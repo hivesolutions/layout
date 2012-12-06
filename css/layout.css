@@ -57,6 +57,7 @@
 }
 
 #footer {
+    color: #888888;
     line-height: 26px;
     margin: 20px 0px 0px 0px;
 }
@@ -72,7 +73,7 @@ html {
 }
 
 body {
-    color: #666666;
+    color: #4d4d4d;
     font-family: "Garamond", "Georgia", "serif";
     font-size: 16px;
     margin: 20px auto 20px auto;
@@ -131,7 +132,7 @@ table td {
 }
 
 table td.label {
-    color: #888888;
+    color: #666666;
 }
 
 table td.left {
@@ -362,6 +363,19 @@ pre {
     height: 10px;
     margin: 12px auto 12px auto;
     width: 260px;
+}
+
+.footer-logo {
+    background: transparent none no-repeat left 0px;
+    cursor: pointer;
+    height: 25px;
+    margin: 28px auto 8px auto;
+    width: 25px;
+}
+
+.footer-logo:hover {
+    background-position: left -25px;
+    border-bottom: none;
 }
 
 .recursion-set {
