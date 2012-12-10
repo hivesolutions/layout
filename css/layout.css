@@ -348,6 +348,11 @@ pre {
     margin: 20px 0px 20px 0px;
 }
 
+.quote.error {
+    color: #c31f30;
+    font-weight: bold;
+}
+
 .up,
 .online,
 .passed,
