@@ -317,6 +317,11 @@ pre {
     -webkit-user-select: none;
 }
 
+.filter li > .table-clear {
+    clear: both;
+    float: none;
+}
+
 .filter .table-row {
     height: 18px;
     padding: 12px 20px 12px 20px;
@@ -324,6 +329,36 @@ pre {
 
 .filter .table-row > * {
     float: left;
+}
+
+.filter .table-text {
+    border-bottom: 1px solid #f2f2f2;
+    margin: 0px 0px 0px 0px;
+    padding: 18px 12px 18px 12px;
+    text-align: left;
+}
+
+.filter .table-text > * {
+    float: left;
+}
+
+.filter .table-text > .image {
+    line-height: 0px;
+    margin-bottom: 0px;
+}
+
+.filter .table-text > .container {
+    margin-left: 12px;
+    width: 520px;
+}
+
+.filter .table-text > .container > .name {
+    font-size: 22px;
+}
+
+.filter .table-text > .container > .description {
+    font-size: 16px;
+    line-height: 26px;
 }
 
 .error-description {
