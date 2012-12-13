@@ -188,9 +188,9 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     background: transparent url(../images/check-button.png) no-repeat left 0px;
     border: none;
+    cursor: pointer;
     height: 24px;
     width: 42px;
-    cursor: pointer;
 }
 
 input[type="checkbox"]:hover {
