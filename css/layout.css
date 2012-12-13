@@ -334,7 +334,7 @@ pre {
 .filter .table-text {
     border-bottom: 1px solid #f2f2f2;
     margin: 0px 0px 0px 0px;
-    padding: 18px 12px 18px 12px;
+    padding: 16px 16px 16px 16px;
     text-align: left;
 }
 
@@ -348,8 +348,8 @@ pre {
 }
 
 .filter .table-text > .container {
-    margin-left: 12px;
-    width: 520px;
+    margin-left: 16px;
+    width: 508px;
 }
 
 .filter .table-text > .container > .name {
