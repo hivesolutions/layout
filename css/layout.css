@@ -184,6 +184,27 @@ input:-moz-placeholder {
     color: #999999;
 }
 
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    background: transparent url(../images/check-button.png) no-repeat left 0px;
+    border: none;
+    height: 24px;
+    width: 42px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover {
+    background-position: left -24px;
+}
+
+input[type="checkbox"]:checked {
+    background-position: left -48px;
+}
+
+input[type="checkbox"]:checked:hover {
+    background-position: left -72px;
+}
+
 textarea {
     background-color: #fcfcfc;
     border: 1px solid #dddddd;
