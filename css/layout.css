@@ -135,10 +135,12 @@ table td.label {
     color: #666666;
 }
 
+table th.left,
 table td.left {
     text-align: left;
 }
 
+table th.right,
 table td.right {
     text-align: right;
 }
