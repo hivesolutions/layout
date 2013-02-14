@@ -91,11 +91,33 @@ body.uwide {
 }
 
 body.full {
+    min-width: 960px;
+    padding: 0px 0px 0px 0px;
     width: inherit;
 }
 
 h1, h2, h3, h4, h5 {
     color: #4d4d4d;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14px;
 }
 
 a {
@@ -123,6 +145,8 @@ form.small {
 }
 
 table {
+      border-collapse: collapse;
+    border-spacing: 0px;
     margin: 20px 0px 32px 0px;
     width: 620px;
 }
@@ -340,6 +364,10 @@ pre {
 .button:hover {
     border-bottom: 1px solid #666666;
     padding-bottom: 2px;
+}
+
+.table-full {
+    width: 100%;
 }
 
 .filter {
