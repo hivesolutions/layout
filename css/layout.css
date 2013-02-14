@@ -292,6 +292,10 @@ pre {
     word-wrap: break-word;
 }
 
+.strong {
+    font-weight: bold;
+}
+
 .text-left {
     text-align: left;
 }
