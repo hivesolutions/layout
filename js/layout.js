@@ -24,12 +24,9 @@
 // __license__   = GNU General Public License (GPL), Version 3
 
 (function(jQuery) {
-    jQuery.fn.ulinksextra = function(method, options) {
+    jQuery.fn.ulinksextra = function(options) {
         // the default values for the pos customer
         var defaults = {};
-
-        // sets the default method value
-        var method = method ? method : "default";
 
         // sets the default options value
         var options = options ? options : {};
@@ -146,15 +143,8 @@
                     });
         };
 
-        // switches over the method
-        switch (method) {
-            case "default" :
-                // initializes the plugin
-                initialize();
-
-                // breaks the switch
-                break;
-        }
+        // initializes the plugin
+        initialize();
 
         // returns the object
         return this;
