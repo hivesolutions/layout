@@ -107,7 +107,8 @@ a.active {
     font-weight: bold;
 }
 
-a:hover {
+a:hover,
+a.hover {
     border-bottom: 1px solid #3668c6;
     padding-bottom: 2px;
 }
@@ -464,4 +465,35 @@ pre {
     margin: 0px 12px 0px 12px;
     text-align: center;
     width: 24px;
+}
+
+.links-extra {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow: 0px 1px 4px #dddddd;
+    -moz-box-shadow: 0px 1px 4px #dddddd;
+    -webkit-box-shadow: 0px 1px 4px #dddddd;
+    display: none;
+    margin-top: 28px;
+    position: absolute;
+    text-align: left;
+}
+
+.links-extra ul {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.links-extra ul > li {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.links-extra a {
+    display: block;
+    padding: 8px 24px 8px 12px;
+}
+
+.links-extra a:hover {
+    border-bottom: none;
 }
