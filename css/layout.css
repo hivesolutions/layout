@@ -145,7 +145,7 @@ form.small {
 }
 
 table {
-      border-collapse: collapse;
+    border-collapse: collapse;
     border-spacing: 0px;
     margin: 20px 0px 32px 0px;
     width: 620px;
@@ -420,6 +420,26 @@ pre {
 .filter .table-text > .container > .description {
     font-size: 16px;
     line-height: 26px;
+}
+
+.filter-more {
+    padding: 26px 0px 26px 0px;
+}
+
+.filter-more:hover {
+    background-color: #f6f6f6;
+}
+
+.filter-more .button.load {
+    display: none;
+}
+
+.filter-more.loading .button.more {
+    display: none;
+}
+
+.filter-more.loading .button.load {
+    display: inline;
 }
 
 .error-description {
