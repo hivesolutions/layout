@@ -370,6 +370,36 @@ pre {
     width: 100%;
 }
 
+.window {
+    background-color: #ffffff;
+    border: 1px solid #bbbbbb;
+    box-shadow: 0px 1px 4px #dddddd;
+    -moz-box-shadow: 0px 1px 4px #dddddd;
+    -webkit-box-shadow: 0px 1px 4px #dddddd;
+    min-width: 220px;
+    padding: 12px 24px 12px 24px;
+}
+
+.drop-field > .drop-field-contents {
+    background-color: #ffffff;
+    box-shadow: 0px 1px 4px #f0f0f0;
+    -moz-box-shadow: 0px 1px 4px #f0f0f0;
+    -webkit-box-shadow: 0px 1px 4px #f0f0f0;
+    margin: 0px 0px 0px 0px;
+}
+
+.drop-field > .drop-field-contents > li {
+    border-bottom: 1px solid #f4f4f4;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    margin: 0px 0px 0px 0px;
+    padding: 14px 6px 14px 6px;
+}
+
+.drop-field > .drop-field-contents > li:last-child {
+    border-bottom: 1px solid #dddddd;
+}
+
 .filter {
     user-select: none;
     -o-user-select: none;
