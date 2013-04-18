@@ -217,6 +217,7 @@ input[type="checkbox"] {
     border: none;
     cursor: pointer;
     height: 24px;
+    margin: 0px 0px 0px 0px;
     width: 42px;
 }
 
@@ -231,6 +232,45 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:checked:hover {
     background-position: left -72px;
 }
+
+input[type="checkbox"]:focus {
+    background-position: left -96px;
+}
+
+input[type="checkbox"]:checked:focus {
+    background-position: left -120px;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    background: transparent url(../images/radio-button.png) no-repeat left 0px;
+    border: none;
+    cursor: pointer;
+    height: 24px;
+    margin: 0px 0px 0px 0px;
+    width: 24px;
+}
+
+input[type="radio"]:hover {
+    background-position: left -24px;
+}
+
+input[type="radio"]:checked {
+    background-position: left -48px;
+}
+
+input[type="radio"]:checked:hover {
+    background-position: left -72px;
+}
+
+input[type="radio"]:focus {
+    background-position: left -96px;
+}
+
+input[type="radio"]:checked:focus {
+    background-position: left -120px;
+}
+
 
 input.date {
     background-image: url(../images/text-field-date.png);
@@ -337,6 +377,14 @@ pre {
 
 .text-center {
     text-align: center;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
 }
 
 .clear {
@@ -799,4 +847,27 @@ pre {
 .table.table-edit .table-remove .inline-remove {
     background-image: url(../images/table-remove.png);
     margin-left: 5px;
+}
+
+.option {
+    height: 42px;
+}
+
+.option:first-child {
+    margin-top: 16px;
+}
+
+.option:last-child {
+    height: auto;
+}
+
+.radio-label {
+    line-height: 26px;
+    margin-left: 8px;
+    margin-right: 8px;
+    vertical-align: top;
+}
+
+.radio-label:last-child {
+    margin-right: 0px;
 }
