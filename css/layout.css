@@ -186,10 +186,6 @@ input.small {
     width: 324px;
 }
 
-input.lower {
-    color: #999999;
-}
-
 input:focus {
     border-color: #3668c6;
 }
@@ -201,6 +197,10 @@ input.invalid {
 
 input.disabled {
     opacity: 0.6;
+}
+
+input.lower {
+    color: #999999;
 }
 
 input::-webkit-input-placeholder {
@@ -230,6 +230,12 @@ input[type="checkbox"]:checked {
 
 input[type="checkbox"]:checked:hover {
     background-position: left -72px;
+}
+
+input.date {
+    background-image: url(../images/text-field-date.png);
+    background-position: right center;
+    background-repeat: no-repeat;
 }
 
 textarea {
@@ -419,6 +425,81 @@ pre {
 
 .drop-field > .drop-field-contents > li:last-child {
     border-bottom: 1px solid #dddddd;
+}
+
+.calendar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    box-shadow: 0px 1px 4px #f0f0f0;
+    -moz-box-shadow: 0px 1px 4px #f0f0f0;
+    -webkit-box-shadow: 0px 1px 4px #f0f0f0;
+    position: absolute;
+}
+
+.calendar-header {
+    color: #777777;
+    font-weight: bold;
+    height: 62px;
+    line-height: 62px;
+}
+
+.calendar-header .calendar-arrow {
+    background-color: yellow;
+    cursor: pointer;
+    height: 62px;
+    opacity: 0.5;
+    width: 62px;
+}
+
+.calendar-header .calendar-arrow:hover {
+    border-bottom: none;
+    opacity: 1;
+    padding-bottom: 0px;
+}
+
+.calendar-header .calendar-arrow-left {
+    background: transparent url(../images/calendar-arrow-left.png) no-repeat center center;
+    float: left;
+}
+
+.calendar-header .calendar-arrow-right {
+    background: transparent url(../images/calendar-arrow-right.png) no-repeat center center;
+    float: right;
+}
+
+.calendar-content {
+    margin: 0px 2px 2px 2px;
+    width: 180px;
+}
+
+.calendar-content thead tr th {
+    color: #777777;
+}
+
+.calendar-content tbody tr td {
+    color: #666666;
+    cursor: pointer;
+}
+
+.calendar-content tbody tr td:hover {
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+.calendar-content tbody tr td.active {
+    background-color: #c0c0c0;
+    color: #ffffff;
+}
+
+.calendar-content tbody tr td.faded {
+    color: #aaaaaa;
+}
+
+.calendar-content tbody tr td.faded.active {
+    background-color: #f4f4f4;
+    color: #aaaaaa;
 }
 
 .filter {
