@@ -899,7 +899,8 @@ pre {
 
 .progress-bar {
     background-color: #fcfcfc;
-    border: 1px solid #cccccc;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px 4px 4px 4px;
     display: inline-block;
     font-size: 20px;
     font-weight: bold;
