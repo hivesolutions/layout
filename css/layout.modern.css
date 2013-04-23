@@ -368,9 +368,7 @@ ul li .image a:hover {
 }
 
 ul li .name {
-    font-size: 12px;
     margin-bottom: 4px;
-    text-transform: uppercase;
 }
 
 ul li .description {
@@ -977,4 +975,22 @@ pre {
     font-size: 14px;
     vertical-align: top;
     visibility: visible;
+}
+
+ul.traceback {
+    background-color: #fafafa;
+    font-family: monospace;
+    font-size: 12px;
+    padding: 8px 0px 8px 0px;
+    text-align: left;
+}
+
+ul.traceback li {
+    line-height: 18px;
+    margin: 0px 0px 0px 0px;
+    padding: 6px 18px 6px 18px;
+}
+
+ul.traceback li:hover {
+    background-color: #ebebeb;
 }
