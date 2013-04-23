@@ -367,7 +367,7 @@ ul li .name {
 }
 
 ul li .description {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 pre {
@@ -471,11 +471,12 @@ pre {
 .window h1 {
     font-weight: normal;
     margin: 16px 0px 16px 0px;
+    line-height: 26px;
 }
 
 .window p {
     line-height: 22px;
-    margin: 26px 0px 26px 0px;
+    margin: 22px 0px 22px 0px;
 }
 
 .window .window-buttons {
