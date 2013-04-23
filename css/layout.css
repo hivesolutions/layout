@@ -138,6 +138,13 @@ a.hover {
     padding-bottom: 2px;
 }
 
+a.warning,
+a.invalid,
+a.error {
+    border-color: #c31f30;
+    color: #c31f30;
+}
+
 form {
     margin: 46px auto 46px auto;
     width: 540px;
@@ -688,14 +695,16 @@ pre {
 .up,
 .online,
 .passed,
-.valid {
+.valid,
+.truth {
     color: #32951b;
 }
 
 .down,
 .offline,
 .failed,
-.invalid {
+.invalid,
+.error {
     color: #c31f30;
 }
 
