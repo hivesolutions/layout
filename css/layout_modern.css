@@ -417,12 +417,23 @@ pre {
 }
 
 .label.label-right {
-    text-align: left;
+    text-align: right;
 }
 
 .input {
     font-size: 16px;
     margin: 10px 0px 26px 0px;
+}
+
+.input.center {
+    text-align: center;
+}
+
+.input.left {
+    text-align: left;
+}
+
+.input.right {
     text-align: left;
 }
 
@@ -681,11 +692,6 @@ pre {
 .links {
     color: #cccccc;
 }
-
-/*
-.links a {
-    margin: 0px 5px 0px 5px;
-}*/
 
 .links.sub-links {
     font-size: 16px;
