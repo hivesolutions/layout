@@ -532,7 +532,7 @@ pre {
     height: 21px;
     line-height: 20px;
     margin: 4px 6px 0px 0px;
-    padding: 9px 10px 0px 10px;
+    padding: 9px 0px 0px 10px;
 }
 
 .tag-field .tag-field-label {
@@ -548,13 +548,13 @@ pre {
     background: transparent url(../images/tag-field-remove.png) no-repeat;
     cursor: pointer;
     float: left;
-    height: 11px;
-    margin: 1px 0px 0px 6px;
-    width: 11px;
+    height: 30px;
+    margin: -9px 0px 0px 10px;
+    width: 30px;
 }
 
 .tag-field .tag-field-remove:hover {
-    background-position: 0px -11px;
+    background-position: 0px -30px;
 }
 
 .calendar {
