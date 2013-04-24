@@ -623,8 +623,8 @@ pre {
 }
 
 .calendar-content thead tr th {
-    border-bottom: 1px solid #f7f7f7;
-    border-top: 1px solid #f7f7f7;
+    border-bottom: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
     font-size: 12px;
     font-weight: normal;
     padding: 10px 0px 10px 0px;
