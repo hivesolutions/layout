@@ -543,6 +543,13 @@ pre {
     background-repeat: no-repeat;
 }
 
+
+.drop-field > .text-field {
+    background-image: url(../images/drop-field-dots.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
 .drop-field.drop-field-select > .text-field {
     background: transparent url(../images/drop-field-select.png) repeat-x right center;
     box-shadow: none;
@@ -552,6 +559,10 @@ pre {
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
+}
+
+.drop-field.drop-field-lock > .text-field {
+    background-image: url(../images/drop-field-lock.png);
 }
 
 .drop-field > .drop-field-contents {
