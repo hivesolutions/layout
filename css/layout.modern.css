@@ -1069,6 +1069,64 @@ pre {
     visibility: visible;
 }
 
+.header-notifications-container {
+    height: 0px;
+    position: fixed;
+    text-align: center;
+    top: 0px;
+    width: 620px;
+    z-index: 12;
+}
+
+body.wide .header-notifications-container {
+    width: 820px;
+}
+
+body.uwide .header-notifications-container {
+    width: 1280px;
+}
+
+body.full .header-notifications-container {
+    min-width: 960px;
+    width: inherit;
+}
+
+.header-notification {
+    background-color: #cee6c5;
+    border-bottom: 1px solid #86c795;
+    border-left: 1px solid #86c795;
+    border-right: 1px solid #86c795;
+    box-shadow: 0px 1px 6px #cccccc;
+    -moz-box-shadow: 0px 1px 6px #cccccc;
+    -webkit-box-shadow: 0px 1px 6px #cccccc;
+    color: #4d4d4d;
+    display: inline-block;
+    margin: 0px auto 0px auto;
+    padding: 8px 12px 8px 12px;
+}
+
+.header-notification.link-close {
+    cursor: pointer;
+}
+
+.header-notification.success,
+.header-notification.green {
+    background-color: #cee6c5;
+    border-color: #86c795;
+}
+
+.header-notification.warning,
+.header-notification.yellow {
+    background-color: #fcebbc;
+    border-color: #f6c167;
+}
+
+.header-notification.error,
+.header-notification.red {
+    background-color: #fcc0c0;
+    border-color: #f68f8f;
+}
+
 ul.traceback {
     background-color: #f8f8f8;
     font-family: monospace;
