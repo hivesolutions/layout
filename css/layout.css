@@ -722,9 +722,18 @@ pre {
     font-size: 18px;
 }
 
+.links a {
+    margin: 0px 0px 0px 0px;
+}
+
+
 .links.sub-links {
     font-size: 16px;
     margin-top: 6px;
+}
+
+.links.sub-links a {
+    margin: 0px 0px 0px 0px;
 }
 
 .quote {
@@ -991,6 +1000,35 @@ pre {
 
 .progress-bar .progress-bar-percentage {
     visibility: hidden;
+}
+
+.panel-more-action {
+    margin-bottom: 38px;
+}
+
+li.list-more {
+    list-style: none;
+}
+
+li.list-more > .button {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;    ;
+    color: #a0a0a0;
+    font-size: 17px;
+    font-weight: normal;
+    padding: 2px 8px 2px 8px;
+}
+
+li.list-more > .button:hover {
+    background-color: #b2b2b2;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+li.list-divider {
+    border-bottom: 1px solid #dddddd;
+    list-style: none;
+    margin-top: -10px;
 }
 
 .header-notifications-container {

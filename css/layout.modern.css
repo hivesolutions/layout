@@ -230,6 +230,8 @@ input {
     background-color: #ffffff;
     border: 1px solid #dddddd;
     box-shadow: inset 0px 2px 2px #f9f9f9;
+    -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
+    -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
     color: #2d2d2d;
     font-family: "Open Sans", "Oxygen", sans-serif;
     font-size: 16px;
@@ -246,6 +248,8 @@ input.small {
 input:focus {
     border-color: #3668c6;
     box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 input.invalid {
@@ -274,6 +278,8 @@ input[type="checkbox"] {
     background: transparent url(../images/check-button.png) no-repeat left 0px;
     border: none;
     box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
     cursor: pointer;
     height: 24px;
     margin: 0px 0px 0px 0px;
@@ -342,6 +348,8 @@ textarea {
     background-color: #ffffff;
     border: 1px solid #dddddd;
     box-shadow: inset 0px 2px 2px #f9f9f9;
+    -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
+    -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
     color: #2d2d2d;
     font-family: "Open Sans", "Oxygen", sans-serif;
     font-size: 16px;
@@ -553,6 +561,8 @@ pre {
 .drop-field.drop-field-select > .text-field {
     background: transparent url(../images/drop-field-select.png) repeat-x right center;
     box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
     cursor: pointer;
     user-select: none;
     -o-user-select: none;
@@ -791,9 +801,17 @@ pre {
     color: #cccccc;
 }
 
+.links a {
+    margin: 0px 4px 0px 4px;
+}
+
 .links.sub-links {
     font-size: 13px;
     margin-top: 6px;
+}
+
+.links.sub-links a {
+    margin: 0px 2px 0px 2px;
 }
 
 .quote {
@@ -1067,6 +1085,35 @@ pre {
     font-size: 14px;
     vertical-align: top;
     visibility: visible;
+}
+
+.panel-more-action {
+    margin-bottom: 37px;
+}
+
+li.list-more {
+    list-style: none;
+}
+
+li.list-more > .button {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;    ;
+    color: #a0a0a0;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 2px 8px 2px 8px;
+}
+
+li.list-more > .button:hover {
+    background-color: #b2b2b2;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+li.list-divider {
+    border-bottom: 1px solid #dddddd;
+    list-style: none;
+    margin-top: -9px;
 }
 
 .header-notifications-container {
