@@ -739,7 +739,7 @@ pre {
 }
 
 .filter .table-row {
-    height: 18px;
+    min-height: 18px;
     padding: 12px 20px 12px 20px;
 }
 
