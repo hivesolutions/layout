@@ -57,6 +57,15 @@
             var links = linkMore.parents(".links");
             var linksElements = jQuery("> a", links);
 
+            // tries to retrieve the complete set of extra links
+            // that were selected and in case the ammount is zero
+            // the link more section is hidden (not necessary)
+            var linksExtra = jQuery("li", matchedObject);
+            var extraSize = linksExtra.length;
+            if (extraSize == 0) {
+                linkMore.hide();
+            }
+
             // retrieves the size of the complete set of
             // link element present in the current menu links
             // bar and uses the size to retrieve the before
@@ -92,7 +101,7 @@
             // retrieves the references to the various elements
             // for which event handlers will be registered
             var _document = jQuery(document);
-            var linkMore = jQuery(".link-more");
+            var linkMore = jQuery(".link-more > .link");
             var links = jQuery("a", matchedObject);
 
             // registers for the hide event on the matched object
