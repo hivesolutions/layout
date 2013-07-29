@@ -704,6 +704,7 @@ pre {
 .calendar-content tbody tr td {
     color: #666666;
     cursor: pointer;
+    padding: 8px 14px 8px 14px;
 }
 
 .calendar-content tbody tr td:hover {
