@@ -664,7 +664,6 @@ pre {
 }
 
 .calendar-header .calendar-arrow {
-    background-color: yellow;
     cursor: pointer;
     height: 62px;
     opacity: 0.5;
