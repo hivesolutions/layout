@@ -697,6 +697,7 @@ pre {
     font-size: 12px;
     font-weight: normal;
     padding: 10px 0px 10px 0px;
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -704,6 +705,7 @@ pre {
     color: #666666;
     cursor: pointer;
     padding: 8px 14px 8px 14px;
+    text-align: center;
 }
 
 .calendar-content tbody tr td:hover {
