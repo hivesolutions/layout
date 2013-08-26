@@ -644,16 +644,21 @@ pre {
 
 .calendar {
     background-color: #ffffff;
-    border-bottom: 1px solid #dddddd;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
+    border: 1px solid #dddddd;
     box-shadow: 0px 1px 4px #f0f0f0;
     -moz-box-shadow: 0px 1px 4px #f0f0f0;
     -webkit-box-shadow: 0px 1px 4px #f0f0f0;
-    position: absolute;
+    margin: 12px auto 12px auto;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+    width: 313px;
+}
+
+.calendar.text-field-calendar {
+    border-top: none;
+    margin: 0px 0px 0px 0px;
+    position: absolute;
 }
 
 .calendar-header {
@@ -725,6 +730,18 @@ pre {
 .calendar-content tbody tr td.faded.active {
     background-color: #f4f4f4;
     color: #aaaaaa;
+}
+
+.calendar-range .range .text-field {
+    width: 120px;
+}
+
+.calendar-range .range .text-field.start-date {
+    margin-right: 12px;
+}
+
+.calendar-range .range .text-field.end-date {
+    margin-left: 12px;
 }
 
 .filter {
