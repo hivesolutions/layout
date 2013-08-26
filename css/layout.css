@@ -185,7 +185,7 @@ input {
     border: 1px solid #dddddd;
     color: #2d2d2d;
     font-family: "Garamond", "Georgia", "serif";
-    font-size: 20px;
+    font-size: 16px;
     height: 40px;
     outline: none;
     padding: 0px 8px 0px 8px;
@@ -280,7 +280,6 @@ input[type="radio"]:focus {
 input[type="radio"]:checked:focus {
     background-position: left -120px;
 }
-
 
 input.date {
     background-image: url(../images/text-field-date.png);
@@ -433,6 +432,14 @@ pre {
 .input.small {
     font-size: 16px;
     margin: 10px 0px 18px 0px;
+}
+
+.input input {
+    font-size: 20px;
+}
+
+.input.small input {
+    font-size: 16px;
 }
 
 .button {

@@ -501,6 +501,14 @@ pre {
     margin: 10px 0px 18px 0px;
 }
 
+.input input {
+    font-size: 16px;
+}
+
+.input.small input {
+    font-size: 14px;
+}
+
 .button {
     font-size: 16px;
     font-weight: bold;
