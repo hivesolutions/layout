@@ -151,9 +151,8 @@ body.full {
 
 body.complete {
     margin: 0px 0px 0px 0px;
-    min-width: 960px;
     padding: 0px 0px 0px 0px;
-    width: inherit;    ;
+    width: inherit;
 }
 
 h1, h2, h3, h4, h5 {
