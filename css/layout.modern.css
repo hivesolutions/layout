@@ -480,11 +480,11 @@ ul li {
 }
 
 ul li.selected {
-    background-color: #f6f6f6;
+    background-color: #f0f0f0;
 }
 
 ul li:hover {
-    background-color: #f6f6f6;
+    background-color: #f0f0f0;
 }
 
 ul li .image {
@@ -810,7 +810,7 @@ body.romantic .calendar {
 }
 
 body.romantic .calendar-content tbody tr td {
-	padding: 10px 14px 10px 14px;
+    padding: 10px 14px 10px 14px;
 }
 
 .calendar-content tbody tr td:hover {
@@ -905,7 +905,7 @@ body.romantic .calendar-content tbody tr td {
 }
 
 .filter-more:hover {
-    background-color: #f6f6f6;
+    background-color: #f0f0f0;
 }
 
 .filter-more .button.load {
