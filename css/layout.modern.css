@@ -717,6 +717,7 @@ pre {
 }
 
 body.romantic .tag-field .tag-field-label {
+    line-height: 17px;
     text-transform: inherit;
 }
 
