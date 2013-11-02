@@ -747,6 +747,10 @@ body.romantic .tag-field .tag-field-label {
     width: 313px;
 }
 
+body.romantic .calendar {
+    width: 325px;
+}
+
 .calendar.text-field-calendar {
     border-top: none;
     margin: 0px 0px 0px 0px;
@@ -803,6 +807,10 @@ body.romantic .tag-field .tag-field-label {
     cursor: pointer;
     padding: 8px 14px 8px 14px;
     text-align: center;
+}
+
+body.romantic .calendar-content tbody tr td {
+	padding: 10px 14px 10px 14px;
 }
 
 .calendar-content tbody tr td:hover {
