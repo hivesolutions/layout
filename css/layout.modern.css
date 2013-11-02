@@ -155,12 +155,6 @@
     background-color: #cccccc;
 }
 
-#header {
-}
-
-#content {
-}
-
 #footer {
     color: #888888;
     font-size: 13px;
@@ -418,7 +412,6 @@ input[type="radio"]:checked:focus {
     background-position: left -120px;
 }
 
-
 input.date {
     background-image: url(../images/text-field-date.png);
     background-position: right center;
@@ -648,7 +641,6 @@ pre {
     background-position: right center;
     background-repeat: no-repeat;
 }
-
 
 .drop-field > .text-field {
     background-image: url(../images/drop-field-dots.png);
