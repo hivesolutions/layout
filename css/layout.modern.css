@@ -716,6 +716,10 @@ pre {
     text-transform: uppercase;
 }
 
+body.romantic .tag-field .tag-field-label {
+    text-transform: normal;
+}
+
 .tag-field .tag-field-remove {
     background: transparent url(../images/tag-field-remove.png) no-repeat;
     cursor: pointer;
