@@ -717,7 +717,7 @@ pre {
 }
 
 body.romantic .tag-field .tag-field-label {
-    text-transform: normal;
+    text-transform: inherit;
 }
 
 .tag-field .tag-field-remove {
@@ -928,7 +928,7 @@ body.romantic .tag-field .tag-field-label {
 
 .links.sub-links {
     font-size: 13px;
-    margin-top: 6px;
+    margin-top: 8px;
 }
 
 .links.sub-links a {
