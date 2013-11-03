@@ -193,6 +193,7 @@ body {
 
 body.romantic {
     font-family: "Merriweather", "Open Sans", "Oxygen", sans-serif;
+    font-style: italic;
 }
 
 body.wide {
@@ -316,6 +317,7 @@ input {
 
 body.romantic input {
     font-family: "Merriweather", "Open Sans", "Oxygen", sans-serif;
+    font-style: italic;
 }
 
 input.small {
@@ -438,6 +440,7 @@ textarea {
 
 body.romantic textarea {
     font-family: "Merriweather", "Open Sans", "Oxygen", sans-serif;
+    font-style: italic;
 }
 
 textarea:focus {
