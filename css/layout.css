@@ -50,12 +50,6 @@
     background-color: #cccccc;
 }
 
-#header {
-}
-
-#content {
-}
-
 #footer {
     color: #888888;
     line-height: 26px;
@@ -344,11 +338,11 @@ ul li {
 }
 
 ul li.selected {
-    background-color: #f6f6f6;
+    background-color: #f0f0f0;
 }
 
 ul li:hover {
-    background-color: #f6f6f6;
+    background-color: #f0f0f0;
 }
 
 ul li .image {
@@ -737,7 +731,7 @@ pre {
 }
 
 .filter-more:hover {
-    background-color: #f6f6f6;
+    background-color: #f0f0f0;
 }
 
 .filter-more .button.load {
@@ -766,7 +760,6 @@ pre {
 .links a {
     margin: 0px 0px 0px 0px;
 }
-
 
 .links.sub-links {
     font-size: 16px;
