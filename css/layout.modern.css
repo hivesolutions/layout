@@ -1159,6 +1159,20 @@ body.romantic .calendar-content tbody tr td {
     margin-left: 5px;
 }
 
+.table.table-list thead tr th {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 20px 10px 20px;
+}
+
+.table.table-list tbody tr td {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 16px 20px 16px 20px;
+}
+
+.table.table-list tfoot tr td {
+    padding-top: 30px;
+}
+
 .option {
     height: 42px;
 }
