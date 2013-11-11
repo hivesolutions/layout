@@ -838,7 +838,7 @@ pre {
     display: none;
     margin-top: 28px;
     position: absolute;
-    text-align: left;
+    text-align: right;
 }
 
 .links-extra ul {
@@ -853,7 +853,7 @@ pre {
 
 .links-extra a {
     display: block;
-    padding: 8px 24px 8px 12px;
+    padding: 8px 12px 8px 24px;
 }
 
 .links-extra a:hover {
