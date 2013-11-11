@@ -983,6 +983,10 @@ pre {
     margin-left: 5px;
 }
 
+.table.table-list {
+    margin: 32px 0px 32px 0px;
+}
+
 .table.table-list thead tr th {
     border-bottom: 1px solid #e6e6e6;
     padding: 10px 20px 10px 20px;
