@@ -176,7 +176,7 @@ h5 {
 }
 
 a {
-    color: #3668c6;
+    color: #1b75bb;
     text-decoration: none;
 }
 
@@ -186,7 +186,7 @@ a.active {
 
 a:hover,
 a.hover {
-    border-bottom: 1px solid #3668c6;
+    border-bottom: 1px solid #1b75bb;
     padding-bottom: 2px;
 }
 
@@ -195,6 +195,12 @@ a.invalid,
 a.error {
     border-color: #c31f30;
     color: #c31f30;
+}
+
+a.silent:hover,
+a.silent.hover {
+    border-bottom: none;
+    padding-bottom: 0px;
 }
 
 form {
@@ -253,7 +259,7 @@ input.small {
 }
 
 input:focus {
-    border-color: #3668c6;
+    border-color: #1b75bb;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -366,7 +372,7 @@ textarea {
 }
 
 textarea:focus {
-    border-color: #3668c6;
+    border-color: #1b75bb;
 }
 
 textarea.invalid {
@@ -1003,11 +1009,11 @@ pre {
 }
 
 .table.table-edit tr td.next-horizontal input {
-    border-left-color: #3668c6;
+    border-left-color: #1b75bb;
 }
 
 .table.table-edit tr td.next-vertical input {
-    border-top-color: #3668c6;
+    border-top-color: #1b75bb;
 }
 
 .table.table-edit tr td.next-horizontal-invalid input {
@@ -1019,11 +1025,11 @@ pre {
 }
 
 .table.table-edit tr td.next-horizontal-invalid input.active {
-    border-left-color: #3668c6;
+    border-left-color: #1b75bb;
 }
 
 .table.table-edit tr td.next-vertical-invalid input.active {
-    border-top-color: #3668c6;
+    border-top-color: #1b75bb;
 }
 
 .table.table-edit tr td.next-horizontal-invalid input.invalid {
@@ -1141,7 +1147,7 @@ pre {
 }
 
 .progress-bar .bar-left {
-    background-color: #3668c6;
+    background-color: #1b75bb;
     line-height: 40px;
     width: 0px;
 }
