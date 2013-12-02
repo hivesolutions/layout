@@ -927,7 +927,7 @@ pre {
     display: none;
     margin-top: 28px;
     position: absolute;
-    text-align: left;
+    text-align: right;
 }
 
 .links-extra ul {
@@ -942,7 +942,7 @@ pre {
 
 .links-extra a {
     display: block;
-    padding: 8px 24px 8px 12px;
+    padding: 8px 12px 8px 24px
 }
 
 .links-extra a:hover {
@@ -1075,6 +1075,24 @@ pre {
     margin-left: 5px;
 }
 
+.table.table-list {
+    margin: 32px 0px 32px 0px;
+}
+
+.table.table-list thead tr th {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 20px 10px 20px;
+}
+
+.table.table-list tbody tr td {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 16px 20px 16px 20px;
+}
+
+.table.table-list tfoot tr td {
+    padding-top: 30px;
+}
+
 .option {
     height: 42px;
 }
@@ -1145,7 +1163,7 @@ pre {
 }
 
 .progress-bar .bar-left {
-    background-color: #1b75bb;
+    background-color: #52a67c;
     line-height: 40px;
     width: 0px;
 }
