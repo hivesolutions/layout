@@ -867,8 +867,9 @@ body.romantic .calendar-content tbody tr td {
 }
 
 .filter .table-row {
+    line-height: 26px;
     min-height: 18px;
-    padding: 12px 20px 12px 20px;
+    padding: 8px 20px 8px 20px;
 }
 
 .filter .table-row > * {
