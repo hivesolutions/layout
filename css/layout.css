@@ -1090,6 +1090,10 @@ pre {
     visibility: hidden;
 }
 
+.rating {
+    text-align: left;
+}
+
 .rating .rating-item {
     background: transparent url(../images/rating.png) no-repeat left 0px;
     cursor: pointer;

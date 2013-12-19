@@ -1270,6 +1270,10 @@ body.romantic .calendar-content tbody tr td {
     visibility: visible;
 }
 
+.rating {
+    text-align: left;
+}
+
 .rating .rating-item {
     background: transparent url(../images/rating.png) no-repeat left 0px;
     cursor: pointer;
