@@ -1270,6 +1270,27 @@ body.romantic .calendar-content tbody tr td {
     visibility: visible;
 }
 
+.rating .rating-item {
+    background: transparent url(../images/rating.png) no-repeat left 0px;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    padding-left: 4px;
+    width: 24px;
+}
+
+.rating .rating-item.active {
+    background-position: left -24px;
+}
+
+.rating .rating-item.inactive {
+    background-position: left 0px;
+}
+
+.rating .rating-item.hover {
+    background-position: left -24px;
+}
+
 .panel-more-action {
     margin-bottom: 37px;
 }
