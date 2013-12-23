@@ -766,6 +766,7 @@ body.romantic .calendar {
     font-weight: bold;
     height: 62px;
     line-height: 62px;
+    text-align: center;
     text-transform: uppercase;
 }
 
