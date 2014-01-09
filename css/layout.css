@@ -916,6 +916,7 @@ pre {
 
 .table.table-edit tr.last td input {
     border-bottom-width: 1px;
+    height: 41px;
 }
 
 .table.table-edit tr td.last input {
