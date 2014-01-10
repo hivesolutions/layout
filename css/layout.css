@@ -875,6 +875,7 @@ pre {
 
 .table.table-edit thead th {
     padding: 0px 0px 8px 0px;
+    text-indent: 9px;
 }
 
 .table.table-edit td {

@@ -958,6 +958,7 @@ pre {
 .table.table-edit thead th {
     font-weight: bold;
     padding: 0px 0px 8px 0px;
+    text-indent: 9px;
     text-transform: uppercase;
 }
 
