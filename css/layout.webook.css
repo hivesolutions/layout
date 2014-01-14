@@ -596,6 +596,10 @@ pre {
     background-image: url(../images/drop-field-lock.png);
 }
 
+.drop-field.drop-field-select.drop-field-lock > .text-field {
+    background-image: url(../images/drop-field-select.png);
+}
+
 .drop-field > .drop-field-contents {
     background-color: #ffffff;
     box-shadow: 0px 1px 4px #f0f0f0;
