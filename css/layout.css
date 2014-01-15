@@ -887,6 +887,7 @@ pre {
 
 .table.table-edit .table-new-line-row {
     padding-top: 16px;
+    text-align: center;
 }
 
 .table.table-edit .table-new-line-row .button {
