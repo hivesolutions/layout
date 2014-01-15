@@ -1366,7 +1366,6 @@ ul.traceback li:hover {
     width: 681px;
 }
 
-
 ul.side-list {
     margin: 0px 0px 0px 0px;
 }
@@ -1380,6 +1379,9 @@ ul.side-list > li {
     text-transform: uppercase;
 }
 
+ul.side-list > li:last-child {
+    margin-bottom: 0px;
+}
 
 ul.side-list > li:hover {
     background-color: inherit;
