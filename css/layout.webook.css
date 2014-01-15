@@ -1315,3 +1315,101 @@ ul.traceback li {
 ul.traceback li:hover {
     background-color: #ebebeb;
 }
+
+.side {
+    margin: 0px auto 0px auto;
+    width: 960px;
+}
+
+.side-header {
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 6px;
+    text-align: left;
+    width: 960px;
+}
+
+.side-header > h2 {
+    margin: 18px 0px 8px 0px;
+}
+
+.side-menu {
+    float: left;
+    padding: 18px 0px 18px 0px;
+    text-align: left;
+    width: 200px;
+}
+
+.side-contents {
+    border-left: 1px solid #ebebeb;
+    float: left;
+    padding: 18px 18px 18px 18px;
+    text-align: left;
+    width: 723px;
+}
+
+.side-clear {
+    clear: both;
+}
+
+.side-contents form {
+    margin: 0px 0px 12px 12px;
+    text-align: center;
+    width: 699px;
+}
+
+.side-contents .input {
+    text-align: left;
+}
+
+.side-contents input {
+    text-align: left;
+    width: 681px;
+}
+
+
+ul.side-list {
+    margin: 0px 0px 0px 0px;
+}
+
+ul.side-list > li {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px 0px 14px 0px;
+    padding: 0px 0px 0px 0px;
+    text-transform: uppercase;
+}
+
+
+ul.side-list > li:hover {
+    background-color: inherit;
+}
+
+ul.side-list > li > a {
+    color: #4d4d4d;
+    padding-bottom: 2px;
+}
+
+ul.side-list > li > a:hover,
+.side-list > li > a.hover {
+    border-bottom: none;
+    color: #1b75bb;
+}
+
+ul.side-list > li.selected {
+    background-color: inherit;
+    border-right: 2px solid #1b75bb;;
+}
+
+ul.side-list > li.selected > a {
+    color: #1b75bb;
+}
+
+ul.sections-list {
+    margin: 0px 0px 0px 0px;
+}
+
+ul.sections-list > li {
+    margin: 0px 0px 12px 0px;
+    padding: 12px 12px 12px 12px;
+}
