@@ -1399,7 +1399,9 @@ ul.traceback li:hover {
 
 .side-header > .side-buttons {
     display: inline-block;
+    margin-top: 13px;
     text-align: right;
+    vertical-align: top;
     width: 676px;
 }
 
@@ -1430,6 +1432,11 @@ ul.traceback li:hover {
 
 .side-contents .filter {
     margin: -12px -18px -12px -18px;
+    min-height: 240px;
+}
+
+.side-contents .filter .table-row {
+    padding: 8px 8px 8px 20px;
 }
 
 .side-contents .input {
