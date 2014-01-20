@@ -1366,6 +1366,11 @@ ul.traceback li:hover {
     width: 681px;
 }
 
+.side-contents textarea {
+    text-align: left;
+    width: 681px;
+}
+
 ul.side-list {
     margin: 0px 0px 0px 0px;
 }
