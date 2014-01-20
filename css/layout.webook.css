@@ -1361,6 +1361,15 @@ ul.traceback li:hover {
     background-color: #d11825;
 }
 
+.button.button-color.button-blue {
+    background-color: #1c75bc;
+}
+
+.button.button-color.button-blue:hover,
+.button.button-color.button-blue.hover {
+    background-color: #1f84d4;
+}
+
 .button.button-color.button-grey {
     background-color: #706f6f;
 }
