@@ -698,8 +698,18 @@ pre {
     float: none;
 }
 
+.filter .table-header {
+    border-bottom: 1px solid #ebebeb;
+    font-weight: bold;
+}
+
+.filter .table-header:hover {
+    background-color: inherit;
+}
+
 .filter .table-row {
     line-height: 26px;
+    margin: 0px 0px 0px 0px;
     min-height: 18px;
     padding: 8px 20px 8px 20px;
 }
@@ -740,6 +750,7 @@ pre {
 
 .filter-more {
     padding: 26px 0px 26px 0px;
+    text-align: center;
 }
 
 .filter-more:hover {

@@ -780,8 +780,19 @@ pre {
     float: none;
 }
 
+.filter .table-header {
+    border-bottom: 1px solid #ebebeb;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.filter .table-header:hover {
+    background-color: inherit;
+}
+
 .filter .table-row {
     line-height: 26px;
+    margin: 0px 0px 0px 0px;
     min-height: 18px;
     padding: 8px 20px 8px 20px;
 }
@@ -822,6 +833,7 @@ pre {
 
 .filter-more {
     padding: 26px 0px 26px 0px;
+    text-align: center;
 }
 
 .filter-more:hover {
@@ -1316,6 +1328,48 @@ ul.traceback li:hover {
     background-color: #ebebeb;
 }
 
+.button.button-color {
+    border-radius: 4px 4px 4px 4px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px;
+    min-width: 70px;
+    padding: 6px 4px 6px 4px;
+    text-align: center;
+}
+
+.button.button-color:hover,
+.button.button-color.hover {
+    border-bottom: none;
+}
+
+.button.button-color.button-green {
+    background-color: #008d36;
+}
+
+.button.button-color.button-green:hover,
+.button.button-color.button-green.hover {
+    background-color: #00963a;
+}
+
+.button.button-color.button-red {
+    background-color: #be1622;
+}
+
+.button.button-color.button-red:hover,
+.button.button-color.button-red.hover {
+    background-color: #d11825;
+}
+
+.button.button-color.button-grey {
+    background-color: #706f6f;
+}
+
+.button.button-color.button-grey:hover,
+.button.button-color.button-grey.hover {
+    background-color: #858484;
+}
+
 .side {
     margin: 0px auto 0px auto;
     width: 960px;
@@ -1329,7 +1383,15 @@ ul.traceback li:hover {
 }
 
 .side-header > h2 {
+    display: inline-block;
     margin: 18px 0px 8px 0px;
+    width: 280px;
+}
+
+.side-header > .side-buttons {
+    display: inline-block;
+    text-align: right;
+    width: 676px;
 }
 
 .side-menu {
@@ -1355,6 +1417,10 @@ ul.traceback li:hover {
     margin: 0px 0px 12px 12px;
     text-align: center;
     width: 699px;
+}
+
+.side-contents .filter {
+    margin: -12px -18px -12px -18px;
 }
 
 .side-contents .input {
