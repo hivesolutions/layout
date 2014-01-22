@@ -978,6 +978,11 @@ body.romantic .calendar-content tbody tr td {
     font-weight: bold;
 }
 
+.overflow {
+    color: #c9273f;
+    font-weight: bold;
+}
+
 .up,
 .online,
 .passed,
