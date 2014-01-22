@@ -1399,7 +1399,7 @@ ul.traceback li:hover {
 .side-header > h2 {
     display: inline-block;
     margin: 18px 0px 8px 0px;
-    width: 280px;
+    width: 530px;
 }
 
 .side-header > .side-buttons {
@@ -1407,7 +1407,7 @@ ul.traceback li:hover {
     margin-top: 13px;
     text-align: right;
     vertical-align: top;
-    width: 676px;
+    width: 426px;
 }
 
 .side-menu {
