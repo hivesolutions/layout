@@ -831,6 +831,10 @@ pre {
     line-height: 26px;
 }
 
+.filter-no-results {
+    text-align: center;
+}
+
 .filter-more {
     padding: 26px 0px 26px 0px;
     text-align: center;
