@@ -1150,6 +1150,7 @@ pre {
 
 li.list-more {
     list-style: none;
+    text-align: center;
 }
 
 li.list-more > .button {

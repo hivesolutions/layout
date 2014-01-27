@@ -1331,6 +1331,7 @@ body.romantic .calendar-content tbody tr td {
 
 li.list-more {
     list-style: none;
+    text-align: center;
 }
 
 li.list-more > .button {
