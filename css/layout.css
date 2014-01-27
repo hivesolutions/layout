@@ -918,6 +918,8 @@ pre {
     border-bottom-width: 0px;
     border-right-width: 0px;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     width: 100%;
 }
 
@@ -996,7 +998,7 @@ pre {
 
 .table.table-edit .table-add .inline-add,
 .table.table-edit .table-remove .inline-remove {
-    background: transparent none no-repeat no-scroll 0px 0px;
+    background: transparent none no-repeat 0px 0px;
     height: 15px;
     margin-top: 12px;
     width: 15px;
