@@ -600,6 +600,7 @@ pre {
     border-top: none;
     margin: 0px 0px 0px 0px;
     position: absolute;
+    z-index: 1;
 }
 
 .calendar-header {
