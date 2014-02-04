@@ -927,6 +927,10 @@ body.romantic .calendar-content tbody tr td {
     display: inline;
 }
 
+.uploader-input {
+    height: inherit;
+}
+
 .error-description {
     color: #c9273f;
     font-size: 14px;

@@ -836,6 +836,10 @@ pre {
     display: inline;
 }
 
+.uploader-input {
+    height: inherit;
+}
+
 .error-description {
     color: #c9273f;
     font-size: 14px;
