@@ -31,51 +31,51 @@
 
 @font-face {
     font-family: "Oxygen";
-    src: local("Oxygen Light"), local("Oxygen-Light"), url(../fonts/Oxygen-Light.ttf);
     font-style: normal;
     font-weight: 300;
+    src: local("Oxygen Light"), local("Oxygen-Light"), url(../fonts/Oxygen-Light.ttf);
 }
 
 @font-face {
     font-family: "Oxygen";
-    src: local("Oxygen"), local("Oxygen-Regular"), url(../fonts/Oxygen-Regular.ttf);
     font-style: normal;
     font-weight: 400;
+    src: local("Oxygen"), local("Oxygen-Regular"), url(../fonts/Oxygen-Regular.ttf);
 }
 
 @font-face {
     font-family: "Oxygen";
-    src: local("Oxygen Bold"), local("Oxygen-Bold"), url(../fonts/Oxygen-Bold.ttf);
     font-style: normal;
     font-weight: 700;
+    src: local("Oxygen Bold"), local("Oxygen-Bold"), url(../fonts/Oxygen-Bold.ttf);
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: local("Open Sans Light"), local("OpenSans-Light"), url(../fonts/OpenSans-Light.ttf);
     font-style: normal;
     font-weight: 300;
+    src: local("Open Sans Light"), local("OpenSans-Light"), url(../fonts/OpenSans-Light.ttf);
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: local("Open Sans"), local("OpenSans"), url(../fonts/OpenSans-Regular.ttf);
     font-style: normal;
     font-weight: 400;
+    src: local("Open Sans"), local("OpenSans"), url(../fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: local("Open Sans Semi-Bold"), local("OpenSans-Semibold"), url(../fonts/OpenSans-Semibold.ttf);
     font-style: normal;
     font-weight: 600;
+    src: local("Open Sans Semi-Bold"), local("OpenSans-Semibold"), url(../fonts/OpenSans-Semibold.ttf);
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/OpenSans-Bold.ttf);
     font-style: normal;
     font-weight: 700;
+    src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/OpenSans-Bold.ttf);
 }
 
 #footer {
@@ -102,11 +102,11 @@ body {
     color: #4d4d4d;
     font-family: "Open Sans", "Oxygen", sans-serif;
     font-size: 14px;
+    -webkit-font-smoothing: antialiased;
     margin: 20px auto 20px auto;
     padding: 12px 12px 12px 12px;
     text-align: center;
     width: 620px;
-    -webkit-font-smoothing: antialiased;
 }
 
 body.wide {
