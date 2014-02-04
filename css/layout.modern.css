@@ -162,6 +162,7 @@ body {
     padding: 12px 12px 12px 12px;
     text-align: center;
     width: 620px;
+    -webkit-font-smoothing: antialiased;
 }
 
 body.romantic {
