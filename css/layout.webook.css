@@ -99,7 +99,7 @@ html {
 }
 
 body {
-    color: #4d4d4d;
+    color: #2d2d2d;
     font-family: "Open Sans", "Oxygen", sans-serif;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
@@ -1330,10 +1330,16 @@ ul.traceback li:hover {
     color: #ffffff;
     display: inline-block;
     font-size: 14px;
+    line-height: 32px;
     margin: 0px 0px 0px 0px;
     min-width: 70px;
-    padding: 6px 12px 6px 12px;
+    padding: 0px 12px 0px 12px;
     text-align: center;
+    transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
 }
 
 .button.button-color:hover,
@@ -1473,7 +1479,7 @@ ul.side-list > li:hover {
 }
 
 ul.side-list > li > a {
-    color: #4d4d4d;
+    color: #2d2d2d;
     padding-bottom: 2px;
 }
 
