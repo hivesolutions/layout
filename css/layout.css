@@ -505,10 +505,13 @@ pre {
 
 .drop-field > .drop-field-contents {
     background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
     box-shadow: 0px 1px 4px #f0f0f0;
     -moz-box-shadow: 0px 1px 4px #f0f0f0;
     -webkit-box-shadow: 0px 1px 4px #f0f0f0;
     margin: 0px 0px 0px 0px;
+    max-height: 234px;
+    overflow-y: auto;
     z-index: 1;
 }
 
@@ -517,11 +520,7 @@ pre {
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     margin: 0px 0px 0px 0px;
-    padding: 14px 8px 14px 8px;
-}
-
-.drop-field > .drop-field-contents > li:last-child {
-    border-bottom: 1px solid #dddddd;
+    padding: 8px 8px 8px 8px;
 }
 
 .tag-field > .tag-field-tags {
