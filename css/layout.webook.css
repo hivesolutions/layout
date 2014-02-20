@@ -1450,6 +1450,10 @@ ul.traceback li:hover {
     text-align: left;
 }
 
+.side-contents.center .input {
+    text-align: center;
+}
+
 .side-contents input {
     text-align: left;
     width: 681px;
@@ -1458,18 +1462,6 @@ ul.traceback li:hover {
 .side-contents textarea {
     text-align: left;
     width: 681px;
-}
-
-.side-contents.center .input {
-    text-align: center;
-}
-
-.side-contents.center input {
-    text-align: center;
-}
-
-.side-contents textarea {
-    text-align: center;
 }
 
 ul.side-list {
@@ -1519,8 +1511,8 @@ ul.sections-list {
 
 ul.sections-list > li {
     border: 1px solid transparent;
-    margin: 0px 0px 12px 0px;
-    padding: 12px 12px 12px 12px;
+    margin: 0px 0px 10px 0px;
+    padding: 14px 14px 14px 14px;
 }
 
 ul.sections-list > li:hover {
