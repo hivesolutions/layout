@@ -1536,5 +1536,8 @@ ul.sections-list > li {
 }
 
 ul.sections-list > li:hover {
-    border-color: #cdcdcd;;
+    border-color: #cdcdcd;
+    box-shadow: 0px 0px 6px #e8e8e8;
+    -moz-box-shadow: 0px 0px 6px #e8e8e8;
+    -webkit-box-shadow: 0px 0px 6px #e8e8e8;
 }
