@@ -1423,6 +1423,10 @@ ul.traceback li:hover {
     width: 723px;
 }
 
+.side-contents.center {
+    text-align: center;
+}
+
 .side-clear {
     clear: both;
 }
@@ -1454,6 +1458,18 @@ ul.traceback li:hover {
 .side-contents textarea {
     text-align: left;
     width: 681px;
+}
+
+.side-contents.center .input {
+    text-align: center;
+}
+
+.side-contents.center input {
+    text-align: center;
+}
+
+.side-contents textarea {
+    text-align: center;
 }
 
 ul.side-list {
