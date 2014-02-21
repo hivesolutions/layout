@@ -285,8 +285,10 @@ table td.right {
 }
 
 input {
+    -webkit-appearance: none;
     background-color: #ffffff;
     border: 1px solid #dddddd;
+    border-radius: 0px 0px 0px 0px;
     box-shadow: inset 0px 2px 2px #f9f9f9;
     -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
     -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
