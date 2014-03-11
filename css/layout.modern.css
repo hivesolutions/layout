@@ -691,10 +691,10 @@ pre {
     background-color: #888888;
     cursor: default;
     float: left;
-    height: 23px;
-    line-height: 22px;
-    margin: 4px 6px 0px 0px;
-    padding: 7px 0px 0px 10px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0px 6px 4px 0px;
+    padding: 0px 0px 0px 10px;
 }
 
 .tag-field .tag-field-label {
@@ -702,12 +702,10 @@ pre {
     float: left;
     font-size: 14px;
     font-weight: bold;
-    line-height: 15px;
     text-transform: uppercase;
 }
 
 body.romantic .tag-field .tag-field-label {
-    line-height: 17px;
     text-transform: inherit;
 }
 
@@ -716,7 +714,7 @@ body.romantic .tag-field .tag-field-label {
     cursor: pointer;
     float: left;
     height: 30px;
-    margin: -7px 0px 0px 10px;
+    margin: 0px 0px 0px 10px;
     width: 30px;
 }
 
