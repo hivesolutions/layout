@@ -1536,6 +1536,10 @@ ul.side-list > li:hover {
     background-color: inherit;
 }
 
+ul.side-list > li.separator {
+    border-top: 1px solid #ebebeb;
+}
+
 ul.side-list > li > a {
     color: #2d2d2d;
     padding-bottom: 2px;
