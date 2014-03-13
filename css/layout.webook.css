@@ -1497,6 +1497,10 @@ ul.traceback li:hover {
     padding: 8px 8px 8px 20px;
 }
 
+.side-contents .filter .table-header {
+    padding: 11px 8px 8px 20px;
+}
+
 .side-contents .input {
     text-align: left;
 }
