@@ -1357,6 +1357,20 @@ ul.traceback li:hover {
     opacity: 0.6;
 }
 
+.button.button-color.medium {
+    line-height: 40px;
+}
+
+.button.button-color.medium:hover,
+.button.button-color.medium.hover {
+    background-position: left -40px;
+}
+
+.button.button-color.medium:active,
+.button.button-color.medium.active {
+    background-position: left -80px;
+}
+
 .button.button-color.button-green {
     background-color: #008d36;
     background-image: url(../images/button-green.png);
@@ -1366,6 +1380,10 @@ ul.traceback li:hover {
 .button.button-color.button-green:hover,
 .button.button-color.button-green.hover {
     background-color: #00963a;
+}
+
+.button.button-color.button-green.medium {
+    background-image: url(../images/button-medium-green.png);
 }
 
 .button.button-color.button-red {
@@ -1379,6 +1397,10 @@ ul.traceback li:hover {
     background-color: #d11825;
 }
 
+.button.button-color.button-red.medium {
+    background-image: url(../images/button-medium-red.png);
+}
+
 .button.button-color.button-blue {
     background-color: #1c75bc;
     background-image: url(../images/button-blue.png);
@@ -1388,6 +1410,10 @@ ul.traceback li:hover {
 .button.button-color.button-blue:hover,
 .button.button-color.button-blue.hover {
     background-color: #1f84d4;
+}
+
+.button.button-color.button-blue.medium {
+    background-image: url(../images/button-medium-blue.png);
 }
 
 .button.button-color.button-grey {
@@ -1401,6 +1427,10 @@ ul.traceback li:hover {
 .button.button-color.button-grey:hover,
 .button.button-color.button-grey.hover {
     background-color: #858484;
+}
+
+.button.button-color.button-grey.medium {
+    background-image: url(../images/button-medium-grey.png);
 }
 
 .side {
