@@ -1363,12 +1363,12 @@ ul.traceback li:hover {
 
 .button.button-color.medium:hover,
 .button.button-color.medium.hover {
-    background-position: left -40px;
+    background-position: left -36px;
 }
 
 .button.button-color.medium:active,
 .button.button-color.medium.active {
-    background-position: left -80px;
+    background-position: left -72px;
 }
 
 .button.button-color.button-green {
