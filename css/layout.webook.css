@@ -794,7 +794,6 @@ pre {
 }
 
 .filter .table-header {
-    border-bottom: 1px solid #ebebeb;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -812,6 +811,29 @@ pre {
 
 .filter .table-row > * {
     float: left;
+}
+
+.filter .filter-contents .table-row {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid #ebebeb;
+}
+
+.filter .filter-contents .table-row:last-child {
+    border-bottom-color: #ebebeb;
+}
+
+.filter .filter-contents .table-row:hover,
+.filter .filter-contents .table-row.selected {
+    border-bottom-color: #dadada;
+    border-top-color: #dadada;
+    box-shadow: 0px 0px 4px #e4e4e4;
+    -moz-box-shadow: 0px 0px 4px #e4e4e4;
+    -webkit-box-shadow: 0px 0px 4px #e4e4e4;
+}
+
+.filter .filter-contents .table-row:hover + .table-row,
+.filter .filter-contents .table-row.selected + .table-row {
+    border-top-color: transparent;
 }
 
 .filter .table-text {
@@ -1517,7 +1539,7 @@ ul.traceback li:hover {
 }
 
 .side-contents .filter {
-    margin: -12px -18px -12px -18px;
+    margin: -12px -18px -19px -18px;
     min-height: 240px;
 }
 
@@ -1547,6 +1569,10 @@ ul.traceback li:hover {
 .side-contents textarea {
     text-align: left;
     width: 681px;
+}
+
+.side-contents .table-edit input {
+    width: 100%;
 }
 
 .side-clear {
@@ -1591,7 +1617,7 @@ ul.side-list > li > a:hover,
 
 ul.side-list > li.selected {
     background-color: inherit;
-    border-right: 2px solid #1b75bb;;
+    border-right: 2px solid #1b75bb;
 }
 
 ul.side-list > li.selected > a {
