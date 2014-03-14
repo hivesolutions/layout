@@ -445,6 +445,34 @@ pre {
     padding-bottom: 2px;
 }
 
+.tag {
+    background-color: #aaaaaa;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 3px 12px 3px 12px;
+    text-transform: uppercase;
+}
+
+.tag.green,
+.tag.paid,
+.tag.confirmed,
+.tag.fulfilled  {
+    background-color: #46a546;
+}
+
+.tag.orange,
+.tag.pending {
+    background-color: #f89406;
+}
+
+.tag.red {
+    background-color: #c43c35;
+}
+
+.tag.blue {
+    background-color: #62cffc;
+}
+
 .table-full {
     width: 100%;
 }
