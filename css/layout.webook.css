@@ -423,6 +423,10 @@ pre {
     word-wrap: break-word;
 }
 
+.capital {
+	text-transform: capitalize;
+}
+
 .strong {
     font-weight: bold;
 }
@@ -1478,10 +1482,6 @@ ul.traceback li:hover {
     text-align: center;
 }
 
-.side-clear {
-    clear: both;
-}
-
 .side-contents form {
     margin: 0px 0px 12px 12px;
     text-align: center;
@@ -1509,7 +1509,9 @@ ul.traceback li:hover {
     text-align: center;
 }
 
-.side-contents input {
+.side-contents input[type="text"],
+.side-contents input[type="email"],
+.side-contents input[type="password"] {
     text-align: left;
     width: 681px;
 }
@@ -1517,6 +1519,10 @@ ul.traceback li:hover {
 .side-contents textarea {
     text-align: left;
     width: 681px;
+}
+
+.side-clear {
+    clear: both;
 }
 
 ul.side-list {

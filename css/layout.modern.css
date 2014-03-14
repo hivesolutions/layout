@@ -501,6 +501,10 @@ pre {
     word-wrap: break-word;
 }
 
+.capital {
+	text-transform: capitalize;
+}
+
 .strong {
     font-weight: bold;
 }
