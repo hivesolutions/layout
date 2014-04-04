@@ -160,6 +160,149 @@
     };
 })(jQuery);
 
+(function(jQuery) {
+    jQuery.fn.upanels = function(options) {
+        // the default values for the pos customer
+        var defaults = {};
+
+        // sets the default options value
+        var options = options ? options : {};
+
+        // constructs the options
+        var options = jQuery.extend(defaults, options);
+
+        // sets the jquery matched object
+        var matchedObject = this;
+
+        /**
+         * Initializer of the plugin, runs the necessary functions to initialize
+         * the structures.
+         */
+        var initialize = function() {
+            _appendHtml();
+            _registerHandlers();
+        };
+
+        /**
+         * Creates the necessary html for the component.
+         */
+        var _appendHtml = function() {
+            // validates that there's a valid matched object,
+            // otherwise returns immediately
+            if (matchedObject.length == 0) {
+                return;
+            }
+
+            // runs the initial laout operation so that the current
+            // panel is display with the correct dimensions
+            _layout(matchedObject, options);
+        };
+
+        /**
+         * Registers the event handlers for the created objects.
+         */
+        var _registerHandlers = function() {
+            // validates that there's a valid matched object,
+            // otherwise returns immediately, no registration done
+            if (matchedObject.length == 0) {
+                return;
+            }
+
+            // retrieves the reference to the various elements that
+            // are going to be used for event handler registration
+            var _window = jQuery(window);
+            var sideLinks = jQuery(".side-links", matchedObject);
+
+            sideLinks.bind("toggle", function() {
+                        var element = jQuery(this);
+                        var isVisible = element.is(":visible");
+                        if (isVisible) {
+                            element.triggerHandler("hide");
+                        } else {
+                            element.triggerHandler("show");
+                        }
+                    });
+
+            // registers for the show event so that the side links
+            // are properly shown in the current display container
+            sideLinks.bind("show", function() {
+                        var element = jQuery(this);
+                        element.show();
+                        element.animate({
+                                    left : 0
+                                }, {
+                                    duration : 350,
+                                    easing : "swing",
+                                    complete : function() {
+                                        _layout(matchedObject, options);
+                                    },
+                                    progress : function() {
+                                        _layout(matchedObject, options);
+                                    }
+                                });
+                    });
+
+            // registers for the hide event so that the side links
+            // are properly hidden from the current display container
+            sideLinks.bind("hide", function() {
+                        var element = jQuery(this);
+                        var width = element.outerWidth(true);
+                        element.animate({
+                                    left : width * -1
+                                }, {
+                                    duration : 350,
+                                    easing : "swing",
+                                    complete : function() {
+                                        element.hide();
+                                        _layout(matchedObject, options);
+                                    },
+                                    progress : function() {
+                                        _layout(matchedObject, options);
+                                    }
+                                });
+                    });
+        };
+
+        var _layout = function(element, options) {
+            // retrieves the reference to the various elements that are going
+            // to have their layout update, or that are going to be used as
+            // reference for the various layout calculus operations
+            var sideLinks = jQuery(".side-links", matchedObject);
+            var content = jQuery(".content", matchedObject);
+
+            // calculates the proper side links width, taking into account
+            // the complete set of possibilities for it's visibility, like
+            // the current left position and the visibility of it
+            var sideLinksVisible = sideLinks.is(":visible");
+            var sideLinksWidth = sideLinks.outerWidth(true);
+            var sideLinksLeft = sideLinks.css("left");
+            sideLinksLeft = parseInt(sideLinksLeft);
+            sideLinksLeft = sideLinksLeft ? sideLinksLeft : 0;
+            sideLinksWidth += sideLinksLeft;
+            sideLinksWidth = sideLinksVisible ? sideLinksWidth : 0;
+
+            // updates the margin left property of the content panel
+            // with the proper width of the side links so that no overlap
+            // exists between both panels (as expected)
+            content.css("margin-left", sideLinksWidth + "px");
+        };
+
+        // initializes the plugin
+        initialize();
+
+        // returns the object
+        return this;
+    };
+})(jQuery);
+
 jQuery(document).ready(function() {
-            jQuery(".links-extra").ulinksextra();
+            // retrieves the reference to the links extra element and runs the
+            // setup operation using the proper extension
+            var linksExtra = jQuery(".links-extra");
+            linksExtra.ulinksextra();
+
+            // gathers the reference to the body panels type of layout and then
+            // runs the main layout manager extension for the panels
+            var panels = jQuery("body.panels");
+            panels.upanels();
         });
