@@ -96,53 +96,47 @@ body.no-footer .footer {
 }
 
 .content-container form {
-	width: 100%;
-	max-width: 640px;
-	margin: 24px 0px 24px 0px;
-	text-align: center;
+    margin: 24px 0px 24px 0px;
+    max-width: 640px;
+    text-align: center;
+    width: 100%;
 }
 
 .content-container form div.item {
-	text-align: left;
-}
-
-.content-container form .or {
-	margin: 0px 8px 0px 8px;
-	text-transform: uppercase;
-	font-weight: bold;
+    text-align: left;
 }
 
 .content-container form.inline {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 .content-container form.inline div.item {
-	float: left;
+    float: left;
     margin: 8px 0px 8px 0px;
+    padding-left: 8px;
+    padding-right: 8px;
     vertical-align: top;
     width: 50%;
-    padding-right: 8px;
-    padding-left: 8px;
 }
 
 .content-container form.inline div.item.clear {
-	float: none;
+    float: none;
 }
 
 .content-container form.inline div.item.full {
-	width: 100%;
+    width: 100%;
 }
 
 .content-container form.inline div.separator {
-	clear: both;
+    clear: both;
 }
 
 .content-container .text-field {
-	width: 100%;
+    width: 100%;
 }
 
 .content-container .text-area {
-	width: 100%;
+    width: 100%;
 }
 
 .content-container .filter .table-row > td:first-child,
@@ -169,6 +163,12 @@ body.no-footer .footer {
 
 .border-box .button.button-color {
     min-width: 94px;
+}
+
+.or {
+    font-weight: bold;
+    margin: 0px 8px 0px 8px;
+    text-transform: uppercase;
 }
 
 .separator {
