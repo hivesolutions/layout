@@ -60,11 +60,15 @@ body.panels .content {
     text-align: left;
 }
 
+body.panels .content.no-header .content-header {
+    display: none;
+}
+
 body.panels .content-container {
     padding: 0px 24px 0px 24px;
 }
 
-body.panels .content-container.no-padding {
+body.panels .content.no-padding .content-container {
     padding: 0px 0px 0px 0px;
 }
 
@@ -89,6 +93,16 @@ body.no-footer .footer {
     border-collapse: collapse;
     margin: 0px 0px 0px 0px;
     width: 100%;
+}
+
+.content-container .filter .table-row > td:first-child,
+.content-container .filter .table-row > th:first-child {
+    padding-left: 24px;
+}
+
+.content-container .filter .table-row > td:last-child,
+.content-container .filter .table-row > th:last-child {
+    padding-right: 24px;
 }
 
 .border-box {
