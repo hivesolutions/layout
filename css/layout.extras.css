@@ -106,6 +106,12 @@ body.no-footer .footer {
 	text-align: left;
 }
 
+.content-container form .or {
+	margin: 0px 8px 0px 8px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 .content-container form.inline {
 	max-width: 100%;
 }
