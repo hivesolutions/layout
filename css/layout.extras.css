@@ -95,6 +95,50 @@ body.no-footer .footer {
     width: 100%;
 }
 
+.content-container form {
+	width: 100%;
+	max-width: 640px;
+	margin: 24px 0px 24px 0px;
+	text-align: center;
+}
+
+.content-container form div.item {
+	text-align: left;
+}
+
+.content-container form.inline {
+	max-width: 100%;
+}
+
+.content-container form.inline div.item {
+	float: left;
+    margin: 8px 0px 8px 0px;
+    vertical-align: top;
+    width: 50%;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.content-container form.inline div.item.clear {
+	float: none;
+}
+
+.content-container form.inline div.item.full {
+	width: 100%;
+}
+
+.content-container form.inline div.separator {
+	clear: both;
+}
+
+.content-container .text-field {
+	width: 100%;
+}
+
+.content-container .text-area {
+	width: 100%;
+}
+
 .content-container .filter .table-row > td:first-child,
 .content-container .filter .table-row > th:first-child {
     padding-left: 24px;
@@ -173,6 +217,7 @@ body.no-footer .footer {
 
 .top-bar > .logo > a {
     color: #2d2d2d;
+    cursor: pointer;
 }
 
 .top-bar > .logo > a:hover {
