@@ -524,7 +524,7 @@ pre {
 }
 
 .drop-field.drop-field-select > .text-field {
-    background: transparent url(../images/drop-field-select.png) repeat-x right center;
+    background: transparent url(../images/drop-field-select.png) no-repeat right center;
     cursor: pointer;
     user-select: none;
     -o-user-select: none;
@@ -1151,7 +1151,7 @@ pre {
 }
 
 .drop-list .drop-item {
-    background: transparent url(../images/drop-list.png) repeat-x right center;
+    background: transparent url(../images/drop-list.png) no-repeat right center;
     border: 1px solid #dddddd;
     cursor: pointer;
     font-weight: bold;
