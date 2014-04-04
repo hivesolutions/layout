@@ -121,6 +121,11 @@ body.no-footer .footer {
     min-width: 94px;
 }
 
+.separator {
+    border-top: 1px solid #e0e0e0;
+    margin: 18px 0px 18px 0px;
+}
+
 .top-bar {
     background-color: #cccccc;
     height: 50px;
@@ -271,6 +276,9 @@ ul.side-links > li.separator {
 }
 
 .system-menu .avatar-image {
+    border-radius: 32px 32px 32px 32px;
+    -moz-border-radius: 32px 32px 32px 32px;
+    -webkit-border-radius: 32px 32px 32px 32px;
     height: 64px;
     width: 64px;
 }
@@ -369,4 +377,62 @@ ul.side-links > li.separator {
 
 .side-panel .buttons > :last-child {
     margin-right: 0px;
+}
+
+.show-panel {
+    color: #3d3d3d;
+}
+
+.show-panel .panel-header {
+    height: 96px;
+    margin-top: 20px;
+}
+
+.show-panel .panel-header .buttons {
+    float: right;
+}
+
+.show-panel .panel-header .image {
+    border: 1px solid #cccccc;
+    border-radius: 48px 48px 48px 48px;
+    -moz-border-radius: 48px 48px 48px 48px;
+    -webkit-border-radius: 48px 48px 48px 48px;
+    height: 96px;
+    width: 96px;
+}
+
+.show-panel .panel-header .details {
+    display: inline-block;
+    height: 86px;
+    margin-left: 24px;
+    padding-top: 12px;
+    vertical-align: top;
+}
+
+.show-panel .panel-header .details h2 {
+    margin: 0px 0px 12px 0px;
+}
+
+.show-panel .panel-header .details h3 {
+    font-size: 14px;
+    margin: 0px 0px 0px 0px;
+    text-transform: uppercase;
+}
+
+.show-panel .panel-contents {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 20px;
+}
+
+.show-panel .panel-contents dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px 0px 4px 0px;
+    text-transform: uppercase;
+}
+
+.show-panel .panel-contents dl dd {
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0px 0px 18px 0px;
 }
