@@ -908,12 +908,40 @@ body.romantic .calendar-content tbody tr td {
     float: left;
 }
 
+.filter .table-row > td,
+.filter .table-row > th {
+    float: none;
+    margin: 0px 0px 0px 0px;
+    min-height: 18px;
+    padding: 8px 0px 8px 0px;
+}
+
+.filter .table-row > td:first-child,
+.filter .table-row > th:first-child {
+    padding-left: 20px;
+}
+
+.filter .table-row > td:last-child,
+.filter .table-row > th:last-child {
+    padding-right: 20px;
+}
+
 .filter .filter-contents .table-row {
     border-bottom: 1px solid transparent;
     border-top: 1px solid #ebebeb;
 }
 
+.filter .filter-contents .table-row > td,
+.filter .filter-contents .table-row > th {
+    border-top: 1px solid #ebebeb;
+}
+
 .filter .filter-contents .table-row:last-child {
+    border-bottom-color: #ebebeb;
+}
+
+.filter .filter-contents .table-row:last-child > td,
+.filter .filter-contents .table-row:last-child > th {
     border-bottom-color: #ebebeb;
 }
 
@@ -924,6 +952,19 @@ body.romantic .calendar-content tbody tr td {
     box-shadow: 0px 0px 4px #e4e4e4;
     -moz-box-shadow: 0px 0px 4px #e4e4e4;
     -webkit-box-shadow: 0px 0px 4px #e4e4e4;
+}
+
+.filter .filter-contents .table-row:hover > td,
+.filter .filter-contents .table-row:hover > th,
+.filter .filter-contents .table-row.selected > td,
+.filter .filter-contents .table-row.selected > th {
+    background-color: #f8f8f8;
+}
+
+.filter .filter-contents tr.table-row:hover,
+.filter .filter-contents tr.table-row.selected {
+    border-bottom-color: #ebebeb;
+    border-top-color: #ebebeb;
 }
 
 .filter .filter-contents .table-row:hover + .table-row,
