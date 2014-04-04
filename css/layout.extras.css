@@ -385,7 +385,7 @@ ul.side-links > li.separator {
 
 .show-panel .panel-header {
     height: 96px;
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .show-panel .panel-header .buttons {
@@ -421,7 +421,7 @@ ul.side-links > li.separator {
 
 .show-panel .panel-contents {
     border-top: 1px solid #e0e0e0;
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .show-panel .panel-contents dl dt {
