@@ -215,6 +215,14 @@ ul.side-links {
     z-index: 1;
 }
 
+ul.side-links.grey,
+body.grey ul.side-links {
+    background-color: #fafafa;
+    box-shadow: 1px 0px 4px #f2f2f2;
+    -moz-box-shadow: 1px 0px 4px #f2f2f2;
+    -webkit-box-shadow: 1px 0px 4px #f2f2f2;
+}
+
 ul.side-links > li {
     cursor: pointer;
     margin: 0px 0px 14px 0px;
@@ -354,6 +362,11 @@ ul.side-links > li.separator {
     z-index: 30;
 }
 
+.side-panel.grey,
+body.grey .side-panel {
+    background-color: #fafafa;
+}
+
 .side-panel h1 {
     font-weight: normal;
 }
@@ -422,6 +435,23 @@ ul.side-links > li.separator {
 .show-panel .panel-contents {
     border-top: 1px solid #e0e0e0;
     margin-top: 18px;
+}
+
+.show-panel .panel-contents:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.show-panel .panel-contents dl.inline div.item {
+    float: left;
+    margin: 8px 0px 8px 0px;
+    vertical-align: top;
+    width: 50%;
+}
+
+.show-panel .panel-contents dl.inline div.separator {
+    clear: both;
 }
 
 .show-panel .panel-contents dl dt {
