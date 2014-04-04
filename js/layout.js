@@ -196,6 +196,11 @@
             // runs the initial laout operation so that the current
             // panel is display with the correct dimensions
             _layout(matchedObject, options);
+
+            // retrieves the reference to the side links and sets the
+            // initial value for the visibility of such elements
+            var sideLinks = jQuery(".side-links", matchedObject);
+            sideLinks.data("visible", true);
         };
 
         /**
@@ -213,9 +218,11 @@
             var _window = jQuery(window);
             var sideLinks = jQuery(".side-links", matchedObject);
 
+            // registers for the toggle event in the side links so that
+            // their visibility is changed according to the current state
             sideLinks.bind("toggle", function() {
                         var element = jQuery(this);
-                        var isVisible = element.is(":visible");
+                        var isVisible = element.data("visible");
                         if (isVisible) {
                             element.triggerHandler("hide");
                         } else {
@@ -227,6 +234,11 @@
             // are properly shown in the current display container
             sideLinks.bind("show", function() {
                         var element = jQuery(this);
+                        var isVisible = element.data("visible");
+                        if (isVisible) {
+                            return;
+                        }
+                        element.data("visible", true);
                         element.show();
                         element.animate({
                                     left : 0
@@ -246,6 +258,11 @@
             // are properly hidden from the current display container
             sideLinks.bind("hide", function() {
                         var element = jQuery(this);
+                        var isVisible = element.data("visible");
+                        if (!isVisible) {
+                            return;
+                        }
+                        element.data("visible", false);
                         var width = element.outerWidth(true);
                         element.animate({
                                     left : width * -1
