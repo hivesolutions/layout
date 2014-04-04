@@ -267,7 +267,7 @@ ul.side-links {
 
 ul.side-links.grey,
 body.grey ul.side-links {
-    background-color: #fafafa;
+    background-color: #f2f2f2;
     box-shadow: 1px 0px 4px #f2f2f2;
     -moz-box-shadow: 1px 0px 4px #f2f2f2;
     -webkit-box-shadow: 1px 0px 4px #f2f2f2;
@@ -414,11 +414,12 @@ ul.side-links > li.separator {
 
 .side-panel.grey,
 body.grey .side-panel {
-    background-color: #fafafa;
+    background-color: #f2f2f2;
 }
 
 .side-panel h1 {
     font-weight: normal;
+    text-transform: none;
 }
 
 .side-panel .form {
