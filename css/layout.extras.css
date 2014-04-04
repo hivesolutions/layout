@@ -64,6 +64,10 @@ body.panels .content-container {
     padding: 0px 24px 0px 24px;
 }
 
+body.panels .content-container.no-padding {
+    padding: 0px 0px 0px 0px;
+}
+
 body.panels .footer {
     border-top: 1px solid #e0e0e0;
     color: #4d4d4d;
@@ -79,6 +83,12 @@ body.panels .window {
 
 body.no-footer .footer {
     display: none;
+}
+
+.content-container table {
+    border-collapse: collapse;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
 }
 
 .border-box {
