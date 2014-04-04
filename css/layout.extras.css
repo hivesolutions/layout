@@ -61,8 +61,10 @@ body.panels .content {
 }
 
 body.panels .content-container {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     padding: 0px 24px 0px 24px;
-    text-align: left;
 }
 
 body.panels .footer {
@@ -288,4 +290,44 @@ ul.side-links > li.separator {
 .content-header > .content-buttons {
     float: right;
     margin: 0px 24px 0px 0px;
+}
+
+.side-panel {
+    background-color: #ffffff;
+    border-left: 1px solid #888888;
+    box-shadow: -2px 0px 4px #aaaaaa;
+    -moz-box-shadow: -2px 0px 4px #aaaaaa;
+    -webkit-box-shadow: -2px 0px 4px #aaaaaa;
+    display: none;
+    min-height: 100%;
+    padding: 0px 24px 0px 24px;
+    position: fixed;
+    right: 0px;
+    text-align: left;
+    top: 0px;
+    width: 360px;
+    z-index: 30;
+}
+
+.side-panel * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.side-panel h1 {
+    font-weight: normal;
+}
+
+.side-panel .form {
+    margin: 0px auto 0px auto;
+    width: 100%;
+}
+
+.side-panel .text-field {
+    width: 100%;
+}
+
+.side-panel .buttons {
+    margin-top: 24px;
 }
