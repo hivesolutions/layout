@@ -216,6 +216,10 @@ h5 {
     font-size: 12px;
 }
 
+p {
+    line-height: 24px;
+}
+
 a {
     color: #3668c6;
     text-decoration: none;

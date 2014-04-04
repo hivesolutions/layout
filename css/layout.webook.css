@@ -154,6 +154,10 @@ h5 {
     font-size: 12px;
 }
 
+p {
+    line-height: 24px;
+}
+
 a {
     color: #1b75bb;
     text-decoration: none;
