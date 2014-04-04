@@ -193,14 +193,20 @@
                 return;
             }
 
+            // retrieves the refereces to the various inner elements
+            // of the panels layout that are going to be updated
+            var sideLinks = jQuery(".side-links", matchedObject);
+            var contentContainer = jQuery(".content-container", matchedObject);
+
             // runs the initial laout operation so that the current
             // panel is display with the correct dimensions
             _layout(matchedObject, options);
 
-            // retrieves the reference to the side links and sets the
-            // initial value for the visibility of such elements
-            var sideLinks = jQuery(".side-links", matchedObject);
+            // updates the side links so that it's initial visibility
+            // is set accordingly and then sets the contents container
+            // as a border box oriented panel (better size measurements)
             sideLinks.data("visible", true);
+            contentContainer.addClass("border-box");
         };
 
         /**

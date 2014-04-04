@@ -61,9 +61,6 @@ body.panels .content {
 }
 
 body.panels .content-container {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     padding: 0px 24px 0px 24px;
 }
 
@@ -82,6 +79,22 @@ body.panels .window {
 
 body.no-footer .footer {
     display: none;
+}
+
+.border-box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.border-box * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.border-box .button.button-color {
+    min-width: 94px;
 }
 
 .top-bar {
@@ -309,12 +322,6 @@ ul.side-links > li.separator {
     z-index: 30;
 }
 
-.side-panel * {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-
 .side-panel h1 {
     font-weight: normal;
 }
@@ -330,4 +337,12 @@ ul.side-links > li.separator {
 
 .side-panel .buttons {
     margin-top: 24px;
+}
+
+.side-panel .buttons > * {
+    margin-right: 6px;
+}
+
+.side-panel .buttons > :last-child {
+    margin-right: 0px;
 }
