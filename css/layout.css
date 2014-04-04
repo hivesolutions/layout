@@ -173,7 +173,7 @@ table td.right {
 input {
     -webkit-appearance: none;
     background-color: #fcfcfc;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     border-radius: 0px 0px 0px 0px;
     color: #2d2d2d;
     font-family: "Garamond", "Georgia", "serif";
@@ -281,7 +281,7 @@ input.date {
 
 textarea {
     background-color: #fcfcfc;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     color: #2d2d2d;
     font-family: "Garamond", "Georgia", "serif";
     font-size: 20px;
@@ -543,7 +543,7 @@ pre {
 
 .drop-field > .drop-field-contents {
     background-color: #ffffff;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #cccccc;
     box-shadow: 0px 1px 4px #f0f0f0;
     -moz-box-shadow: 0px 1px 4px #f0f0f0;
     -webkit-box-shadow: 0px 1px 4px #f0f0f0;
@@ -555,8 +555,8 @@ pre {
 
 .drop-field > .drop-field-contents > li {
     border-bottom: 1px solid #f4f4f4;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
     margin: 0px 0px 0px 0px;
     padding: 8px 8px 8px 8px;
 }
@@ -601,7 +601,7 @@ pre {
 
 .calendar {
     background-color: #ffffff;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     box-shadow: 0px 1px 4px #f0f0f0;
     -moz-box-shadow: 0px 1px 4px #f0f0f0;
     -webkit-box-shadow: 0px 1px 4px #f0f0f0;
@@ -1152,7 +1152,7 @@ pre {
 
 .drop-list .drop-item {
     background: transparent url(../images/drop-list.png) no-repeat right center;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     cursor: pointer;
     font-weight: bold;
     height: 40px;
@@ -1161,9 +1161,9 @@ pre {
 }
 
 .drop-list ul.drop-options {
-    border-bottom: 1px solid #dddddd;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
     margin: 0px 0px 0px 0px;
 }
 
@@ -1240,7 +1240,7 @@ li.list-more {
 
 li.list-more > .button {
     background-color: #ffffff;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     color: #a0a0a0;
     font-size: 17px;
     font-weight: normal;
@@ -1254,7 +1254,7 @@ li.list-more > .button:hover {
 }
 
 li.list-divider {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #cccccc;
     list-style: none;
     margin-top: -10px;
 }

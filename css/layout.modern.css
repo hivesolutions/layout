@@ -291,7 +291,7 @@ table td.right {
 input {
     -webkit-appearance: none;
     background-color: #ffffff;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     border-radius: 0px 0px 0px 0px;
     box-shadow: inset 0px 2px 2px #f9f9f9;
     -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
@@ -414,7 +414,7 @@ input.date {
 
 textarea {
     background-color: #ffffff;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     box-shadow: inset 0px 2px 2px #f9f9f9;
     -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
     -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
@@ -698,7 +698,7 @@ pre {
 
 .drop-field > .drop-field-contents {
     background-color: #ffffff;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #cccccc;
     box-shadow: 0px 1px 4px #f0f0f0;
     -moz-box-shadow: 0px 1px 4px #f0f0f0;
     -webkit-box-shadow: 0px 1px 4px #f0f0f0;
@@ -710,8 +710,8 @@ pre {
 
 .drop-field > .drop-field-contents > li {
     border-bottom: 1px solid #f4f4f4;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
     margin: 0px 0px 0px 0px;
     padding: 8px 8px 8px 8px;
 }
@@ -760,7 +760,7 @@ body.romantic .tag-field .tag-field-label {
 
 .calendar {
     background-color: #ffffff;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     box-shadow: 0px 1px 4px #f0f0f0;
     -moz-box-shadow: 0px 1px 4px #f0f0f0;
     -webkit-box-shadow: 0px 1px 4px #f0f0f0;
@@ -1328,7 +1328,7 @@ body.romantic .calendar-content tbody tr td {
 
 .drop-list .drop-item {
     background: transparent url(../images/drop-list.png) no-repeat right center;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     cursor: pointer;
     font-weight: bold;
     height: 40px;
@@ -1337,9 +1337,9 @@ body.romantic .calendar-content tbody tr td {
 }
 
 .drop-list ul.drop-options {
-    border-bottom: 1px solid #dddddd;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
     margin: 0px 0px 0px 0px;
 }
 
@@ -1352,7 +1352,7 @@ body.romantic .calendar-content tbody tr td {
 
 .progress-bar {
     background-color: #ffffff;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     border-radius: 4px 4px 4px 4px;
     display: inline-block;
     font-size: 20px;
@@ -1420,7 +1420,7 @@ li.list-more {
 
 li.list-more > .button {
     background-color: #ffffff;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     color: #a0a0a0;
     font-size: 12px;
     font-weight: normal;
@@ -1434,7 +1434,7 @@ li.list-more > .button:hover {
 }
 
 li.list-divider {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #cccccc;
     list-style: none;
     margin-top: -9px;
 }

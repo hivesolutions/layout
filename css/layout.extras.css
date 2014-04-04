@@ -98,12 +98,7 @@ body.no-footer .footer {
 .content-container form {
     margin: 24px 0px 24px 0px;
     max-width: 640px;
-    text-align: center;
     width: 100%;
-}
-
-.content-container form div.item {
-    text-align: left;
 }
 
 .content-container form.inline {
