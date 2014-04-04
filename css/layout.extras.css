@@ -29,12 +29,26 @@
  __license__   = GNU General Public License (GPL), Version 3
 */
 
+html {
+    height: 100%;
+}
+
+body.panels {
+    height: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: inherit;
+}
+
+body.panels .header {
+    height: 100%;
+}
+
 .top-bar {
     background-color: #cccccc;
     height: 50px;
     line-height: 50px;
     padding: 0px 0px 0px 0px;
-    position: static;
     text-align: left;
     width: 100%;
 }
@@ -101,11 +115,14 @@
 
 ul.side-links {
     border-right: 1px solid #eeeeee;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     color: #2d2d2d;
     font-weight: bold;
-    height: 100%;
     margin: 0px 0px 0px 0px;
-    padding: 24px 0px 24px 0px;
+    min-height: 100%;
+    padding: 66px 0px 16px 0px;
     text-align: left;
     text-transform: uppercase;
     width: 200px;
@@ -123,7 +140,6 @@ ul.side-links > li:last-child {
 
 ul.side-links > li.selected {
     background-color: transparent;
-    border-right: 2px solid #3668c6;
     color: #3668c6;
 }
 
