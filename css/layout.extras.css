@@ -42,18 +42,24 @@ body.panels {
 }
 
 body.panels .header {
-    float: left;
     height: 100%;
+    position: fixed;
 }
 
 body.panels .content {
-    float: left;
-    padding: 50px 32px 0px 32px;
+    padding: 50px 24px 0px 24px;
     text-align: left;
 }
 
-body.panels .footer {
-    clear: both;
+body.panels #overlay {
+    background-color: #888888;
+}
+
+body.panels .window {
+    border-color: #888888;
+    box-shadow: 0px 1px 4px #aaaaaa;
+    -moz-box-shadow: 0px 1px 4px #aaaaaa;
+    -webkit-box-shadow: 0px 1px 4px #aaaaaa;
 }
 
 .top-bar {
@@ -64,6 +70,7 @@ body.panels .footer {
     padding: 0px 0px 0px 0px;
     text-align: left;
     width: 100%;
+    z-index: 10;
 }
 
 .top-bar.large {
@@ -127,7 +134,8 @@ body.panels .footer {
 }
 
 ul.side-links {
-    border-right: 1px solid #eeeeee;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -136,9 +144,11 @@ ul.side-links {
     margin: 0px 0px 0px 0px;
     min-height: 100%;
     padding: 66px 0px 16px 0px;
+    position: absolute;
     text-align: left;
     text-transform: uppercase;
     width: 200px;
+    z-index: 1;
 }
 
 ul.side-links > li {
@@ -162,7 +172,7 @@ ul.side-links > li:hover {
 }
 
 ul.side-links > li.separator {
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid #e0e0e0;
 }
 
 .system-menu {
@@ -232,4 +242,29 @@ ul.side-links > li.separator {
     line-height: 20px;
     padding: 12px 20px 12px 20px;
     text-align: right;
+}
+
+.content-header {
+    border-bottom: 1px solid #e0e0e0;
+    height: 36px;
+    line-height: 36px;
+    margin: 16px 0px 0px 0px;
+    padding-bottom: 10px;
+}
+
+.content-header:after {
+    clear: both;
+    display: block;
+    height: 0px;
+    visibility: hidden;
+}
+
+.content-header > h1 {
+    float: left;
+    font-weight: normal;
+    margin: 0px 0px 0px 0px;
+}
+
+.content-header > .content-buttons {
+    float: right;
 }
