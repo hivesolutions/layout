@@ -716,6 +716,10 @@ pre {
     padding: 8px 8px 8px 8px;
 }
 
+.drop-field > .drop-field-contents > li:last-child {
+    border-bottom: none;
+}
+
 .tag-field > .tag-field-tags {
     cursor: text;
     margin: 8px 0px 8px 0px;
