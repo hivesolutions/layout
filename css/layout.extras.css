@@ -266,7 +266,7 @@ body.no-footer .footer {
     width: 400px;
 }
 
-ul.side-links {
+.side-links {
     background-color: #ffffff;
     border-right: 1px solid #e0e0e0;
     box-sizing: border-box;
@@ -276,7 +276,7 @@ ul.side-links {
     font-weight: bold;
     margin: 0px 0px 0px 0px;
     min-height: 100%;
-    padding: 66px 0px 16px 0px;
+    padding: 69px 0px 16px 0px;
     position: absolute;
     text-align: left;
     text-transform: uppercase;
@@ -284,35 +284,39 @@ ul.side-links {
     z-index: 1;
 }
 
-ul.side-links.grey,
-body.grey ul.side-links {
+.side-links.grey,
+body.grey .side-links {
     background-color: #f2f2f2;
     box-shadow: 1px 0px 4px #f2f2f2;
     -moz-box-shadow: 1px 0px 4px #f2f2f2;
     -webkit-box-shadow: 1px 0px 4px #f2f2f2;
 }
 
-ul.side-links > li {
+.side-links > a {
+    color: #4d4d4d;
     cursor: pointer;
+    display: block;
     margin: 0px 0px 14px 0px;
     padding: 0px 8px 0px 24px;
 }
 
-ul.side-links > li:last-child {
+.side-links > a:last-child {
     margin-bottom: 0px;
 }
 
-ul.side-links > li.selected {
+.side-links > a.active,
+.side-links > a.selected {
     background-color: transparent;
     color: #3668c6;
 }
 
-ul.side-links > li:hover {
+.side-links > a:hover {
     background-color: transparent;
+    border-bottom: none;
     color: #3668c6;
 }
 
-ul.side-links > li.separator {
+.side-links > div.separator {
     border-top: 1px solid #e0e0e0;
 }
 

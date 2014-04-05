@@ -161,7 +161,7 @@
 })(jQuery);
 
 (function(jQuery) {
-    jQuery.fn.upanels = function(options) {
+    jQuery.fn.ufluid = function(options) {
         // the default values for the pos customer
         var defaults = {};
 
@@ -194,7 +194,7 @@
             }
 
             // retrieves the refereces to the various inner elements
-            // of the panels layout that are going to be updated
+            // of the fluid layout that are going to be updated
             var sideLinks = jQuery(".side-links", matchedObject);
             var contentContainer = jQuery(".content-container", matchedObject);
 
@@ -222,7 +222,15 @@
             // retrieves the reference to the various elements that
             // are going to be used for event handler registration
             var _window = jQuery(window);
+            var topBar = jQuery(".top-bar", matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
+            var logoLink = jQuery(".logo > a", topBar);
+
+            // registers for the click event on the logo link element
+            // so that the side links visibility is changed
+            logoLink.click(function() {
+                        sideLinks.triggerHandler("toggle");
+                    });
 
             // registers for the toggle event in the side links so that
             // their visibility is changed according to the current state
@@ -324,8 +332,8 @@ jQuery(document).ready(function() {
             var linksExtra = jQuery(".links-extra");
             linksExtra.ulinksextra();
 
-            // gathers the reference to the body panels type of layout and then
-            // runs the main layout manager extension for the panels
-            var panels = jQuery("body.panels");
-            panels.upanels();
+            // gathers the reference to the body fluid type of layout and then
+            // runs the main layout manager extension for the fluid layout
+            var fluid = jQuery("body.fluid");
+            fluid.ufluid();
         });
