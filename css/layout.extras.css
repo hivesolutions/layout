@@ -231,7 +231,8 @@ body.no-footer .footer {
     color: #3668c6;
 }
 
-.top-bar > .text-field {
+.top-bar > .text-field,
+.top-bar > .drop-field > .text-field {
     border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
     -webkit-border-radius: 4px 4px 4px 4px;
@@ -244,7 +245,8 @@ body.no-footer .footer {
     width: 300px;
 }
 
-.top-bar > .text-field:focus {
+.top-bar > .text-field:focus,
+.top-bar > .drop-field > .text-field:focus {
     width: 400px;
 }
 

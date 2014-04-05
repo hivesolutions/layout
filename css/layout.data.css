@@ -47,3 +47,23 @@ form .zip-code {
 form .province {
     max-width: 70%;
 }
+
+.drop-field.entities .drop-field-contents > * > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.drop-field.entities .drop-field-contents > * .picture {
+    border-radius: 32px;
+}
+
+.drop-field.entities .drop-field-contents > * .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0px 0px 12px;
+}
+
+.drop-field.entities .drop-field-contents > * .description {
+    font-size: 14px;
+    margin: 0px 0px 0px 12px;
+}
