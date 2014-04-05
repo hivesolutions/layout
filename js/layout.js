@@ -195,8 +195,14 @@
 
             // retrieves the refereces to the various inner elements
             // of the fluid layout that are going to be updated
+            var elements = jQuery(".header, .content, .footer", matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
             var contentContainer = jQuery(".content-container", matchedObject);
+
+            // wrapps the complete set of valid elements of the current layout
+            // arround the container element, as this will provide extra flexibility
+            // for the dynamic dimensions of this layout
+            elements.wrapAll("<div class=\"container\"></div>");
 
             // runs the initial laout operation so that the current
             // panel is display with the correct dimensions

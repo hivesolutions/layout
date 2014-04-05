@@ -41,8 +41,13 @@ body.fluid {
     width: inherit;
 }
 
-body.fluid.fixed {
-    max-width: 1024px;
+body.fluid > .container {
+    height: 100%;
+    margin: 0px auto 0px auto;
+}
+
+body.fluid.fixed > .container {
+    width: 1024px;
 }
 
 body.fluid #overlay {
@@ -62,7 +67,9 @@ body.fluid .header {
 
 body.fluid .content {
     padding: 50px 0px 0px 0px;
+    position: relative;
     text-align: left;
+    z-index: 1;
 }
 
 body.fluid .content.no-header .content-header {
