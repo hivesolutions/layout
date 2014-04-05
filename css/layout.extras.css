@@ -53,6 +53,7 @@ body.panels #footer {
 body.panels .header {
     height: 100%;
     position: fixed;
+    z-index: 1;
 }
 
 body.panels .content {
@@ -97,7 +98,7 @@ body.no-footer .footer {
 
 .content-container form {
     margin: 24px 0px 24px 0px;
-    max-width: 840px;
+    max-width: 690px;
     width: 100%;
 }
 
