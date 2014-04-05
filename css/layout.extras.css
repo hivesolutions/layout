@@ -33,7 +33,7 @@ html {
     height: 100%;
 }
 
-body.panels {
+body.fluid {
     height: 100%;
     margin: 0px 0px 0px 0px;
     min-width: 960px;
@@ -41,45 +41,45 @@ body.panels {
     width: inherit;
 }
 
-body.panels #overlay {
+body.fluid #overlay {
     background-color: #888888;
 }
 
-body.panels #footer {
+body.fluid #footer {
     color: #4d4d4d;
     font-size: 12px;
 }
 
-body.panels .header {
+body.fluid .header {
     height: 100%;
     position: fixed;
     z-index: 1;
 }
 
-body.panels .content {
+body.fluid .content {
     padding: 50px 0px 0px 0px;
     text-align: left;
 }
 
-body.panels .content.no-header .content-header {
+body.fluid .content.no-header .content-header {
     display: none;
 }
 
-body.panels .content-container {
+body.fluid .content-container {
     padding: 0px 24px 0px 24px;
 }
 
-body.panels .content.no-padding .content-container {
+body.fluid .content.no-padding .content-container {
     padding: 0px 0px 0px 0px;
 }
 
-body.panels .footer {
+body.fluid .footer {
     border-top: 1px solid #e0e0e0;
     color: #4d4d4d;
     padding: 6px 0px 6px 0px;
 }
 
-body.panels .window {
+body.fluid .window {
     border-color: #888888;
     box-shadow: 0px 1px 4px #aaaaaa;
     -moz-box-shadow: 0px 1px 4px #aaaaaa;
