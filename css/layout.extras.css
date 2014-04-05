@@ -238,8 +238,14 @@ body.no-footer .footer {
     color: #3668c6;
 }
 
+.top-bar > .text-field {
+    margin-top: 9px;
+}
+
 .top-bar > .drop-field {
-    line-height: 0px;
+    height: 34px;
+    line-height: 34px;
+    margin-top: 9px;
 }
 
 .top-bar > .text-field,
@@ -249,7 +255,6 @@ body.no-footer .footer {
     -webkit-border-radius: 4px 4px 4px 4px;
     font-size: 14px;
     height: 32px;
-    margin-top: 9px;
     transition: width 0.2s;
     -webkit-transition: width 0.2s;
     vertical-align: top;
