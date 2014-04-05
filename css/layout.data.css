@@ -66,7 +66,11 @@ form .province {
 }
 
 .drop-field.entities .drop-field-contents > * .picture {
-    border-radius: 32px;
+    border-radius: 32px 32px 32px 32px;
+    -moz-border-radius: 32px 32px 32px 32px;
+    -webkit-border-radius: 32px 32px 32px 32px;
+    height: 64px;
+    width: 64px;
 }
 
 .drop-field.entities .drop-field-contents > * .title {

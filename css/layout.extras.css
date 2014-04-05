@@ -35,10 +35,14 @@ html {
 
 body.fluid {
     height: 100%;
-    margin: 0px 0px 0px 0px;
+    margin: 0px auto 0px auto;
     min-width: 960px;
     padding: 0px 0px 0px 0px;
     width: inherit;
+}
+
+body.fluid.fixed {
+    max-width: 1024px;
 }
 
 body.fluid #overlay {
@@ -198,27 +202,35 @@ body.no-footer .footer {
     border-bottom: 1px solid #cccccc;
 }
 
-.top-bar:after {
+.top-bar > .container {
+    margin: 0px auto 0px auto;
+}
+
+body.fluid.fixed .top-bar > .container {
+    width: 1024px;
+}
+
+.top-bar > .container:after {
     clear: both;
     display: block;
     height: 0px;
     visibility: hidden;
 }
 
-.top-bar > :first-child {
+.top-bar > .container > :first-child {
     margin-left: 24px;
 }
 
-.top-bar > * {
+.top-bar > .container > * {
     float: left;
 }
 
-.top-bar > .right {
+.top-bar > .container > .right {
     float: right;
     margin-right: 24px;
 }
 
-.top-bar > .logo {
+.top-bar > .container > .logo {
     background: transparent none no-repeat;
     color: #2d2d2d;
     font-size: 26px;
@@ -228,28 +240,28 @@ body.no-footer .footer {
     width: 176px;
 }
 
-.top-bar > .logo > a {
+.top-bar > .container > .logo > a {
     color: #2d2d2d;
     cursor: pointer;
 }
 
-.top-bar > .logo > a:hover {
+.top-bar > .container > .logo > a:hover {
     border-bottom: none;
     color: #3668c6;
 }
 
-.top-bar > .text-field {
+.top-bar > .container > .text-field {
     margin-top: 9px;
 }
 
-.top-bar > .drop-field {
+.top-bar > .container > .drop-field {
     height: 34px;
     line-height: 34px;
     margin-top: 9px;
 }
 
-.top-bar > .text-field,
-.top-bar > .drop-field > .text-field {
+.top-bar > .container > .text-field,
+.top-bar > .container > .drop-field > .text-field {
     border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
     -webkit-border-radius: 4px 4px 4px 4px;
@@ -261,13 +273,14 @@ body.no-footer .footer {
     width: 300px;
 }
 
-.top-bar > .text-field:focus,
-.top-bar > .drop-field > .text-field:focus {
+.top-bar > .container > .text-field:focus,
+.top-bar > .container > .drop-field > .text-field:focus {
     width: 400px;
 }
 
 .side-links {
     background-color: #ffffff;
+    border-left: 1px solid #e0e0e0;
     border-right: 1px solid #e0e0e0;
     box-sizing: border-box;
     -moz-box-sizing: border-box;

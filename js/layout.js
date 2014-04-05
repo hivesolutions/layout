@@ -254,10 +254,11 @@
                         }
                         element.data("visible", true);
                         element.show();
+                        var duration = _isFixed() ? 0 : 350;
                         element.animate({
                                     left : 0
                                 }, {
-                                    duration : 350,
+                                    duration : duration,
                                     easing : "swing",
                                     complete : function() {
                                         _layout(matchedObject, options);
@@ -278,10 +279,12 @@
                         }
                         element.data("visible", false);
                         var width = element.outerWidth(true);
+                        var duration = _isFixed() ? 0 : 350;
+                        console.info(_isFixed());
                         element.animate({
                                     left : width * -1
                                 }, {
-                                    duration : 350,
+                                    duration : duration,
                                     easing : "swing",
                                     complete : function() {
                                         element.hide();
@@ -316,6 +319,11 @@
             // with the proper width of the side links so that no overlap
             // exists between both panels (as expected)
             content.css("margin-left", sideLinksWidth + "px");
+        };
+
+        var _isFixed = function() {
+            var _body = jQuery("body");
+            return _body.hasClass("fixed");
         };
 
         // initializes the plugin
