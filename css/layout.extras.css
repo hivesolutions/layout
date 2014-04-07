@@ -62,7 +62,7 @@ body.fluid #footer {
 body.fluid .header {
     height: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 body.fluid .content {
