@@ -287,7 +287,6 @@ body.fluid.fixed .top-bar > .container {
 
 .side-links {
     background-color: #ffffff;
-    border-left: 1px solid #e0e0e0;
     border-right: 1px solid #e0e0e0;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -307,6 +306,7 @@ body.fluid.fixed .top-bar > .container {
 .side-links.grey,
 body.grey .side-links {
     background-color: #f2f2f2;
+    border-left: 1px solid #e0e0e0;
     box-shadow: 1px 0px 4px #f2f2f2;
     -moz-box-shadow: 1px 0px 4px #f2f2f2;
     -webkit-box-shadow: 1px 0px 4px #f2f2f2;
