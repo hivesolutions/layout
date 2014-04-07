@@ -24,6 +24,333 @@
 // __license__   = GNU General Public License (GPL), Version 3
 
 (function(jQuery) {
+    jQuery.fn.uasync = function() {
+        /**
+         * Flag that controls if a notification should be presented to the user
+         * about the loading of the new contents.
+         */
+        var SHOW_NOTIFICATION = false;
+
+        // sets the jquery matched object
+        var matchedObject = this;
+
+        var _validate = function() {
+            var _body = jQuery("body");
+            var async = !_body.hasClass("noajax");
+            return window.FormData ? async : false;
+        };
+
+        var _registerHandlers = function() {
+            // retrieves the various elements that are going to be
+            // used in the registration for the handlers
+            var _body = jQuery("body");
+            var links = jQuery("a[href], .link[href]", matchedObject);
+
+            // registers for the click event on the current set of links
+            // that exist in the object, so that they can be handled in
+            // an async fashion if thats the case
+            links.click(function(event) {
+                        // in case the control key is pressed the event operation is
+                        // not meant to be overriden and should be ignored
+                        if (event.metaKey || event.ctrlKey) {
+                            return;
+                        }
+
+                        // in case the click used the right or center button the
+                        // event should be ignored not bean to be overriden
+                        if (event.which == 2 || event.which == 3) {
+                            return;
+                        }
+
+                        // retrieves the current element and the current link
+                        // associated so that it can be validated and tested in
+                        // the current async environment
+                        var element = jQuery(this);
+                        var href = element.attr("href");
+
+                        // runs the async link execution with no force flag set
+                        // and in case it run through avoids the default link
+                        // behavior (avoid duplicated execution)
+                        var result = jQuery.uxlinkasync(href, false);
+                        result && event.preventDefault();
+                    });
+
+            // retrieves the current async registration flag from the body
+            // elemennt in case it's currently set returns immediately to
+            // avoid duplicated registration
+            var async = _body.data("async") || false;
+            if (async) {
+                return;
+            }
+
+            // registers for the data changed event so that if there's new panel
+            // data available the layour is update in acordance, so that the async
+            // requests are reflected in a layout change
+            _body.bind("data", function(event, data, href, uuid, push, hbase) {
+                        // in case no unique identifier for the state exists generates a new
+                        // on in order to identify the current layout state
+                        uuid = uuid || jQuery.uxguid();
+
+                        // retrieves the default hiperlink base value as the target link value
+                        // this value may be used to customize the url versus link resolution
+                        hbase = hbase || href;
+
+                        // creates the object that describes the current state with both the
+                        // unique identifier of the state and the link that generated it
+                        var state = {
+                            uuid : uuid,
+                            href : href
+                        };
+
+                        // in case this is not a verified operation the current state
+                        // must be pushed into the history stack, so that we're able
+                        // to rollback to it latter
+                        push && window.history.pushState(state, null, href);
+
+                        try {
+                            // replaces the image source references in the requested
+                            // data so that no extra images are loaded then loads the
+                            // data as the base object structure
+                            data = data.replace(/src=/ig, "aux-src=");
+                            var base = jQuery(data);
+
+                            // extracts the special body associated data from the data
+                            // value escapes it with a special value and then creates
+                            // the logical element representation for it
+                            var bodyData = data.match(/<body.*>/)[0]
+                                    + "</body>";
+                            bodyData = bodyData.replace("body", "body_");
+                            var body = jQuery(bodyData);
+
+                            // retrieves the information on the current layout state and
+                            // on the current base element state, so that options may be
+                            // taken on the kind of transforms to apply
+                            var _isFull = isFull();
+                            var _isSimple = isSimple();
+                            var _isBaseFull = isBaseFull(base);
+                            var _isBaseSimple = isBaseSimple(base);
+
+                            // verifies if the current layout and the target layout for
+                            // loadinf are valid for layout change in case they're not
+                            // raises an exception indicating the problem
+                            var isValid = (_isFull || _isSimple)
+                                    && (_isBaseFull || _isBaseSimple);
+                            if (!isValid) {
+                                throw "Invalid layout or layout not found";
+                            }
+
+                            // triggers the pre async event to notify the listening handlers
+                            // that the async modification operations are going to be
+                            // started and that the dom is going to be modified
+                            _body.triggerHandler("pre_async");
+
+                            // hides the current body reference so that all of the update
+                            // operations occur with the ui disabled (faster performance)
+                            // and the user experience is not broken
+                            _body.hide();
+
+                            // updates the base (resolution) tag in the document header
+                            // so that it reflects the proper link resolution, expected
+                            // for the current document state
+                            updateBase(hbase);
+
+                            // verifies if the kind of layout update to be performed is
+                            // full or not and then executes the proper logic depending
+                            // on the kind of update operation to be performed
+                            var isUpdateFull = _isFull && _isBaseFull;
+                            if (isUpdateFull) {
+                                updateFull(base, body);
+                            } else {
+                                updateSimple(base, body);
+                            }
+
+                            // updates the globally unique identifier representation for
+                            // the current state in the current structures
+                            updateGuid(uuid);
+
+                            // restores the display of the body so that the elements of
+                            // it are restored to the user, also scroll the body element
+                            // to the top so that the feel is of a new page
+                            _body.show();
+                            _body.scrollTop(0);
+
+                            // triggers the post async event to notify the listening
+                            // handlers about the end of the dom modification operations
+                            // so that many operations may be resumed
+                            _body.triggerHandler("post_async");
+                        } catch (exception) {
+                            window.history.back();
+                            document.location = href;
+                        }
+                    });
+
+            // registers for the async envent that should be triggered
+            // as a validator for the asyncronous execution of calls, plugins
+            // like the form should use this event to validate their
+            // own behavior, and react to the result of this event
+            _body.bind("async", function() {
+                        var _isFull = isFull();
+                        var _isSimple = isSimple();
+                        return _isFull || _isSimple;
+                    });
+
+            // registers for the async start event that marks the
+            // the start of a remote asycn call with the intension
+            // of chaming the current layout
+            _body.bind("async_start", function() {
+                // in case the show notification flag is set the notification must
+                // be created and show in the correct place
+                if (SHOW_NOTIFICATION) {
+                    // retrieves the localized version of the loading message so that it
+                    // may be used in the notification to be shown
+                    var loading = jQuery.uxlocale("Loading");
+
+                    // retrieves the reference to the notifications container element
+                    // and removes any message that is contained in it, avoiding any
+                    // duplicatd message display
+                    var container = jQuery(".header-notifications-container");
+                    container.empty();
+
+                    // creates the notification message that will indicate the loading
+                    // of the new panel and adds it to the notifications container
+                    var notification = jQuery("<div class=\"header-notification warning\"><strong>"
+                            + loading + "</strong></div>");
+                    container.append(notification);
+                }
+
+                // tries to retrieve the current top loader element, in case it's
+                // not found inserts it in the correct position in the top bar
+                var topLoader = jQuery(".top-loader");
+                if (topLoader.length == 0) {
+                    var rightPanel = jQuery(".top-bar > .content-wrapper > .right");
+                    var topLoader = jQuery("<div class=\"top-loader\">"
+                            + "<div class=\"loader-background\"></div>"
+                            + "</div>");
+                    rightPanel.after(topLoader);
+                }
+
+                // sets the top loader to the initial position then shows it in the
+                // the current screen and runs the initial animation in it
+                topLoader.width(0);
+                topLoader.show();
+                topLoader.animate({
+                            width : 60
+                        }, 100);
+            });
+
+            // registers for the async end event that marks the end of the remote
+            // call that performs an async operation with the intesion of chaging
+            // the current layout to remote the current loading structures
+            _body.bind("async_end", function() {
+                // in case the show nofication flag is set the notification must
+                // be hidden so that the layout gets back to normal
+                if (SHOW_NOTIFICATION) {
+                    // retrieves the current notifications container and uses it to
+                    // retrieve the current visible notification
+                    var container = jQuery(".header-notifications-container");
+                    var notification = jQuery(".header-notification", container);
+
+                    // removes the loading notification, as the request has been
+                    // completed with success (no need to display it anymore)
+                    notification.remove();
+                }
+
+                // runs the final part of the loading animation, moving the loading
+                // bar to the final part of the contents and fading it afterwards
+                var topLoader = jQuery(".top-loader");
+                topLoader.animate({
+                            width : 566
+                        }, 150, function() {
+                            // verifies if the top loader is currently visible if that's
+                            // the case fades it out (ux effect) otherwise hides it immediately
+                            // to avoid problems with the fading effect
+                            var isVisible = topLoader.is(":visible");
+                            if (isVisible) {
+                                topLoader.fadeOut(150);
+                            } else {
+                                topLoader.hide();
+                            }
+                        });
+            });
+
+            // registers for the location changed event in order to validate the
+            // location changes for async execution then sets the async flag in the
+            // current body in order duplicated registration
+            _body.bind("location", function(event, location) {
+                        // tries to runthe async link logic and in case it goes through
+                        // cancels the current event returning an invalid value, so that
+                        // the default location setting logic does not run
+                        var result = jQuery.uxlinkasync(location, false);
+                        return !result;
+                    });
+            _body.data("async", true);
+        };
+
+        var _setPopHandler = function() {
+            // in case the pop state (changed) handler is already set there's
+            // no need to set it again and so returns immediately
+            if (window.onpopstate != null) {
+                return;
+            }
+
+            // sets the initial and loded variables so that they will
+            // be used by the pop state function handler as a clojure
+            var initial = null;
+
+            // registers the pop state changed handler function so that
+            // it's possible to restore the state using an async approach
+            window.onpopstate = function(event) {
+                // verifies if the current state is valid by checking the current
+                // document url agains the link defined in the state in case it's
+                // the same or no state exists it's considered valid
+                var isValid = event.state == null
+                        || event.state.href == document.URL;
+
+                // retrieves the proper uuid value to be used in the trigger
+                // of the link action, taking into account the current state
+                var uuid = event.state ? event.state.uuid : null;
+
+                // in case the event raised contains no state (not pushed)
+                // and the location or the location is the initial one the
+                // async login must be run
+                if (event.state != null || document.location == initial) {
+                    var href = document.location;
+                    isValid && jQuery.uxlinkasync(href, true, uuid);
+                }
+
+                // in case the initial location value is not set this is the
+                // the right time to set it
+                if (initial == null) {
+                    initial = document.location;
+                }
+            };
+        };
+
+        // validates if the current system has support for the async
+        // behavior in case it does not returns immediately avoiding
+        // any async behavior to be applied, but first it unsets the
+        // async flag in the current body to avoid async behavior
+        var result = _validate();
+        if (!result) {
+            var _body = jQuery("body");
+            _body.data("async", false);
+            return;
+        }
+
+        // runs the initial registration logic enabling the current matched
+        // object with the async logic and execution
+        _registerHandlers();
+        _setPopHandler();
+    };
+
+    var updateGuid = function(uuid) {
+        var _body = jQuery("body");
+        _body.attr("uuid", uuid);
+    };
+
+})(jQuery);
+
+(function(jQuery) {
     jQuery.fn.ulinksextra = function(options) {
         // the default values for the pos customer
         var defaults = {};
@@ -340,14 +667,37 @@
     };
 })(jQuery);
 
-jQuery(document).ready(function() {
-            // retrieves the reference to the links extra element and runs the
-            // setup operation using the proper extension
-            var linksExtra = jQuery(".links-extra");
-            linksExtra.ulinksextra();
+(function(jQuery) {
+    jQuery.fn.uapply = function(options) {
+        // sets the jquery matched object
+        var matchedObject = this;
 
-            // gathers the reference to the body fluid type of layout and then
-            // runs the main layout manager extension for the fluid layout
-            var fluid = jQuery("body.fluid");
-            fluid.ufluid();
+        // gathers the reference to the body fluid type of layout and then
+        // runs the main layout manager extension for the fluid layout
+        var fluid = jQuery(matchedObject).filter("body.fluid");
+        fluid.ufluid();
+        
+        // retrieves the reference to the links extra element and runs the
+        // setup operation using the proper extension
+        var linksExtra = jQuery(".links-extra", matchedObject);
+        linksExtra.ulinksextra();
+    };
+})(jQuery);
+
+jQuery(document).ready(function() {
+            // retrieves the reference to the top level
+            // body element to apply the components in it
+            var _body = jQuery("body");
+
+            // applies the ui component to the body element (main
+            // element) and then applies the extra component logic
+            // from the composite extensions
+            _body.uapply();
+
+            // registers for the applied event on the body to be
+            // notified of new apply operations and react to them
+            // in the sense of applying the specifics
+            _body.bind("applied", function(event, base) {
+                        base.uapply();
+                    });
         });
