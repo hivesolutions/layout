@@ -316,9 +316,9 @@ body.grey .side-links {
     color: #4d4d4d;
     cursor: pointer;
     display: block;
+    font-size: 14px;
     margin: 0px 0px 14px 0px;
     padding: 0px 8px 0px 24px;
-    font-size: 14px;
 }
 
 .side-links > a:last-child {
