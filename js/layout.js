@@ -25,12 +25,6 @@
 
 (function(jQuery) {
     jQuery.fn.uasync = function() {
-        /**
-         * Flag that controls if a notification should be presented to the user
-         * about the loading of the new contents.
-         */
-        var SHOW_NOTIFICATION = false;
-
         // sets the jquery matched object
         var matchedObject = this;
 
@@ -113,7 +107,6 @@
                             // data as the base object structure
                             data = data.replace(/src=/ig, "aux-src=");
                             var base = jQuery(data);
-
                             // extracts the special body associated data from the data
                             // value escapes it with a special value and then creates
                             // the logical element representation for it
@@ -125,16 +118,13 @@
                             // retrieves the information on the current layout state and
                             // on the current base element state, so that options may be
                             // taken on the kind of transforms to apply
-                            var _isFull = isFull();
-                            var _isSimple = isSimple();
-                            var _isBaseFull = isBaseFull(base);
-                            var _isBaseSimple = isBaseSimple(base);
+                            var _isValid = isBodyValid();
+                            var _isBaseValid = isBaseValid(base);
 
                             // verifies if the current layout and the target layout for
                             // loadinf are valid for layout change in case they're not
                             // raises an exception indicating the problem
-                            var isValid = (_isFull || _isSimple)
-                                    && (_isBaseFull || _isBaseSimple);
+                            var isValid = _isValid && _isBaseValid
                             if (!isValid) {
                                 throw "Invalid layout or layout not found";
                             }
@@ -149,20 +139,9 @@
                             // and the user experience is not broken
                             _body.hide();
 
-                            // updates the base (resolution) tag in the document header
-                            // so that it reflects the proper link resolution, expected
-                            // for the current document state
-                            updateBase(hbase);
-
-                            // verifies if the kind of layout update to be performed is
-                            // full or not and then executes the proper logic depending
-                            // on the kind of update operation to be performed
-                            var isUpdateFull = _isFull && _isBaseFull;
-                            if (isUpdateFull) {
-                                updateFull(base, body);
-                            } else {
-                                updateSimple(base, body);
-                            }
+                            // runs the full ajax update on the current contents so that
+                            // the page is correctly updated with the new contents
+                            updateFull(base, body);
 
                             // updates the globally unique identifier representation for
                             // the current state in the current structures
@@ -189,34 +168,14 @@
             // like the form should use this event to validate their
             // own behavior, and react to the result of this event
             _body.bind("async", function() {
-                        var _isFull = isFull();
-                        var _isSimple = isSimple();
-                        return _isFull || _isSimple;
+                        var _isValid = isBodyValid();
+                        return _isValid;
                     });
 
             // registers for the async start event that marks the
             // the start of a remote asycn call with the intension
             // of chaming the current layout
             _body.bind("async_start", function() {
-                // in case the show notification flag is set the notification must
-                // be created and show in the correct place
-                if (SHOW_NOTIFICATION) {
-                    // retrieves the localized version of the loading message so that it
-                    // may be used in the notification to be shown
-                    var loading = jQuery.uxlocale("Loading");
-
-                    // retrieves the reference to the notifications container element
-                    // and removes any message that is contained in it, avoiding any
-                    // duplicatd message display
-                    var container = jQuery(".header-notifications-container");
-                    container.empty();
-
-                    // creates the notification message that will indicate the loading
-                    // of the new panel and adds it to the notifications container
-                    var notification = jQuery("<div class=\"header-notification warning\"><strong>"
-                            + loading + "</strong></div>");
-                    container.append(notification);
-                }
 
                 // tries to retrieve the current top loader element, in case it's
                 // not found inserts it in the correct position in the top bar
@@ -242,36 +201,23 @@
             // call that performs an async operation with the intesion of chaging
             // the current layout to remote the current loading structures
             _body.bind("async_end", function() {
-                // in case the show nofication flag is set the notification must
-                // be hidden so that the layout gets back to normal
-                if (SHOW_NOTIFICATION) {
-                    // retrieves the current notifications container and uses it to
-                    // retrieve the current visible notification
-                    var container = jQuery(".header-notifications-container");
-                    var notification = jQuery(".header-notification", container);
-
-                    // removes the loading notification, as the request has been
-                    // completed with success (no need to display it anymore)
-                    notification.remove();
-                }
-
-                // runs the final part of the loading animation, moving the loading
-                // bar to the final part of the contents and fading it afterwards
-                var topLoader = jQuery(".top-loader");
-                topLoader.animate({
-                            width : 566
-                        }, 150, function() {
-                            // verifies if the top loader is currently visible if that's
-                            // the case fades it out (ux effect) otherwise hides it immediately
-                            // to avoid problems with the fading effect
-                            var isVisible = topLoader.is(":visible");
-                            if (isVisible) {
-                                topLoader.fadeOut(150);
-                            } else {
-                                topLoader.hide();
-                            }
-                        });
-            });
+                        // runs the final part of the loading animation, moving the loading
+                        // bar to the final part of the contents and fading it afterwards
+                        var topLoader = jQuery(".top-loader");
+                        topLoader.animate({
+                                    width : 566
+                                }, 150, function() {
+                                    // verifies if the top loader is currently visible if that's
+                                    // the case fades it out (ux effect) otherwise hides it immediately
+                                    // to avoid problems with the fading effect
+                                    var isVisible = topLoader.is(":visible");
+                                    if (isVisible) {
+                                        topLoader.fadeOut(150);
+                                    } else {
+                                        topLoader.hide();
+                                    }
+                                });
+                    });
 
             // registers for the location changed event in order to validate the
             // location changes for async execution then sets the async flag in the
@@ -343,11 +289,256 @@
         _setPopHandler();
     };
 
+    var isBodyValid = function() {
+        var hasContent = jQuery(".content").length > 0;
+        if (!hasContent) {
+            return false;
+        }
+
+        return true;
+    };
+
+    var isBaseValid = function(base) {
+        var hasContent = base.filter(".content");
+        if (!hasContent) {
+            return false;
+        }
+
+        return true;
+    };
+
     var updateGuid = function(uuid) {
         var _body = jQuery("body");
         _body.attr("uuid", uuid);
     };
 
+    var updateFull = function(base, body) {
+        updateBody(body);
+        updateSideLinks(base);
+        updateContent(base);
+        fixFluid();
+    };
+
+    var updateBody = function(body) {
+        var _body = jQuery("body");
+        var bodyClass = body.attr("class");
+        _body.attr("class", bodyClass);
+    };
+
+    var updateSideLinks = function(base) {
+        var sideLinks = jQuery(".side-links", base);
+        var sideLinks_ = jQuery(".side-links");
+        var sideLinksClass = sideLinks.attr("class")
+        var sideLinksHtml = sideLinks.html();
+        sideLinksHtml = sideLinksHtml.replace(/aux-src=/ig, "src=");
+        sideLinks_.html(sideLinksHtml);
+        sideLinks_.attr("class", sideLinksClass);
+        sideLinks_.uxapply();
+    };
+
+    var updateContent = function(base) {
+        var content = base.filter(".content");
+        var content_ = jQuery(".content");
+        var contentClass = content.attr("class");
+        var contentHtml = content.html();
+        console.info(contentHtml);
+        contentHtml = contentHtml.replace(/aux-src=/ig, "src=");
+        content_.html(contentHtml);
+        content_.attr("class", contentClass);
+        content_.uxapply();
+        content_.uxshortcuts();
+    };
+
+    var fixFluid = function() {
+        var _body = jQuery("body");
+        var isFluid = _body.hasClass("fluid");
+        if (!isFluid) {
+            return;
+        }
+
+        var content = jQuery(".content");
+        var contentContainer = jQuery(".content-container", content);
+        contentContainer.addClass("border-box");
+    };
+})(jQuery);
+
+(function(jQuery) {
+    jQuery.fn.ufluid = function(options) {
+        // the default values for the pos customer
+        var defaults = {};
+
+        // sets the default options value
+        var options = options ? options : {};
+
+        // constructs the options
+        var options = jQuery.extend(defaults, options);
+
+        // sets the jquery matched object
+        var matchedObject = this;
+
+        /**
+         * Initializer of the plugin, runs the necessary functions to initialize
+         * the structures.
+         */
+        var initialize = function() {
+            _appendHtml();
+            _registerHandlers();
+        };
+
+        /**
+         * Creates the necessary html for the component.
+         */
+        var _appendHtml = function() {
+            // validates that there's a valid matched object,
+            // otherwise returns immediately
+            if (matchedObject.length == 0) {
+                return;
+            }
+
+            // retrieves the refereces to the various inner elements
+            // of the fluid layout that are going to be updated
+            var elements = jQuery(".header, .content, .footer", matchedObject);
+            var sideLinks = jQuery(".side-links", matchedObject);
+            var contentContainer = jQuery(".content-container", matchedObject);
+
+            // wrapps the complete set of valid elements of the current layout
+            // arround the container element, as this will provide extra flexibility
+            // for the dynamic dimensions of this layout
+            elements.wrapAll("<div class=\"container\"></div>");
+
+            // runs the initial laout operation so that the current
+            // panel is display with the correct dimensions
+            _layout(matchedObject, options);
+
+            // updates the side links so that it's initial visibility
+            // is set accordingly and then sets the contents container
+            // as a border box oriented panel (better size measurements)
+            sideLinks.data("visible", true);
+            contentContainer.addClass("border-box");
+        };
+
+        /**
+         * Registers the event handlers for the created objects.
+         */
+        var _registerHandlers = function() {
+            // validates that there's a valid matched object,
+            // otherwise returns immediately, no registration done
+            if (matchedObject.length == 0) {
+                return;
+            }
+
+            // retrieves the reference to the various elements that
+            // are going to be used for event handler registration
+            var _window = jQuery(window);
+            var topBar = jQuery(".top-bar", matchedObject);
+            var sideLinks = jQuery(".side-links", matchedObject);
+            var logoLink = jQuery(".logo > a", topBar);
+
+            // registers for the click event on the logo link element
+            // so that the side links visibility is changed
+            logoLink.click(function() {
+                        sideLinks.triggerHandler("toggle");
+                    });
+
+            // registers for the toggle event in the side links so that
+            // their visibility is changed according to the current state
+            sideLinks.bind("toggle", function() {
+                        var element = jQuery(this);
+                        var isVisible = element.data("visible");
+                        if (isVisible) {
+                            element.triggerHandler("hide");
+                        } else {
+                            element.triggerHandler("show");
+                        }
+                    });
+
+            // registers for the show event so that the side links
+            // are properly shown in the current display container
+            sideLinks.bind("show", function() {
+                        var element = jQuery(this);
+                        var isVisible = element.data("visible");
+                        if (isVisible) {
+                            return;
+                        }
+                        element.data("visible", true);
+                        element.show();
+                        var duration = _isFixed() ? 0 : 350;
+                        element.animate({
+                                    left : 0
+                                }, {
+                                    duration : duration,
+                                    easing : "swing",
+                                    complete : function() {
+                                        _layout(matchedObject, options);
+                                    },
+                                    progress : function() {
+                                        _layout(matchedObject, options);
+                                    }
+                                });
+                    });
+
+            // registers for the hide event so that the side links
+            // are properly hidden from the current display container
+            sideLinks.bind("hide", function() {
+                        var element = jQuery(this);
+                        var isVisible = element.data("visible");
+                        if (!isVisible) {
+                            return;
+                        }
+                        element.data("visible", false);
+                        var width = element.outerWidth(true);
+                        var duration = _isFixed() ? 0 : 350;
+                        element.animate({
+                                    left : width * -1
+                                }, {
+                                    duration : duration,
+                                    easing : "swing",
+                                    complete : function() {
+                                        element.hide();
+                                        _layout(matchedObject, options);
+                                    },
+                                    progress : function() {
+                                        _layout(matchedObject, options);
+                                    }
+                                });
+                    });
+        };
+
+        var _layout = function(element, options) {
+            // retrieves the reference to the various elements that are going
+            // to have their layout update, or that are going to be used as
+            // reference for the various layout calculus operations
+            var sideLinks = jQuery(".side-links", matchedObject);
+            var content = jQuery(".content", matchedObject);
+
+            // calculates the proper side links width, taking into account
+            // the complete set of possibilities for it's visibility, like
+            // the current left position and the visibility of it
+            var sideLinksVisible = sideLinks.is(":visible");
+            var sideLinksWidth = sideLinks.outerWidth(true);
+            var sideLinksLeft = sideLinks.css("left");
+            sideLinksLeft = parseInt(sideLinksLeft);
+            sideLinksLeft = sideLinksLeft ? sideLinksLeft : 0;
+            sideLinksWidth += sideLinksLeft;
+            sideLinksWidth = sideLinksVisible ? sideLinksWidth : 0;
+
+            // updates the margin left property of the content panel
+            // with the proper width of the side links so that no overlap
+            // exists between both panels (as expected)
+            content.css("margin-left", sideLinksWidth + "px");
+        };
+
+        var _isFixed = function() {
+            var _body = jQuery("body");
+            return _body.hasClass("fixed");
+        };
+
+        // initializes the plugin
+        initialize();
+
+        // returns the object
+        return this;
+    };
 })(jQuery);
 
 (function(jQuery) {
@@ -488,195 +679,20 @@
 })(jQuery);
 
 (function(jQuery) {
-    jQuery.fn.ufluid = function(options) {
-        // the default values for the pos customer
-        var defaults = {};
-
-        // sets the default options value
-        var options = options ? options : {};
-
-        // constructs the options
-        var options = jQuery.extend(defaults, options);
-
-        // sets the jquery matched object
-        var matchedObject = this;
-
-        /**
-         * Initializer of the plugin, runs the necessary functions to initialize
-         * the structures.
-         */
-        var initialize = function() {
-            _appendHtml();
-            _registerHandlers();
-        };
-
-        /**
-         * Creates the necessary html for the component.
-         */
-        var _appendHtml = function() {
-            // validates that there's a valid matched object,
-            // otherwise returns immediately
-            if (matchedObject.length == 0) {
-                return;
-            }
-
-            // retrieves the refereces to the various inner elements
-            // of the fluid layout that are going to be updated
-            var elements = jQuery(".header, .content, .footer", matchedObject);
-            var sideLinks = jQuery(".side-links", matchedObject);
-            var contentContainer = jQuery(".content-container", matchedObject);
-
-            // wrapps the complete set of valid elements of the current layout
-            // arround the container element, as this will provide extra flexibility
-            // for the dynamic dimensions of this layout
-            elements.wrapAll("<div class=\"container\"></div>");
-
-            // runs the initial laout operation so that the current
-            // panel is display with the correct dimensions
-            _layout(matchedObject, options);
-
-            // updates the side links so that it's initial visibility
-            // is set accordingly and then sets the contents container
-            // as a border box oriented panel (better size measurements)
-            sideLinks.data("visible", true);
-            contentContainer.addClass("border-box");
-        };
-
-        /**
-         * Registers the event handlers for the created objects.
-         */
-        var _registerHandlers = function() {
-            // validates that there's a valid matched object,
-            // otherwise returns immediately, no registration done
-            if (matchedObject.length == 0) {
-                return;
-            }
-
-            // retrieves the reference to the various elements that
-            // are going to be used for event handler registration
-            var _window = jQuery(window);
-            var topBar = jQuery(".top-bar", matchedObject);
-            var sideLinks = jQuery(".side-links", matchedObject);
-            var logoLink = jQuery(".logo > a", topBar);
-
-            // registers for the click event on the logo link element
-            // so that the side links visibility is changed
-            logoLink.click(function() {
-                        sideLinks.triggerHandler("toggle");
-                    });
-
-            // registers for the toggle event in the side links so that
-            // their visibility is changed according to the current state
-            sideLinks.bind("toggle", function() {
-                        var element = jQuery(this);
-                        var isVisible = element.data("visible");
-                        if (isVisible) {
-                            element.triggerHandler("hide");
-                        } else {
-                            element.triggerHandler("show");
-                        }
-                    });
-
-            // registers for the show event so that the side links
-            // are properly shown in the current display container
-            sideLinks.bind("show", function() {
-                        var element = jQuery(this);
-                        var isVisible = element.data("visible");
-                        if (isVisible) {
-                            return;
-                        }
-                        element.data("visible", true);
-                        element.show();
-                        var duration = _isFixed() ? 0 : 350;
-                        element.animate({
-                                    left : 0
-                                }, {
-                                    duration : duration,
-                                    easing : "swing",
-                                    complete : function() {
-                                        _layout(matchedObject, options);
-                                    },
-                                    progress : function() {
-                                        _layout(matchedObject, options);
-                                    }
-                                });
-                    });
-
-            // registers for the hide event so that the side links
-            // are properly hidden from the current display container
-            sideLinks.bind("hide", function() {
-                        var element = jQuery(this);
-                        var isVisible = element.data("visible");
-                        if (!isVisible) {
-                            return;
-                        }
-                        element.data("visible", false);
-                        var width = element.outerWidth(true);
-                        var duration = _isFixed() ? 0 : 350;
-                        console.info(_isFixed());
-                        element.animate({
-                                    left : width * -1
-                                }, {
-                                    duration : duration,
-                                    easing : "swing",
-                                    complete : function() {
-                                        element.hide();
-                                        _layout(matchedObject, options);
-                                    },
-                                    progress : function() {
-                                        _layout(matchedObject, options);
-                                    }
-                                });
-                    });
-        };
-
-        var _layout = function(element, options) {
-            // retrieves the reference to the various elements that are going
-            // to have their layout update, or that are going to be used as
-            // reference for the various layout calculus operations
-            var sideLinks = jQuery(".side-links", matchedObject);
-            var content = jQuery(".content", matchedObject);
-
-            // calculates the proper side links width, taking into account
-            // the complete set of possibilities for it's visibility, like
-            // the current left position and the visibility of it
-            var sideLinksVisible = sideLinks.is(":visible");
-            var sideLinksWidth = sideLinks.outerWidth(true);
-            var sideLinksLeft = sideLinks.css("left");
-            sideLinksLeft = parseInt(sideLinksLeft);
-            sideLinksLeft = sideLinksLeft ? sideLinksLeft : 0;
-            sideLinksWidth += sideLinksLeft;
-            sideLinksWidth = sideLinksVisible ? sideLinksWidth : 0;
-
-            // updates the margin left property of the content panel
-            // with the proper width of the side links so that no overlap
-            // exists between both panels (as expected)
-            content.css("margin-left", sideLinksWidth + "px");
-        };
-
-        var _isFixed = function() {
-            var _body = jQuery("body");
-            return _body.hasClass("fixed");
-        };
-
-        // initializes the plugin
-        initialize();
-
-        // returns the object
-        return this;
-    };
-})(jQuery);
-
-(function(jQuery) {
     jQuery.fn.uapply = function(options) {
         // sets the jquery matched object
         var matchedObject = this;
 
+        // starts the asynchronous extension so that the proper mechanisms
+        // are set in place to provide a simple and fluid environment for
+        // the layout infra-sructure that is going to be loaded
+        matchedObject.uasync();
+
         // gathers the reference to the body fluid type of layout and then
         // runs the main layout manager extension for the fluid layout
-        var fluid = jQuery(matchedObject).filter("body.fluid");
+        var fluid = matchedObject.filter("body.fluid");
         fluid.ufluid();
-        
+
         // retrieves the reference to the links extra element and runs the
         // setup operation using the proper extension
         var linksExtra = jQuery(".links-extra", matchedObject);
