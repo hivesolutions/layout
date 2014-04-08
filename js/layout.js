@@ -176,7 +176,6 @@
             // the start of a remote asycn call with the intension
             // of chaming the current layout
             _body.bind("async_start", function() {
-
                 // tries to retrieve the current top loader element, in case it's
                 // not found inserts it in the correct position in the top bar
                 var topLoader = jQuery(".top-loader");
