@@ -134,6 +134,7 @@
                             // is a full one, meaning that the complete body element is going
                             // to be replace instead of just some of its parts
                             var isFull = type(body) != type();
+                            isFull = isFull || hash(body) != hash();
 
                             // triggers the pre async event to notify the listening handlers
                             // that the async modification operations are going to be
@@ -339,6 +340,18 @@
         return "static";
     };
 
+    var hash = function(body) {
+        var buffer = "";
+        var body = body || jQuery("body");
+        buffer += body.hasClass("static") ? "1" : "0";
+        buffer += body.hasClass("fluid") ? "1" : "0";
+        buffer += jQuery("#header", body).length ? "1" : "0";
+        buffer += jQuery("#content", body).length ? "1" : "0";
+        buffer += jQuery("#footer", body).length ? "1" : "0";
+        buffer += jQuery(".action-bar", body).length ? "1" : "0";
+        return buffer;
+    };
+
     var isBodyValid = function() {
         var hasContent = jQuery("#content").length > 0;
         if (!hasContent) {
@@ -371,6 +384,7 @@
         updateBody(body);
         updateLinks(base);
         updateSideLinks(base);
+        updateActionBar(base);
         updateHeader(base);
         updateContent(base);
         updateFooter(base);
@@ -413,6 +427,18 @@
         sideLinks_.html(sideLinksHtml);
         sideLinks_.attr("class", sideLinksClass);
         sideLinks_.uxapply();
+    };
+
+    var updateActionBar = function(base) {
+        var actionBar = jQuery(".action-bar", base);
+        var actionBar_ = jQuery(".action-bar");
+        var actionBarClass = actionBar.attr("class")
+        var actionBarHtml = actionBar.html();
+        actionBarHtml = actionBarHtml
+                && actionBarHtml.replace(/aux-src=/ig, "src=");
+        actionBar_.html(actionBarHtml);
+        actionBar_.attr("class", actionBarClass);
+        actionBar_.uxapply();
     };
 
     var updateHeader = function(base) {
