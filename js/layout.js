@@ -192,20 +192,18 @@
                         // to the current structure so that it may be used
                         var barLoader = jQuery(".bar-loader");
                         if (barLoader.length == 0) {
-                            var _html = jQuery("html");
                             var barLoader = jQuery("<div class=\"bar-loader\"></div>");
-                            _html.prepend(barLoader);
+                            _body.prepend(barLoader);
                         }
 
                         // tries to retrieve the current top loader element, in case it's
-                        // not found inserts it in the correct position in the html contents
+                        // not found inserts it in the correct position in the body contents
                         var topLoader = jQuery(".top-loader");
                         if (topLoader.length == 0) {
-                            var _html = jQuery("html");
                             var topLoader = jQuery("<div class=\"top-loader\">"
                                     + "<div class=\"loader-background\"></div>"
                                     + "</div>");
-                            _html.prepend(topLoader);
+                            _body.prepend(topLoader);
                         }
 
                         // adds the loading class to both of the "loader" so that their layut

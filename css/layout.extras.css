@@ -54,22 +54,30 @@ body.fluid #overlay {
     background-color: #888888;
 }
 
-body.fluid #footer {
-    color: #4d4d4d;
-    font-size: 12px;
-}
-
-body.fluid .header {
+body.fluid #header {
     height: 100%;
     position: fixed;
     z-index: 2;
 }
 
-body.fluid .content {
+body.fluid #footer {
+    color: #4d4d4d;
+    font-size: 12px;
+}
+
+body.fluid #content {
     padding: 50px 0px 0px 0px;
     position: relative;
     text-align: left;
     z-index: 1;
+}
+
+body.fluid .bar-loader.loading {
+    opacity: 0.0;
+}
+
+body.fluid .top-loader {
+    opacity: 1.0;
 }
 
 body.fluid .content.no-header .content-header {
