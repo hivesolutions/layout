@@ -794,7 +794,7 @@
 })(jQuery);
 
 (function(jQuery) {
-    jQuery.fn.uapply = function(options) {
+    jQuery.fn.lapply = function(options) {
         // sets the jquery matched object
         var matchedObject = this;
 
@@ -823,12 +823,12 @@ jQuery(document).ready(function() {
             // applies the ui component to the body element (main
             // element) and then applies the extra component logic
             // from the composite extensions
-            _body.uapply();
+            _body.lapply();
 
             // registers for the applied event on the body to be
             // notified of new apply operations and react to them
             // in the sense of applying the specifics
             _body.bind("applied", function(event, base) {
-                        base.uapply();
+                        base.lapply();
                     });
         });
