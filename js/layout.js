@@ -219,7 +219,7 @@
                         var width = parent.outerWidth(false);
                         topLoader.animate({
                                     width : width
-                                }, 150, function() {
+                                }, 350, function() {
                                     // verifies if the top loader is currently visible if that's
                                     // the case fades it out (ux effect) otherwise hides it immediately
                                     // to avoid problems with the fading effect
