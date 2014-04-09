@@ -408,17 +408,17 @@
     };
 
     var updateLinks = function(base) {
-        var links = jQuery("#header > .links", base);
+        var links = jQuery("> .links", base);
         var links_ = jQuery("#header > .links");
         var header = jQuery("#header");
         links_.remove();
         header.append(links);
-        var links_ = jQuery(".links");
+        var links_ = jQuery("#header > .links");
         links_.uxapply();
     };
 
     var updateSideLinks = function(base) {
-        var sideLinks = jQuery("#header > .side-links", base);
+        var sideLinks = jQuery("> .side-links", base);
         var sideLinks_ = jQuery("#header > .side-links");
         var sideLinksClass = sideLinks.attr("class")
         var sideLinksHtml = sideLinks.html();
