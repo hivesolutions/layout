@@ -130,6 +130,11 @@
                                 throw "Invalid layout or layout not found";
                             }
 
+                            // verifies if the kind of update that is going to be performed
+                            // is a full one, meaning that the complete body element is going
+                            // to be replace instead of just some of its parts
+                            var isFull = type(body) != type();
+
                             // triggers the pre async event to notify the listening handlers
                             // that the async modification operations are going to be
                             // started and that the dom is going to be modified
@@ -140,9 +145,14 @@
                             // and the user experience is not broken
                             _body.hide();
 
-                            // runs the full ajax update on the current contents so that
-                            // the page is correctly updated with the new contents
-                            updateFull(base, body);
+                            // runs the proper ajax update on the current contents so that
+                            // the page is correctly updated with the new contents, note that
+                            // a full update will break the current state of data and inputs
+                            if (isFull) {
+                                updateFull(base, body);
+                            } else {
+                                updateSimple(base, body);
+                            }
 
                             // updates the globally unique identifier representation for
                             // the current state in the current structures
@@ -289,6 +299,26 @@
         // object with the async logic and execution
         _registerHandlers();
         _setPopHandler();
+    };
+
+    var isStatic = function(body) {
+        var body = body || jQuery("body");
+        return body.hasClass("static");
+    };
+
+    var isFluid = function(body) {
+        var body = body || jQuery("body");
+        return body.hasClass("fluid");
+    };
+
+    var type = function(body) {
+        if (isStatic(body)) {
+            return "static";
+        }
+        if (isFluid(body)) {
+            return "fluid";
+        }
+        return null;
     };
 
     var isBodyValid = function() {
