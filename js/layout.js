@@ -169,10 +169,8 @@
                             // so that many operations may be resumed
                             _body.triggerHandler("post_async");
                         } catch (exception) {
-                            console.info(exception.stack);
-
-                            //window.history.back();
-                            //document.location = href;
+                            window.history.back();
+                            document.location = href;
                         }
                     });
 

@@ -291,8 +291,8 @@ body.fluid.fixed .top-bar > .container {
     margin-top: 48px;
     padding-top: 2px;
     position: absolute;
-    z-index: 30;
     top: -50px;
+    z-index: 30;
 }
 
 .top-loader > .loader-background {
