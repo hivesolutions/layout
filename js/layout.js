@@ -187,17 +187,31 @@
             // the start of a remote asycn call with the intension
             // of chaming the current layout
             _body.bind("async_start", function() {
+                        // tries to retrieve the reference to the current bar based loader
+                        // animation element and in case it does not exists adds a new one
+                        // to the current structure so that it may be used
+                        var barLoader = jQuery(".bar-loader");
+                        if (barLoader.length == 0) {
+                            var _html = jQuery("html");
+                            var barLoader = jQuery("<div class=\"bar-loader\"></div>");
+                            _html.prepend(barLoader);
+                        }
+
                         // tries to retrieve the current top loader element, in case it's
                         // not found inserts it in the correct position in the html contents
                         var topLoader = jQuery(".top-loader");
                         if (topLoader.length == 0) {
                             var _html = jQuery("html");
-                            var topContainer = jQuery(".top-bar > .container");
                             var topLoader = jQuery("<div class=\"top-loader\">"
                                     + "<div class=\"loader-background\"></div>"
                                     + "</div>");
                             _html.prepend(topLoader);
                         }
+
+                        // adds the loading class to both of the "loader" so that their layut
+                        // may be "modified" taking that into account
+                        barLoader.addClass("loading");
+                        topLoader.addClass("loading");
 
                         // sets the top loader to the initial position then shows it in the
                         // the current screen and runs the initial animation in it
@@ -214,6 +228,7 @@
             _body.bind("async_end", function() {
                         // runs the final part of the loading animation, moving the loading
                         // bar to the final part of the contents and fading it afterwards
+                        var barLoader = jQuery(".bar-loader");
                         var topLoader = jQuery(".top-loader");
                         var parent = topLoader.parent();
                         var width = parent.outerWidth(false);
@@ -230,6 +245,10 @@
                                         topLoader.hide();
                                     }
                                 });
+                        setTimeout(function() {
+                                    barLoader.removeClass("loading");
+                                    topLoader.removeClass("loading");
+                                }, 350);
                     });
 
             // registers for the location changed event in order to validate the
