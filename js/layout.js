@@ -158,8 +158,10 @@
                             // so that many operations may be resumed
                             _body.triggerHandler("post_async");
                         } catch (exception) {
-                            window.history.back();
-                            document.location = href;
+                            console.info(exception.stack);
+
+                            //window.history.back();
+                            //document.location = href;
                         }
                     });
 
@@ -313,6 +315,7 @@
 
     var updateFull = function(base, body) {
         updateBody(body);
+        updateLinks(base);
         updateSideLinks(base);
         updateContent(base);
         fixFluid();
@@ -324,8 +327,25 @@
         _body.attr("class", bodyClass);
     };
 
+    var updateLinks = function(base) {
+        var links = jQuery(".links", base);
+        if (links.length == 0) {
+            return;
+        }
+        var links_ = jQuery(".links");
+        var linksClass = links.attr("class")
+        var linksHtml = links.html();
+        linksHtml = linksHtml.replace(/aux-src=/ig, "src=");
+        links_.html(linksHtml);
+        links_.attr("class", linksClass);
+        links_.uxapply();
+    };
+
     var updateSideLinks = function(base) {
         var sideLinks = jQuery(".side-links", base);
+        if (sideLinks.length == 0) {
+            return;
+        }
         var sideLinks_ = jQuery(".side-links");
         var sideLinksClass = sideLinks.attr("class")
         var sideLinksHtml = sideLinks.html();
@@ -340,7 +360,6 @@
         var content_ = jQuery(".content");
         var contentClass = content.attr("class");
         var contentHtml = content.html();
-        console.info(contentHtml);
         contentHtml = contentHtml.replace(/aux-src=/ig, "src=");
         content_.html(contentHtml);
         content_.attr("class", contentClass);
