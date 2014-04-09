@@ -323,7 +323,7 @@
     };
 
     var isBodyValid = function() {
-        var hasContent = jQuery(".content").length > 0;
+        var hasContent = jQuery("#content").length > 0;
         if (!hasContent) {
             return false;
         }
@@ -332,7 +332,7 @@
     };
 
     var isBaseValid = function(base) {
-        var hasContent = base.filter(".content");
+        var hasContent = base.filter("#content");
         if (!hasContent) {
             return false;
         }
@@ -356,6 +356,7 @@
         updateSideLinks(base);
         updateHeader(base);
         updateContent(base);
+        updateFooter(base);
         fixFluid();
     };
 
@@ -378,11 +379,10 @@
     var updateLinks = function(base) {
         var links = jQuery(".links", base);
         var links_ = jQuery(".links");
-        var linksClass = links.attr("class")
-        var linksHtml = links.html();
-        linksHtml = linksHtml && linksHtml.replace(/aux-src=/ig, "src=");
-        links_.html(linksHtml);
-        links_.attr("class", linksClass);
+        var header = jQuery("#header");
+        links_.remove();
+        header.append(links);
+        var links_ = jQuery(".links");
         links_.uxapply();
     };
 
@@ -399,8 +399,8 @@
     };
 
     var updateHeader = function(base) {
-        var header = base.filter(".header");
-        var header_ = jQuery(".header");
+        var header = base.filter("#header");
+        var header_ = jQuery("#header");
         var container = jQuery(".header-container", header);
         var container_ = jQuery(".header-container", header_);
         var title = jQuery("> h1", header);
@@ -417,8 +417,8 @@
     };
 
     var updateContent = function(base) {
-        var content = base.filter(".content");
-        var content_ = jQuery(".content");
+        var content = base.filter("#content");
+        var content_ = jQuery("#content");
         var contentClass = content.attr("class");
         var contentHtml = content.html();
         contentHtml = contentHtml.replace(/aux-src=/ig, "src=");
@@ -428,6 +428,17 @@
         content_.uxshortcuts();
     };
 
+    var updateFooter = function(base) {
+        var footer = base.filter("#footer");
+        var footer_ = jQuery("#footer");
+        var footerClass = footer.attr("class");
+        var footerHtml = footer.html();
+        footerHtml = footerHtml && footerHtml.replace(/aux-src=/ig, "src=");
+        footer_.html(footerHtml);
+        footer_.attr("class", footerClass);
+        footer_.uxapply();
+    };
+
     var fixFluid = function() {
         var _body = jQuery("body");
         var isFluid = _body.hasClass("fluid");
@@ -435,7 +446,7 @@
             return;
         }
 
-        var content = jQuery(".content");
+        var content = jQuery("#content");
         var contentContainer = jQuery(".content-container", content);
         contentContainer.addClass("border-box");
     };
@@ -476,7 +487,7 @@
 
             // retrieves the refereces to the various inner elements
             // of the fluid layout that are going to be updated
-            var elements = jQuery(".header, .content, .footer", matchedObject);
+            var elements = jQuery("#header, #content, #footer", matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
             var contentContainer = jQuery(".content-container", matchedObject);
 
@@ -587,8 +598,8 @@
             // retrieves the reference to the various elements that are going
             // to have their layout update, or that are going to be used as
             // reference for the various layout calculus operations
+            var content = jQuery("#content", matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
-            var content = jQuery(".content", matchedObject);
 
             // calculates the proper side links width, taking into account
             // the complete set of possibilities for it's visibility, like
