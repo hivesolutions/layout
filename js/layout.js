@@ -317,6 +317,7 @@
         updateBody(body);
         updateLinks(base);
         updateSideLinks(base);
+        updateHeader(base);
         updateContent(base);
         fixFluid();
     };
@@ -353,6 +354,23 @@
         sideLinks_.html(sideLinksHtml);
         sideLinks_.attr("class", sideLinksClass);
         sideLinks_.uxapply();
+    };
+
+    var updateHeader = function(base) {
+        var header = base.filter(".header");
+        var header_ = jQuery(".header");
+        var container = jQuery(".header-container", header);
+        var container_ = jQuery(".header-container", header_);
+        var title = jQuery("> h1", header);
+        var title_ = jQuery("> h1", header_);
+        var containertHtml = container.html();
+        containertHtml = containertHtml.replace(/aux-src=/ig, "src=");
+        container_.html(containertHtml);
+        container_.uxapply();
+        var titleHtml = title.html();
+        titleHtml = titleHtml.replace(/aux-src=/ig, "src=");
+        title_.html(titleHtml);
+        title_.uxapply();
     };
 
     var updateContent = function(base) {
@@ -586,11 +604,17 @@
          * Creates the necessary html for the component.
          */
         var _appendHtml = function() {
+            // in case no elements have been matched, must return
+            // immediately to avoid any side effect or problem
+            if (matchedObject.length == 0) {
+                return;
+            }
+
             // retrieves the reference to the element
             // to be used in the construction of the
-            // extra links menu
-            var linkMore = jQuery(".link-more");
-            var links = linkMore.parents(".links");
+            // extra links menu (the links more element)
+            var links = matchedObject.parents(".links");
+            var linkMore = jQuery(".link-more", links);
             var linksElements = jQuery("> a", links);
 
             // tries to retrieve the complete set of extra links
@@ -620,20 +644,22 @@
                 activeItem.append(element);
             }
 
-            // retrieves both the width of the extra links menu
-            // and the width of the more link element then calculates
-            // the extra width to be deduces using margin and applies
-            // the value to the matched object (menu alignment)
-            var width = matchedObject.outerWidth(true);
-            var linkMoreWidth = linkMore.outerWidth(true);
-            var extraWidth = (width - linkMoreWidth) * -1;
-            matchedObject.css("margin-left", extraWidth + "px");
+            // runs the initial update of the position for the currently
+            // matched object so that the panel is properly displayed in
+            // the viewport once it's shown on screen
+            _updatePosition(matchedObject, options);
         };
 
         /**
          * Registers the event handlers for the created objects.
          */
         var _registerHandlers = function() {
+            // in case no elements have been matched, must return
+            // immediately to avoid any side effect or problem
+            if (matchedObject.length == 0) {
+                return;
+            }
+
             // retrieves the references to the various elements
             // for which event handlers will be registered
             var _document = jQuery(document);
@@ -670,6 +696,8 @@
                             linksExtra.data("link", element);
                         }
 
+                        _updatePosition(linksExtra, options);
+
                         event.stopPropagation();
                         event.preventDefault();
                     });
@@ -686,6 +714,32 @@
                         var element = jQuery(this);
                         matchedObject.triggerHandler("hide");
                     });
+        };
+
+        var _updatePosition = function(matchedObject, options) {
+            // verifies if the matched object already contains a defined
+            // margin left in the element, and for such cases returns the
+            // control flow immediately to the caller method
+            var positioned = matchedObject.hasClass("positioned");
+            if (positioned) {
+                return;
+            }
+
+            // retrieves the various elements that are going to be
+            // used in the update of the current element's position
+            var links = matchedObject.parents(".links");
+            var linkMore = jQuery(".link-more", links);
+
+            // retrieves both the width of the extra links menu
+            // and the width of the more link element then calculates
+            // the extra width to be deduces using margin and applies
+            // the value to the matched object (menu alignment)
+            var width = matchedObject.outerWidth(true);
+            var linkMoreWidth = linkMore.outerWidth(true);
+            var isValid = width != 0 && linkMoreWidth != 0;
+            var extraWidth = (width - linkMoreWidth) * -1;
+            isValid && matchedObject.css("margin-left", extraWidth + "px");
+            isValid && matchedObject.addClass("positioned");
         };
 
         // initializes the plugin
