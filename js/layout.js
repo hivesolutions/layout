@@ -442,6 +442,12 @@
     };
 
     var updateHeader = function(base) {
+        var header_ = jQuery("#header");
+        var isFull = header_.hasClass("replace");
+        isFull ? updateHeaderFull(base) : updateHeaderSimple(base);
+    };
+
+    var updateHeaderSimple = function(base) {
         var header = base.filter("#header");
         var header_ = jQuery("#header");
         var container = jQuery(".header-container", header);
@@ -457,6 +463,17 @@
         titleHtml = titleHtml && titleHtml.replace(/aux-src=/ig, "src=");
         title_.html(titleHtml);
         title_.uxapply();
+    };
+
+    var updateHeaderFull = function(base) {
+        var header = base.filter("#header");
+        var header_ = jQuery("#header");
+        var headerClass = header.attr("class");
+        var headerHtml = header.html();
+        headerHtml = headerHtml && headerHtml.replace(/aux-src=/ig, "src=");
+        header_.html(headerHtml);
+        header_.attr("class", headerClass);
+        header_.uxapply();
     };
 
     var updateContent = function(base) {
