@@ -330,13 +330,10 @@
 
     var updateLinks = function(base) {
         var links = jQuery(".links", base);
-        if (links.length == 0) {
-            return;
-        }
         var links_ = jQuery(".links");
         var linksClass = links.attr("class")
         var linksHtml = links.html();
-        linksHtml = linksHtml.replace(/aux-src=/ig, "src=");
+        linksHtml = linksHtml && linksHtml.replace(/aux-src=/ig, "src=");
         links_.html(linksHtml);
         links_.attr("class", linksClass);
         links_.uxapply();
@@ -344,13 +341,11 @@
 
     var updateSideLinks = function(base) {
         var sideLinks = jQuery(".side-links", base);
-        if (sideLinks.length == 0) {
-            return;
-        }
         var sideLinks_ = jQuery(".side-links");
         var sideLinksClass = sideLinks.attr("class")
         var sideLinksHtml = sideLinks.html();
-        sideLinksHtml = sideLinksHtml.replace(/aux-src=/ig, "src=");
+        sideLinksHtml = sideLinksHtml
+                && sideLinksHtml.replace(/aux-src=/ig, "src=");
         sideLinks_.html(sideLinksHtml);
         sideLinks_.attr("class", sideLinksClass);
         sideLinks_.uxapply();
@@ -364,11 +359,12 @@
         var title = jQuery("> h1", header);
         var title_ = jQuery("> h1", header_);
         var containertHtml = container.html();
-        containertHtml = containertHtml.replace(/aux-src=/ig, "src=");
+        containertHtml = containertHtml
+                && containertHtml.replace(/aux-src=/ig, "src=");
         container_.html(containertHtml);
         container_.uxapply();
         var titleHtml = title.html();
-        titleHtml = titleHtml.replace(/aux-src=/ig, "src=");
+        titleHtml = titleHtml && titleHtml.replace(/aux-src=/ig, "src=");
         title_.html(titleHtml);
         title_.uxapply();
     };
