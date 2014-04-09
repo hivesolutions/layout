@@ -1519,9 +1519,27 @@ ul.traceback li:hover {
     background-color: #ebebeb;
 }
 
+.bar-loader {
+    background: transparent url(../images/bar-loader.gif) no-repeat right top;
+    bottom: 12px;
+    bottom: 12px;
+    height: 11px;
+    opacity: 0.0;
+    position: fixed;
+    right: 18px;
+    width: 16px;
+    z-index: 20;
+}
+
+.bar-loader.loading {
+    opacity: 1.0;
+}
+
 .top-loader {
     background: transparent url(../images/top-loader.png) no-repeat right top;
     height: 6px;
+    margin-top: -2px;
+    opacity: 0.0;
     position: absolute;
     z-index: 20;
 }
@@ -1529,6 +1547,8 @@ ul.traceback li:hover {
 .top-loader > .loader-background {
     background-color: #5abbe6;
     height: 2px;
+    margin-right: 5px;
+    margin-top: 2px;
     width: 100%;
 }
 
