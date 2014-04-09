@@ -285,22 +285,6 @@ body.fluid.fixed .top-bar > .container {
     width: 400px;
 }
 
-.top-loader {
-    background: transparent url(../images/top-loader.png) no-repeat right top;
-    height: 6px;
-    margin-top: 48px;
-    padding-top: 2px;
-    position: absolute;
-    top: -50px;
-    z-index: 30;
-}
-
-.top-loader > .loader-background {
-    background-color: #5abbe6;
-    height: 2px;
-    width: 100%;
-}
-
 .side-links {
     background-color: #ffffff;
     border-right: 1px solid #e0e0e0;
