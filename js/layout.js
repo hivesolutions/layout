@@ -189,25 +189,26 @@
             // the start of a remote asycn call with the intension
             // of chaming the current layout
             _body.bind("async_start", function() {
-                // tries to retrieve the current top loader element, in case it's
-                // not found inserts it in the correct position in the top bar
-                var topLoader = jQuery(".top-loader");
-                if (topLoader.length == 0) {
-                    var rightPanel = jQuery(".top-bar > .content-wrapper > .right");
-                    var topLoader = jQuery("<div class=\"top-loader\">"
-                            + "<div class=\"loader-background\"></div>"
-                            + "</div>");
-                    rightPanel.after(topLoader);
-                }
+                        // tries to retrieve the current top loader element, in case it's
+                        // not found inserts it in the correct position in the html contents
+                        var topLoader = jQuery(".top-loader");
+                        if (topLoader.length == 0) {
+                            var _html = jQuery("html");
+                            var topContainer = jQuery(".top-bar > .container");
+                            var topLoader = jQuery("<div class=\"top-loader\">"
+                                    + "<div class=\"loader-background\"></div>"
+                                    + "</div>");
+                            _html.prepend(topLoader);
+                        }
 
-                // sets the top loader to the initial position then shows it in the
-                // the current screen and runs the initial animation in it
-                topLoader.width(0);
-                topLoader.show();
-                topLoader.animate({
-                            width : 60
-                        }, 100);
-            });
+                        // sets the top loader to the initial position then shows it in the
+                        // the current screen and runs the initial animation in it
+                        topLoader.width(0);
+                        topLoader.show();
+                        topLoader.animate({
+                                    width : 60
+                                }, 100);
+                    });
 
             // registers for the async end event that marks the end of the remote
             // call that performs an async operation with the intesion of chaging
@@ -216,8 +217,10 @@
                         // runs the final part of the loading animation, moving the loading
                         // bar to the final part of the contents and fading it afterwards
                         var topLoader = jQuery(".top-loader");
+                        var parent = topLoader.parent();
+                        var width = parent.outerWidth(false);
                         topLoader.animate({
-                                    width : 566
+                                    width : width
                                 }, 150, function() {
                                     // verifies if the top loader is currently visible if that's
                                     // the case fades it out (ux effect) otherwise hides it immediately
