@@ -212,6 +212,13 @@
                         barLoader.addClass("loading");
                         topLoader.addClass("loading");
 
+                        // verifies if the top loader is defined as visible (valid opacity) and
+                        // in case it's not return immediately, avoiding the display of it
+                        var isVisible = topLoader.css("opacity") == "1";
+                        if (!isVisible) {
+                            return;
+                        }
+
                         // sets the top loader to the initial position then shows it in the
                         // the current screen and runs the initial animation in it
                         topLoader.width(0);
@@ -225,12 +232,29 @@
             // call that performs an async operation with the intesion of chaging
             // the current layout to remote the current loading structures
             _body.bind("async_end", function() {
-                        // runs the final part of the loading animation, moving the loading
-                        // bar to the final part of the contents and fading it afterwards
+                        // runs the final part of the loading animation, removing the loading
+                        // marking class from both loaders avoiding any further layout notification
                         var barLoader = jQuery(".bar-loader");
                         var topLoader = jQuery(".top-loader");
+                        setTimeout(function() {
+                                    barLoader.removeClass("loading");
+                                    topLoader.removeClass("loading");
+                                }, 350);
+
+                        // verifies if the top loader is defined as visible (valid opacity) and
+                        // in case it's not return immediately, avoiding the display of it
+                        var isVisible = topLoader.css("opacity") == "1";
+                        if (!isVisible) {
+                            return;
+                        }
+
+                        // retrieves the parent element of the top loader and uses it to retrieve
+                        // the target width for the loading bar animation
                         var parent = topLoader.parent();
                         var width = parent.outerWidth(false);
+
+                        // performs the proper animation of the top loader moving it's width along
+                        // the horizontal line, providing the "feeling of progress"
                         topLoader.animate({
                                     width : width
                                 }, 350, function() {
@@ -244,10 +268,6 @@
                                         topLoader.hide();
                                     }
                                 });
-                        setTimeout(function() {
-                                    barLoader.removeClass("loading");
-                                    topLoader.removeClass("loading");
-                                }, 350);
                     });
 
             // registers for the location changed event in order to validate the
