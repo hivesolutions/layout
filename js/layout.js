@@ -107,11 +107,12 @@
                             // data as the base object structure
                             data = data.replace(/src=/ig, "aux-src=");
                             var base = jQuery(data);
+
                             // extracts the special body associated data from the data
                             // value escapes it with a special value and then creates
                             // the logical element representation for it
-                            var bodyData = data.match(/<body.*>/)[0]
-                                    + "</body>";
+                            var bodyData = data.match(/<body.*>[^]*<\/body>/g)[0];
+                            bodyData = bodyData.replace(/aux-src=/ig, "src=");
                             bodyData = bodyData.replace("body", "body_");
                             var body = jQuery(bodyData);
 
@@ -315,6 +316,11 @@
 
     var updateFull = function(base, body) {
         updateBody(body);
+        updateBodyFull(body);
+    };
+
+    var updateSimple = function(base, body) {
+        updateBody(body);
         updateLinks(base);
         updateSideLinks(base);
         updateHeader(base);
@@ -326,6 +332,16 @@
         var _body = jQuery("body");
         var bodyClass = body.attr("class");
         _body.attr("class", bodyClass);
+    };
+
+    var updateBodyFull = function(body) {
+        var _body = jQuery("body");
+        var bodyHtml = body.html();
+        bodyHtml = bodyHtml.replace(/aux-src=/ig, "src=");
+        _body.html(bodyHtml);
+        _body.show();
+        _body.uxapply();
+        _body.hide();
     };
 
     var updateLinks = function(base) {
