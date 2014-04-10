@@ -289,36 +289,18 @@
                 return;
             }
 
-            // sets the initial and loded variables so that they will
-            // be used by the pop state function handler as a clojure
-            var initial = null;
-
             // registers the pop state changed handler function so that
             // it's possible to restore the state using an async approach
             window.onpopstate = function(event) {
-                // verifies if the current state is valid by checking the current
-                // document url agains the link defined in the state in case it's
-                // the same or no state exists it's considered valid
-                var isValid = event.state == null
-                        || event.state.href == document.URL;
-
                 // retrieves the proper uuid value to be used in the trigger
                 // of the link action, taking into account the current state
                 var uuid = event.state ? event.state.uuid : null;
 
-                // in case the event raised contains no state (not pushed)
-                // and the location or the location is the initial one the
-                // async login must be run
-                if (event.state != null || document.location == initial) {
-                    var href = document.location;
-                    isValid && jQuery.uxlinkasync(href, true, uuid);
-                }
-
-                // in case the initial location value is not set this is the
-                // the right time to set it
-                if (initial == null) {
-                    initial = document.location;
-                }
+                // retrieves the location of the current document and uses it
+                // to run the async redirection logic already used by the link
+                // async infra-structure for the link click operations
+                var href = document.location;
+                jQuery.uxlinkasync(href, true, uuid);
             };
         };
 
