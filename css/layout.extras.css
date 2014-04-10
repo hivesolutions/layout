@@ -61,8 +61,10 @@ body.fluid #header {
 }
 
 body.fluid #footer {
+    border-top: 1px solid #e0e0e0;
     color: #4d4d4d;
     font-size: 12px;
+    padding: 6px 0px 6px 0px;
 }
 
 body.fluid #content {
@@ -90,12 +92,6 @@ body.fluid .content-container {
 
 body.fluid .content.no-padding .content-container {
     padding: 0px 0px 0px 0px;
-}
-
-body.fluid .footer {
-    border-top: 1px solid #e0e0e0;
-    color: #4d4d4d;
-    padding: 6px 0px 6px 0px;
 }
 
 body.fluid .window {
