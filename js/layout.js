@@ -289,12 +289,36 @@
                 return;
             }
 
+            // while setting the pop handler for the first time the first and
+            // initial state must be populated with the current identifier and
+            // the reference to the initial statem, this is required to provide
+            // compatability with the current invalid state support
+            var href = document.location.href;
+            var state = {
+                uuid : jQuery.uxguid(),
+                href : href
+            }
+            window.history.replaceState(state, null, href);
+
             // registers the pop state changed handler function so that
             // it's possible to restore the state using an async approach
             window.onpopstate = function(event) {
                 // retrieves the proper uuid value to be used in the trigger
                 // of the link action, taking into account the current state
                 var uuid = event.state ? event.state.uuid : null;
+
+                // in case the state of the event is invalid the value the event
+                // is ignored and the current state is properly updated so that
+                // the value becomes ready and available (just as a safety measure)
+                if (event.state == null) {
+                    var href = document.location.href;
+                    var state = {
+                        uuid : jQuery.uxguid(),
+                        href : href
+                    }
+                    window.history.replaceState(state, null, href);
+                    return;
+                }
 
                 // retrieves the location of the current document and uses it
                 // to run the async redirection logic already used by the link
