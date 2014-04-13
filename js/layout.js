@@ -289,9 +289,9 @@
                 return;
             }
 
-            // while setting the pop handler for the first time the first and
+            // while setting the pop handler for the first time, the first and
             // initial state must be populated with the current identifier and
-            // the reference to the initial statem, this is required to provide
+            // the reference to the initial state, this is required to provide
             // compatability with the current invalid state support
             var href = document.location.href;
             var state = {
