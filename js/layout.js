@@ -297,7 +297,7 @@
             var state = {
                 uuid : jQuery.uxguid(),
                 href : href
-            }
+            };
             window.history.replaceState(state, null, href);
 
             // registers the pop state changed handler function so that
@@ -315,7 +315,7 @@
                     var state = {
                         uuid : jQuery.uxguid(),
                         href : href
-                    }
+                    };
                     window.history.replaceState(state, null, href);
                     return;
                 }
