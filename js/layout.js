@@ -404,10 +404,12 @@
     var updateFull = function(base, body) {
         updateBody(body);
         updateBodyFull(body);
+        updateTitle(base);
     };
 
     var updateSimple = function(base, body) {
         updateBody(body);
+        updateTitle(base);
         updateLinks(base);
         updateSideLinks(base);
         updateActionBar(base);
@@ -431,6 +433,20 @@
         _body.show();
         _body.uxapply();
         _body.hide();
+    };
+
+    var updateTitle = function(base) {
+        var title = base.filter("title");
+        var title_ = jQuery("title");
+        var titleHtml = title.html();
+        title_.html(titleHtml);
+    };
+
+    var updateIcon = function(base) {
+        var title = base.filter("title");
+        var title_ = jQuery("title");
+        var titleHtml = title.html();
+        title_.html(titleHtml);
     };
 
     var updateLinks = function(base) {
