@@ -413,6 +413,7 @@
         updateLinks(base);
         updateSideLinks(base);
         updateActionBar(base);
+        updateNotifications(base);
         updateHeader(base);
         updateContent(base);
         updateFooter(base);
@@ -481,6 +482,13 @@
         actionBar_.html(actionBarHtml);
         actionBar_.attr("class", actionBarClass);
         actionBar_.uxapply();
+    };
+
+    var updateNotifications = function(base) {
+        var notifications = base.filter(".header-notifications-container");
+        var notifications_ = jQuery(".header-notifications-container");
+        var notificationsHtml = notifications.html();
+        notifications_.html(notificationsHtml);
     };
 
     var updateHeader = function(base) {
