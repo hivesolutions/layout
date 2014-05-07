@@ -529,7 +529,8 @@ pre {
 }
 
 .tag.orange,
-.tag.pending {
+.tag.pending,
+.tag.issued {
     background-color: #f89406;
 }
 
