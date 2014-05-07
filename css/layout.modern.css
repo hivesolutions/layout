@@ -611,7 +611,8 @@ pre {
     background-color: #f89406;
 }
 
-.tag.red {
+.tag.red,
+.tag.canceled {
     background-color: #c43c35;
 }
 
