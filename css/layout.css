@@ -392,6 +392,10 @@ pre {
     float: right;
 }
 
+.hidden {
+    display: none;
+}
+
 .clear {
     clear: both;
 }
