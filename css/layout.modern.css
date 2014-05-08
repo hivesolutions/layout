@@ -959,9 +959,6 @@ body.romantic .calendar-content tbody tr td {
 .filter .filter-contents .table-row.selected {
     border-bottom-color: #dadada;
     border-top-color: #dadada;
-    box-shadow: 0px 0px 4px #e4e4e4;
-    -moz-box-shadow: 0px 0px 4px #e4e4e4;
-    -webkit-box-shadow: 0px 0px 4px #e4e4e4;
 }
 
 .filter .filter-contents .table-row:hover > td,
