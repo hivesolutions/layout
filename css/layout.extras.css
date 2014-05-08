@@ -537,6 +537,10 @@ body.grey .side-panel {
     margin-top: 18px;
 }
 
+.show-panel .panel-contents.simple {
+    border-top: none;
+}
+
 .show-panel .panel-contents:after {
     clear: both;
     content: "";
