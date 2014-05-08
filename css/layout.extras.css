@@ -514,6 +514,12 @@ body.grey .side-panel {
     width: 96px;
 }
 
+.show-panel .panel-header .image.square {
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+}
+
 .show-panel .panel-header .details {
     display: inline-block;
     height: 86px;
