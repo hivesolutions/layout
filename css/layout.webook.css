@@ -528,7 +528,8 @@ pre {
 .tag.green,
 .tag.paid,
 .tag.confirmed,
-.tag.fulfilled  {
+.tag.fulfilled,
+.tag.get  {
     background-color: #46a546;
 }
 
@@ -539,11 +540,14 @@ pre {
 }
 
 .tag.red,
-.tag.canceled {
+.tag.canceled,
+.tag.delete {
     background-color: #c43c35;
 }
 
-.tag.blue {
+.tag.blue,
+.tag.post,
+.tag.put {
     background-color: #62cffc;
 }
 
