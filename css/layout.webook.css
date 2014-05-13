@@ -527,6 +527,7 @@ pre {
 
 .tag.green,
 .tag.true,
+.tag.enabled,
 .tag.paid,
 .tag.confirmed,
 .tag.fulfilled,
@@ -542,6 +543,7 @@ pre {
 
 .tag.red,
 .tag.false,
+.tag.disabled,
 .tag.canceled,
 .tag.delete {
     background-color: #c43c35;
