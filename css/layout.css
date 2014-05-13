@@ -462,6 +462,7 @@ pre {
 }
 
 .tag.green,
+.tag.true,
 .tag.paid,
 .tag.confirmed,
 .tag.fulfilled,
@@ -476,6 +477,7 @@ pre {
 }
 
 .tag.red,
+.tag.false,
 .tag.canceled,
 .tag.delete {
     background-color: #c43c35;
