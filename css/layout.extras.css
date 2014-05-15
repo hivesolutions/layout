@@ -597,6 +597,7 @@ body.grey .side-panel {
     font-size: 34px;
     font-weight: normal;
     margin: 0px 0px 16px 0px;
+    text-transform: none;
 }
 
 .login-panel h3 {
