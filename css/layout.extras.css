@@ -611,12 +611,12 @@ body.grey .side-panel {
     color: #4d4d4d;
     font-size: 16px;
     font-weight: normal;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 16px 0px;
 }
 
 .login-panel p {
     color: #4d4d4d;
-    margin-bottom: 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 .login-panel .forgot {
