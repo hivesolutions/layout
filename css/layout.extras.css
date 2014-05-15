@@ -607,6 +607,13 @@ body.grey .side-panel {
     margin: 0px 0px 42px 0px;
 }
 
+.login-panel h4 {
+    color: #4d4d4d;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0px 0px 0px 0px;
+}
+
 .login-panel .forgot {
     margin: -8px 0px 26px 0px;
     text-align: left;
