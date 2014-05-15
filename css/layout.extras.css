@@ -638,3 +638,8 @@ body.grey .side-panel {
     margin-top: 12px;
     text-align: left;
 }
+
+.login-footer {
+    margin-bottom: 18px;
+    margin-top: -32px;
+}
