@@ -614,6 +614,11 @@ body.grey .side-panel {
     margin: 0px 0px 0px 0px;
 }
 
+.login-panel p {
+    color: #4d4d4d;
+    margin-bottom: 0px;
+}
+
 .login-panel .forgot {
     margin: -8px 0px 26px 0px;
     text-align: left;
