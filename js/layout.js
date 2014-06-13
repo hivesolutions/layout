@@ -114,12 +114,13 @@
                             // on the current base element state, so that options may be
                             // taken on the kind of transforms to apply
                             var _isValid = isBodyValid();
+                            var _isContentsValid = isContentsValid(body);
                             var _isBaseValid = isBaseValid(base);
 
                             // verifies if the current layout and the target layout for
                             // loadinf are valid for layout change in case they're not
                             // raises an exception indicating the problem
-                            var isValid = _isValid && _isBaseValid
+                            var isValid = _isValid && _isContentsValid && _isBaseValid;
                             if (!isValid) {
                                 throw "Invalid layout or layout not found";
                             }
@@ -381,6 +382,15 @@
     var isBodyValid = function() {
         var hasContent = jQuery("#content").length > 0;
         if (!hasContent) {
+            return false;
+        }
+
+        return true;
+    };
+
+    var isContentsValid = function(body) {
+        var isFramework = body.hasClass("ux");
+        if (!isFramework) {
             return false;
         }
 
