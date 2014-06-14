@@ -373,7 +373,7 @@
         if (isFluid(body)) {
             return "fluid";
         }
-        return "simple";
+        return "static";
     };
 
     var hash = function(body) {
