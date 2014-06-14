@@ -364,7 +364,7 @@
         if (isFluid(body)) {
             return "fluid";
         }
-        return "static";
+        return "general";
     };
 
     var hash = function(body) {
