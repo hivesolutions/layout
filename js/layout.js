@@ -120,7 +120,8 @@
                             // verifies if the current layout and the target layout for
                             // loadinf are valid for layout change in case they're not
                             // raises an exception indicating the problem
-                            var isValid = _isValid && _isContentsValid && _isBaseValid;
+                            var isValid = _isValid && _isContentsValid
+                                    && _isBaseValid;
                             if (!isValid) {
                                 throw "Invalid layout or layout not found";
                             }
@@ -347,6 +348,11 @@
         setTimeout(_setPopHandler);
     };
 
+    var isSimple = function(body) {
+        var body = body || jQuery("body");
+        return body.hasClass("simple");
+    };
+
     var isStatic = function(body) {
         var body = body || jQuery("body");
         return body.hasClass("static");
@@ -358,13 +364,16 @@
     };
 
     var type = function(body) {
+        if (isSimple(body)) {
+            return "simple";
+        }
         if (isStatic(body)) {
             return "static";
         }
         if (isFluid(body)) {
             return "fluid";
         }
-        return "general";
+        return "simple";
     };
 
     var hash = function(body) {
