@@ -348,11 +348,6 @@
         setTimeout(_setPopHandler);
     };
 
-    var isSimple = function(body) {
-        var body = body || jQuery("body");
-        return body.hasClass("simple");
-    };
-
     var isStatic = function(body) {
         var body = body || jQuery("body");
         return body.hasClass("static");
@@ -363,15 +358,20 @@
         return body.hasClass("fluid");
     };
 
+    var isSimple = function(body) {
+        var body = body || jQuery("body");
+        return body.hasClass("simple");
+    };
+
     var type = function(body) {
-        if (isSimple(body)) {
-            return "simple";
-        }
         if (isStatic(body)) {
             return "static";
         }
         if (isFluid(body)) {
             return "fluid";
+        }
+        if (isSimple(body)) {
+            return "simple";
         }
         return "static";
     };
