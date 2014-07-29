@@ -424,11 +424,14 @@
         updateBody(body);
         updateBodyFull(body);
         updateTitle(base);
+        updateIcon(base);
+        updateMeta(base);
     };
 
     var updateSimple = function(base, body) {
         updateBody(body);
         updateTitle(base);
+        updateIcon(base);
         updateLinks(base);
         updateSideLinks(base);
         updateActionBar(base);
@@ -436,6 +439,7 @@
         updateHeader(base);
         updateContent(base);
         updateFooter(base);
+        updateMeta(base);
         fixFluid();
     };
 
@@ -463,10 +467,18 @@
     };
 
     var updateIcon = function(base) {
-        var title = base.filter("title");
-        var title_ = jQuery("title");
-        var titleHtml = title.html();
-        title_.html(titleHtml);
+        var icon = base.filter("link[rel='shortcut icon']");
+        var icon_ = jQuery("link[rel='shortcut icon']");
+        var iconHref = icon.attr("href");
+        icon_.attr("href", iconHref);
+    };
+
+    var updateMeta = function(base) {
+        var meta = base.filter(".meta");
+        var meta_ = jQuery(".meta");
+        var metaHtml = meta.html();
+        meta_.html(metaHtml);
+        meta_.uxapply();
     };
 
     var updateLinks = function(base) {
