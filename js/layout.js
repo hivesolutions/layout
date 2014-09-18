@@ -51,7 +51,7 @@
                         }
 
                         // in case the click used the right or center button the
-                        // event should be ignored not bean to be overriden
+                        // event should be ignored not meant to be overriden
                         if (event.which == 2 || event.which == 3) {
                             return;
                         }
@@ -61,6 +61,14 @@
                         // the current async environment
                         var element = jQuery(this);
                         var href = element.attr("href");
+
+                        // verifies if the link element contains the flag class
+                        // that prevent the typical async behavior, if that's the
+                        // case the current method returns immediately
+                        var noAsync = element.hasClass("no-async");
+                        if (noAsync) {
+                            return;
+                        }
 
                         // runs the async link execution with no force flag set
                         // and in case it run through avoids the default link
