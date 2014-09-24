@@ -837,12 +837,6 @@ pre {
     border-top-color: #dadada;
 }
 
-.filter .filter-contents .table-header.table-row:hover,
-.filter .filter-contents .table-header.table-row.selected {
-    border-bottom-color: transparent;
-    border-top-color: transparent;
-}
-
 .filter .filter-contents .table-row:hover > td,
 .filter .filter-contents .table-row:hover > th,
 .filter .filter-contents .table-row.selected > td,
