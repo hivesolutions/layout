@@ -962,7 +962,11 @@ body.romantic .calendar-content tbody tr td {
 }
 
 .filter .filter-contents {
-    margin-top: 12px;
+    margin-top: 20px;
+}
+
+.filter.no-input .filter-contents {
+    margin-top: 0px;
 }
 
 .filter .filter-contents .table-row {
