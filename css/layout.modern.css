@@ -1059,7 +1059,9 @@ body.romantic .calendar-content tbody tr td {
 }
 
 .filter-no-results {
+    font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .filter-more {
