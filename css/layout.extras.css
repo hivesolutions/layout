@@ -105,6 +105,22 @@ body.no-footer .footer {
     display: none;
 }
 
+.text-green {
+    color: #46a546;
+}
+
+.text-orange {
+    color: #f89406;
+}
+
+.text-red {
+    color: #c43c35;
+}
+
+.text-blue {
+    color: #3c80cd;
+}
+
 .content-container table {
     border-collapse: collapse;
     margin: 0px 0px 0px 0px;
