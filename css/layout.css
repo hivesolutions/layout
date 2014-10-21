@@ -273,6 +273,15 @@ input[type="radio"]:checked:focus {
     background-position: left -120px;
 }
 
+input[type="file"] {
+    -webkit-appearance: none;
+    border: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    margin: 0px 0px 0px 0px;
+}
+
 input.date {
     background-image: url(../images/text-field-date.png);
     background-position: right center;
