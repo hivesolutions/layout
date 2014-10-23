@@ -536,6 +536,10 @@ body.grey .side-panel {
     -webkit-border-radius: 0px 0px 0px 0px;
 }
 
+.show-panel .panel-header .image.no-border {
+    border: none;
+}
+
 .show-panel .panel-header .details {
     display: inline-block;
     height: 86px;
