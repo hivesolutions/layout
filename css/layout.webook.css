@@ -225,6 +225,8 @@ input {
     background-color: #ffffff;
     border: 1px solid #cccccc;
     border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
     box-shadow: inset 0px 2px 2px #f9f9f9;
     -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
     -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
@@ -1330,6 +1332,8 @@ pre {
     background-color: #ffffff;
     border: 1px solid #cccccc;
     border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
     display: inline-block;
     font-size: 20px;
     font-weight: bold;
@@ -1529,6 +1533,8 @@ ul.traceback li:hover {
     background-repeat: repeat-x;
     border: 1px solid transparent;
     border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
     color: #ffffff;
     display: inline-block;
     font-size: 14px;

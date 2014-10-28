@@ -175,6 +175,8 @@ input {
     background-color: #fcfcfc;
     border: 1px solid #cccccc;
     border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
     color: #2d2d2d;
     font-family: "Garamond", "Georgia", "serif";
     font-size: 16px;
@@ -1245,6 +1247,8 @@ pre {
     background-color: #fcfcfc;
     border: 1px solid #bbbbbb;
     border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
     display: inline-block;
     font-size: 20px;
     font-weight: bold;
@@ -1440,6 +1444,8 @@ ul.traceback li:hover {
     background-repeat: repeat-x;
     border: 1px solid transparent;
     border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
     color: #ffffff;
     display: inline-block;
     font-size: 16px;
