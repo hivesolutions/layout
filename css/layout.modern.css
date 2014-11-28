@@ -384,7 +384,7 @@ input[type="radio"] {
     box-shadow: none;
     cursor: pointer;
     height: 24px;
-    margin: 0px 0px 0px 0px;
+    margin: 8px 0px 8px 0px;
     width: 24px;
 }
 
@@ -1381,7 +1381,7 @@ body.romantic .calendar-content tbody tr td {
 }
 
 .radio-label {
-    line-height: 26px;
+    line-height: 40px;
     margin-left: 8px;
     margin-right: 8px;
     vertical-align: top;
