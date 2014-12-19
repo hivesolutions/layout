@@ -434,6 +434,10 @@ body.grey .side-links {
     text-align: right;
 }
 
+.system-menu .footer-contents a {
+    text-transform: uppercase;
+}
+
 .content-header {
     border-bottom: 1px solid #e0e0e0;
     height: 36px;
