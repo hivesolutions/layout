@@ -621,13 +621,15 @@ pre {
 .tag.paid,
 .tag.confirmed,
 .tag.fulfilled,
-.tag.get  {
+.tag.get,
+.tag.finished {
     background-color: #46a546;
 }
 
 .tag.orange,
 .tag.pending,
-.tag.issued {
+.tag.issued,
+.tag.started {
     background-color: #f89406;
 }
 
@@ -635,6 +637,7 @@ pre {
 .tag.false,
 .tag.disabled,
 .tag.canceled,
+.tag.stopped,
 .tag.delete {
     background-color: #c43c35;
 }
@@ -1145,7 +1148,9 @@ body.romantic .calendar-content tbody tr td {
 .online,
 .passed,
 .valid,
-.truth {
+.truth,
+.success,
+.running {
     color: #32951b;
 }
 
@@ -1153,7 +1158,9 @@ body.romantic .calendar-content tbody tr td {
 .offline,
 .failed,
 .invalid,
-.error {
+.error,
+.failure,
+.stopped {
     color: #c31f30;
 }
 
