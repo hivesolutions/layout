@@ -454,6 +454,10 @@ pre {
     font-size: 16px;
 }
 
+.input-line {
+    font-size: 0px;
+}
+
 .button {
     font-size: 22px;
     font-weight: bold;
