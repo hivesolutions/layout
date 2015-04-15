@@ -282,6 +282,7 @@ input[type="file"] {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 input.date {
