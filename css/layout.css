@@ -1563,3 +1563,20 @@ ul.traceback li:hover {
 .button.button-color.button-grey.medium {
     background-image: url(../images/button-medium-grey.png);
 }
+
+ul.sections-list {
+    margin: 0px 0px 0px 0px;
+}
+
+ul.sections-list > li {
+    border: 1px solid transparent;
+    margin: 0px 0px 10px 0px;
+    padding: 14px 14px 14px 14px;
+}
+
+ul.sections-list > li:hover {
+    border-color: #cdcdcd;
+    box-shadow: 0px 0px 6px #e8e8e8;
+    -moz-box-shadow: 0px 0px 6px #e8e8e8;
+    -webkit-box-shadow: 0px 0px 6px #e8e8e8;
+}
