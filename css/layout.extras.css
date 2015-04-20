@@ -127,22 +127,22 @@ body.no-footer .footer {
     width: 100%;
 }
 
-.content-container form {
+.content-container > form {
     margin: 24px 0px 24px 0px;
     max-width: 690px;
     width: 100%;
 }
 
-.content-container form .buttons {
+.content-container > form .buttons {
     padding-bottom: 18px;
     text-align: right;
 }
 
-.content-container form.inline {
+.content-container > form.inline {
     max-width: 100%;
 }
 
-.content-container form.inline div.item {
+.content-container > form.inline div.item {
     float: left;
     margin: 8px 0px 8px 0px;
     padding-left: 8px;
@@ -151,19 +151,25 @@ body.no-footer .footer {
     width: 50%;
 }
 
-.content-container form.inline div.item.clear {
+.content-container > form.inline div.item.clear {
     float: none;
 }
 
-.content-container form.inline div.item.full {
+.content-container > form.inline div.item.full {
     width: 100%;
 }
 
-.content-container form.inline div.separator {
+.content-container > form.inline div.separator {
     clear: both;
 }
 
-.content-container ul.sections-list {
+.content-container > ul.sections-list {
+     margin: 24px 0px 24px 0px;
+     max-width: 690px;
+     width: 100%;
+}
+
+.content-container > .flow-content {
      margin: 24px 0px 24px 0px;
      max-width: 690px;
      width: 100%;
