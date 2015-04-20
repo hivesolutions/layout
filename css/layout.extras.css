@@ -164,15 +164,15 @@ body.no-footer .footer {
 }
 
 .content-container > ul.sections-list {
-     margin: 24px 0px 24px 0px;
-     max-width: 690px;
-     width: 100%;
+    margin: 24px 0px 24px 0px;
+    max-width: 690px;
+    width: 100%;
 }
 
 .content-container > .flow-content {
-     margin: 24px 0px 24px 0px;
-     max-width: 690px;
-     width: 100%;
+    margin: 24px 0px 24px 0px;
+    text-align: center;
+    width: 100%;
 }
 
 .content-container .text-field {
