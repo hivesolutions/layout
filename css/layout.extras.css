@@ -163,6 +163,10 @@ body.no-footer .footer {
     clear: both;
 }
 
+.content-container ul.sections-list {
+	 max-width: 690px;
+}
+
 .content-container .text-field {
     width: 100%;
 }
