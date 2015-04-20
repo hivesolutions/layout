@@ -164,7 +164,9 @@ body.no-footer .footer {
 }
 
 .content-container ul.sections-list {
-	 max-width: 690px;
+     margin: 24px 0px 24px 0px;
+     max-width: 690px;
+     width: 100%;
 }
 
 .content-container .text-field {
