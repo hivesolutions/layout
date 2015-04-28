@@ -276,6 +276,8 @@ body.fluid.fixed .top-bar > .container {
     font-size: 26px;
     font-weight: bold;
     height: 50px;
+    line-height: 50px;
+    overflow: hidden;
     text-shadow: 1px 1px 1px #ffffff;
     width: 176px;
 }
@@ -328,6 +330,7 @@ body.fluid.fixed .top-bar > .container {
     font-weight: bold;
     margin: 0px 0px 0px 0px;
     min-height: 100%;
+    overflow: hidden;
     padding: 69px 0px 16px 0px;
     position: absolute;
     text-align: left;
@@ -350,8 +353,8 @@ body.grey .side-links {
     cursor: pointer;
     display: block;
     font-size: 14px;
-    margin: 0px 0px 14px 0px;
-    padding: 0px 8px 0px 24px;
+    margin: 0px 24px 14px 24px;
+    padding: 0px 0px 0px 0px;
 }
 
 .side-links > a:last-child {
