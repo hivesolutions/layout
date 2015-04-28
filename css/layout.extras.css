@@ -354,6 +354,7 @@ body.grey .side-links {
     display: block;
     font-size: 14px;
     margin: 0px 24px 14px 24px;
+    overflow: hidden;
     padding: 0px 0px 0px 0px;
 }
 
