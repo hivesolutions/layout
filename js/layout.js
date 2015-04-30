@@ -1045,14 +1045,23 @@
         };
 
         var _updatePartial = function(matchedObject, options) {
+            // gathers the reference to the header and body checkboxes
+            // (including the ones that are checked), these are going
+            // to be used to detect the correct header checkbox state
             var headerCheckbox = jQuery("thead input[type=checkbox]",
                     matchedObject);
             var bodyCheckboxes = jQuery("tbody input[type=checkbox]",
                     matchedObject);
             var bodyCheckboxesChecked = jQuery(
                     "tbody input[type=checkbox]:checked", matchedObject);
+
+            // tries to determine the correct flag values for the header
+            // checkbox from both the length values of checkboxed
             var isPartial = bodyCheckboxes.length != bodyCheckboxesChecked.length;
             var isNotEmpty = bodyCheckboxesChecked.length != 0;
+
+            // resets the state of the header checkbox and then applies the
+            // delta values taking into account the various flags
             headerCheckbox.removeClass("partial");
             headerCheckbox.attr("checked", false);
             isPartial && headerCheckbox.addClass("partial");
@@ -1062,7 +1071,7 @@
         var _selectSingle = function(element) {
             // retrieves the reference to the current line's checkbox and
             // then adds the active class to the current element and runs
-            // the select operation to the current checkbox 
+            // the select operation to the current checkbox
             var checkbox = jQuery("input[type=checkbox]", element);
             element.addClass("active");
             checkbox.attr("checked", true);
