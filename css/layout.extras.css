@@ -188,7 +188,8 @@ body.no-footer .footer {
 	width: 90px;
 }
 
-.content-container .filter .table-row > th.selection > input[type=checkbox] {
+.content-container .filter .table-row > th.selection > input[type=checkbox],
+.content-container .filter .table-row > td.selection > input[type=checkbox] {
 	vertical-align: middle;
 }
 
