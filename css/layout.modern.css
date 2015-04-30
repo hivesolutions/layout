@@ -358,7 +358,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"].square {
-    background-image: (../images/check-button-square.png);
+    background-image: url(../images/check-button-square.png);
     width: 24px;
 }
 
