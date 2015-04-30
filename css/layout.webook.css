@@ -313,6 +313,14 @@ input[type="checkbox"]:checked:focus {
     background-position: left -120px;
 }
 
+input[type="checkbox"]:checked.partial {
+    background-position: left -144px;
+}
+
+input[type="checkbox"]:checked:hover.partial {
+    background-position: left -168px;
+}
+
 input[type="radio"] {
     -webkit-appearance: none;
     background: transparent url(../images/radio-button.png) no-repeat left 0px;
