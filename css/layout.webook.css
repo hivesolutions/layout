@@ -955,6 +955,11 @@ pre {
     background-color: #f8f8f8;
 }
 
+.filter .filter-contents .table-row.active > td,
+.filter .filter-contents .table-row.active > th {
+    background-color: #f2f8ff;
+}
+
 .filter .filter-contents tr.table-row:hover,
 .filter .filter-contents tr.table-row.selected {
     border-bottom-color: #ebebeb;
