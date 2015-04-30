@@ -1066,6 +1066,15 @@
             headerCheckbox.attr("checked", false);
             isPartial && headerCheckbox.addClass("partial");
             isNotEmpty && headerCheckbox.attr("checked", true);
+
+            // updates the various state variables for the current bulk
+            // selection table so that it may be checked
+            matchedObject.data("selected", bodyCheckboxesChecked.length);
+
+            // triggers the proper value change event so that possible
+            // event listeners may change their current status
+            matchedObject.triggerHandler("value_change",
+                    [bodyCheckboxesChecked.length]);
         };
 
         var _selectSingle = function(element) {
