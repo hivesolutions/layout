@@ -954,6 +954,126 @@
 })(jQuery);
 
 (function(jQuery) {
+    jQuery.fn.ubulk = function(options) {
+        // the default values for the pos customer
+        var defaults = {};
+
+        // sets the default options value
+        var options = options ? options : {};
+
+        // constructs the options
+        var options = jQuery.extend(defaults, options);
+
+        // sets the jquery matched object
+        var matchedObject = this;
+
+        /**
+         * Initializer of the plugin, runs the necessary functions to initialize
+         * the structures.
+         */
+        var initialize = function() {
+            _appendHtml();
+            _registerHandlers();
+        };
+
+        /**
+         * Creates the necessary html for the component.
+         */
+        var _appendHtml = function() {
+        };
+
+        /**
+         * Registers the event handlers for the created objects.
+         */
+        var _registerHandlers = function() {
+            // retrieves the references to the header checkbox and the various
+            // possible checkboxes from the body of the current table
+            var headerCheckbox = jQuery("thead input[type=checkbox]",
+                    matchedObject);
+            var bodyCheckboxes = jQuery("tbody input[type=checkbox]",
+                    matchedObject);
+
+            // registers for the change operation in the header checkbox
+            // so that the various checkboxes are selected or unselected
+            headerCheckbox.bind("change", function() {
+                        var element = jQuery(this);
+                        var table = element.parents("table");
+                        var checked = element.attr("checked");
+                        if (checked) {
+                            _selectAll(table, options);
+                        } else {
+                            _deselectAll(table, options);
+                        }
+                        element.removeClass("partial");
+                        _updatePartial(table, options);
+                    });
+
+            bodyCheckboxes.bind("change", function() {
+                        var element = jQuery(this);
+                        var table = element.parents("table");
+                        var tableRow = element.parents(".table-row");
+                        var checked = element.attr("checked");
+                        if (checked) {
+                            _selectSingle(tableRow);
+                        } else {
+                            _deselectSingle(tableRow, true);
+                        }
+                        _updatePartial(table, options);
+                    });
+        };
+
+        var _selectAll = function(matchedObject, options) {
+            var rows = jQuery("tbody .table-row", matchedObject);
+            rows.each(function(index, element) {
+                        var element = jQuery(this);
+                        _selectSingle(element);
+                    });
+        };
+
+        var _deselectAll = function(matchedObject, options) {
+            var rows = jQuery("tbody .table-row", matchedObject);
+            rows.each(function(index, element) {
+                        var element = jQuery(this);
+                        _deselectSingle(element, false);
+                    });
+        };
+
+        var _updatePartial = function(matchedObject, options) {
+            var headerCheckbox = jQuery("thead input[type=checkbox]",
+                    matchedObject);
+            var bodyCheckboxes = jQuery("tbody input[type=checkbox]",
+                    matchedObject);
+            var bodyCheckboxesChecked = jQuery(
+                    "tbody input[type=checkbox]:checked", matchedObject);
+            var isPartial = bodyCheckboxes.length != bodyCheckboxesChecked.length;
+            var isNotEmpty = bodyCheckboxesChecked.length != 0;
+            headerCheckbox.removeClass("partial");
+            headerCheckbox.attr("checked", false);
+            isPartial && headerCheckbox.addClass("partial");
+            isNotEmpty && headerCheckbox.attr("checked", true);
+        };
+
+        var _selectSingle = function(element) {
+            var checkbox = jQuery("input[type=checkbox]", element);
+            element.addClass("active");
+            checkbox.attr("checked", true);
+        };
+
+        var _deselectSingle = function(element) {
+            var checkbox = jQuery("input[type=checkbox]", element);
+            element.removeClass("active");
+            checkbox.attr("checked", false);
+        };
+
+        // initializes the plugin
+        initialize();
+
+        // returns the object
+        return this;
+    };
+})(jQuery);
+
+(function(jQuery) {
     jQuery.fn.lapply = function(options) {
         // sets the jquery matched object
         var matchedObject = this;
@@ -972,6 +1092,11 @@
         // setup operation using the proper extension
         var linksExtra = jQuery(".links-extra", matchedObject);
         linksExtra.ulinksextra();
+
+        // retrieves the reference to the bulk editing compoment and then
+        // registers for the proper operations in it
+        var bulk = jQuery(".bulk", matchedObject);
+        bulk.ubulk();
     };
 })(jQuery);
 
