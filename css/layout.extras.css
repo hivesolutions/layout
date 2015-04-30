@@ -185,12 +185,12 @@ body.no-footer .footer {
 
 .content-container .filter .table-row > th.selection,
 .content-container .filter .table-row > td.selection {
-	width: 90px;
+    width: 90px;
 }
 
 .content-container .filter .table-row > th.selection > input[type=checkbox],
 .content-container .filter .table-row > td.selection > input[type=checkbox] {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 .content-container .filter .table-row > td:first-child,

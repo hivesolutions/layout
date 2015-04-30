@@ -284,6 +284,11 @@ input[type="checkbox"] {
     width: 42px;
 }
 
+input[type="checkbox"].square {
+    background-image: (../images/check-button-square.png);
+    width: 24px;
+}
+
 input[type="checkbox"]:hover {
     background-position: left -24px;
 }
