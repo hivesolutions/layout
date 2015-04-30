@@ -230,6 +230,10 @@ input[type="checkbox"].square {
     width: 24px;
 }
 
+input[type="checkbox"].square.small {
+    background-image: url(../images/check-button-square-small.png);
+}
+
 input[type="checkbox"]:hover {
     background-position: left -24px;
 }
