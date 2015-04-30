@@ -1008,6 +1008,8 @@
                         _updatePartial(table, options);
                     });
 
+            // registers for the "simple" change operation in the
+            // body checkboxes so that a single line is toggled
             bodyCheckboxes.bind("change", function() {
                         var element = jQuery(this);
                         var table = element.parents("table");
@@ -1023,6 +1025,8 @@
         };
 
         var _selectAll = function(matchedObject, options) {
+            // retrieves the complete set of table rows from the body
+            // and then applies the select operation in each of the rows
             var rows = jQuery("tbody .table-row", matchedObject);
             rows.each(function(index, element) {
                         var element = jQuery(this);
@@ -1031,6 +1035,8 @@
         };
 
         var _deselectAll = function(matchedObject, options) {
+            // retrieves the complete set of table rows from the body
+            // and then applies the deselect operation in each of the rows
             var rows = jQuery("tbody .table-row", matchedObject);
             rows.each(function(index, element) {
                         var element = jQuery(this);
@@ -1054,12 +1060,18 @@
         };
 
         var _selectSingle = function(element) {
+            // retrieves the reference to the current line's checkbox and
+            // then adds the active class to the current element and runs
+            // the select operation to the current checkbox 
             var checkbox = jQuery("input[type=checkbox]", element);
             element.addClass("active");
             checkbox.attr("checked", true);
         };
 
         var _deselectSingle = function(element) {
+            // retrieves the reference to the current line's checkbox and
+            // then remomoves the active class from the current element and
+            // runs the deselect operation to the current checkbox
             var checkbox = jQuery("input[type=checkbox]", element);
             element.removeClass("active");
             checkbox.attr("checked", false);
