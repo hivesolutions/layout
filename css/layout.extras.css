@@ -185,7 +185,7 @@ body.no-footer .footer {
 
 .content-container .filter .table-row > th.selection,
 .content-container .filter .table-row > td.selection {
-    width: 90px;
+    width: 74px;
 }
 
 .content-container .filter .table-row > th.selection > input[type=checkbox],
