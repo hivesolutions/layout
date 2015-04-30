@@ -183,6 +183,15 @@ body.no-footer .footer {
     width: 100%;
 }
 
+.content-container .filter .table-row > th.selection,
+.content-container .filter .table-row > td.selection {
+	width: 90px;
+}
+
+.content-container .filter .table-row > th.selection > input[type=checkbox] {
+	vertical-align: middle;
+}
+
 .content-container .filter .table-row > td:first-child,
 .content-container .filter .table-row > th:first-child {
     padding-left: 24px;
