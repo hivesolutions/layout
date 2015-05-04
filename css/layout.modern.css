@@ -1656,8 +1656,9 @@ ul.traceback li:hover {
     width: 100%;
 }
 
-.button.button-color {
-    background-position: left 0px;
+.button.button-color,
+.button.button-drop-down {
+    background-position: right 0px;
     background-repeat: repeat-x;
     border: 1px solid transparent;
     border-radius: 4px 4px 4px 4px;
@@ -1675,18 +1676,24 @@ ul.traceback li:hover {
 }
 
 .button.button-color:hover,
-.button.button-color.hover {
-    background-position: left -32px;
+.button.button-drop-down:hover,
+.button.button-color.hover,
+.button.button-drop-down.hover {
+    background-position: right -32px;
 }
 
 .button.button-color:active,
-.button.button-color.active {
-    background-position: left -64px;
+.button.button-drop-down:active,
+.button.button-color.active,
+.button.button-drop-down.active {
+    background-position: right -64px;
 }
 
 .button.button-color:disabled,
-.button.button-color.disabled {
-    background-position: left 0px;
+.button.button-drop-down:disabled,
+.button.button-color.disabled,
+.button.button-drop-down.disabled {
+    background-position: right 0px;
     opacity: 0.6;
 }
 
@@ -1696,12 +1703,12 @@ ul.traceback li:hover {
 
 .button.button-color.medium:hover,
 .button.button-color.medium.hover {
-    background-position: left -36px;
+    background-position: right -36px;
 }
 
 .button.button-color.medium:active,
 .button.button-color.medium.active {
-    background-position: left -72px;
+    background-position: right -72px;
 }
 
 .button.button-color.button-green {
@@ -1749,6 +1756,7 @@ ul.traceback li:hover {
     background-image: url(../images/button-medium-blue.png);
 }
 
+.button.button-drop-down,
 .button.button-color.button-grey {
     background-color: #706f6f;
     background-image: url(../images/button-grey.png);
@@ -1757,6 +1765,8 @@ ul.traceback li:hover {
     text-shadow: 0px 1px 0px #ffffff;
 }
 
+.button.button-drop-down:hover,
+.button.button-drop-down.hover
 .button.button-color.button-grey:hover,
 .button.button-color.button-grey.hover {
     background-color: #858484;
@@ -1764,6 +1774,11 @@ ul.traceback li:hover {
 
 .button.button-color.button-grey.medium {
     background-image: url(../images/button-medium-grey.png);
+}
+
+.button.button-drop-down {
+	background-image: url(../images/button-drop-down-grey.png);
+	padding-right: 32px;
 }
 
 ul.sections-list {
@@ -1781,4 +1796,21 @@ ul.sections-list > li:hover {
     box-shadow: 0px 0px 6px #e8e8e8;
     -moz-box-shadow: 0px 0px 6px #e8e8e8;
     -webkit-box-shadow: 0px 0px 6px #e8e8e8;
+}
+
+ul.drop-down {
+	position: absolute;
+	background-color: #ffffff;
+	border: 1px solid #bcbcbc;
+	box-shadow: 0px 0px 6px #e8e8e8;
+    -moz-box-shadow: 0px 0px 6px #e8e8e8;
+    -webkit-box-shadow: 0px 0px 6px #e8e8e8;
+    padding: 4px 0px 4px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+ul.drop-down > li {
+	padding: 12px 12px 12px 12px;
+	min-width: 80px;
+	margin: 0px 0px 0px 0px;
 }
