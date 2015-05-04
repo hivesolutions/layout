@@ -1685,7 +1685,8 @@ ul.traceback li:hover {
 .button.button-color:active,
 .button.button-drop-down:active,
 .button.button-color.active,
-.button.button-drop-down.active {
+.button.button-drop-down.active,
+.drop-down-container.visible > .button.button-drop-down {
     background-position: right -64px;
 }
 
