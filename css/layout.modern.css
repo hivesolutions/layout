@@ -1810,15 +1810,15 @@ ul.sections-list > li:hover {
     border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
     -webkit-border-radius: 4px 4px 4px 4px;
-    box-shadow: 0px 0px 6px #e8e8e8;
-    -moz-box-shadow: 0px 0px 6px #e8e8e8;
-    -webkit-box-shadow: 0px 0px 6px #e8e8e8;
+    box-shadow: 1px 1px 4px #e8e8e8;
+    -moz-box-shadow: 1px 1px 4px #e8e8e8;
+    -webkit-box-shadow: 1px 1px 4px #e8e8e8;
     left: 0px;
     margin: 0px 0px 0px 0px;
     margin-top: 2px;
     padding: 4px 0px 4px 0px;
     position: absolute;
-    top: 38px;
+    top: 34px;
 }
 
 .drop-down-container > ul.drop-down > li {
