@@ -1029,7 +1029,7 @@
                         // updates the link value in the element and runs
                         // the location plugin to change the browser location
                         element.attr("href", completeLink);
-                        jQuery.uxlocation(link + completeLink);
+                        jQuery.uxlocation(completeLink);
 
                         // prevents the default event so that tha proper link
                         // click operation is not going to be performed
