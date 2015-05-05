@@ -1788,23 +1788,6 @@ ul.traceback li:hover {
     text-align: left;
 }
 
-ul.sections-list {
-    margin: 0px 0px 0px 0px;
-}
-
-ul.sections-list > li {
-    border: 1px solid transparent;
-    margin: 0px 0px 10px 0px;
-    padding: 14px 14px 14px 14px;
-}
-
-ul.sections-list > li:hover {
-    border-color: #cdcdcd;
-    box-shadow: 0px 0px 6px #e8e8e8;
-    -moz-box-shadow: 0px 0px 6px #e8e8e8;
-    -webkit-box-shadow: 0px 0px 6px #e8e8e8;
-}
-
 .drop-down-container {
     display: inline-block;
     position: relative;
@@ -1844,7 +1827,34 @@ ul.sections-list > li:hover {
     border-bottom: none;
     color: #4d4d4d;
     display: block;
+    font-size: 13px;
+    font-weight: bold;
     min-width: 120px;
     padding: 12px 12px 12px 12px;
+    text-transform: uppercase;
     width: 100%;
+}
+
+body.romantic .drop-down-container > ul.drop-down > li > a,
+body.romantic .drop-down-container > ul.drop-down > li > span {
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: inherit;
+}
+
+ul.sections-list {
+    margin: 0px 0px 0px 0px;
+}
+
+ul.sections-list > li {
+    border: 1px solid transparent;
+    margin: 0px 0px 10px 0px;
+    padding: 14px 14px 14px 14px;
+}
+
+ul.sections-list > li:hover {
+    border-color: #cdcdcd;
+    box-shadow: 0px 0px 6px #e8e8e8;
+    -moz-box-shadow: 0px 0px 6px #e8e8e8;
+    -webkit-box-shadow: 0px 0px 6px #e8e8e8;
 }
