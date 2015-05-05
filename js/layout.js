@@ -1003,8 +1003,27 @@
             // drop down so that the proper link may be changed according
             // to the selected lines of the bulk operation panel
             operationsLinks.click(function() {
+                        // retrieves the current element in iteration and uses it
+                        // to gather the reference to the associated bulk element
+                        // and the complete set of active table rows in it
                         var element = jQuery(this);
+                        var content = element.parents(".content");
+                        var bulk = jQuery(".bulk", content);
+                        var activeRows = jQuery(".table-row.active", bulk);
+
+                        // starts the ids value string to the default (empty)
+                        // value and then iterates over the various active rows
+                        // to appends the id values of each to the string
+                        var ids = "";
+                        activeRows.each(function(index, element) {
+                                    var _element = jQuery(this);
+                                    ids += _element.attr("data-id") + ","
+                                });
+
+                        // retrieves the current (base) link value for the
+                        // element and adds the ids value to it
                         var link = element.attr("href");
+                        element.attr("href", link + "?ids=" + ids);
                     });
 
             // registers for the change operation in the header checkbox
@@ -1082,7 +1101,7 @@
             isNotEmpty && headerCheckbox.attr("checked", true);
 
             // uses the is not empty flag to decide on whether or not to show
-            // the operations (button) for drop down usage and activation 
+            // the operations (button) for drop down usage and activation
             isNotEmpty
                     ? _showOperations(matchedObject)
                     : _hideOperations(matchedObject);
