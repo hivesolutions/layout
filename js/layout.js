@@ -1023,7 +1023,10 @@
                         // retrieves the current (base) link value for the
                         // element and adds the ids value to it
                         var link = element.attr("href");
-                        element.attr("href", link + "?ids=" + ids);
+                        element.attr("href", link + "?ids=" + ids);                        
+                        jQuery.uxlocation(link + "?ids=" + ids);
+                        
+                        event.preventDefault();
                     });
 
             // registers for the change operation in the header checkbox
