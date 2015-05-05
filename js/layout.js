@@ -990,7 +990,7 @@
             // this is going to be used for global registration
             var content = matchedObject.parents(".contents");
             var operations = jQuery(".drop-down.operations", content);
-            var operationLinks = jQuery("> li > a", items);
+            var operationsLinks = jQuery("> li > a", operations);
 
             // retrieves the references to the header checkbox and the various
             // possible checkboxes from the body of the current table
@@ -999,10 +999,10 @@
             var bodyCheckboxes = jQuery("tbody input[type=checkbox]",
                     matchedObject);
 
-            // registers for the click operation in the operation links
+            // registers for the click operation in the operations links
             // drop down so that the proper link may be changed according
             // to the selected lines of the bulk operation panel
-            operationLinks.click(function() {
+            operationsLinks.click(function() {
                         var element = jQuery(this);
                         var link = element.attr("href");
                     });
