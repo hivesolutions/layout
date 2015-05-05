@@ -1626,14 +1626,19 @@ ul.traceback li:hover {
     background-position: right -72px;
 }
 
-.button.button-color.button-green {
+.button.button-color.button-green,
+.button.button-drop-down.button-green {
     background-color: #008d36;
     background-image: url(../images/button-green.png);
     border-color: #58863f;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px #4d4d4d;
 }
 
 .button.button-color.button-green:hover,
-.button.button-color.button-green.hover {
+.button.button-drop-down.button-green:hover,
+.button.button-color.button-green.hover,
+.button.button-drop-down.button-green.hover {
     background-color: #00963a;
 }
 
@@ -1641,14 +1646,19 @@ ul.traceback li:hover {
     background-image: url(../images/button-medium-green.png);
 }
 
-.button.button-color.button-red {
+.button.button-color.button-red,
+.button.button-drop-down.button-red {
     background-color: #be1622;
     background-image: url(../images/button-red.png);
     border-color: #ba4e48;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px #4d4d4d;
 }
 
 .button.button-color.button-red:hover,
-.button.button-color.button-red.hover {
+.button.button-drop-down.button-red:hover,
+.button.button-color.button-red.hover,
+.button.button-drop-down.button-red.hover {
     background-color: #d11825;
 }
 
@@ -1656,14 +1666,19 @@ ul.traceback li:hover {
     background-image: url(../images/button-medium-red.png);
 }
 
-.button.button-color.button-blue {
+.button.button-color.button-blue,
+.button.button-drop-down.button-blue {
     background-color: #1c75bc;
     background-image: url(../images/button-blue.png);
     border-color: #1d5f91;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px #4d4d4d;
 }
 
 .button.button-color.button-blue:hover,
-.button.button-color.button-blue.hover {
+.button.button-drop-down.button-blue:hover,
+.button.button-color.button-blue.hover,
+.button.button-drop-down.button-blue.hover {
     background-color: #1f84d4;
 }
 
@@ -1671,8 +1686,10 @@ ul.traceback li:hover {
     background-image: url(../images/button-medium-blue.png);
 }
 
+.button.button-color,
 .button.button-drop-down,
-.button.button-color.button-grey {
+.button.button-color.button-grey,
+.button.button-drop-down.button-grey {
     background-color: #706f6f;
     background-image: url(../images/button-grey.png);
     border-color: #bcbcbc;
@@ -1680,22 +1697,30 @@ ul.traceback li:hover {
     text-shadow: 0px 1px 0px #ffffff;
 }
 
+.button.button-color:hover,
 .button.button-drop-down:hover,
-.button.button-drop-down.hover,
 .button.button-color.button-grey:hover,
-.button.button-color.button-grey.hover {
+.button.button-drop-down.button-grey:hover,
+.button.button-color.hover,
+.button.button-drop-down.hover,
+.button.button-color.button-grey.hover,
+.button.button-drop-down.button-grey.hover {
     background-color: #858484;
 }
 
+.button.button-color.medium,
 .button.button-color.button-grey.medium {
     background-image: url(../images/button-medium-grey.png);
+}
+
+.button.button-drop-down {
+    padding-right: 32px;
+    text-align: left;
 }
 
 .button.button-drop-down,
 .button.button-drop-down.button-grey {
     background-image: url(../images/button-drop-down-grey.png);
-    padding-right: 32px;
-    text-align: left;
 }
 
 .button.button-drop-down.button-green {
