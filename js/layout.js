@@ -603,7 +603,7 @@
 
 (function(jQuery) {
     jQuery.fn.ufluid = function(options) {
-        // the default values for the pos customer
+        // the default values for the fluid element
         var defaults = {};
 
         // sets the default options value
@@ -782,7 +782,7 @@
 
 (function(jQuery) {
     jQuery.fn.ulinksextra = function(options) {
-        // the default values for the pos customer
+        // the default values for the links extra
         var defaults = {};
 
         // sets the default options value
@@ -955,7 +955,7 @@
 
 (function(jQuery) {
     jQuery.fn.ubulk = function(options) {
-        // the default values for the pos customer
+        // the default values for the bulk element
         var defaults = {};
 
         // sets the default options value
