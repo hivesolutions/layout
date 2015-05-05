@@ -1017,7 +1017,7 @@
                         var ids = "";
                         activeRows.each(function(index, element) {
                                     var _element = jQuery(this);
-                                    ids += _element.attr("data-id") + ","
+                                    ids += _element.attr("data-id") + ",";
                                 });
 
                         // retrieves the current (base) link value for the
