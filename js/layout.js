@@ -988,7 +988,7 @@
         var _registerHandlers = function() {
             // retrieves the top level reference of the operations element
             // this is going to be used for global registration
-            var content = matchedObject.parents(".contents");
+            var content = matchedObject.parents(".content");
             var operations = jQuery(".drop-down.operations", content);
             var operationsLinks = jQuery("> li > a", operations);
 
@@ -1116,7 +1116,7 @@
         };
 
         var _showOperations = function(element) {
-            var content = element.parents(".contents");
+            var content = element.parents(".content");
             var operations = jQuery(".drop-down.operations", content);
             var container = operations.parents(".drop-down-container");
             var button = jQuery(".button-drop-down", container);
@@ -1124,7 +1124,7 @@
         };
 
         var _hideOperations = function(element) {
-            var content = element.parents(".contents");
+            var content = element.parents(".content");
             var operations = jQuery(".drop-down.operations", content);
             var container = operations.parents(".drop-down-container");
             var button = jQuery(".button-drop-down", container);
