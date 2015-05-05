@@ -1021,11 +1021,18 @@
                                 });
 
                         // retrieves the current (base) link value for the
-                        // element and adds the ids value to it
+                        // element and adds the ids value to it amking the
+                        // complete link value (with identifiers)
                         var link = element.attr("href");
-                        element.attr("href", link + "?ids=" + ids);                        
-                        jQuery.uxlocation(link + "?ids=" + ids);
-                        
+                        var completeLink = link + "?ids=" + ids;
+
+                        // updates the link value in the element and runs
+                        // the location plugin to change the browser location
+                        element.attr("href", completeLink);
+                        jQuery.uxlocation(link + completeLink);
+
+                        // prevents the default event so that tha proper link
+                        // click operation is not going to be performed
                         event.preventDefault();
                     });
 
