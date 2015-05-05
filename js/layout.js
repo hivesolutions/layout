@@ -1081,6 +1081,12 @@
             isPartial && headerCheckbox.addClass("partial");
             isNotEmpty && headerCheckbox.attr("checked", true);
 
+            // uses the is not empty flag to decide on whether or not to show
+            // the operations (button) for drop down usage and activation 
+            isNotEmpty
+                    ? _showOperations(matchedObject)
+                    : _hideOperations(matchedObject);
+
             // updates the various state variables for the current bulk
             // selection table so that it may be checked
             matchedObject.data("selected", bodyCheckboxesChecked.length);
@@ -1107,6 +1113,22 @@
             var checkbox = jQuery("input[type=checkbox]", element);
             element.removeClass("active");
             checkbox.attr("checked", false);
+        };
+
+        var _showOperations = function(element) {
+            var content = element.parents(".contents");
+            var operations = jQuery(".drop-down.operations", content);
+            var container = operations.parents(".drop-down-container");
+            var button = jQuery(".button-drop-down", container);
+            button.css("display", "inline-block");
+        };
+
+        var _hideOperations = function(element) {
+            var content = element.parents(".contents");
+            var operations = jQuery(".drop-down.operations", content);
+            var container = operations.parents(".drop-down-container");
+            var button = jQuery(".button-drop-down", container);
+            button.hide();
         };
 
         // initializes the plugin
