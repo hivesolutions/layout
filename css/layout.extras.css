@@ -694,3 +694,7 @@ body.grey .side-panel {
     margin-bottom: 20px;
     margin-top: -32px;
 }
+
+.button-drop-down.operations {
+	display: none;
+}
