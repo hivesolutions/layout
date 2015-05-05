@@ -1867,8 +1867,9 @@ ul.traceback li:hover {
     display: block;
     font-size: 13px;
     font-weight: bold;
+    line-height: 24px;
     min-width: 120px;
-    padding: 12px 12px 12px 12px;
+    padding: 6px 12px 6px 12px;
     text-transform: uppercase;
     width: 100%;
 }
