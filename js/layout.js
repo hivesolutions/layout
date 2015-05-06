@@ -1060,6 +1060,7 @@
                         // prevents the default event so that tha proper link
                         // click operation is not going to be performed
                         event.stopPropagation();
+                        event.stopImmediatePropagation();
                         event.preventDefault();
                     });
 
