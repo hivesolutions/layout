@@ -487,7 +487,12 @@ body.grey .side-links {
 
 .content-header > .content-buttons {
     float: right;
+    font-size: 0px;
     margin: 0px 24px 0px 0px;
+}
+
+.content-header > .content-buttons .button.button-color {
+    margin-left: 8px;
 }
 
 .side-panel {
