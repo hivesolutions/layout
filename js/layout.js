@@ -1025,8 +1025,8 @@
                         // not provided for the bulk structure
                         var template = bulk.attr("data-message");
                         template = template
-                                || "Are you sure you want to perform **'%s'** ?\n"
-                                + "It will be performed for **%s entities**.";
+                                || "Are you sure you want to perform ['%s'] ?\\n"
+                                + "It will be performed for [%s entities].";
                         var message = template.formatC(element.text(),
                                 activeRows.length);
 
