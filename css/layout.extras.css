@@ -492,7 +492,7 @@ body.grey .side-links {
 }
 
 .content-header > .content-buttons .button.button-color,
-.content-header > .content-buttons .button.button-drop-down {
+.content-header > .content-buttons .drop-down-container {
     margin-left: 8px;
 }
 
