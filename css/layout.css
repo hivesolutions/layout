@@ -1688,6 +1688,7 @@ ul.traceback li:hover {
     line-height: 24px;
     min-width: 120px;
     padding: 6px 12px 6px 12px;
+    white-space: nowrap;
     width: 100%;
 }
 
