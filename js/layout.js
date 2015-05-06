@@ -980,6 +980,10 @@
          * Creates the necessary html for the component.
          */
         var _appendHtml = function() {
+            var content = matchedObject.parents(".content");
+            var operations = jQuery(".drop-down.operations", content);
+            var operationsLinks = jQuery("> li > a", operations);
+            operationsLinks.addClass("no-async");
         };
 
         /**
@@ -999,10 +1003,6 @@
                     matchedObject);
             var bodyCheckboxes = jQuery("tbody input[type=checkbox]",
                     matchedObject);
-
-            // unregisters any pending click event handler for the operations
-            // links, required for proper override of behaviour
-            operationsLinks.unbind("click");
 
             // registers for the click operation in the operations links
             // drop down so that the proper link may be changed according
