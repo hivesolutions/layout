@@ -1026,7 +1026,7 @@
                 var template = bulk.attr("data-message");
                 template = template
                         || "Are you sure you want to perform ['%s'] ?\\n"
-                        + "The operation is going to be performed for [%s entitie(s)].";
+                        + "The operation is going to be performed for [%s entities].";
                 var message = template.formatC(element.text(),
                         activeRows.length);
 
