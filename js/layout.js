@@ -988,6 +988,7 @@
         var _registerHandlers = function() {
             // retrieves the top level reference of the operations element
             // this is going to be used for global registration
+            var _body = jQuery("body");
             var content = matchedObject.parents(".content");
             var operations = jQuery(".drop-down.operations", content);
             var operationsLinks = jQuery("> li > a", operations);
@@ -1011,6 +1012,14 @@
                         var bulk = jQuery(".bulk", content);
                         var activeRows = jQuery(".table-row.active", bulk);
 
+                        // tries to retrieve the message defined for the bulk
+                        // element, defaulting to the base one in case one is
+                        // not provided for the bulk structure
+                        var template = bulk.attr("data-message");
+                        template = template
+                                || "Are you sure you want to perform '%s' ?";
+                        var message = template.formatC(element.text());
+
                         // starts the ids value string to the default (empty)
                         // value and then iterates over the various active rows
                         // to appends the id values of each to the string
@@ -1028,10 +1037,21 @@
                         var separator = hasGet ? "&" : "?";
                         var completeLink = link + separator + "ids=" + ids;
 
-                        // updates the link value in the element and runs
-                        // the location plugin to change the browser location
-                        element.attr("href", completeLink);
-                        jQuery.uxlocation(completeLink);
+                        // calls the confirm window in the document, so that
+                        // only in case the operation is confirmed the proper
+                        // redirection is performed (as expected)
+                        _body.uxconfirm(message, function(result) {
+                                    // in case the result is cancel avoids the current
+                                    // execution and returns immediately
+                                    if (result == false) {
+                                        return;
+                                    }
+
+                                    // updates the link value in the element and runs
+                                    // the location plugin to change the browser location
+                                    element.attr("href", completeLink);
+                                    jQuery.uxlocation(completeLink);
+                                });
 
                         // prevents the default event so that tha proper link
                         // click operation is not going to be performed
