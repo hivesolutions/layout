@@ -1000,6 +1000,10 @@
             var bodyCheckboxes = jQuery("tbody input[type=checkbox]",
                     matchedObject);
 
+            // unregisters any pending click event handler for the operations
+            // links, required for proper override of behaviour
+            operationsLinks.unbind("click");
+
             // registers for the click operation in the operations links
             // drop down so that the proper link may be changed according
             // to the selected lines of the bulk operation panel
@@ -1046,7 +1050,7 @@
                                     if (result == false) {
                                         return;
                                     }
-                                    
+
                                     debugger;
 
                                     // updates the link value in the element and runs
@@ -1055,8 +1059,8 @@
                                     jQuery.uxlocation(completeLink);
                                 });
 
-                                debugger;
-                                
+                        debugger;
+
                         // prevents the default event so that tha proper link
                         // click operation is not going to be performed
                         event.stopPropagation();
