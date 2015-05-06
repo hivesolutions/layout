@@ -1024,7 +1024,9 @@
                         // element and adds the ids value to it amking the
                         // complete link value (with identifiers)
                         var link = element.attr("href");
-                        var completeLink = link + "?ids=" + ids;
+                        var hasGet = link.indexOf("?") != -1;
+                        var separator = hasGet ? "&" : "?";
+                        var completeLink = link + separator + "ids=" + ids;
 
                         // updates the link value in the element and runs
                         // the location plugin to change the browser location
