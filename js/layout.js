@@ -980,6 +980,10 @@
          * Creates the necessary html for the component.
          */
         var _appendHtml = function() {
+            // retrieves the reference to the various element that are
+            // going to be used in the complete element modification
+            // operations, that should make the operation links ready
+            // to be used with a proper confirmation message
             var content = matchedObject.parents(".content");
             var operations = jQuery(".drop-down.operations", content);
             var operationsLinks = jQuery("> li > a", operations);
@@ -990,8 +994,8 @@
          * Registers the event handlers for the created objects.
          */
         var _registerHandlers = function() {
-            // retrieves the top level reference of the operations element
-            // this is going to be used for global registration
+            // retrieves the reference to the various element that are
+            // going to be used in the complete event handling registration
             var _body = jQuery("body");
             var content = matchedObject.parents(".content");
             var operations = jQuery(".drop-down.operations", content);
