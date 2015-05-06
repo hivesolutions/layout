@@ -491,7 +491,8 @@ body.grey .side-links {
     margin: 0px 24px 0px 0px;
 }
 
-.content-header > .content-buttons .button.button-color {
+.content-header > .content-buttons .button.button-color,
+.content-header > .content-buttons .button.button-drop-down {
     margin-left: 8px;
 }
 
