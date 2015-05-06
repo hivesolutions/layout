@@ -1046,6 +1046,8 @@
                                     if (result == false) {
                                         return;
                                     }
+                                    
+                                    debugger;
 
                                     // updates the link value in the element and runs
                                     // the location plugin to change the browser location
@@ -1053,6 +1055,8 @@
                                     jQuery.uxlocation(completeLink);
                                 });
 
+                                debugger;
+                                
                         // prevents the default event so that tha proper link
                         // click operation is not going to be performed
                         event.stopPropagation();
