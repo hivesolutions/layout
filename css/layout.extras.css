@@ -698,3 +698,7 @@ body.grey .side-panel {
 .button-drop-down.operations {
     display: none;
 }
+
+.button-drop-down.operations.force {
+    display: inline-block;
+}
