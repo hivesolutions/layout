@@ -631,6 +631,7 @@ body.grey .side-panel {
     font-size: 16px;
     line-height: 30px;
     margin: 0px 0px 18px 0px;
+    overflow: hidden;
 }
 
 .login-panel {
