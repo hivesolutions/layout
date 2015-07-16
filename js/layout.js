@@ -392,6 +392,7 @@
         buffer += jQuery("#header", body).length ? "1" : "0";
         buffer += jQuery("#content", body).length ? "1" : "0";
         buffer += jQuery("#footer", body).length ? "1" : "0";
+        buffer += jQuery("#windows", body).length ? "1" : "0";
         buffer += jQuery(".action-bar", body).length ? "1" : "0";
         return buffer;
     };
@@ -447,6 +448,7 @@
         updateHeader(base);
         updateContent(base);
         updateFooter(base);
+        updateWindows(base);
         updateMeta(base);
         fixFluid();
     };
@@ -588,6 +590,17 @@
         footer_.uxapply();
     };
 
+    var updateWindows = function(base) {
+        var windows = base.filter("#windows");
+        var windows_ = jQuery("#windows");
+        var windowsClass = windows.attr("class");
+        var windowsHtml = windows.html();
+        windowsHtml = windowsHtml && windowsHtml.replace(/aux-src=/ig, "src=");
+        windows_.html(windowsHtml);
+        windows_.attr("class", windowsClass);
+        windows_.uxapply();
+    };
+
     var fixFluid = function() {
         var _body = jQuery("body");
         var isFluid = _body.hasClass("fluid");
@@ -636,7 +649,8 @@
 
             // retrieves the refereces to the various inner elements
             // of the fluid layout that are going to be updated
-            var elements = jQuery("#header, #content, #footer", matchedObject);
+            var elements = jQuery("#header, #content, #footer, #windows",
+                    matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
             var contentContainer = jQuery(".content-container", matchedObject);
 
