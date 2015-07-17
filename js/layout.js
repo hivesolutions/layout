@@ -1011,9 +1011,12 @@
             // retrieves the reference to the various element that are
             // going to be used in the complete event handling registration
             var _body = jQuery("body");
+            var container = matchedObject.parents(".container");
             var content = matchedObject.parents(".content");
+            var operationsWindows = jQuery(".window.window-operation", container);
             var operations = jQuery(".drop-down.operations", content);
             var operationsLinks = jQuery("> li > a", operations);
+            var operationsForms = jQuery("> form", operationsWindows);
 
             // retrieves the references to the header checkbox and the various
             // possible checkboxes from the body of the current table
@@ -1054,7 +1057,7 @@
                         });
 
                 // retrieves the current (base) link value for the
-                // element and adds the ids value to it amking the
+                // element and adds the ids value to it making the
                 // complete link value (with identifiers)
                 var link = element.attr("href");
                 var hasGet = link.indexOf("?") != -1;
@@ -1081,6 +1084,40 @@
                 // click operation is not going to be performed
                 event.preventDefault();
             });
+
+            // registers for the pre submit event on the operations forms so
+            // that it's possible to change the action value for the selected
+            // values (changes the ids value on the fly)
+            operationsForms.bind("pre_submit", function() {
+                        // retrieves the reference to the current element and
+                        // then uses it to retrieve the parent bulk values
+                        var element = jQuery(this);
+                        var container = element.parents(".container");
+                        var content = jQuery(".content", container);
+                        var bulk = jQuery(".bulk", content);
+                        var activeRows = jQuery(".table-row.active", bulk);
+
+                        // starts the ids value string to the default (empty)
+                        // value and then iterates over the various active rows
+                        // to appends the id values of each to the string
+                        var ids = "";
+                        activeRows.each(function(index, element) {
+                                    var _element = jQuery(this);
+                                    ids += _element.attr("data-id") + ",";
+                                });
+
+                        // retrieves the current (base) link/action value
+                        // for the element and adds the ids value to it
+                        // making the complete link value (with identifiers)
+                        var link = element.attr("action");
+                        var hasGet = link.indexOf("?") != -1;
+                        var separator = hasGet ? "&" : "?";
+                        var completeLink = link + separator + "ids=" + ids;
+
+                        // changes the action attribute of the form so that
+                        // it represents the "new" complete link value
+                        element.attr("action", completeLink);
+                    });
 
             // registers for the change operation in the header checkbox
             // so that the various checkboxes are selected or unselected
