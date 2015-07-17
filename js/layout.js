@@ -1115,6 +1115,8 @@
                         var hasGet = link.indexOf("?") != -1;
                         var separator = hasGet ? "&" : "?";
                         var completeLink = link + separator + "ids=" + ids;
+                        
+                        console.info(completeLink);
 
                         // changes the action attribute of the form so that
                         // it represents the "new" complete link value
