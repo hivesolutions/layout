@@ -1041,7 +1041,7 @@
                 // tries to determine if the link referes a window opening
                 // situation and if that's the case returns immediately as
                 // the final handling will be performed by the window
-                var window = element.attr("data-window");
+                var window = element.attr("data-window_open");
                 if (window) {
                     return;
                 }
