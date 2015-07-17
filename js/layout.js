@@ -1107,6 +1107,8 @@
                         var content = jQuery(".content", container);
                         var bulk = jQuery(".bulk", content);
                         var activeRows = jQuery(".table-row.active", bulk);
+                        
+                        debugger;
 
                         // starts the ids value string to the default (empty)
                         // value and then iterates over the various active rows
