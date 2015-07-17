@@ -1084,6 +1084,8 @@
                 // click operation is not going to be performed
                 event.preventDefault();
             });
+            
+            console.info(operationsForms);
 
             // registers for the pre submit event on the operations forms so
             // that it's possible to change the action value for the selected
