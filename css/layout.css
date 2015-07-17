@@ -564,6 +564,28 @@ pre {
     margin: 0px 6px 0px 6px;
 }
 
+.window > form {
+    margin: 0px auto 0px auto;
+    min-width: 360px;
+    text-align: left;
+    width: inherit;
+}
+
+.window > form input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.window > form label {
+    display: block;
+    margin: 12px 0px 6px 0px;
+}
+
+.window > form > .window-buttons {
+    margin-top: 24px;
+    text-align: center;
+}
+
 .drop-field {
     text-align: left;
 }
