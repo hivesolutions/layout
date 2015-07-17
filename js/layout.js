@@ -1013,7 +1013,8 @@
             var _body = jQuery("body");
             var container = matchedObject.parents(".container");
             var content = matchedObject.parents(".content");
-            var operationsWindows = jQuery(".window.window-operation", container);
+            var operationsWindows = jQuery(".window.window-operation",
+                    container);
             var operations = jQuery(".drop-down.operations", content);
             var operationsLinks = jQuery("> li > a", operations);
             var operationsForms = jQuery("> form", operationsWindows);
@@ -1036,6 +1037,14 @@
                 var content = element.parents(".content");
                 var bulk = jQuery(".bulk", content);
                 var activeRows = jQuery(".table-row.active", bulk);
+
+                // tries to determine if the link referes a window opening
+                // situation and if that's the case returns immediately as
+                // the final handling will be performed by the window
+                var window = element.attr("data-window");
+                if (window) {
+                    return;
+                }
 
                 // tries to retrieve the message defined for the bulk
                 // element, defaulting to the base one in case one is
@@ -1084,7 +1093,7 @@
                 // click operation is not going to be performed
                 event.preventDefault();
             });
-            
+
             console.info(operationsForms);
 
             // registers for the pre submit event on the operations forms so
@@ -1115,7 +1124,7 @@
                         var hasGet = link.indexOf("?") != -1;
                         var separator = hasGet ? "&" : "?";
                         var completeLink = link + separator + "ids=" + ids;
-                        
+
                         console.info(completeLink);
 
                         // changes the action attribute of the form so that
