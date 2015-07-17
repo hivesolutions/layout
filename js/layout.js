@@ -445,10 +445,10 @@
         updateSideLinks(base);
         updateActionBar(base);
         updateNotifications(base);
+        updateWindows(base);
         updateHeader(base);
         updateContent(base);
         updateFooter(base);
-        updateWindows(base);
         updateMeta(base);
         fixFluid();
     };
@@ -532,6 +532,17 @@
         notifications_.html(notificationsHtml);
     };
 
+    var updateWindows = function(base) {
+        var windows = base.filter("#windows");
+        var windows_ = jQuery("#windows");
+        var windowsClass = windows.attr("class");
+        var windowsHtml = windows.html();
+        windowsHtml = windowsHtml && windowsHtml.replace(/aux-src=/ig, "src=");
+        windows_.html(windowsHtml);
+        windows_.attr("class", windowsClass);
+        windows_.uxapply();
+    };
+
     var updateHeader = function(base) {
         var header_ = jQuery("#header");
         var isFull = header_.hasClass("replace");
@@ -588,17 +599,6 @@
         footer_.html(footerHtml);
         footer_.attr("class", footerClass);
         footer_.uxapply();
-    };
-
-    var updateWindows = function(base) {
-        var windows = base.filter("#windows");
-        var windows_ = jQuery("#windows");
-        var windowsClass = windows.attr("class");
-        var windowsHtml = windows.html();
-        windowsHtml = windowsHtml && windowsHtml.replace(/aux-src=/ig, "src=");
-        windows_.html(windowsHtml);
-        windows_.attr("class", windowsClass);
-        windows_.uxapply();
     };
 
     var fixFluid = function() {
@@ -1094,8 +1094,6 @@
                 event.preventDefault();
             });
 
-            console.info(operationsForms);
-
             // registers for the pre submit event on the operations forms so
             // that it's possible to change the action value for the selected
             // values (changes the ids value on the fly)
@@ -1107,8 +1105,6 @@
                         var content = jQuery(".content", container);
                         var bulk = jQuery(".bulk", content);
                         var activeRows = jQuery(".table-row.active", bulk);
-                        
-                        debugger;
 
                         // starts the ids value string to the default (empty)
                         // value and then iterates over the various active rows
@@ -1126,8 +1122,6 @@
                         var hasGet = link.indexOf("?") != -1;
                         var separator = hasGet ? "&" : "?";
                         var completeLink = link + separator + "ids=" + ids;
-
-                        console.info(completeLink);
 
                         // changes the action attribute of the form so that
                         // it represents the "new" complete link value
