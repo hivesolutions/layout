@@ -407,8 +407,16 @@
     };
 
     var isContentsValid = function(body) {
+        var _body = jQuery("body");
         var isFramework = body.hasClass("ux");
         if (!isFramework) {
+            return false;
+        }
+
+        var identifier = body.attr("data-id");
+        var identifier_ = _body.attr("data-id");
+        var isCompatible = identifier == identifier;
+        if (!isCompatible) {
             return false;
         }
 
