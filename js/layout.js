@@ -415,7 +415,7 @@
 
         var identifier = body.attr("data-id");
         var identifier_ = _body.attr("data-id");
-        var isCompatible = identifier == identifier;
+        var isCompatible = identifier == identifier_;
         if (!isCompatible) {
             return false;
         }
