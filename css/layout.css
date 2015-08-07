@@ -1082,6 +1082,7 @@ pre {
     margin-top: 28px;
     position: absolute;
     text-align: right;
+    z-index: 1;
 }
 
 .links-extra ul {
