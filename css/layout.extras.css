@@ -342,7 +342,7 @@ body.fluid.fixed .top-bar > .container {
     max-height: 100%;
     min-height: 100%;
     overflow: auto;
-    padding: 69px 0px 16px 0px;
+    padding: 69px 0px 0px 0px;
     position: absolute;
     text-align: left;
     text-transform: uppercase;
