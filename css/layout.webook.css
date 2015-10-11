@@ -1576,7 +1576,7 @@ ul.traceback li:hover {
     height: 6px;
     margin-top: -2px;
     opacity: 0.0;
-    position: absolute;
+    position: fixed;
     z-index: 20;
 }
 
