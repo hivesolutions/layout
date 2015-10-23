@@ -1249,6 +1249,7 @@
             var operations = jQuery(".drop-down.operations", content);
             var container = operations.parents(".drop-down-container");
             var button = jQuery(".button-drop-down", container);
+            container.css("display", "inline-block");
             button.css("display", "inline-block");
         };
 
@@ -1257,6 +1258,7 @@
             var operations = jQuery(".drop-down.operations", content);
             var container = operations.parents(".drop-down-container");
             var button = jQuery(".button-drop-down", container);
+            container.hide();
             button.hide();
         };
 
