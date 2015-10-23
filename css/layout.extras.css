@@ -708,7 +708,7 @@ body.grey .side-panel {
     margin-top: -32px;
 }
 
-.drop-down-container .operations {
+.drop-down-container.operations {
     display: none;
 }
 
