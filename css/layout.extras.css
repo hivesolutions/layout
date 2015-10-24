@@ -712,6 +712,10 @@ body.grey .side-panel {
     display: none;
 }
 
+.drop-down-container.operations.force {
+    display: inline-block;
+}
+
 .button-drop-down.operations {
     display: none;
 }
