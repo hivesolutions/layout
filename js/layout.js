@@ -1244,11 +1244,17 @@
             checkbox.attr("checked", false);
         };
 
-        var _showOperations = function(element) {
+        var _showOperations = function(element, force) {
             var content = element.parents(".content");
             var operations = jQuery(".drop-down.operations", content);
             var container = operations.parents(".drop-down-container");
             var button = jQuery(".button-drop-down", container);
+            var dropDown = jQuery(".drop-down", container);
+            var elements = jQuery("> li", dropDown);
+            var isEmpty = element.length == 0;
+            if (isEmpty && !force) {
+                return;
+            }
             container.css("display", "inline-block");
             button.css("display", "inline-block");
         };
