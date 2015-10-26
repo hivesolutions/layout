@@ -1251,7 +1251,7 @@
             var button = jQuery(".button-drop-down", container);
             var dropDown = jQuery(".drop-down", container);
             var elements = jQuery("> li", dropDown);
-            var isEmpty = element.length == 0;
+            var isEmpty = elements.length == 0;
             if (isEmpty && !force) {
                 return;
             }
