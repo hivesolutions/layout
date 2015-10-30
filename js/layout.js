@@ -1371,9 +1371,16 @@
             var messageAll = templateAll.formatC(count);
             tableAllMessage.text(messageAll);
 
+            // tries to determine the amount of pages available for the
+            // current bulk table and considers the current bulk table
+            // to be multiple (pages) if that value is greater than one
+            var pages = matchedObject.attr("data-pages") || "1";
+            pages = parseInt(pages);
+            var multiple = pages > 1;
+
             // verifies if this is a table total selection and if that's
             // the case show the table all section
-            if (isTotal) {
+            if (isTotal && multiple) {
                 tableAll.show();
             }
             // otherwise hide the table all section and removes the
