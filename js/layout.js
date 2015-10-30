@@ -1010,6 +1010,51 @@
             var operations = jQuery(".drop-down.operations", content);
             var operationsLinks = jQuery("> li > a", operations);
             operationsLinks.addClass("no-async");
+
+            // iterates over the complete set of selected table elements
+            // to start them in their concrete initialization values
+            matchedObject.each(function(index, element) {
+                        // retrieves the reference to the current element
+                        // (bulk) in iteration and it's child element
+                        var _element = jQuery(this);
+                        var tableBody = jQuery("tbody", matchedObject);
+                        var size = _element.attr("data-size");
+                        var total = _element.attr("data-total");
+                        var templateAll = _element.attr("data-all");
+                        var templateSelect = _element.attr("data-select");
+                        var templateDeselect = _element.attr("data-deselect");
+
+                        // creates the table all (special) row at the begining
+                        // of the bulk table and then retrieves the reference
+                        // to it to be able to change it
+                        tableBody.prepend("<tr class=\"table-all\"></tr>");
+                        var tableAll = jQuery(".table-all", tableBody);
+
+                        // creates the proper template information taking into
+                        // account possible override via attribute
+                        templateAll = templateAll
+                                || "All %s items on this page are selected.";
+                        templateSelect = templateSelect
+                                || "Select all %s items";
+                        templateDeselect = templateDeselect || "Clear all";
+
+                        // runs the format operation for each of the templates
+                        // with the proper (initial) arguments
+                        var messageAll = templateAll.formatC(size);
+                        var messageSelect = templateSelect.formatC(total);
+                        var messageDeselect = templateDeselect;
+
+                        // adds the (unique) table column to the all row that
+                        // contains the proper all message and selectors and
+                        // the runs the initial update state for the bulk
+                        tableAll.append("<td colspan=\"99\">"
+                                + "<span class=\"message\">" + messageAll
+                                + "</span>" + "<a class=\"selector\">"
+                                + messageSelect + "</a>"
+                                + "<a class=\"deselector\">" + messageDeselect
+                                + "</a>" + "</td>");
+                        _updateState(_element, options);
+                    });
         };
 
         /**
@@ -1034,6 +1079,12 @@
             var bodyCheckboxes = jQuery("tbody input[type=checkbox]",
                     matchedObject);
 
+            // retreives the reference to the table all information
+            // message and to its child selector
+            var tableAll = jQuery("tbody .table-all", matchedObject);
+            var tableAllSelector = jQuery(".selector", tableAll);
+            var tableAllDeselector = jQuery(".deselector", tableAll);
+
             // registers for the click operation in the operations links
             // drop down so that the proper link may be changed according
             // to the selected lines of the bulk operation panel
@@ -1054,6 +1105,18 @@
                     return;
                 }
 
+                // determines if the current bulk panel is selected under
+                // the verything mode, if that's the case the operation is
+                // going to be performed for the complete set of elements
+                var isEverything = bulk.hasClass("everything");
+
+                // retrieves the total number of records/items associated
+                // with the bulk operation and then in case the everything
+                // mode is selected forces the count as that value, otherwise
+                // uses the currently slected active rows
+                var total = bulk.attr("data-total");
+                var count = isEverything ? total : activeRows.length;
+
                 // tries to retrieve the message defined for the bulk
                 // element, defaulting to the base one in case one is
                 // not provided for the bulk structure
@@ -1061,8 +1124,7 @@
                 template = template
                         || "Are you sure you want to perform ['%s'] ?\\n"
                         + "The operation is going to be performed for [%s entities].";
-                var message = template.formatC(element.text(),
-                        activeRows.length);
+                var message = template.formatC(element.text(), count);
 
                 // starts the ids value string to the default (empty)
                 // value and then iterates over the various active rows
@@ -1073,13 +1135,19 @@
                             ids += _element.attr("data-id") + ",";
                         });
 
+                // in case the everything mode is active the gathered
+                // ids are ignored as the selection is going to be
+                // performed on the server side
+                ids = isEverything ? "" : ids;
+
                 // retrieves the current (base) link value for the
                 // element and adds the ids value to it making the
                 // complete link value (with identifiers)
                 var link = element.attr("href");
                 var hasGet = link.indexOf("?") != -1;
                 var separator = hasGet ? "&" : "?";
-                var completeLink = link + separator + "ids=" + ids;
+                var completeLink = link + separator;
+                completeLink += ids ? "ids=" + ids : "";
 
                 // calls the confirm window in the document, so that
                 // only in case the operation is confirmed the proper
@@ -1140,22 +1208,23 @@
             // so that the various checkboxes are selected or unselected
             headerCheckbox.bind("change", function() {
                         var element = jQuery(this);
-                        var table = element.parents("table");
+                        var bulk = element.parents(".bulk");
                         var checked = element.attr("checked");
                         if (checked) {
-                            _selectAll(table, options);
+                            _selectAll(bulk, options);
                         } else {
-                            _deselectAll(table, options);
+                            _deselectAll(bulk, options);
                         }
+                        bulk.removeClass("partial");
                         element.removeClass("partial");
-                        _updatePartial(table, options);
+                        _updateState(bulk, options);
                     });
 
             // registers for the "simple" change operation in the
             // body checkboxes so that a single line is toggled
             bodyCheckboxes.bind("change", function() {
                         var element = jQuery(this);
-                        var table = element.parents("table");
+                        var bulk = element.parents(".bulk");
                         var tableRow = element.parents(".table-row");
                         var checked = element.attr("checked");
                         if (checked) {
@@ -1163,7 +1232,23 @@
                         } else {
                             _deselectSingle(tableRow, true);
                         }
-                        _updatePartial(table, options);
+                        _updateState(bulk, options);
+                    });
+
+            // registers for the click operation in the
+            // table all selector to select everything
+            tableAllSelector.click(function() {
+                        var element = jQuery(this);
+                        var bulk = element.parents(".bulk");
+                        _selectEverything(bulk, options);
+                    });
+
+            // registers for the click operation in the
+            // table all deselector to deselect everything
+            tableAllDeselector.click(function() {
+                        var element = jQuery(this);
+                        var bulk = element.parents(".bulk");
+                        _deselectEverything(bulk, options);
                     });
         };
 
@@ -1187,6 +1272,28 @@
                     });
         };
 
+        var _selectEverything = function(matchedObject, options) {
+            // adds the everything class to the matched object
+            // and then runs the update state operation
+            matchedObject.addClass("everything");
+            _updateState(matchedObject, options);
+        };
+
+        var _deselectEverything = function(matchedObject, options) {
+            // removes the everything class to the matched object
+            // and then runs the update state operation
+            matchedObject.removeClass("everything");
+            _deselectAll(matchedObject, options);
+            _updateState(matchedObject, options);
+        };
+
+        var _updateState = function(matchedObject, options) {
+            // runs the complete set of state updating operation
+            // associated with the current extension
+            _updatePartial(matchedObject, options);
+            _updateEverything(matchedObject, options);
+        };
+
         var _updatePartial = function(matchedObject, options) {
             // gathers the reference to the header and body checkboxes
             // (including the ones that are checked), these are going
@@ -1202,11 +1309,16 @@
             // checkbox from both the length values of checkboxed
             var isPartial = bodyCheckboxes.length != bodyCheckboxesChecked.length;
             var isNotEmpty = bodyCheckboxesChecked.length != 0;
+            isPartial = isPartial && isNotEmpty;
 
             // resets the state of the header checkbox and then applies the
             // delta values taking into account the various flags
+            matchedObject.removeClass("partial");
+            matchedObject.removeClass("selection");
             headerCheckbox.removeClass("partial");
             headerCheckbox.attr("checked", false);
+            isPartial && matchedObject.addClass("partial");
+            isNotEmpty && matchedObject.addClass("selection");
             isPartial && headerCheckbox.addClass("partial");
             isNotEmpty && headerCheckbox.attr("checked", true);
 
@@ -1224,6 +1336,63 @@
             // event listeners may change their current status
             matchedObject.triggerHandler("value_change",
                     [bodyCheckboxesChecked.length]);
+        };
+
+        var _updateEverything = function(matchedObject, options) {
+            // retrieves the various elements associated with the table
+            // all section of the table (to be changed)
+            var tableAll = jQuery("tbody .table-all", matchedObject);
+            var tableAllMessage = jQuery(".message", tableAll);
+            var tableAllSelector = jQuery(".selector", tableAll);
+            var tableAllDeselector = jQuery(".deselector", tableAll);
+
+            // determines the kind of selection that is currently present
+            // in the bulk table (everything, total or partial)
+            var isSelected = matchedObject.hasClass("selection");
+            var isPartial = matchedObject.hasClass("partial");
+            var isEverything = matchedObject.hasClass("everything");
+            var isTotal = isSelected && !isPartial;
+
+            // retrieves the various attributes that are going to be used
+            // to build the proper end user message
+            var size = matchedObject.attr("data-size");
+            var total = matchedObject.attr("data-total");
+            var templateAll = matchedObject.attr("data-all");
+
+            // determines the count value that is going to be presented
+            // to the end user taking into account the current selection
+            // state (everyting or other)
+            var count = isEverything ? total : size;
+
+            // retrieves the proper template value and then applies the
+            // (item) count value to it and changed the table all message
+            templateAll = templateAll
+                    || "All %s items on this page are selected.";
+            var messageAll = templateAll.formatC(count);
+            tableAllMessage.text(messageAll);
+
+            // verifies if this is a table total selection and if that's
+            // the case show the table all section
+            if (isTotal) {
+                tableAll.show();
+            }
+            // otherwise hide the table all section and removes the
+            // everything class from the bulk element
+            else {
+                tableAll.hide();
+                matchedObject.removeClass("everything");
+            }
+
+            // verifies if this is a everything situation and taking
+            // that into account toggles the visibility of the selector
+            // or deselector of the everything button/action
+            if (isEverything) {
+                tableAllSelector.hide();
+                tableAllDeselector.show();
+            } else {
+                tableAllSelector.show();
+                tableAllDeselector.hide();
+            }
         };
 
         var _selectSingle = function(element) {
