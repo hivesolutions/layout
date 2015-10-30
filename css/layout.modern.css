@@ -992,6 +992,14 @@ body.romantic .calendar-content tbody tr td {
     background-image: url(../images/header-up.png);
 }
 
+.filter .table-all {
+    line-height: 26px;
+    margin: 0px 0px 0px 0px;
+    min-height: 18px;
+    padding: 8px 20px 8px 20px;
+    text-align: center;
+}
+
 .filter .table-row {
     line-height: 26px;
     margin: 0px 0px 0px 0px;
@@ -1043,6 +1051,25 @@ body.romantic .calendar-content tbody tr td {
 
 .filter.no-input .filter-contents {
     margin-top: 0px;
+}
+
+.filter .filter-contents .table-all {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid #ebebeb;
+}
+
+.filter .filter-contents .table-all > td,
+.filter .filter-contents .table-all > th {
+    background-color: #f2f8ff;
+    border-top: 1px solid #ebebeb;
+}
+
+.filter .filter-contents .table-all > td > .selector,
+.filter .filter-contents .table-all > td > .deselector,
+.filter .filter-contents .table-all > th > .selector,
+.filter .filter-contents .table-all > th > .deselector {
+    cursor: pointer;
+    margin-left: 6px;
 }
 
 .filter .filter-contents .table-row {
