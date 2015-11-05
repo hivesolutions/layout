@@ -124,6 +124,7 @@ body.no-footer .footer {
 .content-container table {
     border-collapse: collapse;
     margin: 0px 0px 0px 0px;
+    table-layout: fixed;
     width: 100%;
 }
 
