@@ -860,6 +860,7 @@ pre {
     margin: 0px 0px 0px 0px;
     min-height: 18px;
     padding: 8px 0px 8px 0px;
+    word-wrap: break-word;
 }
 
 .filter .table-row > td:first-child,
