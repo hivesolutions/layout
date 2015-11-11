@@ -1341,12 +1341,12 @@
         var _updateEverything = function(matchedObject, options) {
             // retrieves the various elements associated with the table
             // all section of the table (to be changed)
-            var tableHeaders = jQuery("thead .th", matchedObject);
+            var tableHeaders = jQuery("thead th", matchedObject);
             var tableAll = jQuery("tbody .table-all", matchedObject);
             var tableAllColumn = jQuery("td", tableAll);
-            var tableAllMessage = jQuery(".message", tableAll);
-            var tableAllSelector = jQuery(".selector", tableAll);
-            var tableAllDeselector = jQuery(".deselector", tableAll);
+            var tableAllMessage = jQuery(".message", tableAllColumn);
+            var tableAllSelector = jQuery(".selector", tableAllColumn);
+            var tableAllDeselector = jQuery(".deselector", tableAllColumn);
 
             // determines the kind of selection that is currently present
             // in the bulk table (everything, total or partial)
