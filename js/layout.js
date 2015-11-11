@@ -1341,7 +1341,9 @@
         var _updateEverything = function(matchedObject, options) {
             // retrieves the various elements associated with the table
             // all section of the table (to be changed)
+            var tableHeaders = jQuery("thead .th", matchedObject);
             var tableAll = jQuery("tbody .table-all", matchedObject);
+            var tableAllColumn = jQuery("td", tableAll);
             var tableAllMessage = jQuery(".message", tableAll);
             var tableAllSelector = jQuery(".selector", tableAll);
             var tableAllDeselector = jQuery(".deselector", tableAll);
@@ -1364,6 +1366,10 @@
             // state (everyting or other)
             var count = isEverything ? total : size;
 
+            // calculates the number of columns in the current table as
+            // the number of header columns in the table (should be equivalent)
+            var numberColumns = tableHeaders.length;
+
             // retrieves the proper template value and then applies the
             // (item) count value to it and changed the table all message
             templateAll = templateAll
@@ -1379,8 +1385,11 @@
             var multiple = pages > 1;
 
             // verifies if this is a table total selection and if that's
-            // the case show the table all section
+            // the case show the table all section, note that the colspan
+            // attribute of the table all column is updated according to
+            // the current specification of the table
             if (isTotal && multiple) {
+                tableAllColumn.attr("colspan", String(numberColumns));
                 tableAll.show();
             }
             // otherwise hide the table all section and removes the
