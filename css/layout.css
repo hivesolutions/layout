@@ -1575,6 +1575,11 @@ ul.traceback li:hover {
     opacity: 0.6;
 }
 
+.button.button-color.invalid,
+.button.button-drop-down.invalid {
+    border-color: #c9273f;
+}
+
 .button.button-color.medium {
     line-height: 36px;
 }
