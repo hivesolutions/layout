@@ -1131,23 +1131,51 @@ pre {
     font-weight: bold;
 }
 
-.up,
-.online,
-.passed,
-.valid,
-.truth,
-.success,
-.running {
+div.up,
+span.up,
+label.up,
+div.online,
+span.online,
+label.online,
+div.passed,
+span.passed,
+label.passed,
+div.valid,
+span.valid,
+label.valid,
+div.truth,
+span.truth,
+label.truth,
+div.success,
+span.success,
+label.success,
+div.running,
+span.running,
+label.running {
     color: #32951b;
 }
 
-.down,
-.offline,
-.failed,
-.invalid,
-.error,
-.failure,
-.stopped {
+div.down,
+span.down,
+label.down,
+div.offline,
+span.offline,
+label.offline,
+div.failed,
+span.failed,
+label.failed,
+div.invalid,
+span.invalid,
+label.invalid,
+div.error,
+span.error,
+label.error,
+div.failure,
+span.failure,
+label.failure,
+div.stopped,
+span.stopped,
+label.stopped {
     color: #c31f30;
 }
 
