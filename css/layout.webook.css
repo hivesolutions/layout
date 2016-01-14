@@ -914,6 +914,7 @@ pre {
     margin: 0px 0px 0px 0px;
     min-height: 18px;
     padding: 8px 20px 8px 20px;
+    vertical-align: top;
 }
 
 .filter .table-header.table-row {
@@ -985,7 +986,6 @@ pre {
 .filter .filter-contents .table-row {
     border-bottom: 1px solid transparent;
     border-top: 1px solid #ebebeb;
-    vertical-align: top;
 }
 
 .filter .filter-contents .table-row > td,
