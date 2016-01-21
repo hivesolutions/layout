@@ -504,6 +504,7 @@ pre {
 .tag.get,
 .tag.finished {
     background-color: #46a546;
+    color: #ffffff;
 }
 
 .tag.orange,
@@ -511,6 +512,7 @@ pre {
 .tag.issued,
 .tag.started {
     background-color: #f89406;
+    color: #ffffff;
 }
 
 .tag.red,
@@ -520,12 +522,14 @@ pre {
 .tag.stopped,
 .tag.delete {
     background-color: #c43c35;
+    color: #ffffff;
 }
 
 .tag.blue,
 .tag.post,
 .tag.put {
     background-color: #3c80cd;
+    color: #ffffff;
 }
 
 .table-full {
