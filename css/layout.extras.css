@@ -372,6 +372,7 @@ body.grey .side-links {
     margin: 0px 24px 14px 24px;
     overflow: hidden;
     padding: 0px 0px 0px 0px;
+    text-overflow: ellipsis;
 }
 
 .side-links > a:last-child {
