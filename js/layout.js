@@ -463,6 +463,7 @@
         var _body = jQuery("body");
         var bodyClass = body.attr("class");
         _body.attr("class", bodyClass);
+        _body.uxresponsive();
     };
 
     var updateBodyFull = function(body) {
