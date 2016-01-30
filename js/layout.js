@@ -689,7 +689,6 @@
 
             // retrieves the reference to the various elements that
             // are going to be used for event handler registration
-            var _window = jQuery(window);
             var topBar = jQuery(".top-bar", matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
             var logoLink = jQuery(".logo > a", topBar);
@@ -935,7 +934,6 @@
             // registers for the click event on the document
             // to hide the current extra links menu
             _document.click(function() {
-                var element = jQuery(this);
                 matchedObject.triggerHandler("hide");
             });
         };
