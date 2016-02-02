@@ -86,7 +86,7 @@
             }
 
             // registers for the data changed event so that if there's new panel
-            // data available the layour is update in acordance, so that the async
+            // data available the layour is updated in acordance, so that the async
             // requests are reflected in a layout change
             _body.bind("data", function(event, data, href, uuid, push, hbase) {
                 // in case no unique identifier for the state exists generates a new
