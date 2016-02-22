@@ -692,6 +692,7 @@
             var topBar = jQuery(".top-bar", matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
             var logoLink = jQuery(".logo > a", topBar);
+            var dropField = jQuery(".drop-field", topBar);
 
             // registers for the click event on the logo link element
             // so that the side links visibility is changed
@@ -760,6 +761,15 @@
                         _layout(matchedObject, options);
                     }
                 });
+            });
+
+            // registers for the selection of an element in the top
+            // drop field and resets the drop field for such operation
+            // as this is considered the expected behaviour
+            dropField.bind("value_select", function() {
+                var element = jQuery(this);
+                element.uxreset();
+                element.blur();
             });
         };
 
