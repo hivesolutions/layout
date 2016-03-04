@@ -1976,7 +1976,6 @@ ul.traceback li:hover {
     padding: 6px 12px 6px 12px;
     text-transform: uppercase;
     white-space: nowrap;
-    width: 100%;
 }
 
 body.romantic .drop-down-container > ul.drop-down > li > a,
