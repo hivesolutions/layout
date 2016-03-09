@@ -54,6 +54,7 @@ form .province {
 
 .drop-field.entities > .drop-field-contents > li {
     border-bottom: 1px solid #e6e6e6;
+    overflow: hidden;
 }
 
 .drop-field.entities > .drop-field-contents > li:last-child {
@@ -63,6 +64,7 @@ form .province {
 .drop-field.entities .drop-field-contents > * > * {
     display: inline-block;
     vertical-align: top;
+    width: 100%;
 }
 
 .drop-field.entities .drop-field-contents > * .picture {
@@ -76,10 +78,16 @@ form .province {
 .drop-field.entities .drop-field-contents > * .title {
     font-size: 18px;
     font-weight: bold;
-    margin: 8px 0px 0px 12px;
+    margin: 8px 12px 0px 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 
 .drop-field.entities .drop-field-contents > * .description {
     font-size: 14px;
-    margin: 0px 0px 0px 12px;
+    margin: 0px 12px 0px 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
 }
