@@ -62,15 +62,15 @@ form .province {
 }
 
 .drop-field.entities .drop-field-contents > * > * {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
+    display: block;
 }
 
 .drop-field.entities .drop-field-contents > * .picture {
     border-radius: 32px 32px 32px 32px;
     -moz-border-radius: 32px 32px 32px 32px;
     -webkit-border-radius: 32px 32px 32px 32px;
+    clear: both;
+    float: left;
     height: 64px;
     width: 64px;
 }
@@ -78,14 +78,16 @@ form .province {
 .drop-field.entities .drop-field-contents > * .title {
     font-size: 18px;
     font-weight: bold;
-    margin: 8px 12px 0px 12px;
+    margin: 0px 0px 0px 0px;
     overflow: hidden;
+    padding: 8px 12px 0px 12px;
     text-overflow: ellipsis;
 }
 
 .drop-field.entities .drop-field-contents > * .description {
     font-size: 14px;
-    margin: 0px 12px 0px 12px;
+    margin: 0px 0px 0px 0px;
     overflow: hidden;
+    padding: 0px 12px 0px 12px;
     text-overflow: ellipsis;
 }
