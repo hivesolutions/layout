@@ -81,7 +81,6 @@ form .province {
     margin: 8px 12px 0px 12px;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 100%;
 }
 
 .drop-field.entities .drop-field-contents > * .description {
@@ -89,5 +88,4 @@ form .province {
     margin: 0px 12px 0px 12px;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 100%;
 }
