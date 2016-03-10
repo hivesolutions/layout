@@ -60,13 +60,19 @@ form .province {
     border-bottom: none;
 }
 
-.drop-field.entities .drop-field-contents > * > * {
+.drop-field.entities > .drop-field-contents > li::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.drop-field.entities > .drop-field-contents > * > * {
     display: block;
     overflow: hidden;
     word-break: break-all;
 }
 
-.drop-field.entities .drop-field-contents > * .picture {
+.drop-field.entities > .drop-field-contents > * .picture {
     border-radius: 32px 32px 32px 32px;
     -moz-border-radius: 32px 32px 32px 32px;
     -webkit-border-radius: 32px 32px 32px 32px;
@@ -76,21 +82,15 @@ form .province {
     width: 64px;
 }
 
-.drop-field.entities .drop-field-contents > * .title {
+.drop-field.entities > .drop-field-contents > * .title {
     font-size: 18px;
     font-weight: bold;
     margin: 0px 0px 0px 0px;
     padding: 8px 12px 0px 12px;
 }
 
-.drop-field.entities .drop-field-contents > * .description {
+.drop-field.entities > .drop-field-contents > * .description {
     font-size: 14px;
     margin: 0px 0px 0px 0px;
     padding: 0px 12px 0px 12px;
-}
-
-.drop-field.entities .drop-field-contents > * .description::after {
-    clear: both;
-    content: "";
-    display: block;
 }
