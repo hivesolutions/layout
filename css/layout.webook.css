@@ -267,7 +267,11 @@ input::-webkit-input-placeholder {
     color: #cccccc;
 }
 
-input:-moz-placeholder {
+input::-moz-placeholder {
+    color: #cccccc;
+}
+
+input:-ms-input-placeholder {
     color: #cccccc;
 }
 
@@ -400,7 +404,11 @@ textarea::-webkit-input-placeholder {
     color: #cccccc;
 }
 
-textarea:-moz-placeholder {
+textarea::-moz-placeholder {
+    color: #cccccc;
+}
+
+textarea:-ms-input-placeholder {
     color: #cccccc;
 }
 
