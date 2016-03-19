@@ -237,6 +237,10 @@ input[type="checkbox"] {
     width: 42px;
 }
 
+body.firefox input[type="checkbox"] {
+    width: 24px;
+}
+
 input[type="checkbox"].square {
     background-image: url(../images/check-button-square.png);
     width: 24px;
