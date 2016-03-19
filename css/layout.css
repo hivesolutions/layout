@@ -209,14 +209,22 @@ input.lower {
 
 input::-webkit-input-placeholder {
     color: #999999;
+    opacity: 1.0;
 }
 
 input::-moz-placeholder {
     color: #999999;
+    opacity: 1.0;
+}
+
+input:-moz-placeholder {
+    color: #999999;
+    opacity: 1.0;
 }
 
 input:-ms-input-placeholder {
     color: #999999;
+    opacity: 1.0;
 }
 
 input[type="checkbox"] {
@@ -339,14 +347,22 @@ textarea.disabled {
 
 textarea::-webkit-input-placeholder {
     color: #aaaaaa;
+    opacity: 1.0;
 }
 
 textarea::-moz-placeholder {
     color: #aaaaaa;
+    opacity: 1.0;
+}
+
+textarea:-moz-placeholder {
+    color: #aaaaaa;
+    opacity: 1.0;
 }
 
 textarea:-ms-input-placeholder {
     color: #aaaaaa;
+    opacity: 1.0;
 }
 
 label {
