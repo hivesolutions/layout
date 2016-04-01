@@ -1049,8 +1049,8 @@
                 var messageSelect = templateSelect.formatC(total);
                 var messageDeselect = templateDeselect;
 
-                // adds the (unique) table column to the all row that
-                // contains the proper all message and selectors and
+                // adds the (unique) table column to the all rows that
+                // contain the proper all message and selectors and
                 // the runs the initial update state for the bulk
                 tableAll.append("<td colspan=\"99\">" + "<span class=\"message\">" + messageAll +
                     "</span>" + "<a class=\"selector\">" + messageSelect + "</a>" +
@@ -1183,6 +1183,11 @@
                 var bulk = jQuery(".bulk", content);
                 var activeRows = jQuery(".table-row.active", bulk);
 
+                // determines if the current bulk panel is selected under
+                // the verything mode, if that's the case the operation is
+                // going to be performed for the complete set of elements
+                var isEverything = bulk.hasClass("everything");
+
                 // starts the ids value string to the default (empty)
                 // value and then iterates over the various active rows
                 // to appends the id values of each to the string
@@ -1191,6 +1196,11 @@
                     var _element = jQuery(this);
                     ids += _element.attr("data-id") + ",";
                 });
+
+                // in case the everything mode is active the gathered
+                // ids are ignored as the selection is going to be
+                // performed on the server side
+                ids = isEverything ? "" : ids;
 
                 // retrieves the current (base) link/action value
                 // for the element and adds the ids value to it
