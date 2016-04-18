@@ -830,7 +830,7 @@ body.retina-s .tag-field .tag-field-remove {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    width: 313px;
+    width: 312px;
 }
 
 .calendar.text-field-calendar {
@@ -895,7 +895,7 @@ body.retina-s .calendar-header .calendar-arrow-right {
     padding: 10px 0px 10px 0px;
     text-align: center;
     text-transform: uppercase;
-    width: 42px;
+    width: 44px;
 }
 
 .calendar-content tbody tr td {
