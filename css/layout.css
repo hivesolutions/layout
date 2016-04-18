@@ -775,9 +775,19 @@ body.retina-s .drop-field.drop-field-select > .text-field {
     float: left;
 }
 
+body.retina-s .calendar-header .calendar-arrow-left {
+    background-image: url(../images/calendar-arrow-left-2x.png);
+    background-size: 10px 10px;
+}
+
 .calendar-header .calendar-arrow-right {
     background: transparent url(../images/calendar-arrow-right.png) no-repeat center center;
     float: right;
+}
+
+body.retina-s .calendar-header .calendar-arrow-right {
+    background-image: url(../images/calendar-arrow-right-2x.png);
+    background-size: 10px 10px;
 }
 
 .calendar-content {
