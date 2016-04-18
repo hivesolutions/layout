@@ -829,7 +829,7 @@ body.retina-s .drop-field.drop-field-select > .text-field {
 
 body.retina-s .drop-field.drop-field-lock > .text-field {
     background-image: url(../images/drop-field-lock-2x.png);
-    background-size: 19px 16px;;
+    background-size: 19px 16px;
 }
 
 .drop-field.drop-field-select.drop-field-lock > .text-field {
@@ -974,6 +974,7 @@ body.retina-s .calendar-header .calendar-arrow-right {
 
 .calendar-content {
     margin: 0px 2px 2px 2px;
+    table-layout: fixed;
     width: 180px;
 }
 
@@ -985,6 +986,7 @@ body.retina-s .calendar-header .calendar-arrow-right {
     padding: 10px 0px 10px 0px;
     text-align: center;
     text-transform: uppercase;
+    width: 42px;
 }
 
 .calendar-content tbody tr td {
