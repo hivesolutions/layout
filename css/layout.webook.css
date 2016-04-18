@@ -744,6 +744,11 @@ body.retina-s .drop-field.drop-field-select > .text-field {
     background-image: url(../images/drop-field-lock.png);
 }
 
+body.retina-s .drop-field.drop-field-lock > .text-field {
+    background-image: url(../images/drop-field-lock-2x.png);
+    background-size: 19px 16px;;
+}
+
 .drop-field.drop-field-select.drop-field-lock > .text-field {
     background-image: url(../images/drop-field-select.png);
 }
