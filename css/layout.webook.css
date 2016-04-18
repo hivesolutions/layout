@@ -296,6 +296,11 @@ input[type="checkbox"] {
     width: 42px;
 }
 
+body.retina-s input[type="checkbox"] {
+    background-image: url(../images/check-button-2x.png);
+    background-size: 42px 144px;
+}
+
 body.firefox input[type="checkbox"] {
     width: 24px;
 }
