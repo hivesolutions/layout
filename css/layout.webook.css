@@ -707,10 +707,9 @@ pre {
     background-repeat: no-repeat;
 }
 
-.drop-field > .text-field {
-    background-image: url(../images/drop-field-dots.png);
-    background-position: right center;
-    background-repeat: no-repeat;
+body.retina-s .drop-field > .text-field {
+    background-image: url(../images/drop-field-dots-2x.png);
+    background-size: 23px 16px;
 }
 
 .drop-field.drop-field-select > .text-field {
@@ -939,8 +938,18 @@ pre {
     background-image: url(../images/header-down.png);
 }
 
+body.retina-s .filter .table-header th.direction.descending {
+    background-image: url(../images/header-down-2x.png);
+    background-size: 24px 16px;
+}
+
 .filter .table-header th.direction.ascending {
     background-image: url(../images/header-up.png);
+}
+
+body.retina-s .filter .table-header th.direction.ascending {
+    background-image: url(../images/header-up-2x.png);
+    background-size: 24px 16px;
 }
 
 .filter .table-all {
