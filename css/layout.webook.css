@@ -725,6 +725,11 @@ body.retina-s .drop-field > .text-field {
     -webkit-user-select: none;
 }
 
+body.retina-s .drop-field.drop-field-select > .text-field {
+    background-image: url(../images/drop-field-select.png);
+    background-size: auto;
+}
+
 .drop-field.drop-field-lock > .text-field {
     background-image: url(../images/drop-field-lock.png);
 }
