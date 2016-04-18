@@ -383,8 +383,18 @@ input[type="checkbox"].square {
     width: 24px;
 }
 
+body.retina-s input[type="checkbox"].square {
+    background-image: url(../images/check-button-square-2x.png);
+    background-size: 24px 192px;
+}
+
 input[type="checkbox"].square.small {
     background-image: url(../images/check-button-square-small.png);
+}
+
+body.retina-s input[type="checkbox"].square.small {
+    background-image: url(../images/check-button-square-small-2x.png);
+    background-size: 24px 192px;
 }
 
 input[type="checkbox"]:hover {
@@ -881,6 +891,11 @@ body.romantic .tag-field .tag-field-label {
     height: 30px;
     margin: 0px 0px 0px 10px;
     width: 30px;
+}
+
+body.retina-s .tag-field .tag-field-remove {
+    background-image: url(../images/tag-field-remove-2x.png);
+    background-size: 30px 60px;
 }
 
 .tag-field .tag-field-remove:hover {
