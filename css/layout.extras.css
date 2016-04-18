@@ -410,6 +410,11 @@ body.grey .side-links {
     padding: 0px 24px 0px 18px;
 }
 
+body.retina-s .system-menu .menu-button {
+    background-image: url(../images/arrow-blue-2x.png);
+    background-size: 13px 3px;
+}
+
 .system-menu.active .menu-button {
     background-color: #ffffff;
     border-left-color: #dddddd;
