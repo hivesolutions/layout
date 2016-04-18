@@ -152,7 +152,7 @@ table {
 }
 
 table td {
-    font-size: 18px;
+    font-size: 16px;
     padding: 8px 20px 8px 20px;
 }
 
@@ -759,7 +759,7 @@ body.retina-s .tag-field .tag-field-remove {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    width: 313px;
+    width: 312px;
 }
 
 .calendar.text-field-calendar {
