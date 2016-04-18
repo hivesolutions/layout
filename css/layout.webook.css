@@ -348,6 +348,11 @@ input[type="radio"] {
     width: 24px;
 }
 
+body.retina-s input[type="radio"] {
+    background-image: url(../images/radio-button-2x.png);
+    background-size: 24px 144px;
+}
+
 input[type="radio"]:hover {
     background-position: left -24px;
 }
@@ -382,6 +387,11 @@ input.date {
     background-image: url(../images/text-field-date.png);
     background-position: right center;
     background-repeat: no-repeat;
+}
+
+body.retina-s input.date {
+    background-image: url(../images/text-field-date-2x.png);
+    background-size: 24px 16px;
 }
 
 textarea {
@@ -1415,9 +1425,19 @@ label.stopped {
     margin-left: 5px;
 }
 
+body.retina-s .table.table-edit .table-add .inline-add {
+    background-image: url(../images/table-add-2x.png);
+    background-size: 15px 30px;
+}
+
 .table.table-edit .table-remove .inline-remove {
     background-image: url(../images/table-remove.png);
     margin-left: 5px;
+}
+
+body.retina-s .table.table-edit .table-remove .inline-remove {
+    background-image: url(../images/table-remove-2x.png);
+    background-size: 15px 30px;
 }
 
 .table.table-list {
@@ -1451,6 +1471,7 @@ label.stopped {
 }
 
 .radio-label {
+    cursor: pointer;
     line-height: 40px;
     margin-left: 8px;
     margin-right: 8px;
