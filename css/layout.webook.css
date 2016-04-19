@@ -1613,6 +1613,11 @@ body.retina-s .table.table-edit .table-remove .inline-remove {
     width: 24px;
 }
 
+body.retina-s .rating .rating-item {
+    background-image: url(../images/rating-2x.png);
+    background-size: 24px 48px;
+}
+
 .rating .rating-item.active {
     background-position: left -24px;
 }
