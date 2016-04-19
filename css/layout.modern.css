@@ -819,8 +819,8 @@ body.retina-s .drop-field > .text-field {
 }
 
 body.retina-s .drop-field.drop-field-select > .text-field {
-    background-image: url(../images/drop-field-select.png);
-    background-size: auto;
+    background-image: url(../images/drop-field-select-2x.png);
+    background-size: 1880px 40px;
 }
 
 .drop-field.drop-field-lock > .text-field {
@@ -834,6 +834,11 @@ body.retina-s .drop-field.drop-field-lock > .text-field {
 
 .drop-field.drop-field-select.drop-field-lock > .text-field {
     background-image: url(../images/drop-field-select.png);
+}
+
+body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
+    background-image: url(../images/drop-field-select-2x.png);
+    background-size: 1880px 40px;
 }
 
 .drop-field > .drop-field-contents {
