@@ -1553,6 +1553,11 @@ body.retina-s .table.table-edit .table-remove .inline-remove {
     padding: 0px 8px 0px 8px;
 }
 
+body.retina-s .drop-list .drop-item {
+    background-image: url(../images/drop-list-2x.png);
+    background-size: 1880px 40px;
+}
+
 .drop-list ul.drop-options {
     border-bottom: 1px solid #cccccc;
     border-left: 1px solid #cccccc;
