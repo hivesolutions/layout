@@ -1223,6 +1223,11 @@ label.stopped {
     width: 260px;
 }
 
+body.retina-s .separator-horizontal {
+    background-image: url(../images/separator-horizontal-2x.png);
+    background-size: 260px 10px;
+}
+
 .footer-logo {
     background: transparent none no-repeat left 0px;
     cursor: pointer;
