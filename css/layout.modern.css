@@ -2021,16 +2021,37 @@ ul.traceback li:hover {
     background-image: url(../images/button-drop-down-grey.png);
 }
 
+body.retina-s .button.button-drop-down,
+body.retina-s .button.button-drop-down.button-grey {
+    background-image: url(../images/button-drop-down-grey-2x.png);
+    background-size: 1880px 96px;
+}
+
 .button.button-drop-down.button-green {
     background-image: url(../images/button-drop-down-green.png);
+}
+
+body.retina-s .button.button-drop-down.button-green {
+    background-image: url(../images/button-drop-down-green-2x.png);
+    background-size: 1880px 96px;
 }
 
 .button.button-drop-down.button-red {
     background-image: url(../images/button-drop-down-red.png);
 }
 
+body.retina-s .button.button-drop-down.button-red {
+    background-image: url(../images/button-drop-down-red-2x.png);
+    background-size: 1880px 96px;
+}
+
 .button.button-drop-down.button-blue {
     background-image: url(../images/button-drop-down-blue.png);
+}
+
+body.retina-s .button.button-drop-down.button-blue {
+    background-image: url(../images/button-drop-down-blue-2x.png);
+    background-size: 1880px 96px;
 }
 
 .drop-down-container {
