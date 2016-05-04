@@ -39,6 +39,7 @@
             // used in the registration for the handlers
             var _body = jQuery("body");
             var links = jQuery("a[href], .link[href]", matchedObject);
+            links = links.filter(":not(.link-confirm)");
 
             // registers for the click event on the current set of links
             // that exist in the object, so that they can be handled in
