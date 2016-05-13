@@ -57,13 +57,6 @@
                     return;
                 }
 
-                // in case the current link is defined as a no action link
-                // the click operation should be ignored
-                var noAction = element.attr("data-no_action");
-                if (noAction) {
-                    return;
-                }
-
                 // retrieves the current element and the current link
                 // associated so that it can be validated and tested in
                 // the current async environment
