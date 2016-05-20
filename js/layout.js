@@ -184,6 +184,10 @@
                     // analytics reference exists a new event is triggered
                     push && window.history.pushState(state, null, href);
                     push && window._gaq && _gaq.push(["_trackPageview", relative]);
+                    push && window.ga && ga("send", {
+                        "hitType": "pageview",
+                        "page": relative
+                    });
                 } catch (exception) {
                     document.location = href;
                 }
