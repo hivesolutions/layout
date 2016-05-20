@@ -176,8 +176,10 @@
 
                     // in case this is not a verified operation the current state
                     // must be pushed into the history stack, so that we're able
-                    // to rollback to it latter
+                    // to rollback to it latter, note that in case the a google
+                    // analytics reference exists a new event is triggered
                     push && window.history.pushState(state, null, href);
+                    push && window._gaq && _gaq.push(["_trackPageview", href]);
                 } catch (exception) {
                     document.location = href;
                 }
