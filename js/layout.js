@@ -98,6 +98,10 @@
                 // this value may be used to customize the url versus link resolution
                 hbase = hbase || href;
 
+                // constructs the absolute path from the possibly absolute href
+                // value, so that it may be used for some of the operations
+                var relative = href.replace(/^(?:\/\/|[^\/]+)*\//, "/");
+
                 // creates the object that describes the current state with both the
                 // unique identifier of the state and the link that generated it
                 var state = {
@@ -179,7 +183,7 @@
                     // to rollback to it latter, note that in case the a google
                     // analytics reference exists a new event is triggered
                     push && window.history.pushState(state, null, href);
-                    push && window._gaq && _gaq.push(["_trackPageview", href]);
+                    push && window._gaq && _gaq.push(["_trackPageview", relative]);
                 } catch (exception) {
                     document.location = href;
                 }
