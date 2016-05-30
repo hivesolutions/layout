@@ -180,14 +180,16 @@
 
                     // in case this is not a verified operation the current state
                     // must be pushed into the history stack, so that we're able
-                    // to rollback to it latter, note that in case the a google
-                    // analytics reference exists a new event is triggered
+                    // to rollback to it latter, note that in case the google
+                    // analytics reference exists a new event is triggered, the
+                    // same si also performed for conversion tracking
                     push && window.history.pushState(state, null, href);
                     push && window._gaq && _gaq.push(["_trackPageview", relative]);
                     push && window.ga && ga("send", {
                         hitType: "pageview",
                         page: relative
                     });
+                    push && window.google_trackConversion && trackConversion();
                 } catch (exception) {
                     document.location = href;
                 }
@@ -629,6 +631,35 @@
         var content = jQuery("#content");
         var contentContainer = jQuery(".content-container", content);
         contentContainer.addClass("border-box");
+    };
+
+    var trackConversion = function() {
+        var meta = jQuery(".meta");
+        var conversionId = jQuery("[name=adwords-conversion-id]", meta);
+        var itemId = jQuery("[name=adwords-dynx-itemid]", meta);
+        var totalValue = jQuery("[adwords-dynx-totalvalue]", meta);
+        var pageType = jQuery("[adwords-dynx-pagetype]", meta);
+        if (conversionId.length == 0) {
+            return;
+        }
+        var itemIdList = [];
+        conversionId = parseInt(conversionId.attr("content"));
+        totalValue = parseFloat(totalValue.attr("content"));
+        pageType = conversionId.attr("content");
+        itemId.each(function(index, element) {
+            var _element = jQuery(this);
+            var elementId = _element.text();
+            itemIdList.push(elementId);
+        });
+        google_trackConversion({
+            google_conversion_id: conversionId,
+            google_custom_params: {
+                dynx_itemid: itemIdList,
+                dynx_totalvalue: totalValue,
+                dynx_pagetype: pageType
+            },
+            google_remarketing_only: true
+        });
     };
 })(jQuery);
 
