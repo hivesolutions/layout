@@ -621,7 +621,7 @@
         footer_.uxapply();
     };
 
-    var updateFooter = function(base) {
+    var updateBottom = function(base) {
         var bottom = base.filter("#bottom");
         var bottom_ = jQuery("#bottom");
         var bottomClass = bottom.attr("class");
