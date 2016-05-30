@@ -642,13 +642,16 @@
         if (!window.google_trackConversion) {
             return;
         }
-        if (conversionId.length == 0) {
+        if (!conversionId || conversionId.length == 0) {
             return;
         }
-        var itemIdList = [];
         conversionId = parseInt(conversionId.attr("content"));
+        if (!conversionId) {
+            return;
+        }
         totalValue = parseFloat(totalValue.attr("content"));
-        pageType = conversionId.attr("content");
+        pageType = pageType.attr("content");
+        var itemIdList = [];
         itemId.each(function(index, element) {
             var _element = jQuery(this);
             var elementId = _element.text();
