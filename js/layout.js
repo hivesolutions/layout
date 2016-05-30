@@ -639,6 +639,9 @@
         var itemId = jQuery("[name=adwords-dynx-itemid]", meta);
         var totalValue = jQuery("[adwords-dynx-totalvalue]", meta);
         var pageType = jQuery("[adwords-dynx-pagetype]", meta);
+        if (!window.google_trackConversion) {
+            return;
+        }
         if (conversionId.length == 0) {
             return;
         }
