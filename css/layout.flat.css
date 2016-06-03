@@ -779,9 +779,9 @@ body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
 
 .drop-field > .drop-field-contents {
     background-color: #ffffff;
-    border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
-    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
     border: 1px solid #bcbcbc;
     box-shadow: 1px 1px 4px #e8e8e8; 
     -moz-box-shadow: 1px 1px 4px #e8e8e8;
@@ -846,6 +846,9 @@ body.retina-s .tag-field .tag-field-remove {
 .calendar {
     background-color: #ffffff;
     border: 1px solid #cccccc;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
     box-shadow: 0px 1px 4px #f0f0f0;
     -moz-box-shadow: 0px 1px 4px #f0f0f0;
     -webkit-box-shadow: 0px 1px 4px #f0f0f0;
@@ -857,8 +860,7 @@ body.retina-s .tag-field .tag-field-remove {
 }
 
 .calendar.text-field-calendar {
-    border-top: none;
-    margin: 0px 0px 0px 0px;
+    margin: 4px 0px 0px 0px;
     position: absolute;
     z-index: 1;
 }
@@ -1594,9 +1596,9 @@ body.retina-s .drop-list .drop-item {
 .progress-bar {
     background-color: #ffffff;
     border: 1px solid #cccccc;
-    border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
-    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
     display: inline-block;
     font-size: 20px;
     font-weight: bold;
@@ -1802,9 +1804,9 @@ ul.traceback li:hover {
     background-position: right 0px;
     background-repeat: repeat-x;
     border-bottom: none;
-    border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
-    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
     color: #ffffff;
     display: inline-block;
     font-size: 14px;
@@ -1995,9 +1997,9 @@ body.retina-s .button.button-drop-down.button-blue {
 .drop-down-container > ul.drop-down {
     background-color: #ffffff;
     border: 1px solid #bcbcbc;
-    border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
-    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
     box-shadow: 1px 1px 4px #e8e8e8;
     -moz-box-shadow: 1px 1px 4px #e8e8e8;
     -webkit-box-shadow: 1px 1px 4px #e8e8e8;
