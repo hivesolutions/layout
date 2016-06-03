@@ -358,7 +358,7 @@ input:-ms-input-placeholder {
 
 input[type="checkbox"] {
     -webkit-appearance: none;
-    background: transparent url(../images/check-button.png) no-repeat left 0px;
+    background: transparent url(../images/base/check-button.png) no-repeat left 0px;
     border: none;
     box-shadow: none;
     -moz-box-shadow: none;
@@ -370,7 +370,7 @@ input[type="checkbox"] {
 }
 
 body.retina-s input[type="checkbox"] {
-    background-image: url(../images/check-button-2x.png);
+    background-image: url(../images/base/check-button-2x.png);
     background-size: 42px 144px;
 }
 
@@ -379,21 +379,21 @@ body.firefox input[type="checkbox"] {
 }
 
 input[type="checkbox"].square {
-    background-image: url(../images/check-button-square.png);
+    background-image: url(../images/base/check-button-square.png);
     width: 24px;
 }
 
 body.retina-s input[type="checkbox"].square {
-    background-image: url(../images/check-button-square-2x.png);
+    background-image: url(../images/base/check-button-square-2x.png);
     background-size: 24px 192px;
 }
 
 input[type="checkbox"].square.small {
-    background-image: url(../images/check-button-square-small.png);
+    background-image: url(../images/base/check-button-square-small.png);
 }
 
 body.retina-s input[type="checkbox"].square.small {
-    background-image: url(../images/check-button-square-small-2x.png);
+    background-image: url(../images/base/check-button-square-small-2x.png);
     background-size: 24px 192px;
 }
 
@@ -427,7 +427,7 @@ input[type="checkbox"]:checked:hover.partial {
 
 input[type="radio"] {
     -webkit-appearance: none;
-    background: transparent url(../images/radio-button.png) no-repeat left 0px;
+    background: transparent url(../images/base/radio-button.png) no-repeat left 0px;
     border: none;
     box-shadow: none;
     cursor: pointer;
@@ -437,7 +437,7 @@ input[type="radio"] {
 }
 
 body.retina-s input[type="radio"] {
-    background-image: url(../images/radio-button-2x.png);
+    background-image: url(../images/base/radio-button-2x.png);
     background-size: 24px 144px;
 }
 
@@ -472,13 +472,13 @@ input[type="file"] {
 }
 
 input.date {
-    background-image: url(../images/text-field-date.png);
+    background-image: url(../images/base/text-field-date.png);
     background-position: right center;
     background-repeat: no-repeat;
 }
 
 body.retina-s input.date {
-    background-image: url(../images/text-field-date-2x.png);
+    background-image: url(../images/base/text-field-date-2x.png);
     background-size: 24px 16px;
 }
 
@@ -795,18 +795,18 @@ pre {
 }
 
 .drop-field > .text-field {
-    background-image: url(../images/drop-field-dots.png);
+    background-image: url(../images/base/drop-field-dots.png);
     background-position: right center;
     background-repeat: no-repeat;
 }
 
 body.retina-s .drop-field > .text-field {
-    background-image: url(../images/drop-field-dots-2x.png);
+    background-image: url(../images/base/drop-field-dots-2x.png);
     background-size: 23px 16px;
 }
 
 .drop-field.drop-field-select > .text-field {
-    background: transparent url(../images/drop-field-select.png) no-repeat right center;
+    background: transparent url(../images/base/drop-field-select.png) no-repeat right center;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -819,25 +819,25 @@ body.retina-s .drop-field > .text-field {
 }
 
 body.retina-s .drop-field.drop-field-select > .text-field {
-    background-image: url(../images/drop-field-select-2x.png);
+    background-image: url(../images/base/drop-field-select-2x.png);
     background-size: 1880px 40px;
 }
 
 .drop-field.drop-field-lock > .text-field {
-    background-image: url(../images/drop-field-lock.png);
+    background-image: url(../images/base/drop-field-lock.png);
 }
 
 body.retina-s .drop-field.drop-field-lock > .text-field {
-    background-image: url(../images/drop-field-lock-2x.png);
+    background-image: url(../images/base/drop-field-lock-2x.png);
     background-size: 19px 16px;
 }
 
 .drop-field.drop-field-select.drop-field-lock > .text-field {
-    background-image: url(../images/drop-field-select.png);
+    background-image: url(../images/base/drop-field-select.png);
 }
 
 body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
-    background-image: url(../images/drop-field-select-2x.png);
+    background-image: url(../images/base/drop-field-select-2x.png);
     background-size: 1880px 40px;
 }
 
@@ -895,7 +895,7 @@ body.romantic .tag-field .tag-field-label {
 }
 
 .tag-field .tag-field-remove {
-    background: transparent url(../images/tag-field-remove.png) no-repeat;
+    background: transparent url(../images/base/tag-field-remove.png) no-repeat;
     cursor: pointer;
     float: left;
     height: 30px;
@@ -904,7 +904,7 @@ body.romantic .tag-field .tag-field-label {
 }
 
 body.retina-s .tag-field .tag-field-remove {
-    background-image: url(../images/tag-field-remove-2x.png);
+    background-image: url(../images/base/tag-field-remove-2x.png);
     background-size: 30px 60px;
 }
 
@@ -958,22 +958,22 @@ body.romantic .calendar {
 }
 
 .calendar-header .calendar-arrow-left {
-    background: transparent url(../images/calendar-arrow-left.png) no-repeat center center;
+    background: transparent url(../images/base/calendar-arrow-left.png) no-repeat center center;
     float: left;
 }
 
 body.retina-s .calendar-header .calendar-arrow-left {
-    background-image: url(../images/calendar-arrow-left-2x.png);
+    background-image: url(../images/base/calendar-arrow-left-2x.png);
     background-size: 10px 10px;
 }
 
 .calendar-header .calendar-arrow-right {
-    background: transparent url(../images/calendar-arrow-right.png) no-repeat center center;
+    background: transparent url(../images/base/calendar-arrow-right.png) no-repeat center center;
     float: right;
 }
 
 body.retina-s .calendar-header .calendar-arrow-right {
-    background-image: url(../images/calendar-arrow-right-2x.png);
+    background-image: url(../images/base/calendar-arrow-right-2x.png);
     background-size: 10px 10px;
 }
 
@@ -1077,20 +1077,20 @@ body.romantic .calendar-content tbody tr td {
 }
 
 .filter .table-header th.direction.descending {
-    background-image: url(../images/header-down.png);
+    background-image: url(../images/base/header-down.png);
 }
 
 body.retina-s .filter .table-header th.direction.descending {
-    background-image: url(../images/header-down-2x.png);
+    background-image: url(../images/base/header-down-2x.png);
     background-size: 24px 16px;
 }
 
 .filter .table-header th.direction.ascending {
-    background-image: url(../images/header-up.png);
+    background-image: url(../images/base/header-up.png);
 }
 
 body.retina-s .filter .table-header th.direction.ascending {
-    background-image: url(../images/header-up-2x.png);
+    background-image: url(../images/base/header-up-2x.png);
     background-size: 24px 16px;
 }
 
@@ -1388,14 +1388,14 @@ label.stopped {
 }
 
 .separator-horizontal {
-    background: transparent url(../images/separator-horizontal.png) no-repeat center center;
+    background: transparent url(../images/base/separator-horizontal.png) no-repeat center center;
     height: 10px;
     margin: 12px auto 12px auto;
     width: 260px;
 }
 
 body.retina-s .separator-horizontal {
-    background-image: url(../images/separator-horizontal-2x.png);
+    background-image: url(../images/base/separator-horizontal-2x.png);
     background-size: 260px 10px;
 }
 
@@ -1577,22 +1577,22 @@ body.retina-s .separator-horizontal {
 }
 
 .table.table-edit .table-add .inline-add {
-    background-image: url(../images/table-add.png);
+    background-image: url(../images/base/table-add.png);
     margin-left: 5px;
 }
 
 body.retina-s .table.table-edit .table-add .inline-add {
-    background-image: url(../images/table-add-2x.png);
+    background-image: url(../images/base/table-add-2x.png);
     background-size: 15px 30px;
 }
 
 .table.table-edit .table-remove .inline-remove {
-    background-image: url(../images/table-remove.png);
+    background-image: url(../images/base/table-remove.png);
     margin-left: 5px;
 }
 
 body.retina-s .table.table-edit .table-remove .inline-remove {
-    background-image: url(../images/table-remove-2x.png);
+    background-image: url(../images/base/table-remove-2x.png);
     background-size: 15px 30px;
 }
 
@@ -1644,7 +1644,7 @@ body.retina-s .table.table-edit .table-remove .inline-remove {
 }
 
 .drop-list .drop-item {
-    background: transparent url(../images/drop-list.png) no-repeat right center;
+    background: transparent url(../images/base/drop-list.png) no-repeat right center;
     border: 1px solid #cccccc;
     cursor: pointer;
     font-weight: bold;
@@ -1654,7 +1654,7 @@ body.retina-s .table.table-edit .table-remove .inline-remove {
 }
 
 body.retina-s .drop-list .drop-item {
-    background-image: url(../images/drop-list-2x.png);
+    background-image: url(../images/base/drop-list-2x.png);
     background-size: 1880px 40px;
 }
 
@@ -1715,7 +1715,7 @@ body.retina-s .drop-list .drop-item {
 }
 
 .rating .rating-item {
-    background: transparent url(../images/rating.png) no-repeat left 0px;
+    background: transparent url(../images/base/rating.png) no-repeat left 0px;
     cursor: pointer;
     display: inline-block;
     height: 24px;
@@ -1724,7 +1724,7 @@ body.retina-s .drop-list .drop-item {
 }
 
 body.retina-s .rating .rating-item {
-    background-image: url(../images/rating-2x.png);
+    background-image: url(../images/base/rating-2x.png);
     background-size: 24px 48px;
 }
 
@@ -1847,7 +1847,7 @@ ul.traceback li:hover {
 }
 
 .bar-loader {
-    background: transparent url(../images/bar-loader.gif) no-repeat right top;
+    background: transparent url(../images/base/bar-loader.gif) no-repeat right top;
     bottom: 12px;
     height: 11px;
     opacity: 0.0;
@@ -1862,7 +1862,7 @@ ul.traceback li:hover {
 }
 
 .top-loader {
-    background: transparent url(../images/top-loader.png) no-repeat right top;
+    background: transparent url(../images/base/top-loader.png) no-repeat right top;
     height: 6px;
     margin-top: -2px;
     opacity: 0.0;
@@ -1947,7 +1947,7 @@ ul.traceback li:hover {
 .button.button-color.button-green,
 .button.button-drop-down.button-green {
     background-color: #008d36;
-    background-image: url(../images/button-green.png);
+    background-image: url(../images/base/button-green.png);
     border-color: #58863f;
     color: #ffffff;
     text-shadow: 0px 1px 0px #4d4d4d;
@@ -1961,13 +1961,13 @@ ul.traceback li:hover {
 }
 
 .button.button-color.button-green.medium {
-    background-image: url(../images/button-medium-green.png);
+    background-image: url(../images/base/button-medium-green.png);
 }
 
 .button.button-color.button-red,
 .button.button-drop-down.button-red {
     background-color: #be1622;
-    background-image: url(../images/button-red.png);
+    background-image: url(../images/base/button-red.png);
     border-color: #ba4e48;
     color: #ffffff;
     text-shadow: 0px 1px 0px #4d4d4d;
@@ -1981,13 +1981,13 @@ ul.traceback li:hover {
 }
 
 .button.button-color.button-red.medium {
-    background-image: url(../images/button-medium-red.png);
+    background-image: url(../images/base/button-medium-red.png);
 }
 
 .button.button-color.button-blue,
 .button.button-drop-down.button-blue {
     background-color: #1c75bc;
-    background-image: url(../images/button-blue.png);
+    background-image: url(../images/base/button-blue.png);
     border-color: #1d5f91;
     color: #ffffff;
     text-shadow: 0px 1px 0px #4d4d4d;
@@ -2001,7 +2001,7 @@ ul.traceback li:hover {
 }
 
 .button.button-color.button-blue.medium {
-    background-image: url(../images/button-medium-blue.png);
+    background-image: url(../images/base/button-medium-blue.png);
 }
 
 .button.button-color,
@@ -2009,7 +2009,7 @@ ul.traceback li:hover {
 .button.button-color.button-grey,
 .button.button-drop-down.button-grey {
     background-color: #706f6f;
-    background-image: url(../images/button-grey.png);
+    background-image: url(../images/base/button-grey.png);
     border-color: #bcbcbc;
     color: #3d3d3d;
     text-shadow: 0px 1px 0px #ffffff;
@@ -2028,7 +2028,7 @@ ul.traceback li:hover {
 
 .button.button-color.medium,
 .button.button-color.button-grey.medium {
-    background-image: url(../images/button-medium-grey.png);
+    background-image: url(../images/base/button-medium-grey.png);
 }
 
 .button.button-drop-down {
@@ -2038,39 +2038,39 @@ ul.traceback li:hover {
 
 .button.button-drop-down,
 .button.button-drop-down.button-grey {
-    background-image: url(../images/button-drop-down-grey.png);
+    background-image: url(../images/base/button-drop-down-grey.png);
 }
 
 body.retina-s .button.button-drop-down,
 body.retina-s .button.button-drop-down.button-grey {
-    background-image: url(../images/button-drop-down-grey-2x.png);
+    background-image: url(../images/base/button-drop-down-grey-2x.png);
     background-size: 1880px 96px;
 }
 
 .button.button-drop-down.button-green {
-    background-image: url(../images/button-drop-down-green.png);
+    background-image: url(../images/base/button-drop-down-green.png);
 }
 
 body.retina-s .button.button-drop-down.button-green {
-    background-image: url(../images/button-drop-down-green-2x.png);
+    background-image: url(../images/base/button-drop-down-green-2x.png);
     background-size: 1880px 96px;
 }
 
 .button.button-drop-down.button-red {
-    background-image: url(../images/button-drop-down-red.png);
+    background-image: url(../images/base/button-drop-down-red.png);
 }
 
 body.retina-s .button.button-drop-down.button-red {
-    background-image: url(../images/button-drop-down-red-2x.png);
+    background-image: url(../images/base/button-drop-down-red-2x.png);
     background-size: 1880px 96px;
 }
 
 .button.button-drop-down.button-blue {
-    background-image: url(../images/button-drop-down-blue.png);
+    background-image: url(../images/base/button-drop-down-blue.png);
 }
 
 body.retina-s .button.button-drop-down.button-blue {
-    background-image: url(../images/button-drop-down-blue-2x.png);
+    background-image: url(../images/base/button-drop-down-blue-2x.png);
     background-size: 1880px 96px;
 }
 
