@@ -78,62 +78,6 @@ __license__   = Apache License, Version 2.0
     src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/OpenSans-Bold.ttf);
 }
 
-@font-face {
-    font-family: "Merriweather";
-    font-style: normal;
-    font-weight: 300;
-    src: local("Merriweather Light"), local("Merriweather-Light"), url(../fonts/Merriweather-Light.ttf);
-}
-
-@font-face {
-    font-family: "Merriweather";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Merriweather"), url(../fonts/Merriweather-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Merriweather";
-    font-style: normal;
-    font-weight: 700;
-    src: local("Merriweather Bold"), local("Merriweather-Bold"), url(../fonts/Merriweather-Bold.ttf);
-}
-
-@font-face {
-    font-family: "Merriweather";
-    font-style: normal;
-    font-weight: 900;
-    src: local("Merriweather Heavy"), local("Merriweather-Heavy"), url(../fonts/Merriweather-Black.ttf);
-}
-
-@font-face {
-    font-family: "Merriweather";
-    font-style: italic;
-    font-weight: 300;
-    src: local("Merriweather Light Italic"), local("Merriweather-LightItalic"), url(../fonts/Merriweather-LightItalic.ttf);
-}
-
-@font-face {
-    font-family: "Merriweather";
-    font-style: italic;
-    font-weight: 400;
-    src: local("Merriweather Italic"), local("Merriweather-Italic"), url(../fonts/Merriweather-Italic.ttf);
-}
-
-@font-face {
-    font-family: "Merriweather";
-    font-style: italic;
-    font-weight: 700;
-    src: local("Merriweather Bold Italic"), local("Merriweather-BoldItalic"), url(../fonts/Merriweather-BoldItalic.ttf);
-}
-
-@font-face {
-    font-family: "Merriweather";
-    font-style: italic;
-    font-weight: 900;
-    src: local("Merriweather Heavy Italic"), local("Merriweather-HeavyItalic"), url(../fonts/Merriweather-HeavyItalic.ttf);
-}
-
 #footer {
     color: #888888;
     font-size: 13px;
@@ -156,10 +100,9 @@ html {
 
 body {
     color: #4d4d4d;
-    font-family: "Merriweather", "Open Sans", "Oxygen", sans-serif;
+    font-family: "Open Sans", "Oxygen", sans-serif;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
-    font-style: italic;
     margin: 20px auto 20px auto;
     padding: 12px 12px 12px 12px;
     text-align: center;
@@ -291,9 +234,8 @@ input {
     -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
     -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
     color: #2d2d2d;
-    font-family: "Merriweather", "Open Sans", "Oxygen", sans-serif;
+    font-family: "Open Sans", "Oxygen", sans-serif;
     font-size: 16px;
-    font-style: italic;
     height: 40px;
     outline: none;
     padding: 0px 8px 0px 8px;
@@ -477,7 +419,7 @@ textarea {
     -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
     -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
     color: #2d2d2d;
-    font-family: "Merriweather", "Open Sans", "Oxygen", sans-serif;
+    font-family: "Open Sans", "Oxygen", sans-serif;
     font-size: 16px;
     height: 140px;
     outline: none;
@@ -657,7 +599,6 @@ pre {
     font-size: 16px;
     font-weight: bold;
     margin: 0px 4px 0px 4px;
-    text-transform: uppercase;
 }
 
 .button:hover {
@@ -1848,7 +1789,7 @@ ul.traceback li:hover {
 .button.button-drop-down {
     background-position: right 0px;
     background-repeat: repeat-x;
-    border: 1px solid transparent;
+    border-bottom: none;
     border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
     -webkit-border-radius: 4px 4px 4px 4px;
@@ -1860,7 +1801,6 @@ ul.traceback li:hover {
     min-width: 70px;
     padding: 0px 12px 0px 12px;
     text-align: center;
-    text-shadow: 0px 1px 0px #4d4d4d;
     user-select: none;
     -o-user-select: none;
     -moz-user-select: none;
@@ -1916,7 +1856,6 @@ ul.traceback li:hover {
     background-image: url(../images/flat/button-green.png);
     border-color: #58863f;
     color: #ffffff;
-    text-shadow: 0px 1px 0px #4d4d4d;
 }
 
 .button.button-color.button-green:hover,
@@ -1936,7 +1875,6 @@ ul.traceback li:hover {
     background-image: url(../images/flat/button-red.png);
     border-color: #ba4e48;
     color: #ffffff;
-    text-shadow: 0px 1px 0px #4d4d4d;
 }
 
 .button.button-color.button-red:hover,
@@ -1976,9 +1914,7 @@ ul.traceback li:hover {
 .button.button-drop-down.button-grey {
     background-color: #706f6f;
     background-image: url(../images/flat/button-grey.png);
-    border-color: #bcbcbc;
     color: #3d3d3d;
-    text-shadow: 0px 1px 0px #ffffff;
 }
 
 .button.button-color:hover,
@@ -1998,7 +1934,7 @@ ul.traceback li:hover {
 }
 
 .button.button-drop-down {
-    padding-right: 32px;
+    padding-right: 48px;
     text-align: left;
 }
 
@@ -2079,9 +2015,10 @@ body.retina-s .button.button-drop-down.button-blue {
     border-bottom: none;
     color: #4d4d4d;
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 24px;
     margin: 0px 0px 0px 0px;
+    font-weight: 600;
     min-width: 120px;
     padding: 6px 12px 6px 12px;
     white-space: nowrap;
