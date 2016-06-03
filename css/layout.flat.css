@@ -296,6 +296,9 @@ input[type="checkbox"] {
     height: 24px;
     margin: 0px 0px 0px 0px;
     width: 42px;
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
 }
 
 body.retina-s input[type="checkbox"] {
@@ -363,6 +366,9 @@ input[type="radio"] {
     height: 24px;
     margin: 8px 0px 8px 0px;
     width: 24px;
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
 }
 
 body.retina-s input[type="radio"] {
@@ -431,7 +437,7 @@ textarea {
 }
 
 textarea:focus {
-    border-color: #257f96;
+    border-color: #4cbad7;
 }
 
 textarea.invalid {
