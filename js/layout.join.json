@@ -1,0 +1,6 @@
+{
+    "layout-min.js": {
+        "files": ["layout.js"],
+        "minify": "javascript"
+    }
+}
