@@ -238,7 +238,7 @@ input {
     height: 40px;
     outline: none;
     padding: 0px 12px 0px 12px;
-    width: 516px;
+    width: 512px;
 }
 
 input.small {
@@ -289,6 +289,9 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     background: transparent url(../images/flat/check-button.png) no-repeat left 0px;
     border: none;
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -296,9 +299,6 @@ input[type="checkbox"] {
     height: 24px;
     margin: 0px 0px 0px 0px;
     width: 42px;
-    border-radius: 0px 0px 0px 0px;
-    -moz-border-radius: 0px 0px 0px 0px;
-    -webkit-border-radius: 0px 0px 0px 0px;
 }
 
 body.retina-s input[type="checkbox"] {
@@ -361,14 +361,14 @@ input[type="radio"] {
     -webkit-appearance: none;
     background: transparent url(../images/flat/radio-button.png) no-repeat left 0px;
     border: none;
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
     box-shadow: none;
     cursor: pointer;
     height: 24px;
     margin: 8px 0px 8px 0px;
     width: 24px;
-    border-radius: 0px 0px 0px 0px;
-    -moz-border-radius: 0px 0px 0px 0px;
-    -webkit-border-radius: 0px 0px 0px 0px;
 }
 
 body.retina-s input[type="radio"] {
@@ -429,11 +429,11 @@ textarea {
     color: #2d2d2d;
     font-family: "Open Sans", "Oxygen", sans-serif;
     font-size: 15px;
+    font-weight: 600;
     height: 140px;
     outline: none;
     padding: 8px 12px 8px 12px;
-    font-weight: 600;
-    width: 516px;
+    width: 512px;
 }
 
 textarea:focus {
@@ -667,12 +667,12 @@ pre {
 .window {
     background-color: #ffffff;
     border: 1px solid #bbbbbb;
-    box-shadow: 0px 1px 4px #dddddd;
-    -moz-box-shadow: 0px 1px 4px #dddddd;
-    -webkit-box-shadow: 0px 1px 4px #dddddd;
     border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 1px 4px #dddddd;
+    -moz-box-shadow: 0px 1px 4px #dddddd;
+    -webkit-box-shadow: 0px 1px 4px #dddddd;
     min-width: 260px;
     overflow: auto;
     padding: 12px 24px 12px 24px;
@@ -779,20 +779,20 @@ body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
 
 .drop-field > .drop-field-contents {
     background-color: #ffffff;
-    border-bottom: 1px solid #cccccc;
-    box-shadow: 0px 1px 4px #f0f0f0;
-    -moz-box-shadow: 0px 1px 4px #f0f0f0;
-    -webkit-box-shadow: 0px 1px 4px #f0f0f0;
-    margin: 0px 0px 0px 0px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border: 1px solid #bcbcbc;
+    box-shadow: 1px 1px 4px #e8e8e8; 
+    -moz-box-shadow: 1px 1px 4px #e8e8e8;
+    -webkit-box-shadow: 1px 1px 4px #e8e8e8;
+    margin: 4px 0px 0px 0px;
     max-height: 234px;
     overflow-y: auto;
     z-index: 1;
 }
 
 .drop-field > .drop-field-contents > li {
-    border-bottom: 1px solid #f4f4f4;
-    border-left: 1px solid #cccccc;
-    border-right: 1px solid #cccccc;
     margin: 0px 0px 0px 0px;
     padding: 8px 8px 8px 8px;
 }
@@ -2007,6 +2007,7 @@ body.retina-s .button.button-drop-down.button-blue {
     padding: 4px 0px 4px 0px;
     position: absolute;
     top: 34px;
+    box-sizing: border-box;
 }
 
 .drop-down-container > ul.drop-down > li {
