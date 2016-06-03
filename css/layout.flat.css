@@ -101,8 +101,9 @@ html {
 body {
     color: #4d4d4d;
     font-family: "Open Sans", "Oxygen", sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     -webkit-font-smoothing: antialiased;
+    font-weight: 600;
     margin: 20px auto 20px auto;
     padding: 12px 12px 12px 12px;
     text-align: center;
@@ -233,11 +234,11 @@ input {
     color: #2d2d2d;
     font-family: "Open Sans", "Oxygen", sans-serif;
     font-size: 15px;
+    font-weight: 600;
     height: 40px;
     outline: none;
-    font-weight: 600;
-    padding: 0px 8px 0px 8px;
-    width: 524px;
+    padding: 0px 12px 0px 12px;
+    width: 516px;
 }
 
 input.small {
@@ -412,17 +413,21 @@ body.retina-s input.date {
 
 textarea {
     background-color: #ffffff;
-    border: 1px solid #cccccc;
+    border: 2px solid #cccccc;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
     box-shadow: inset 0px 2px 2px #f9f9f9;
     -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
     -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
     color: #2d2d2d;
     font-family: "Open Sans", "Oxygen", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     height: 140px;
     outline: none;
-    padding: 8px 8px 8px 8px;
-    width: 524px;
+    padding: 8px 12px 8px 12px;
+    font-weight: 600;
+    width: 516px;
 }
 
 textarea:focus {
@@ -559,7 +564,7 @@ pre {
 }
 
 .input {
-    font-size: 16px;
+    font-size: 14px;
     margin: 10px 0px 26px 0px;
     min-height: 40px;
 }
@@ -659,6 +664,9 @@ pre {
     box-shadow: 0px 1px 4px #dddddd;
     -moz-box-shadow: 0px 1px 4px #dddddd;
     -webkit-box-shadow: 0px 1px 4px #dddddd;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
     min-width: 260px;
     overflow: auto;
     padding: 12px 24px 12px 24px;
