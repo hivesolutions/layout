@@ -404,14 +404,14 @@ body.grey .side-links {
 }
 
 .system-menu .menu-button {
-    background: transparent url(../images/arrow-blue.png) no-repeat right center;
+    background: transparent url(../images/base/arrow-blue.png) no-repeat right center;
     border-left: 1px solid transparent;
     border-right: 1px solid transparent;
     padding: 0px 24px 0px 18px;
 }
 
 body.retina-s .system-menu .menu-button {
-    background-image: url(../images/arrow-blue-2x.png);
+    background-image: url(../images/base/arrow-blue-2x.png);
     background-size: 13px 3px;
 }
 
