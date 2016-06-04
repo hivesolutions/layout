@@ -72,6 +72,10 @@ form .province {
     word-break: break-all;
 }
 
+.drop-field.entities > .drop-field-contents > * > div {
+    padding: 8px 0px 8px 0px;
+}
+
 .drop-field.entities > .drop-field-contents > * .picture {
     border-radius: 32px 32px 32px 32px;
     -moz-border-radius: 32px 32px 32px 32px;
