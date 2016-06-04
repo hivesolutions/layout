@@ -318,9 +318,7 @@ body.fluid.fixed .top-bar > .container {
 }
 
 .top-bar > .container > .drop-field {
-    height: 34px;
-    line-height: 34px;
-    margin-top: 9px;
+    line-height: 50px;
 }
 
 .top-bar > .container > .text-field,
@@ -332,7 +330,7 @@ body.fluid.fixed .top-bar > .container {
     height: 32px;
     transition: width 0.2s;
     -webkit-transition: width 0.2s;
-    vertical-align: top;
+    vertical-align: middle;
     width: 300px;
 }
 
