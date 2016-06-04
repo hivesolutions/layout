@@ -673,6 +673,11 @@ pre {
 }
 
 .window {
+    animation: move-into 0.25s ease-in-out;
+    -o-animation: move-into 0.25s ease-in-out;
+    -ms-animation: move-into 0.25s ease-in-out;
+    -moz-animation: move-into 0.25s ease-in-out;
+    -webkit-animation: move-into 0.25s ease-in-out;
     background-color: #ffffff;
     border: 1px solid #bbbbbb;
     border-radius: 5px 5px 5px 5px;
@@ -685,11 +690,6 @@ pre {
     overflow: auto;
     padding: 12px 24px 12px 24px;
     z-index: 30;
-    animation: move-into 0.25s ease-in-out;
-    -o-animation: move-into 0.25s ease-in-out;
-    -ms-animation: move-into 0.25s ease-in-out;
-    -moz-animation: move-into 0.25s ease-in-out;
-    -webkit-animation: move-into 0.25s ease-in-out;
 }
 
 .window.window-alert {
