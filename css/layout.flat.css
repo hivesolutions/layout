@@ -29,6 +29,16 @@ __copyright__ = Copyright (c) 2008-2016 Hive Solutions Lda.
 __license__   = Apache License, Version 2.0
 */
 
+@-webkit-keyframes move-into {
+    from { -webkit-transform: translateY(15px); }
+    to { -webkit-transform: translateY(0px); }
+}
+
+@keyframes move-into {
+    from { transform: translateY(15px); }
+    to { transform: translateY(0px); }
+}
+
 @font-face {
     font-family: "Oxygen";
     font-style: normal;
@@ -211,7 +221,6 @@ table td {
 
 table td.label {
     color: #666666;
-    font-weight: normal;
 }
 
 table th.left,
@@ -676,6 +685,11 @@ pre {
     overflow: auto;
     padding: 12px 24px 12px 24px;
     z-index: 30;
+    animation: move-into 0.25s ease-in-out;
+    -o-animation: move-into 0.25s ease-in-out;
+    -ms-animation: move-into 0.25s ease-in-out;
+    -moz-animation: move-into 0.25s ease-in-out;
+    -webkit-animation: move-into 0.25s ease-in-out;
 }
 
 .window.window-alert {
