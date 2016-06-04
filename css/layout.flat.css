@@ -470,9 +470,8 @@ textarea:-ms-input-placeholder {
 }
 
 label {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 ul {
@@ -779,11 +778,11 @@ body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
 
 .drop-field > .drop-field-contents {
     background-color: #ffffff;
+    border: 1px solid #bcbcbc;
     border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
-    border: 1px solid #bcbcbc;
-    box-shadow: 1px 1px 4px #e8e8e8; 
+    box-shadow: 1px 1px 4px #e8e8e8;
     -moz-box-shadow: 1px 1px 4px #e8e8e8;
     -webkit-box-shadow: 1px 1px 4px #e8e8e8;
     margin: 4px 0px 0px 0px;
@@ -870,7 +869,6 @@ body.retina-s .tag-field .tag-field-remove {
     height: 62px;
     line-height: 62px;
     text-align: center;
-    text-transform: uppercase;
 }
 
 .calendar-header .calendar-arrow {
@@ -1567,6 +1565,9 @@ body.retina-s .table.table-edit .table-remove .inline-remove {
 .drop-list .drop-item {
     background: transparent url(../images/flat/drop-list.png) no-repeat right center;
     border: 1px solid #cccccc;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
     cursor: pointer;
     font-weight: bold;
     height: 40px;
@@ -1580,10 +1581,11 @@ body.retina-s .drop-list .drop-item {
 }
 
 .drop-list ul.drop-options {
-    border-bottom: 1px solid #cccccc;
-    border-left: 1px solid #cccccc;
-    border-right: 1px solid #cccccc;
-    margin: 0px 0px 0px 0px;
+    border: 1px solid #cccccc;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    margin: 4px 0px 4px 0px;
 }
 
 .drop-list ul.drop-options li {
@@ -2003,13 +2005,13 @@ body.retina-s .button.button-drop-down.button-blue {
     box-shadow: 1px 1px 4px #e8e8e8;
     -moz-box-shadow: 1px 1px 4px #e8e8e8;
     -webkit-box-shadow: 1px 1px 4px #e8e8e8;
+    box-sizing: border-box;
     left: 0px;
     margin: 0px 0px 0px 0px;
     margin-top: 2px;
     padding: 4px 0px 4px 0px;
     position: absolute;
     top: 34px;
-    box-sizing: border-box;
 }
 
 .drop-down-container > ul.drop-down > li {
