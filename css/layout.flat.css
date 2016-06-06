@@ -246,8 +246,8 @@ input {
     font-weight: 600;
     height: 40px;
     outline: none;
-    padding: 0px 12px 0px 12px;
-    width: 512px;
+    padding: 0px 8px 0px 8px;
+    width: 520px;
 }
 
 input.small {
@@ -441,8 +441,8 @@ textarea {
     font-weight: 600;
     height: 140px;
     outline: none;
-    padding: 8px 12px 8px 12px;
-    width: 512px;
+    padding: 8px 8px 8px 8px;
+    width: 522px;
 }
 
 textarea:focus {
@@ -1620,7 +1620,7 @@ body.retina-s .drop-list .drop-item {
     height: 40px;
     margin: 0px 0px 0px 0px;
     overflow: hidden;
-    width: 524px;
+    width: 520px;
 }
 
 .progress-bar .progress-bar-bar {

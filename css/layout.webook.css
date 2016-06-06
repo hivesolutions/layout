@@ -236,7 +236,7 @@ input {
     height: 40px;
     outline: none;
     padding: 0px 8px 0px 8px;
-    width: 524px;
+    width: 522px;
 }
 
 input.small {
@@ -421,7 +421,7 @@ textarea {
     height: 140px;
     outline: none;
     padding: 8px 8px 8px 8px;
-    width: 524px;
+    width: 522px;
 }
 
 textarea:focus {
@@ -1993,6 +1993,7 @@ body.retina-s .button.button-drop-down.button-blue {
     box-shadow: 1px 1px 4px #e8e8e8;
     -moz-box-shadow: 1px 1px 4px #e8e8e8;
     -webkit-box-shadow: 1px 1px 4px #e8e8e8;
+    box-sizing: border-box;
     left: 0px;
     margin: 0px 0px 0px 0px;
     margin-top: 2px;
