@@ -673,11 +673,11 @@ pre {
 }
 
 .window {
-    animation: move-into 0.25s ease-in-out;
-    -o-animation: move-into 0.25s ease-in-out;
-    -ms-animation: move-into 0.25s ease-in-out;
-    -moz-animation: move-into 0.25s ease-in-out;
-    -webkit-animation: move-into 0.25s ease-in-out;
+    animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     background-color: #ffffff;
     border: 1px solid #bbbbbb;
     border-radius: 5px 5px 5px 5px;
