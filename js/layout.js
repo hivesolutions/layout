@@ -167,6 +167,11 @@
                     // the current state in the current structures
                     updateGuid(uuid);
 
+                    // triggers do async event, responsible for the possible changing
+                    // of the body of the current document by any external operation
+                    // binding to the current execution logic (allows extension)
+                    _body.triggerHandler("do_async", [base, body]);
+
                     // restores the display of the body so that the elements of
                     // it are restored to the user, also scroll the body element
                     // to the top so that the feel is of a new page
