@@ -1273,7 +1273,7 @@
             headerCheckbox.bind("change", function() {
                 var element = jQuery(this);
                 var bulk = element.parents(".bulk");
-                var checked = element.attr("checked");
+                var checked = element.is(":checked");
                 if (checked) {
                     _selectAll(bulk, options);
                 } else {
@@ -1290,7 +1290,7 @@
                 var element = jQuery(this);
                 var bulk = element.parents(".bulk");
                 var tableRow = element.parents(".table-row");
-                var checked = element.attr("checked");
+                var checked = element.is(":checked");
                 if (checked) {
                     _selectSingle(tableRow);
                 } else {
@@ -1381,10 +1381,12 @@
             matchedObject.removeClass("selection");
             headerCheckbox.removeClass("partial");
             headerCheckbox.attr("checked", false);
+            headerCheckbox.prop && headerCheckbox.prop("checked", false);
             isPartial && matchedObject.addClass("partial");
             isNotEmpty && matchedObject.addClass("selection");
             isPartial && headerCheckbox.addClass("partial");
             isNotEmpty && headerCheckbox.attr("checked", true);
+            isNotEmpty && headerCheckbox.prop && headerCheckbox.prop("checked", true);
 
             // uses the is not empty flag to decide on whether or not to show
             // the operations (button) for drop down usage and activation
@@ -1479,6 +1481,7 @@
             var checkbox = jQuery("input[type=checkbox]", element);
             element.addClass("active");
             checkbox.attr("checked", true);
+            checkbox.prop && checkbox.prop("checked", true);
         };
 
         var _deselectSingle = function(element) {
@@ -1488,6 +1491,7 @@
             var checkbox = jQuery("input[type=checkbox]", element);
             element.removeClass("active");
             checkbox.attr("checked", false);
+            checkbox.prop && checkbox.prop("checked", false);
         };
 
         var _showOperations = function(element, force) {
