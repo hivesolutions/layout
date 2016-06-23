@@ -272,6 +272,7 @@ table td {
 table td.label {
     color: #666666;
     font-weight: 200;
+    vertical-align: top;
 }
 
 body.romantic table td.label {

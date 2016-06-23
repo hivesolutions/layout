@@ -221,6 +221,7 @@ table td {
 
 table td.label {
     color: #666666;
+    vertical-align: top;
 }
 
 table th.left,
