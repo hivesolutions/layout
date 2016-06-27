@@ -801,7 +801,7 @@ body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
     -moz-box-shadow: 1px 1px 4px #e8e8e8;
     -webkit-box-shadow: 1px 1px 4px #e8e8e8;
     margin: 4px 0px 0px 0px;
-    max-height: 234px;
+    max-height: 245px;
     overflow-y: auto;
     z-index: 1;
 }
