@@ -1416,6 +1416,9 @@ body.retina-s .separator-horizontal {
 
 .table.table-edit input {
     border-bottom-width: 0px;
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
     border-right-width: 0px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1433,29 +1436,21 @@ body.retina-s .separator-horizontal {
     border-right-width: 0px;
 }
 
-.table.table-edit .drop-field .drop-field-contents {
-    margin-top: 1px;
-}
-
-.table.table-edit tr.last .drop-field .drop-field-contents {
-    margin-top: 0px;
-}
-
 .table.table-edit tr.last td input {
-    border-bottom-width: 1px;
+    border-bottom-width: 2px;
     height: 41px;
 }
 
 .table.table-edit tr td.last input {
-    border-right-width: 1px;
+    border-right-width: 2px;
 }
 
 .table.table-edit tr td.next-horizontal input {
-    border-left-color: #257f96;
+    border-left-color: #4cbad7;
 }
 
 .table.table-edit tr td.next-vertical input {
-    border-top-color: #257f96;
+    border-top-color: #4cbad7;
 }
 
 .table.table-edit tr td.next-horizontal-invalid input {
@@ -1467,11 +1462,11 @@ body.retina-s .separator-horizontal {
 }
 
 .table.table-edit tr td.next-horizontal-invalid input.active {
-    border-left-color: #257f96;
+    border-left-color: #4cbad7;
 }
 
 .table.table-edit tr td.next-vertical-invalid input.active {
-    border-top-color: #257f96;
+    border-top-color: #4cbad7;
 }
 
 .table.table-edit tr td.next-horizontal-invalid input.invalid {
