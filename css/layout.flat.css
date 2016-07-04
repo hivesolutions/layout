@@ -626,6 +626,9 @@ pre {
 
 .tag {
     background-color: #999999;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
     color: #ffffff;
     font-weight: bold;
     padding: 3px 12px 3px 12px;
