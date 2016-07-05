@@ -328,6 +328,10 @@
             // registers the pop state changed handler function so that
             // it's possible to restore the state using an async approach
             window.onpopstate = function(event) {
+                // sets the inital value of the href value that is going to
+                // be used for the pop state operation
+                var href = null;
+
                 // retrieves the proper uuid value to be used in the trigger
                 // of the link action, taking into account the current state
                 var uuid = event.state ? event.state.uuid : null;
@@ -336,7 +340,7 @@
                 // is ignored and the current state is properly updated so that
                 // the value becomes ready and available (just as a safety measure)
                 if (event.state === null) {
-                    var href = document.location.href;
+                    href = document.location.href;
                     var state = {
                         uuid: jQuery.uxguid(),
                         href: href
@@ -348,7 +352,7 @@
                 // retrieves the location of the current document and uses it
                 // to run the async redirection logic already used by the link
                 // async infra-structure for the link click operations
-                var href = document.location;
+                href = document.location;
                 jQuery.uxlinkasync(href, true, uuid);
             };
         };
@@ -679,11 +683,10 @@
         // the default values for the fluid element
         var defaults = {};
 
-        // sets the default options value
-        var options = options ? options : {};
-
-        // constructs the options
-        var options = jQuery.extend(defaults, options);
+        // sets the default options value and then
+        // runs the proper extension/construction
+        options = options ? options : {};
+        options = jQuery.extend(defaults, options);
 
         // sets the jquery matched object
         var matchedObject = this;
@@ -868,11 +871,10 @@
         // the default values for the links extra
         var defaults = {};
 
-        // sets the default options value
-        var options = options ? options : {};
-
-        // constructs the options
-        var options = jQuery.extend(defaults, options);
+        // sets the default options value and then
+        // runs the proper extension/construction
+        options = options ? options : {};
+        options = jQuery.extend(defaults, options);
 
         // sets the jquery matched object
         var matchedObject = this;
@@ -1040,11 +1042,10 @@
         // the default values for the bulk element
         var defaults = {};
 
-        // sets the default options value
-        var options = options ? options : {};
-
-        // constructs the options
-        var options = jQuery.extend(defaults, options);
+        // sets the default options value and then
+        // runs the proper extension/construction
+        options = options ? options : {};
+        options = jQuery.extend(defaults, options);
 
         // sets the jquery matched object
         var matchedObject = this;
@@ -1321,8 +1322,8 @@
             // and then applies the select operation in each of the rows
             var rows = jQuery("tbody .table-row", matchedObject);
             rows.each(function(index, element) {
-                var element = jQuery(this);
-                _selectSingle(element);
+                var _element = jQuery(this);
+                _selectSingle(_element);
             });
         };
 
@@ -1331,8 +1332,8 @@
             // and then applies the deselect operation in each of the rows
             var rows = jQuery("tbody .table-row", matchedObject);
             rows.each(function(index, element) {
-                var element = jQuery(this);
-                _deselectSingle(element, false);
+                var _element = jQuery(this);
+                _deselectSingle(_element, false);
             });
         };
 
