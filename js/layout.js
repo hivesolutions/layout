@@ -402,7 +402,7 @@
 
     var hash = function(body) {
         var buffer = "";
-        var body = body || jQuery("body");
+        body = body || jQuery("body");
         buffer += body.hasClass("static") ? "1" : "0";
         buffer += body.hasClass("fluid") ? "1" : "0";
         buffer += jQuery("#header", body).length ? "1" : "0";
