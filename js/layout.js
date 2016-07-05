@@ -525,7 +525,7 @@
         var header = jQuery("#header");
         links_.remove();
         header.append(links);
-        var links_ = jQuery("#header > .links");
+        links_ = jQuery("#header > .links");
         links_.uxapply();
     };
 
@@ -703,7 +703,7 @@
         var _appendHtml = function() {
             // validates that there's a valid matched object,
             // otherwise returns immediately
-            if (matchedObject.length == 0) {
+            if (matchedObject.length === 0) {
                 return;
             }
 
@@ -892,7 +892,7 @@
         var _appendHtml = function() {
             // in case no elements have been matched, must return
             // immediately to avoid any side effect or problem
-            if (matchedObject.length == 0) {
+            if (matchedObject.length === 0) {
                 return;
             }
 
