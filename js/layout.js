@@ -217,16 +217,16 @@
                 // animation element and in case it does not exists adds a new one
                 // to the current structure so that it may be used
                 var barLoader = jQuery(".bar-loader");
-                if (barLoader.length == 0) {
-                    var barLoader = jQuery("<div class=\"bar-loader\"></div>");
+                if (barLoader.length === 0) {
+                    barLoader = jQuery("<div class=\"bar-loader\"></div>");
                     _body.prepend(barLoader);
                 }
 
                 // tries to retrieve the current top loader element, in case it's
                 // not found inserts it in the correct position in the body contents
                 var topLoader = jQuery(".top-loader");
-                if (topLoader.length == 0) {
-                    var topLoader = jQuery("<div class=\"top-loader\">" +
+                if (topLoader.length === 0) {
+                    topLoader = jQuery("<div class=\"top-loader\">" +
                         "<div class=\"loader-background\"></div>" + "</div>");
                     _body.prepend(topLoader);
                 }
@@ -310,7 +310,7 @@
         var _setPopHandler = function() {
             // in case the pop state (changed) handler is already set there's
             // no need to set it again and so returns immediately
-            if (window.onpopstate != null) {
+            if (window.onpopstate !== null) {
                 return;
             }
 
@@ -335,7 +335,7 @@
                 // in case the state of the event is invalid the value the event
                 // is ignored and the current state is properly updated so that
                 // the value becomes ready and available (just as a safety measure)
-                if (event.state == null) {
+                if (event.state === null) {
                     var href = document.location.href;
                     var state = {
                         uuid: jQuery.uxguid(),
@@ -373,17 +373,17 @@
     };
 
     var isStatic = function(body) {
-        var body = body || jQuery("body");
+        body = body || jQuery("body");
         return body.hasClass("static");
     };
 
     var isFluid = function(body) {
-        var body = body || jQuery("body");
+        body = body || jQuery("body");
         return body.hasClass("fluid");
     };
 
     var isSimple = function(body) {
-        var body = body || jQuery("body");
+        body = body || jQuery("body");
         return body.hasClass("simple");
     };
 
@@ -532,7 +532,7 @@
     var updateSideLinks = function(base) {
         var sideLinks = jQuery("> .side-links", base);
         var sideLinks_ = jQuery("#header > .side-links");
-        var sideLinksClass = sideLinks.attr("class")
+        var sideLinksClass = sideLinks.attr("class");
         var sideLinksHtml = sideLinks.html();
         sideLinksHtml = sideLinksHtml && sideLinksHtml.replace(/aux-src=/ig, "src=");
         sideLinks_.html(sideLinksHtml);
@@ -543,7 +543,7 @@
     var updateActionBar = function(base) {
         var actionBar = jQuery(".action-bar", base);
         var actionBar_ = jQuery(".action-bar");
-        var actionBarClass = actionBar.attr("class")
+        var actionBarClass = actionBar.attr("class");
         var actionBarHtml = actionBar.html();
         actionBarHtml = actionBarHtml && actionBarHtml.replace(/aux-src=/ig, "src=");
         actionBar_.html(actionBarHtml);
@@ -647,7 +647,7 @@
         if (!window.google_trackConversion) {
             return;
         }
-        if (!conversionId || conversionId.length == 0) {
+        if (!conversionId || conversionId.length === 0) {
             return;
         }
         conversionId = parseInt(conversionId.attr("content"));
@@ -736,7 +736,7 @@
         var _registerHandlers = function() {
             // validates that there's a valid matched object,
             // otherwise returns immediately, no registration done
-            if (matchedObject.length == 0) {
+            if (matchedObject.length === 0) {
                 return;
             }
 
@@ -908,7 +908,7 @@
             // the link more section is hidden (not necessary)
             var linksExtra = jQuery("li", matchedObject);
             var extraSize = linksExtra.length;
-            if (extraSize == 0) {
+            if (extraSize === 0) {
                 linkMore.hide();
             }
 
@@ -925,7 +925,7 @@
             // swith) so that it becomes visible
             var activeLink = jQuery("a.active", matchedObject);
             var activeItem = activeLink.parent("li");
-            if (activeLink.length != 0) {
+            if (activeLink.length !== 0) {
                 activeLink.insertAfter(element);
                 activeItem.append(element);
             }
@@ -942,7 +942,7 @@
         var _registerHandlers = function() {
             // in case no elements have been matched, must return
             // immediately to avoid any side effect or problem
-            if (matchedObject.length == 0) {
+            if (matchedObject.length === 0) {
                 return;
             }
 
@@ -1021,7 +1021,7 @@
             // the value to the matched object (menu alignment)
             var width = matchedObject.outerWidth(true);
             var linkMoreWidth = linkMore.outerWidth(true);
-            var isValid = width != 0 && linkMoreWidth != 0;
+            var isValid = width !== 0 && linkMoreWidth !== 0;
             var extraWidth = (width - linkMoreWidth) * -1;
             isValid && matchedObject.css("margin-left", extraWidth + "px");
             isValid && matchedObject.addClass("positioned");
@@ -1209,7 +1209,7 @@
                 _body.uxconfirm(message, function(result) {
                     // in case the result is cancel avoids the current
                     // execution and returns immediately
-                    if (result == false) {
+                    if (result === false) {
                         return;
                     }
 
@@ -1372,7 +1372,7 @@
             // tries to determine the correct flag values for the header
             // checkbox from both the length values of checkboxed
             var isPartial = bodyCheckboxes.length != bodyCheckboxesChecked.length;
-            var isNotEmpty = bodyCheckboxesChecked.length != 0;
+            var isNotEmpty = bodyCheckboxesChecked.length !== 0;
             isPartial = isPartial && isNotEmpty;
 
             // resets the state of the header checkbox and then applies the
@@ -1501,7 +1501,7 @@
             var button = jQuery(".button-drop-down", container);
             var dropDown = jQuery(".drop-down", container);
             var elements = jQuery("> li", dropDown);
-            var isEmpty = elements.length == 0;
+            var isEmpty = elements.length === 0;
             if (isEmpty && !force) {
                 return;
             }
