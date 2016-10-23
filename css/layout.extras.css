@@ -662,8 +662,13 @@ body.grey .side-panel {
     -moz-box-shadow: 0px 0px 6px #e8e8e8;
     -webkit-box-shadow: 0px 0px 6px #e8e8e8;
     margin: 64px auto 64px auto;
-    max-width: 342px;
+    max-width: 100%;
     padding: 32px 32px 32px 32px;
+    width: 342px;
+}
+
+body.mobile-s .login-panel {
+    margin: 12px auto 12px auto;
 }
 
 .login-panel form {

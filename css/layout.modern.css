@@ -317,6 +317,12 @@ input.small {
     width: 324px;
 }
 
+input.full {
+    box-sizing: border-box;
+    height: 42px;
+    width: 100%;
+}
+
 input:focus {
     border-color: #3668c6;
     box-shadow: none;
