@@ -129,6 +129,10 @@ body.complete {
     width: inherit;
 }
 
+body.mobile-s {
+    max-width: 100%;
+}
+
 h1, h2, h3, h4, h5 {
     color: #2d2d2d;
 }
