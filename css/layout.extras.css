@@ -209,8 +209,8 @@ body.no-footer .footer {
 }
 
 .content-container .filter .table-row > td > .image {
-    max-height: 26px;
-    width: auto;
+    display: block;
+    height: 26px;
 }
 
 .content-container .filter .table-row > td > .image.lightbox-animated {
@@ -665,8 +665,7 @@ body.grey .side-panel {
 }
 
 .show-panel .panel-contents .image {
-    max-height: 150px;
-    width: auto;
+    max-height: 278px;
 }
 
 .show-panel .panel-contents .image.lightbox-animated {
