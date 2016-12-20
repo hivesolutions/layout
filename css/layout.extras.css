@@ -208,6 +208,15 @@ body.no-footer .footer {
     padding-right: 24px;
 }
 
+.content-container .filter .table-row > td > .image {
+    max-height: 26px;
+    width: auto;
+}
+
+.content-container .filter .table-row > td > .image.lightbox-animated {
+    cursor: pointer;
+}
+
 .border-box {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -653,6 +662,15 @@ body.grey .side-panel {
     margin: 0px 0px 18px 0px;
     overflow: hidden;
     word-wrap: break-word;
+}
+
+.show-panel .panel-contents .image {
+    max-height: 150px;
+    width: auto;
+}
+
+.show-panel .panel-contents .image.lightbox-animated {
+    cursor: pointer;
 }
 
 .login-panel {
