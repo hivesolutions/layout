@@ -767,3 +767,52 @@ body.mobile-s .login-footer {
 .button-drop-down.operations.force {
     display: inline-block;
 }
+
+.window.window-lightbox {
+    cursor: pointer;
+    line-height: 0px;
+    overflow: visible;
+    padding: 0px 0px 0px 0px;
+    width: inherit;
+}
+
+.window.window-lightbox .button-confirm,
+.window.window-lightbox .button-expand {
+    animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    -khtml-animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+}
+
+.window.window-lightbox .button-confirm {
+    background: transparent url(../images/base/lightbox-close.png) no-repeat left 0px;
+    cursor: pointer;
+    height: 30px;
+    margin: -14px 0px 0px -14px;
+    position: absolute;
+    width: 30px;
+}
+
+.retina-s .window.window-lightbox .button-confirm {
+    background-image: url(../images/base/lightbox-close-2x.png);
+    background-size: 30px 30px;
+}
+
+.window.window-lightbox.loading .button-confirm {
+    background-image: url(../images/base/lightbox-loading.png);
+}
+
+.retina-s .window.window-lightbox.loading .button-confirm {
+    background-image: url(../images/base/lightbox-loading-2x.png);
+    background-size: 30px 330px;
+}
+
+.window.window-lightbox.loaded .button-confirm {
+    background-image: url(../images/base/lightbox-close.png);
+}
+
+.retina-s .window.window-lightbox.loaded .button-confirm {
+    background-image: url(../images/base/lightbox-close-2x.png);
+    background-size: 30px 30px;
+}
