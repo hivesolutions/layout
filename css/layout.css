@@ -562,7 +562,6 @@ pre {
 .tag.green,
 .tag.true,
 .tag.enabled,
-.tag.paid,
 .tag.confirmed,
 .tag.fulfilled,
 .tag.get,
@@ -597,6 +596,7 @@ pre {
 }
 
 .tag.purple,
+.tag.paid,
 .tag.patch {
     background-color: #b0116c;
     color: #ffffff;
