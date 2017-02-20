@@ -683,6 +683,12 @@ pre {
     color: #ffffff;
 }
 
+.tag.purple,
+.tag.patch {
+    background-color: #b0116c;
+    color: #ffffff;
+}
+
 .table-full {
     width: 100%;
 }
