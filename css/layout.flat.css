@@ -189,7 +189,7 @@ p {
 a {
     color: #257f96;
     text-decoration: none;
-    transition: color 0.10sease-in;
+    transition: color 0.10s ease-in;
     -o-transition: color 0.10s ease-in;
     -ms-transition: color 0.10s ease-in;
     -moz-transition: color 0.10s ease-in;
@@ -854,6 +854,7 @@ body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
 .drop-field > .drop-field-contents > li {
     margin: 0px 0px 0px 0px;
     padding: 8px 8px 8px 8px;
+    cursor: pointer;
 }
 
 .drop-field > .drop-field-contents > li:last-child {
