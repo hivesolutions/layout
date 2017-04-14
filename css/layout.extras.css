@@ -525,6 +525,11 @@ body.retina-s .system-menu .menu-button {
     margin-left: 8px;
 }
 
+.content-header > .content-buttons .drop-down-container > ul.drop-down {
+    max-height: 438px;
+    max-width: 220px;
+}
+
 .side-panel {
     background-color: #ffffff;
     border-left: 1px solid #888888;
