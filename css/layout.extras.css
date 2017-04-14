@@ -400,6 +400,10 @@ body.grey .side-links {
     -webkit-box-shadow: 1px 0px 4px #f2f2f2;
 }
 
+body.flat .side-links {
+    text-transform: capitalize;
+}
+
 .side-links > a {
     color: #4d4d4d;
     cursor: pointer;
@@ -409,6 +413,10 @@ body.grey .side-links {
     overflow: hidden;
     padding: 0px 0px 0px 0px;
     text-overflow: ellipsis;
+}
+
+body.flat .side-links > a {
+    font-size: 15px;
 }
 
 .side-links > a:last-child {
