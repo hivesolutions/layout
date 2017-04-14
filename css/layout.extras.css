@@ -101,6 +101,12 @@ body.fluid .window {
     -webkit-box-shadow: 0px 1px 4px #aaaaaa;
 }
 
+body.fluid.flat .window {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 body.no-footer .footer {
     display: none;
 }
@@ -401,10 +407,19 @@ body.grey .side-links {
     color: #3668c6;
 }
 
+body.flat .side-links > a.active,
+body.flat .side-links > a.selected {
+    color: #257f96;
+}
+
 .side-links > a:hover {
     background-color: transparent;
     border-bottom: none;
     color: #3668c6;
+}
+
+body.flat .side-links > a:hover {
+    color: #257f96;
 }
 
 .side-links > div.separator {
@@ -483,6 +498,10 @@ body.retina-s .system-menu .menu-button {
     font-weight: normal;
     line-height: 13px;
     margin: 0px 0px 0px 0px;
+}
+
+body.flat .system-menu .avatar-contents h3 {
+    font-weight: 600;
 }
 
 .system-menu .footer-contents {
@@ -715,6 +734,10 @@ body.mobile-s .login-panel {
     font-size: 16px;
     font-weight: inherit;
     margin: 0px 0px 42px 0px;
+}
+
+.login-panel.login-panel-message h3 {
+    margin-bottom: 0px;
 }
 
 .login-panel h4 {
