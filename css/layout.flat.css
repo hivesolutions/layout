@@ -710,7 +710,7 @@ pre {
     -moz-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -webkit-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     background-color: #ffffff;
-    border: 1px solid #bbbbbb;
+    border: 2px solid #bbbbbb;
     border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
