@@ -459,6 +459,11 @@ textarea {
     height: 140px;
     outline: none;
     padding: 8px 8px 8px 8px;
+    transition: border-color 0.10s ease-in;
+    -o-transition: border-color 0.10s ease-in;
+    -ms-transition: border-color 0.10s ease-in;
+    -moz-transition: border-color 0.10s ease-in;
+    -webkit-transition: border-color 0.10s ease-in;
     width: 522px;
 }
 
