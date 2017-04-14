@@ -178,6 +178,11 @@ p {
 a {
     color: #257f96;
     text-decoration: none;
+    transition: color 0.10sease-in;
+    -o-transition: color 0.10s ease-in;
+    -ms-transition: color 0.10s ease-in;
+    -moz-transition: color 0.10s ease-in;
+    -webkit-transition: color 0.10s ease-in;
 }
 
 a.active {
@@ -641,7 +646,7 @@ pre {
 }
 
 .button:hover {
-    border-bottom: 1px solid #666666;
+    border-bottom: 2px solid #666666;
     padding-bottom: 2px;
 }
 
@@ -2035,13 +2040,10 @@ body.retina-s .button.button-drop-down.button-blue {
 
 .drop-down-container > ul.drop-down {
     background-color: #ffffff;
-    border: 1px solid #bcbcbc;
+    border: 2px solid #cccccc;
     border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
-    box-shadow: 1px 1px 4px #e8e8e8;
-    -moz-box-shadow: 1px 1px 4px #e8e8e8;
-    -webkit-box-shadow: 1px 1px 4px #e8e8e8;
     box-sizing: border-box;
     left: 0px;
     margin: 0px 0px 0px 0px;
@@ -2069,7 +2071,7 @@ body.retina-s .button.button-drop-down.button-blue {
     border-bottom: none;
     color: #4d4d4d;
     display: block;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 24px;
     margin: 0px 0px 0px 0px;
@@ -2085,14 +2087,14 @@ ul.sections-list {
 }
 
 ul.sections-list > li {
-    border: 1px solid transparent;
+    border: 2px solid transparent;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
     margin: 0px 0px 10px 0px;
     padding: 14px 14px 14px 14px;
 }
 
 ul.sections-list > li:hover {
     border-color: #cdcdcd;
-    box-shadow: 0px 0px 6px #e8e8e8;
-    -moz-box-shadow: 0px 0px 6px #e8e8e8;
-    -webkit-box-shadow: 0px 0px 6px #e8e8e8;
 }

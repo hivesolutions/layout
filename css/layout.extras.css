@@ -532,7 +532,7 @@ body.flat .system-menu .avatar-contents h3 {
 
 .content-header > h1 {
     float: left;
-    font-weight: normal;
+    font-weight: inherit;
     margin: 0px 0px 0px 24px;
 }
 
