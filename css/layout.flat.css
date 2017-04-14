@@ -714,9 +714,6 @@ pre {
     border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
-    box-shadow: 0px 1px 4px #dddddd;
-    -moz-box-shadow: 0px 1px 4px #dddddd;
-    -webkit-box-shadow: 0px 1px 4px #dddddd;
     min-width: 260px;
     overflow: auto;
     padding: 12px 24px 12px 24px;
