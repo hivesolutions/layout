@@ -713,7 +713,7 @@ body.mobile-s .login-panel {
 .login-panel h3 {
     color: #4d4d4d;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: inherit;
     margin: 0px 0px 42px 0px;
 }
 
