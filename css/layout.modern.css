@@ -2110,7 +2110,7 @@ body.retina-s .button.button-drop-down.button-blue {
     left: 0px;
     margin: 0px 0px 0px 0px;
     margin-top: 2px;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 4px 0px 4px 0px;
     position: absolute;
     top: 34px;
