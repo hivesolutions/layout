@@ -835,14 +835,16 @@ body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
 }
 
 .drop-field > .drop-field-contents {
+    animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     background-color: #ffffff;
-    border: 1px solid #bcbcbc;
+    border: 2px solid #cccccc;
     border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
-    box-shadow: 1px 1px 4px #e8e8e8;
-    -moz-box-shadow: 1px 1px 4px #e8e8e8;
-    -webkit-box-shadow: 1px 1px 4px #e8e8e8;
     margin: 4px 0px 0px 0px;
     max-height: 245px;
     overflow-y: auto;
@@ -902,13 +904,10 @@ body.retina-s .tag-field .tag-field-remove {
 
 .calendar {
     background-color: #ffffff;
-    border: 1px solid #cccccc;
+    border: 2px solid #dcdcdc;
     border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
-    box-shadow: 0px 1px 4px #f0f0f0;
-    -moz-box-shadow: 0px 1px 4px #f0f0f0;
-    -webkit-box-shadow: 0px 1px 4px #f0f0f0;
     margin: 0px auto 0px auto;
     user-select: none;
     -moz-user-select: none;
@@ -917,6 +916,11 @@ body.retina-s .tag-field .tag-field-remove {
 }
 
 .calendar.text-field-calendar {
+    animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     margin: 4px 0px 0px 0px;
     position: absolute;
     z-index: 1;
