@@ -712,6 +712,16 @@ body.grey .side-panel {
     width: 406px;
 }
 
+body.flat .login-panel {
+    border: 2px solid #cdcdcd;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 body.mobile-s .login-panel {
     margin: 12px auto 12px auto;
 }
