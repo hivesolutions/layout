@@ -720,6 +720,11 @@ body.grey .side-panel {
     text-transform: uppercase;
 }
 
+body.flat .show-panel .panel-contents dl dt {
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
 .show-panel .panel-contents dl dd {
     font-size: 16px;
     line-height: 30px;

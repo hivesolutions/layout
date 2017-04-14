@@ -523,6 +523,7 @@ textarea:-ms-input-placeholder {
 label {
     font-size: 15px;
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 ul {
@@ -1045,7 +1046,7 @@ body.retina-s .calendar-header .calendar-arrow-right {
 .filter .table-header {
     border-bottom: 1px solid #ebebeb;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .filter .table-header:hover {
