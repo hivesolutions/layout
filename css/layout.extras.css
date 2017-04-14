@@ -401,6 +401,7 @@ body.grey .side-links {
 }
 
 .side-links > a {
+    border-bottom: none;
     color: #4d4d4d;
     cursor: pointer;
     display: block;
