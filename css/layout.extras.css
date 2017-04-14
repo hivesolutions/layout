@@ -261,9 +261,19 @@ body.no-footer .footer {
     z-index: 10;
 }
 
+body.flat {
+    height: 52px;
+    line-height: 52px;
+}
+
 .top-bar.large {
     height: 64px;
     line-height: 64px;
+}
+
+body.flat .top-bar.large {
+    height: 66px;
+    line-height: 66px;
 }
 
 .top-bar,
