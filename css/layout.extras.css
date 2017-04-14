@@ -337,8 +337,11 @@ body.fluid.fixed .top-bar > .container {
     -webkit-border-radius: 4px 4px 4px 4px;
     font-size: 14px;
     height: 32px;
-    transition: width 0.2s;
-    -webkit-transition: width 0.2s;
+    transition: width 0.2s ease;
+    -o-transition: width 0.2s ease;
+    -ms-transition: width 0.2s ease;
+    -moz-transition: width 0.2s ease;
+    -webkit-transition: width 0.2s ease ;
     vertical-align: middle;
     width: 300px;
 }
