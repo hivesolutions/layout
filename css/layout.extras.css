@@ -261,7 +261,7 @@ body.no-footer .footer {
     z-index: 10;
 }
 
-body.flat {
+body.flat .top-bar {
     height: 52px;
     line-height: 52px;
 }
