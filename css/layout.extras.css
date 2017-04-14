@@ -338,6 +338,10 @@ body.fluid.fixed .top-bar > .container {
     color: #3668c6;
 }
 
+body.flat .top-bar > .container > .logo > a:hover {
+    color: #257f96;
+}
+
 .top-bar > .container > .text-field {
     margin-top: 9px;
 }
