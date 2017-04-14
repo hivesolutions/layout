@@ -226,7 +226,9 @@ p {
 }
 
 a {
+    border-bottom: 1px solid transparent;
     color: #3668c6;
+    padding-bottom: 2px;
     text-decoration: none;
 }
 
@@ -237,7 +239,6 @@ a.active {
 a:hover,
 a.hover {
     border-bottom: 1px solid #3668c6;
-    padding-bottom: 2px;
 }
 
 a.warning,
@@ -247,10 +248,14 @@ a.error {
     color: #c31f30;
 }
 
+a.silent {
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+
 a.silent:hover,
 a.silent.hover {
     border-bottom: none;
-    padding-bottom: 0px;
 }
 
 form {

@@ -164,7 +164,9 @@ p {
 }
 
 a {
+    border-bottom: 1px solid transparent;
     color: #1b75bb;
+    padding-bottom: 2px;
     text-decoration: none;
 }
 
@@ -182,6 +184,11 @@ a.invalid,
 a.error {
     border-color: #c31f30;
     color: #c31f30;
+}
+
+a.silent {
+    border-bottom: none;
+    padding-bottom: 0px;
 }
 
 a.silent:hover,
