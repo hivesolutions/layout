@@ -346,10 +346,6 @@ body.flat .top-bar > .container > .logo > a:hover {
     margin-top: 9px;
 }
 
-.top-bar > .container > .drop-field {
-    line-height: 50px;
-}
-
 .top-bar > .container > .text-field,
 .top-bar > .container > .drop-field > .text-field {
     border-radius: 4px 4px 4px 4px;
