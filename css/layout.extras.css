@@ -577,6 +577,10 @@ body.flat .system-menu .avatar-contents h3 {
     max-width: 220px;
 }
 
+body.flat .content-header > .content-buttons .drop-down-container > ul.drop-down {
+    max-height: 444px;
+}
+
 .side-panel {
     background-color: #ffffff;
     border-left: 1px solid #888888;
