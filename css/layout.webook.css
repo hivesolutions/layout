@@ -797,9 +797,9 @@ body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
     border-bottom: 1px solid #f4f4f4;
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
+    cursor: pointer;
     margin: 0px 0px 0px 0px;
     padding: 8px 8px 8px 8px;
-    cursor: pointer;
 }
 
 .drop-field > .drop-field-contents > li:last-child {

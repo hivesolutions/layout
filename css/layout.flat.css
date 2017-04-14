@@ -835,11 +835,11 @@ body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
 }
 
 .drop-field > .drop-field-contents {
-    animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -o-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -ms-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -moz-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -webkit-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     background-color: #ffffff;
     border: 2px solid #cccccc;
     border-radius: 5px 5px 5px 5px;
@@ -852,9 +852,9 @@ body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
 }
 
 .drop-field > .drop-field-contents > li {
+    cursor: pointer;
     margin: 0px 0px 0px 0px;
     padding: 8px 8px 8px 8px;
-    cursor: pointer;
 }
 
 .drop-field > .drop-field-contents > li:last-child {
@@ -917,11 +917,11 @@ body.retina-s .tag-field .tag-field-remove {
 }
 
 .calendar.text-field-calendar {
-    animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -o-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -ms-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -moz-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -webkit-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     margin: 4px 0px 0px 0px;
     position: absolute;
     z-index: 1;
@@ -2055,11 +2055,11 @@ body.retina-s .button.button-drop-down.button-blue {
 }
 
 .drop-down-container > ul.drop-down {
-    animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -o-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -ms-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -moz-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -webkit-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-into-drop 0.20s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     background-color: #ffffff;
     border: 2px solid #cccccc;
     border-radius: 5px 5px 5px 5px;
