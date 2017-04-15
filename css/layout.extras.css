@@ -509,6 +509,12 @@ body.retina-s .system-menu .menu-button {
     border-right-color: #dddddd;
 }
 
+body.flat .system-menu.active .menu-button {
+    background-color: #e0e0e0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
 .system-menu .menu-link {
     cursor: pointer;
 }
