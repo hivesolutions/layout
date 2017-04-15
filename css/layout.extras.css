@@ -407,6 +407,12 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
     z-index: 1;
 }
 
+body.flat .side-links {
+    border-right: none;
+    padding-top: 71px;
+    text-transform: none;
+}
+
 .side-links.grey,
 body.grey .side-links {
     background-color: #f2f2f2;
@@ -416,10 +422,12 @@ body.grey .side-links {
     -webkit-box-shadow: 1px 0px 4px #f2f2f2;
 }
 
-body.flat .side-links {
+body.flat .side-links.grey,
+body.flat.grey .side-links {
     border-left: none;
-    padding-top: 71px;
-    text-transform: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 .side-links > .side-links-container {
