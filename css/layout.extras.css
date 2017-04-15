@@ -529,6 +529,10 @@ body.flat .system-menu .menu-contents {
     text-transform: uppercase;
 }
 
+body.flat .system-menu .avatar-contents h2 {
+    text-transform: none;
+}
+
 .system-menu .avatar-contents h3 {
     color: #5d5d5d;
     font-size: 13px;
