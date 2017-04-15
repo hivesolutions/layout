@@ -250,7 +250,7 @@ body.no-footer .footer {
 }
 
 body.flat .or {
-	text-transform: none;
+    text-transform: none;
 }
 
 .separator {
@@ -368,11 +368,6 @@ body.flat .top-bar > .container > .logo > a:hover {
     -webkit-transition: width 0.2s ease;
     vertical-align: middle;
     width: 300px;
-}
-
-body.flat .top-bar > .container > .text-field,
-body.flat .top-bar > .container > .drop-field > .text-field {
-    border-color: #e0e0e0;
 }
 
 .top-bar > .container > .text-field:focus,
@@ -555,6 +550,10 @@ body.flat .system-menu .avatar-contents h3 {
 
 .system-menu .footer-contents a {
     text-transform: uppercase;
+}
+
+body.flat .system-menu .footer-contents a {
+    text-transform: none;
 }
 
 .content-header {
