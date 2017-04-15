@@ -107,10 +107,10 @@ __license__   = Apache License, Version 2.0
 }
 
 #overlay {
-    background-color: #dddddd;
+    background-color: #000000;
     display: none;
     left: 0px;
-    opacity: 0.4;
+    opacity: 0.7;
     top: 0px;
     z-index: 20;
 }
@@ -731,7 +731,6 @@ pre {
     -moz-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -webkit-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     background-color: #ffffff;
-    border: 2px solid #bbbbbb;
     border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;

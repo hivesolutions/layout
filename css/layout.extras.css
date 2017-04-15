@@ -54,6 +54,10 @@ body.fluid #overlay {
     background-color: #888888;
 }
 
+body.fluid.flat #overlay {
+    background-color: #000000;
+}
+
 body.fluid #header {
     height: 100%;
     position: fixed;
@@ -357,9 +361,14 @@ body.flat .top-bar > .container > .logo > a:hover {
     -o-transition: width 0.2s ease;
     -ms-transition: width 0.2s ease;
     -moz-transition: width 0.2s ease;
-    -webkit-transition: width 0.2s ease ;
+    -webkit-transition: width 0.2s ease;
     vertical-align: middle;
     width: 300px;
+}
+
+body.flat .top-bar > .container > .text-field,
+body.flat .top-bar > .container > .drop-field > .text-field {
+    border-color: e0e0e0;
 }
 
 .top-bar > .container > .text-field:focus,
