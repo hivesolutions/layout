@@ -368,7 +368,7 @@ body.flat .top-bar > .container > .logo > a:hover {
 
 body.flat .top-bar > .container > .text-field,
 body.flat .top-bar > .container > .drop-field > .text-field {
-    border-color: e0e0e0;
+    border-color: #e0e0e0;
 }
 
 .top-bar > .container > .text-field:focus,
@@ -406,7 +406,7 @@ body.grey .side-links {
 }
 
 body.flat .side-links {
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .side-links > a {
