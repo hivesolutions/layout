@@ -400,7 +400,6 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
     margin-top: 50px;
     max-height: 100%;
     min-height: 100%;
-    overflow: auto;
     padding: 69px 0px 0px 0px;
     position: absolute;
     text-align: left;
@@ -424,7 +423,13 @@ body.flat .side-links {
     text-transform: none;
 }
 
-.side-links > a {
+.side-links > side-links-container {
+    max-height: 100%;
+    min-height: 100%;
+    overflow: auto;
+}
+
+.side-links > side-links-container > a {
     color: #4d4d4d;
     cursor: pointer;
     display: block;
@@ -435,40 +440,40 @@ body.flat .side-links {
     text-overflow: ellipsis;
 }
 
-body.flat .side-links > a {
+body.flat .side-links > side-links-container > a {
     font-size: 15px;
 }
 
-.side-links > a:last-child {
+.side-links > side-links-container > a:last-child {
     margin-bottom: 0px;
 }
 
-.side-links > a.active,
-.side-links > a.selected {
+.side-links > side-links-container > a.active,
+.side-links > side-links-container > a.selected {
     background-color: transparent;
     color: #3668c6;
 }
 
-body.flat .side-links > a.active,
-body.flat .side-links > a.selected {
+body.flat .side-links > side-links-container > a.active,
+body.flat .side-links > side-links-container > a.selected {
     color: #257f96;
 }
 
-.side-links > a:hover {
+.side-links > side-links-container > a:hover {
     background-color: transparent;
     border-bottom: none;
     color: #3668c6;
 }
 
-body.flat .side-links > a:hover {
+body.flat .side-links > side-links-container > a:hover {
     color: #257f96;
 }
 
-.side-links > div.separator {
+.side-links > side-links-container > div.separator {
     border-top: 1px solid #e0e0e0;
 }
 
-.side-links > div.separator:last-child {
+.side-links > side-links-container > div.separator:last-child {
     display: none;
 }
 
