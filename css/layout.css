@@ -1681,8 +1681,10 @@ ul.traceback {
     background-color: #f8f8f8;
     font-family: monospace;
     font-size: 12px;
+    overflow-x: auto;
     padding: 8px 0px 8px 0px;
     text-align: left;
+    word-break: break-all;
 }
 
 ul.traceback li {
