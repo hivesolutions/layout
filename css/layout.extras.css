@@ -290,6 +290,11 @@ body.flat .top-bar.large {
     border-bottom: 1px solid #cccccc;
 }
 
+body.flat .top-bar,
+body.flat .top-bar.grey {
+    border-bottom: none;
+}
+
 .top-bar > .container {
     margin: 0px auto 0px auto;
 }
@@ -329,8 +334,6 @@ body.fluid.fixed .top-bar > .container {
     color: #2d2d2d;
     font-size: 26px;
     font-weight: bold;
-    height: 50px;
-    line-height: 50px;
     overflow: hidden;
     text-shadow: 1px 1px 1px #ffffff;
     width: 176px;
@@ -370,9 +373,19 @@ body.flat .top-bar > .container > .logo > a:hover {
     width: 300px;
 }
 
+body.flat .top-bar > .container > .text-field,
+body.flat .top-bar > .container > .drop-field > .text-field {
+    border-color: transparent;
+}
+
 .top-bar > .container > .text-field:focus,
 .top-bar > .container > .drop-field > .text-field:focus {
     width: 400px;
+}
+
+body.flat .top-bar > .container > .text-field:focus,
+body.flat .top-bar > .container > .drop-field > .text-field:focus {
+    border-color: #4cbad7;
 }
 
 .side-links {
@@ -384,6 +397,7 @@ body.flat .top-bar > .container > .logo > a:hover {
     color: #2d2d2d;
     font-weight: bold;
     margin: 0px 0px 0px 0px;
+    margin-top: 50px;
     max-height: 100%;
     min-height: 100%;
     overflow: auto;
@@ -393,6 +407,10 @@ body.flat .top-bar > .container > .logo > a:hover {
     text-transform: uppercase;
     width: 200px;
     z-index: 1;
+}
+
+body.flat .side-links {
+    padding-top: 71px;
 }
 
 .side-links.grey,
