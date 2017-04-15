@@ -727,7 +727,7 @@ body.grey .side-panel {
 
 body.flat .show-panel .panel-contents dl dt {
     font-size: 16px;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .show-panel .panel-contents dl dd {
