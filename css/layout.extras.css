@@ -519,9 +519,10 @@ body.flat .system-menu .menu-contents {
     -ms-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -moz-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -webkit-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    border-radius: 0px 0px 5px 5px;
-    -moz-border-radius: 0px 0px 5px 5px;
-    -webkit-border-radius: 0px 0px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    margin-top: 4px;
 }
 
 .system-menu .header-contents {
