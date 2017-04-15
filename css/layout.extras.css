@@ -409,10 +409,6 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
     z-index: 1;
 }
 
-body.flat .side-links {
-    padding-top: 71px;
-}
-
 .side-links.grey,
 body.grey .side-links {
     background-color: #f2f2f2;
@@ -423,6 +419,8 @@ body.grey .side-links {
 }
 
 body.flat .side-links {
+    border-left: none;
+    padding-top: 71px;
     text-transform: none;
 }
 
