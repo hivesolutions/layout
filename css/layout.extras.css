@@ -725,7 +725,7 @@ body.grey .side-panel {
     text-transform: uppercase;
 }
 
-body.flat .show-panel .panel-contents dl dt {
+body.flat .show-panel .panel-contents dl dt {
     font-size: 16px;
     text-transform: capitalize;
 }
