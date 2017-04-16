@@ -649,6 +649,13 @@ body.flat .content-header > .content-buttons .drop-down-container > ul.drop-down
     z-index: 30;
 }
 
+body.flat .side-panel {
+    border-left: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 .side-panel.grey,
 body.grey .side-panel {
     background-color: #f2f2f2;
