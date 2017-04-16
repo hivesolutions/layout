@@ -1134,6 +1134,11 @@ body.retina-s .filter .table-header th.direction.ascending {
 }
 
 .filter .filter-contents {
+    animation: fade-into-drop 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-into-drop 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-into-drop 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-into-drop 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-into-drop 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     margin-top: 20px;
 }
 
