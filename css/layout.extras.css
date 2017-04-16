@@ -412,7 +412,7 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
 body.flat .side-links {
     border-right: none;
     border-top: 52px solid transparent;
-    padding-top: 8px;
+    padding-top: 12px;
     text-transform: none;
 }
 
