@@ -33,6 +33,14 @@ html {
     height: 100%;
 }
 
+body.flat #content {
+    animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+}
+
 body.fluid {
     height: 100%;
     margin: 0px auto 0px auto;
@@ -79,11 +87,6 @@ body.fluid #content {
 }
 
 body.fluid.flat #content {
-    animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -o-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -ms-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -moz-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -webkit-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     padding-top: 52px;
 }
 
