@@ -484,7 +484,9 @@
     var updateBody = function(body) {
         var _body = jQuery("body");
         var bodyClass = body.attr("class");
+        var bodyStyle = body.attr("style");
         _body.attr("class", bodyClass);
+        _body.attr("style", bodyStyle);
         _body.uxbrowser();
         _body.uxfeature();
         _body.uxmobile();
