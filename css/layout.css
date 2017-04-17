@@ -113,6 +113,7 @@ p {
 }
 
 a {
+    border-bottom: 1px solid transparent;
     color: #3668c6;
     padding-bottom: 2px;
     text-decoration: none;
@@ -547,6 +548,7 @@ pre {
 }
 
 .button {
+    border-bottom: 1px solid transparent;
     font-size: 22px;
     font-weight: bold;
     margin: 0px 4px 0px 4px;

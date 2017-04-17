@@ -452,8 +452,10 @@ body.flat.grey .side-links {
 }
 
 body.flat .side-links > a {
+    border-bottom: none;
     color: #1d1d1d;
     font-size: 15px;
+    font-weight: 600;
 }
 
 .side-links > a:last-child {
@@ -473,7 +475,6 @@ body.flat .side-links > a.selected {
 
 .side-links > a:hover {
     background-color: transparent;
-    border-bottom: none;
     color: #3668c6;
 }
 

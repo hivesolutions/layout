@@ -683,6 +683,7 @@ pre {
 }
 
 .button {
+    border-bottom: 1px solid transparent;
     font-size: 16px;
     font-weight: bold;
     margin: 0px 4px 0px 4px;
