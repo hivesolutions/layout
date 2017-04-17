@@ -973,6 +973,7 @@ body.romantic .calendar {
 }
 
 .calendar-header .calendar-arrow {
+    border-bottom: none;
     cursor: pointer;
     height: 62px;
     opacity: 0.5;
@@ -981,7 +982,6 @@ body.romantic .calendar {
 }
 
 .calendar-header .calendar-arrow:hover {
-    border-bottom: none;
     opacity: 1;
 }
 
