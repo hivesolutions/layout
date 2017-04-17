@@ -521,7 +521,7 @@ textarea:-ms-input-placeholder {
 
 label {
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 600;
     text-transform: capitalize;
 }
 

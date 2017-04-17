@@ -569,6 +569,7 @@ body.flat .system-menu .menu-contents {
 }
 
 body.flat .system-menu .avatar-contents h2 {
+    font-size: 16px;
     text-transform: none;
 }
 
@@ -581,6 +582,7 @@ body.flat .system-menu .avatar-contents h2 {
 }
 
 body.flat .system-menu .avatar-contents h3 {
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -780,6 +782,7 @@ body.grey .side-panel {
 
 body.flat .show-panel .panel-contents dl dt {
     font-size: 16px;
+    font-weight: 600;
     text-transform: none;
 }
 
@@ -789,6 +792,10 @@ body.flat .show-panel .panel-contents dl dt {
     margin: 0px 0px 18px 0px;
     overflow: hidden;
     word-wrap: break-word;
+}
+
+body.flat .show-panel .panel-contents dl dd {
+    font-weight: normal;
 }
 
 .show-panel .panel-contents .image {
