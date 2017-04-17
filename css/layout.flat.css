@@ -1063,8 +1063,11 @@ body.retina-s .calendar-header .calendar-arrow-right {
 }
 
 .filter .table-header a {
-    border-color: #4d4d4d;
     color: #4d4d4d;
+}
+
+.filter .table-header a:hover {
+    border-color: #4d4d4d;
 }
 
 .filter .table-header th.direction {
