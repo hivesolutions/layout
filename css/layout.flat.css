@@ -686,7 +686,7 @@ pre {
     color: #ffffff;
     font-weight: 600;
     padding: 4px 13px 4px 13px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .tag.green,

@@ -806,10 +806,6 @@ body.flat .show-panel .panel-contents dl dd {
     color: #4d4d4d;
 }
 
-body.flat .show-panel .panel-contents dl dd > .tag {
-    font-size: 14px;
-}
-
 .show-panel .panel-contents .image {
     max-height: 278px;
 }
