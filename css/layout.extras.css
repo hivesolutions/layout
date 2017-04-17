@@ -419,6 +419,7 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
 body.flat .side-links {
     border-right: none;
     border-top: 52px solid transparent;
+    font-weight: 600;
     text-transform: none;
 }
 
@@ -451,6 +452,7 @@ body.flat.grey .side-links {
 }
 
 body.flat .side-links > a {
+    color: #1d1d1d;
     font-size: 15px;
 }
 
