@@ -197,7 +197,7 @@ a {
 }
 
 a.active {
-    font-weight: 600;
+    font-weight: bold;
 }
 
 a:hover,
