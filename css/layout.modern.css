@@ -240,9 +240,12 @@ a.hover {
     border-color: #3668c6;
 }
 
-a.warning,
-a.invalid,
-a.error {
+a.warning.hover,
+a.warning:hover,
+a.invalid.hover,
+a.invalid:hover,
+a.error.hover,
+a.error:hover {
     border-color: #c31f30;
     color: #c31f30;
 }
