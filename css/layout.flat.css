@@ -759,9 +759,8 @@ pre {
 }
 
 .window .window-buttons .button {
-    font-size: 14px;
+    font-size: 15px;
     margin: 0px 6px 0px 6px;
-    text-transform: uppercase;
 }
 
 .window > form {
@@ -1240,7 +1239,6 @@ body.retina-s .filter .table-header th.direction.ascending {
 .filter-no-results {
     font-weight: 600;
     text-align: center;
-    text-transform: uppercase;
 }
 
 .filter-more {
@@ -1452,7 +1450,6 @@ body.retina-s .separator-horizontal {
 .table.table-edit thead th {
     font-weight: 600;
     padding: 0px 0px 8px 0px;
-    text-transform: uppercase;
 }
 
 .table.table-edit td {
@@ -1466,7 +1463,6 @@ body.retina-s .separator-horizontal {
 
 .table.table-edit .table-new-line-row .button {
     font-size: 14px;
-    text-transform: uppercase;
 }
 
 .table.table-edit input {
