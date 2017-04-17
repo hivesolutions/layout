@@ -125,7 +125,7 @@ a.active {
 
 a:hover,
 a.hover {
-    border-bottom: 1px solid #3668c6;
+    border-color: #3668c6;
 }
 
 a.warning,
@@ -556,7 +556,7 @@ pre {
 }
 
 .button:hover {
-    border-bottom: 1px solid #666666;
+    border-color: #666666;
 }
 
 .tag {
