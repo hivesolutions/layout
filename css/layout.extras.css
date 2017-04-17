@@ -668,7 +668,7 @@ body.grey .side-panel {
 }
 
 .side-panel h1 {
-    font-weight: normal;
+    font-weight: inherit;
     text-transform: none;
 }
 
