@@ -197,7 +197,7 @@ a {
 }
 
 a.active {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 a:hover,
@@ -656,7 +656,7 @@ pre {
 
 .button {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     margin: 0px 4px 0px 4px;
 }
 
@@ -671,7 +671,7 @@ pre {
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 600;
     padding: 3px 12px 3px 12px;
     text-transform: uppercase;
 }
@@ -885,7 +885,7 @@ body.retina-s .drop-field.drop-field-select.drop-field-lock > .text-field {
     color: #ffffff;
     float: left;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .tag-field .tag-field-remove {
@@ -931,7 +931,7 @@ body.retina-s .tag-field .tag-field-remove {
 }
 
 .calendar-header {
-    font-weight: bold;
+    font-weight: 600;
     height: 62px;
     line-height: 62px;
     text-align: center;
@@ -1043,7 +1043,7 @@ body.retina-s .calendar-header .calendar-arrow-right {
 
 .filter .table-header {
     border-bottom: 1px solid #ebebeb;
-    font-weight: bold;
+    font-weight: 600;
     text-transform: capitalize;
 }
 
@@ -1239,7 +1239,7 @@ body.retina-s .filter .table-header th.direction.ascending {
 }
 
 .filter-no-results {
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     text-transform: uppercase;
 }
@@ -1301,12 +1301,12 @@ body.retina-s .filter .table-header th.direction.ascending {
 
 .quote.error {
     color: #c31f30;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .overflow {
     color: #c9273f;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 td.up,
@@ -1451,7 +1451,7 @@ body.retina-s .separator-horizontal {
 }
 
 .table.table-edit thead th {
-    font-weight: bold;
+    font-weight: 600;
     padding: 0px 0px 8px 0px;
     text-transform: uppercase;
 }
@@ -1673,7 +1673,7 @@ body.retina-s .drop-list .drop-item {
     -webkit-border-radius: 5px 5px 5px 5px;
     display: inline-block;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
     height: 40px;
     margin: 0px 0px 0px 0px;
     overflow: hidden;
