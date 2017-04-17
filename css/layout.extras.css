@@ -765,6 +765,8 @@ body.grey .side-panel {
 .show-panel .panel-contents dl.inline div.item {
     float: left;
     margin: 8px 0px 8px 0px;
+    padding-left: 8px;
+    padding-right: 8px;
     vertical-align: top;
     width: 50%;
 }
