@@ -781,8 +781,8 @@ body.grey .side-panel {
 }
 
 body.flat .show-panel .panel-contents dl dt {
-    font-size: 16px;
-    font-weight: 600;
+    color: #5d5d5d;
+    font-size: 15px;
     text-transform: none;
 }
 
@@ -795,7 +795,11 @@ body.flat .show-panel .panel-contents dl dt {
 }
 
 body.flat .show-panel .panel-contents dl dd {
-    font-weight: normal;
+    margin-bottom: 14px;
+}
+
+.show-panel .panel-contents dl dd {
+    color: #4d4d4d;
 }
 
 .show-panel .panel-contents .image {
