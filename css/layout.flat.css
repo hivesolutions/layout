@@ -206,6 +206,12 @@ a.hover {
     border-color: #257f96;
 }
 
+a.warning,
+a.invalid,
+a.error {
+    color: #c31f30;
+}
+
 a.warning.hover,
 a.warning:hover,
 a.invalid.hover,
@@ -213,7 +219,6 @@ a.invalid:hover,
 a.error.hover,
 a.error:hover {
     border-color: #c31f30;
-    color: #c31f30;
 }
 
 a.silent {
