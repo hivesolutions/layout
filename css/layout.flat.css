@@ -940,13 +940,13 @@ body.retina-s .tag-field .tag-field-remove {
     cursor: pointer;
     height: 62px;
     opacity: 0.5;
+    padding-bottom: 0px;
     width: 62px;
 }
 
 .calendar-header .calendar-arrow:hover {
     border-bottom: none;
     opacity: 1;
-    padding-bottom: 0px;
 }
 
 .calendar-header .calendar-arrow-left {
