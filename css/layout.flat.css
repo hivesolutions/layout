@@ -658,11 +658,11 @@ pre {
     font-size: 16px;
     font-weight: 600;
     margin: 0px 4px 0px 4px;
+    padding-bottom: 2px;
 }
 
 .button:hover {
     border-bottom: 2px solid #666666;
-    padding-bottom: 2px;
 }
 
 .tag {
