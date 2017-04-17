@@ -827,6 +827,14 @@ body.flat .show-panel .panel-contents dl dd {
     width: 406px;
 }
 
+body.flat .login-panel:not(.login-panel-message) {
+    animation: fade-into-rise 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-into-rise 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-into-rise 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-into-rise 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-into-rise 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+}
+
 body.flat .login-panel {
     border: 2px solid #cdcdcd;
     border-radius: 5px 5px 5px 5px;
