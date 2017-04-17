@@ -511,11 +511,8 @@ ul li:hover {
 }
 
 ul li .image {
-    margin-bottom: 4px;
-}
-
-ul li .image a:hover {
     border-bottom: none;
+    margin-bottom: 4px;
 }
 
 ul li .name {
@@ -1341,16 +1338,12 @@ body.retina-s .separator-horizontal {
 
 .footer-logo {
     background: transparent none no-repeat left 0px;
+    border-bottom: none;
     cursor: pointer;
     height: 25px;
     margin: 28px auto 8px auto;
     padding: 0px 0px 0px 0px;
     width: 25px;
-}
-
-.footer-logo:hover {
-    background-position: left -25px;
-    border-bottom: none;
 }
 
 .recursion-set {
@@ -1389,12 +1382,9 @@ body.retina-s .separator-horizontal {
 }
 
 .links-extra a {
+    border-bottom: none;
     display: block;
     padding: 8px 12px 8px 24px;
-}
-
-.links-extra a:hover {
-    border-bottom: none;
 }
 
 .table.table-edit {
@@ -2188,13 +2178,13 @@ ul.side-list > li.separator {
 }
 
 ul.side-list > li > a {
+    border-bottom: none;
     color: #2d2d2d;
     padding-bottom: 2px;
 }
 
 ul.side-list > li > a:hover,
 .side-list > li > a.hover {
-    border-bottom: none;
     color: #1b75bb;
 }
 
