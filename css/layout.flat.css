@@ -244,7 +244,8 @@ table td {
 }
 
 table td.label {
-    color: #666666;
+    color: #1d1d1d;
+    font-weight: bold;
     vertical-align: top;
 }
 

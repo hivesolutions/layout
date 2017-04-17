@@ -217,8 +217,8 @@ table td {
 }
 
 table td.label {
-    color: #666666;
-    font-weight: 200;
+    color: #2d2d2d;
+    font-weight: bold;
     vertical-align: top;
 }
 
