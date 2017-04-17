@@ -839,6 +839,7 @@ body.flat .login-panel {
 
 body.mobile-s .login-panel {
     margin: 12px auto 12px auto;
+    padding: 28px 16px 28px 16px;
 }
 
 .login-panel form {
