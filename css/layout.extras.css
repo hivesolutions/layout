@@ -78,6 +78,10 @@ body.fluid #content {
     z-index: 1;
 }
 
+body.fluid.flat #content {
+    padding-top: 52px;
+}
+
 body.fluid .bar-loader.loading {
     opacity: 0.0;
 }
@@ -270,6 +274,9 @@ body.flat .or {
 }
 
 body.flat .top-bar {
+    box-shadow: 0px 0px 3px #999999;
+    -moz-box-shadow: 0px 0px 3px #999999;
+    -webkit-box-shadow: 0px 0px 3px #999999;
     height: 52px;
     line-height: 52px;
 }
@@ -412,7 +419,6 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
 body.flat .side-links {
     border-right: none;
     border-top: 52px solid transparent;
-    padding-top: 12px;
     text-transform: none;
 }
 
