@@ -319,7 +319,7 @@ input {
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     color: #2d2d2d;
-    font-family: "Open Sans", "Oxygen", sans-serif;
+    font-family: inherit;
     font-size: 15px;
     font-weight: 600;
     height: 40px;
@@ -525,7 +525,7 @@ textarea {
     -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
     -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
     color: #2d2d2d;
-    font-family: "Open Sans", "Oxygen", sans-serif;
+    font-family: inherit;
     font-size: 15px;
     font-weight: 600;
     height: 140px;

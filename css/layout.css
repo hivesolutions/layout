@@ -198,7 +198,7 @@ input {
     -moz-border-radius: 0px 0px 0px 0px;
     -webkit-border-radius: 0px 0px 0px 0px;
     color: #2d2d2d;
-    font-family: "Garamond", "Georgia", "serif";
+    font-family: inherit;
     font-size: 16px;
     height: 40px;
     outline: none;
@@ -379,7 +379,7 @@ textarea {
     background-color: #fcfcfc;
     border: 1px solid #cccccc;
     color: #2d2d2d;
-    font-family: "Garamond", "Georgia", "serif";
+    font-family: inherit;
     font-size: 20px;
     height: 140px;
     outline: none;

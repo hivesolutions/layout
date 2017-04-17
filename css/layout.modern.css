@@ -313,7 +313,7 @@ input {
     -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
     -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
     color: #2d2d2d;
-    font-family: "Open Sans", "Oxygen", sans-serif;
+    font-family: inherit;
     font-size: 16px;
     height: 40px;
     outline: none;
@@ -322,8 +322,8 @@ input {
 }
 
 body.romantic input {
-    font-family: "Merriweather", "Open Sans", "Oxygen", sans-serif;
-    font-style: italic;
+    font-family: inherit;
+    font-style: inherit;
 }
 
 input.small {
@@ -509,7 +509,7 @@ textarea {
     -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
     -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
     color: #2d2d2d;
-    font-family: "Open Sans", "Oxygen", sans-serif;
+    font-family: inherit;
     font-size: 16px;
     height: 140px;
     outline: none;
@@ -518,8 +518,8 @@ textarea {
 }
 
 body.romantic textarea {
-    font-family: "Merriweather", "Open Sans", "Oxygen", sans-serif;
-    font-style: italic;
+    font-family: inherit;
+    font-style: inherit;
 }
 
 textarea:focus {
