@@ -282,9 +282,9 @@ body.flat .or {
 }
 
 body.flat .top-bar {
-    box-shadow: 0px 0px 3px #999999;
-    -moz-box-shadow: 0px 0px 3px #999999;
-    -webkit-box-shadow: 0px 0px 3px #999999;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
     height: 52px;
     line-height: 52px;
 }
