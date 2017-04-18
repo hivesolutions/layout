@@ -986,7 +986,7 @@ body.retina-s .tag-field .tag-field-remove {
 }
 
 .calendar-header {
-    font-weight: 600;
+    font-weight: bold;
     height: 62px;
     line-height: 62px;
     text-align: center;
