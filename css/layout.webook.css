@@ -214,6 +214,10 @@ form.small {
 }
 
 form.tiny {
+    margin: 0px auto 46px auto;
+}
+
+form.minimal {
     margin: 0px auto 0px auto;
 }
 
