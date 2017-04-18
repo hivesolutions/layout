@@ -275,6 +275,7 @@ body.flat .or {
     height: 50px;
     line-height: 50px;
     min-width: 960px;
+    overflow: hidden;
     padding: 0px 0px 0px 0px;
     text-align: left;
     width: 100%;
@@ -312,6 +313,7 @@ body.flat .top-bar.grey {
 
 .top-bar > .container {
     margin: 0px auto 0px auto;
+    max-height: 100%;
 }
 
 .top-bar > .container:after {
@@ -453,7 +455,8 @@ body.flat.grey .side-links {
     cursor: pointer;
     display: block;
     font-size: 14px;
-    margin: 0px 24px 14px 24px;
+    line-height: 22px;
+    margin: 0px 24px 10px 24px;
     overflow: hidden;
     padding: 0px 0px 0px 0px;
     text-overflow: ellipsis;
