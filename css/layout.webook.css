@@ -213,6 +213,10 @@ form.small {
     margin: 22px auto 46px auto;
 }
 
+form.tiny {
+    margin: 0px auto 0px auto;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0px;
