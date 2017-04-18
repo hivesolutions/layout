@@ -568,19 +568,20 @@ body.flat .system-menu .menu-contents {
     -moz-border-radius: 32px 32px 32px 32px;
     -webkit-border-radius: 32px 32px 32px 32px;
     height: 64px;
+    vertical-align: middle;
     width: 64px;
 }
 
 .system-menu .avatar-contents {
     display: inline-block;
     margin: 0px 12px 0px 12px;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .system-menu .avatar-contents h2 {
     font-size: 15px;
-    line-height: 15px;
-    margin: 15px 0px 7px 0px;
+    line-height: 26px;
+    margin: 0px 0px 0px 0px;
     text-transform: uppercase;
 }
 
@@ -593,7 +594,7 @@ body.flat .system-menu .avatar-contents h2 {
     color: #5d5d5d;
     font-size: 13px;
     font-weight: normal;
-    line-height: 13px;
+    line-height: 20px;
     margin: 0px 0px 0px 0px;
 }
 
