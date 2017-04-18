@@ -350,18 +350,23 @@ body.fluid.fixed .top-bar > .container {
     color: #2d2d2d;
     font-size: 26px;
     font-weight: bold;
+    max-height: 50px;
     overflow: hidden;
     text-shadow: 1px 1px 1px #ffffff;
     width: 176px;
 }
 
+body.flat .top-bar > .container > .logo {
+    max-height: 52px;
+}
+
 .top-bar > .container > .logo > a {
+    border-bottom: none;
     color: #2d2d2d;
     cursor: pointer;
 }
 
 .top-bar > .container > .logo > a:hover {
-    border-bottom: none;
     color: #3668c6;
 }
 
