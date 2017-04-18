@@ -523,6 +523,10 @@ pre {
     min-height: 52px;
 }
 
+.input.single {
+    line-height: 52px;
+}
+
 .input.center {
     text-align: center;
 }
