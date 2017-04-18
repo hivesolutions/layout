@@ -671,8 +671,8 @@ pre {
 
 .input {
     font-size: 14px;
-    margin: 10px 0px 26px 0px;
-    min-height: 40px;
+    margin: 10px 0px 10px 0px;
+    min-height: 56px;
 }
 
 .input.center {
@@ -689,7 +689,8 @@ pre {
 
 .input.small {
     font-size: 14px;
-    margin: 10px 0px 18px 0px;
+    margin: 16px 0px 16px 0px;
+    min-height: initial;
 }
 
 .input input {
@@ -729,7 +730,6 @@ pre {
     color: #ffffff;
     font-weight: 600;
     padding: 4px 13px 4px 13px;
-    text-transform: capitalize;
 }
 
 .tag.green,
@@ -1080,6 +1080,11 @@ body.retina-s .calendar-header .calendar-arrow-right {
 }
 
 .calendar-range .calendar {
+    animation: fade-into-drop 0.45s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-into-drop 0.45s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-into-drop 0.45s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-into-drop 0.45s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-into-drop 0.45s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     margin-top: 12px;
 }
 
