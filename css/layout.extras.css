@@ -639,6 +639,10 @@ body.flat .system-menu .footer-contents a {
     margin: 0px 0px 0px 24px;
 }
 
+.content-header > h1 > a {
+    border-bottom: none;
+}
+
 .content-header > .content-buttons {
     float: right;
     font-size: 0px;
