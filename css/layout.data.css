@@ -95,6 +95,7 @@ form .province {
 
 .drop-field.entities > .drop-field-contents > * .title > a {
     border: none;
+    pointer-events: none;
 }
 
 .drop-field.entities > .drop-field-contents > * .description {
