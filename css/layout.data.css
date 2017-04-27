@@ -93,6 +93,10 @@ form .province {
     padding: 0px 12px 0px 12px;
 }
 
+.drop-field.entities > .drop-field-contents > * .title > a {
+    border: none;
+}
+
 .drop-field.entities > .drop-field-contents > * .description {
     font-size: 14px;
     margin: 0px 0px 0px 0px;
