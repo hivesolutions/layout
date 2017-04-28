@@ -616,11 +616,12 @@
         var content_ = jQuery("#content");
         var contentClass = content.attr("class");
         var contentHtml = content.html();
+        var isShortcuts = content.hasClass("shortcuts");
         contentHtml = contentHtml.replace(/aux-src=/ig, "src=");
         content_.html(contentHtml);
         content_.attr("class", contentClass);
         content_.uxapply();
-        content_.uxshortcuts();
+        isShortcuts && content_.uxshortcuts();
     };
 
     var updateFooter = function(base) {
