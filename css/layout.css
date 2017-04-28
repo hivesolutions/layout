@@ -465,6 +465,8 @@ ul li .name {
 
 ul li .description {
     font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 pre {
