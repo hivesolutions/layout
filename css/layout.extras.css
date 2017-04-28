@@ -90,6 +90,10 @@ body.fluid #content {
     z-index: 1;
 }
 
+body.mobile-s.fluid #content {
+    width: 100%;
+}
+
 body.fluid.flat #content {
     padding-top: 52px;
 }
@@ -163,13 +167,12 @@ body.no-footer .footer {
 }
 
 .content-container > form {
-    margin: 24px 0px 24px 0px;
+    margin: 18px 0px 18px 0px;
     max-width: 690px;
     width: 100%;
 }
 
 .content-container > form .buttons {
-    padding-bottom: 18px;
     text-align: right;
 }
 
@@ -410,6 +413,11 @@ body.flat .top-bar > .container > .logo > a:hover {
     width: 300px;
 }
 
+body.mobile-s .top-bar > .container > .text-field,
+body.mobile-s .top-bar > .container > .drop-field > .text-field {
+    display: none;
+}
+
 body.flat .top-bar > .container > .text-field,
 body.flat .top-bar > .container > .drop-field > .text-field {
     border-color: transparent;
@@ -562,6 +570,15 @@ body.flat .system-menu.active .menu-button {
     position: absolute;
 }
 
+body.mobile-s .system-menu .menu-contents {
+    box-sizing: border-box;
+    left: 0px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100%;
+    min-width: 100%;
+}
+
 body.flat .system-menu .menu-contents {
     animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -o-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
@@ -636,9 +653,9 @@ body.flat .system-menu .footer-contents a {
 
 .content-header {
     border-bottom: 1px solid #e0e0e0;
-    height: 36px;
     line-height: 36px;
     margin: 16px 0px 0px 0px;
+    min-height: 36px;
     padding-bottom: 10px;
 }
 
@@ -655,6 +672,11 @@ body.flat .system-menu .footer-contents a {
     margin: 0px 0px 0px 24px;
 }
 
+body.mobile-s .content-header > h1 {
+    float: none;
+    margin-left: 16px;
+}
+
 .content-header > h1 > a {
     border-bottom: none;
 }
@@ -663,6 +685,12 @@ body.flat .system-menu .footer-contents a {
     float: right;
     font-size: 0px;
     margin: 0px 24px 0px 0px;
+}
+
+body.mobile-s .content-header > .content-buttons {
+    float: none;
+    margin-left: 8px;
+    margin-top: 12px;
 }
 
 .content-header > .content-buttons .button.button-color,
@@ -799,12 +827,13 @@ body.grey .side-panel {
     display: block;
 }
 
+.show-panel .panel-contents dl div.item {
+    padding: 8px 8px 8px 8px;
+    vertical-align: top;
+}
+
 .show-panel .panel-contents dl.inline div.item {
     float: left;
-    margin: 8px 0px 8px 0px;
-    padding-left: 8px;
-    padding-right: 8px;
-    vertical-align: top;
     width: 50%;
 }
 
