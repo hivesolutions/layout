@@ -355,6 +355,10 @@ body.fluid.fixed .top-bar > .container {
     margin-left: 24px;
 }
 
+body.mobile-s .top-bar > .container > :first-child {
+    margin-left: 16px;
+}
+
 .top-bar > .container > * {
     float: left;
 }
@@ -362,6 +366,10 @@ body.fluid.fixed .top-bar > .container {
 .top-bar > .container > .right {
     float: right;
     margin-right: 24px;
+}
+
+body.mobile-s .top-bar > .container > .right {
+    margin-right: 16px;
 }
 
 .top-bar > .container > .logo {
@@ -455,6 +463,7 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
 }
 
 body.mobile-s .side-links {
+    display: none;
     left: -200px;
 }
 

@@ -772,7 +772,7 @@
             // their visibility is changed according to the current state
             sideLinks.bind("toggle", function() {
                 var element = jQuery(this);
-                var isVisible = element.data("visible");
+                var isVisible = element.is(":visible");
                 if (isVisible) {
                     element.triggerHandler("hide");
                 } else {
@@ -784,11 +784,10 @@
             // are properly shown in the current display container
             sideLinks.bind("show", function() {
                 var element = jQuery(this);
-                var isVisible = element.data("visible");
+                var isVisible = element.is(":visible");
                 if (isVisible) {
                     return;
                 }
-                element.data("visible", true);
                 element.show();
                 var duration = _isFixed() ? 0 : 350;
                 element.animate({
@@ -809,11 +808,10 @@
             // are properly hidden from the current display container
             sideLinks.bind("hide", function() {
                 var element = jQuery(this);
-                var isVisible = element.data("visible");
+                var isVisible = element.is(":visible");
                 if (!isVisible) {
                     return;
                 }
-                element.data("visible", false);
                 var width = element.outerWidth(true);
                 var duration = _isFixed() ? 0 : 350;
                 element.animate({
@@ -854,6 +852,7 @@
             var sideLinksVisible = sideLinks.is(":visible");
             var sideLinksWidth = sideLinks.outerWidth(true);
             var sideLinksLeft = sideLinks.css("left");
+            var sideLinksDisplay = sideLinks.css("display");
             sideLinksLeft = parseInt(sideLinksLeft);
             sideLinksLeft = sideLinksLeft ? sideLinksLeft : 0;
             sideLinksWidth += sideLinksLeft;
@@ -863,6 +862,12 @@
             // with the proper width of the side links so that no overlap
             // exists between both panels (as expected)
             content.css("margin-left", sideLinksWidth + "px");
+
+            // updates the side links values, effectively persisting them
+            // in the style section of the element (propagating it from the
+            // class based css and avoiding possible device issues)
+            sideLinks.css("display", sideLinksDisplay);
+            sideLinks.css("left", sideLinksLeft);
         };
 
         var _isFixed = function() {
