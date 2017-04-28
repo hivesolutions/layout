@@ -472,6 +472,7 @@
         updateLinks(base);
         updateSideLinks(base);
         updateActionBar(base);
+        updateTopMenu(base);
         updateNotifications(base);
         updateWindows(base);
         updateHeader(base);
@@ -557,6 +558,12 @@
         actionBar_.html(actionBarHtml);
         actionBar_.attr("class", actionBarClass);
         actionBar_.uxapply();
+    };
+
+    var updateTopMenu = function(base) {
+        var topBar = jQuery(".top-bar");
+        var menu = jQuery(".menu", topBar);
+        menu.triggerHandler("hide");
     };
 
     var updateNotifications = function(base) {
