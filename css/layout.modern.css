@@ -603,6 +603,7 @@ ul li .description {
     font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
+    word-break: break-all;
 }
 
 pre {
