@@ -870,7 +870,7 @@ body.mobile-s .show-panel .panel-contents dl dt {
     line-height: 30px;
     margin-bottom: 0px;
     vertical-align: middle;
-    width: 50%;
+    width: 45%;
 }
 
 body.flat .show-panel .panel-contents dl dt {
@@ -903,7 +903,7 @@ body.mobile-s .show-panel .panel-contents dl dd {
     margin-bottom: 0px;
     text-align: right;
     vertical-align: middle;
-    width: 50%;
+    width: 55%;
 }
 
 body.flat .show-panel .panel-contents dl dd {
@@ -923,6 +923,11 @@ body.mobile-s.flat .show-panel .panel-contents dl dd {
 .show-panel .panel-contents .image {
     margin-top: 14px;
     max-height: 278px;
+}
+
+body.mobile-s .show-panel .panel-contents .image {
+	max-height: initial;
+	max-width: 100%;
 }
 
 body.flat .show-panel .panel-contents .image {
