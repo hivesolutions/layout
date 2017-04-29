@@ -258,9 +258,19 @@ body.mobile-s .content-container > form.inline div.item {
     padding-left: 24px;
 }
 
+body.mobile-s .content-container .filter .table-row > td:first-child,
+body-mobile-s .content-container .filter .table-row > th:first-child {
+    padding-left: 16px;
+}
+
 .content-container .filter .table-row > td:last-child,
 .content-container .filter .table-row > th:last-child {
     padding-right: 24px;
+}
+
+body.mobile-s .content-container .filter .table-row > td:last-child,
+body.mobile-s .content-container .filter .table-row > th:last-child {
+    padding-right: 16px;
 }
 
 .content-container .filter .table-row > td > .image {
