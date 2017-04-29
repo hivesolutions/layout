@@ -572,9 +572,17 @@ body.flat .side-links > a:hover {
     padding: 0px 24px 0px 18px;
 }
 
+body.flat .system-menu .menu-button {
+    background-image: url(../images/base/arrow-green.png);
+}
+
 body.retina-s .system-menu .menu-button {
     background-image: url(../images/base/arrow-blue-2x.png);
     background-size: 13px 3px;
+}
+
+body.retina-s.flat .system-menu .menu-button {
+    background-image: url(../images/base/arrow-green-2x.png);
 }
 
 .system-menu.active .menu-button {
