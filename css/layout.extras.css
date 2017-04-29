@@ -49,8 +49,13 @@ body.fluid {
     width: inherit;
 }
 
-body.mobile-s {
+body.mobile-s.fluid {
     min-width: initial;
+    overflow-x: hidden;
+}
+
+body.mobile-s.fluid.side-visible {
+    overflow-y: hidden;
 }
 
 body.fluid > .container {
@@ -85,13 +90,22 @@ body.fluid #footer {
 
 body.fluid #content {
     padding: 50px 0px 0px 0px;
-    position: relative;
     text-align: left;
     z-index: 1;
 }
 
 body.mobile-s.fluid #content {
+    opacity: 1.0;
+    transition: opacity 0.35s ease;
+    -o-transition: opacity 0.35s ease;
+    -ms-transition: opacity 0.35s ease;
+    -moz-transition: opacity 0.35s ease;
+    -webkit-transition: opacity 0.35s ease;
     width: 100%;
+}
+
+body.mobile-s.fluid.side-visible #content {
+    opacity: 0.15;
 }
 
 body.fluid.flat #content {
@@ -115,7 +129,7 @@ body.fluid .content-container {
 }
 
 body.mobile-s.fluid .content-container {
-    padding: 0px 8px 0px 8px;
+    padding: 0px 16px 0px 16px;
 }
 
 body.fluid .content.no-padding .content-container {
@@ -663,10 +677,15 @@ body.flat .system-menu .footer-contents a {
 
 .content-header {
     border-bottom: 1px solid #e0e0e0;
-    line-height: 36px;
+    line-height: 34px;
     margin: 16px 0px 0px 0px;
-    min-height: 36px;
-    padding-bottom: 10px;
+    min-height: 34px;
+    padding-bottom: 16px;
+}
+
+body.flat .content-header {
+    line-height: 32px;
+    min-height: 32px;
 }
 
 .content-header:after {
@@ -674,6 +693,10 @@ body.flat .system-menu .footer-contents a {
     display: block;
     height: 0px;
     visibility: hidden;
+}
+
+.content-header * {
+    vertical-align: middle;
 }
 
 .content-header > h1 {
@@ -684,6 +707,7 @@ body.flat .system-menu .footer-contents a {
 
 body.mobile-s .content-header > h1 {
     float: none;
+    font-size: 22px;
     margin-left: 16px;
 }
 
@@ -700,6 +724,9 @@ body.mobile-s .content-header > h1 {
 body.mobile-s .content-header > .content-buttons {
     float: none;
     margin-left: 8px;
+}
+
+body.mobile-s .content-header > .content-buttons > * {
     margin-top: 12px;
 }
 
@@ -881,7 +908,6 @@ body.flat .show-panel .panel-contents dl dt {
 
 body.mobile-s.flat .show-panel .panel-contents dl dt {
     font-size: 14px;
-    font-weight: 600;
 }
 
 body.mobile-s .show-panel .panel-contents dl dt {
@@ -926,8 +952,8 @@ body.mobile-s.flat .show-panel .panel-contents dl dd {
 }
 
 body.mobile-s .show-panel .panel-contents .image {
-	max-height: initial;
-	max-width: 100%;
+    max-height: initial;
+    max-width: 100%;
 }
 
 body.flat .show-panel .panel-contents .image {

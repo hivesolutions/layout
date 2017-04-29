@@ -736,7 +736,7 @@
 
             // runs the initial laout operation so that the current
             // panel is display with the correct dimensions
-            _layout(matchedObject, options);
+            _layout(matchedObject, options, true);
 
             // updates the side links so that it's initial visibility
             // is set accordingly and then sets the contents container
@@ -757,10 +757,17 @@
 
             // retrieves the reference to the various elements that
             // are going to be used for event handler registration
+            var _body = jQuery("body");
             var topBar = jQuery(".top-bar", matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
             var logoLink = jQuery(".logo > a", topBar);
             var dropField = jQuery(".drop-field", topBar);
+
+            // registers for the pre async event to be able to run
+            // some initial operation on the current viewport
+            _body.bind("pre_async", function() {
+                sideLinks.triggerHandler("hide");
+            });
 
             // registers for the click event on the logo link element
             // so that the side links visibility is changed
@@ -796,10 +803,10 @@
                     duration: duration,
                     easing: "swing",
                     complete: function() {
-                        _layout(matchedObject, options);
+                        _layout(matchedObject, options, true);
                     },
                     progress: function() {
-                        _layout(matchedObject, options);
+                        _layout(matchedObject, options, false);
                     }
                 });
             });
@@ -821,10 +828,10 @@
                     easing: "swing",
                     complete: function() {
                         element.hide();
-                        _layout(matchedObject, options);
+                        _layout(matchedObject, options, true);
                     },
                     progress: function() {
-                        _layout(matchedObject, options);
+                        _layout(matchedObject, options, false);
                     }
                 });
             });
@@ -839,10 +846,11 @@
             });
         };
 
-        var _layout = function(element, options) {
+        var _layout = function(element, options, complete) {
             // retrieves the reference to the various elements that are going
             // to have their layout update, or that are going to be used as
             // reference for the various layout calculus operations
+            var _body = jQuery("body");
             var content = jQuery("#content", matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
 
@@ -863,11 +871,25 @@
             // exists between both panels (as expected)
             content.css("margin-left", sideLinksWidth + "px");
 
+            // verifies if this is considered to be a complete layout update
+            // in case it's not returns immediately (nothing remaining to be done)
+            if (!complete) {
+                return;
+            }
+
             // updates the side links values, effectively persisting them
             // in the style section of the element (propagating it from the
             // class based css and avoiding possible device issues)
             sideLinks.css("display", sideLinksDisplay);
             sideLinks.css("left", sideLinksLeft);
+
+            // updates the global body class according to the visibility
+            // of the side links (allows global css selection)
+            if (sideLinksVisible) {
+                _body.addClass("side-visible");
+            } else {
+                _body.removeClass("side-visible");
+            }
         };
 
         var _isFixed = function() {
