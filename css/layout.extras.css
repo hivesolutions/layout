@@ -924,7 +924,7 @@ body.mobile-s .show-panel .panel-contents dl dt {
     font-size: 13px;
     line-height: 30px;
     margin-bottom: 0px;
-    vertical-align: middle;
+    vertical-align: top;
     width: 45%;
 }
 
@@ -956,7 +956,7 @@ body.mobile-s .show-panel .panel-contents dl dd {
     line-height: 30px;
     margin-bottom: 0px;
     text-align: right;
-    vertical-align: middle;
+    vertical-align: top;
     width: 55%;
 }
 
