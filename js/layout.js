@@ -766,7 +766,8 @@
             // registers for the pre async event to be able to run
             // some initial operation on the current viewport
             _body.bind("pre_async", function() {
-                sideLinks.triggerHandler("hide");
+                var isMobile = _body.hasClass("mobile-s");
+                isMobile && sideLinks.triggerHandler("hide");
             });
 
             // registers for the click event on the logo link element
