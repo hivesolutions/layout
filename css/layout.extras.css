@@ -206,6 +206,8 @@ body.no-footer .footer {
 }
 
 body.mobile-s .content-container > form.inline div.item {
+    padding-left: 0px;
+    padding-right: 0px;
     width: 100%;
 }
 
@@ -309,12 +311,11 @@ body.mobile-s .separator {
     background-color: #cccccc;
     height: 50px;
     line-height: 50px;
-    min-width: 768px;
     padding: 0px 0px 0px 0px;
     text-align: left;
+    user-select: none;
     width: 100%;
     z-index: 10;
-    user-select: none;
 }
 
 body.mobile-s .top-bar {
@@ -443,7 +444,9 @@ body.flat .top-bar > .container > .logo > a:hover {
 }
 
 body.mobile-s .top-bar > .container > .text-field,
-body.mobile-s .top-bar > .container > .drop-field > .text-field {
+body.tablet-s.landscape-s .top-bar > .container > .text-field,
+body.mobile-s .top-bar > .container > .drop-field > .text-field,
+body.tablet-s.landscape-s .top-bar > .container > .drop-field > .text-field {
     display: none;
 }
 
@@ -485,8 +488,7 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
 
 body.mobile-s .side-links {
     display: none;
-    left: -220px;
-    width: 220px;
+    left: -200px;
 }
 
 body.flat .side-links {

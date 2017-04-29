@@ -687,8 +687,16 @@ pre {
     min-height: 52px;
 }
 
+body.mobile-s .input {
+    min-height: 40px;
+}
+
 .input.single {
     line-height: 52px;
+}
+
+body.mobile-s .input.single {
+    line-height: 40px;
 }
 
 .input.center {
