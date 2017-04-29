@@ -685,7 +685,7 @@ body.mobile-s .input.single {
 }
 
 body.mobile-s .window > form {
-	min-width: initial;
+    min-width: initial;
 }
 
 .window > form input {

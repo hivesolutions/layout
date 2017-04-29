@@ -42,8 +42,8 @@ body.flat #content {
 }
 
 body.fluid {
-    min-height: 100%;
     margin: 0px auto 0px auto;
+    min-height: 100%;
     min-width: 768px;
     padding: 0px 0px 0px 0px;
     position: relative;
@@ -60,8 +60,8 @@ body.mobile-s.fluid.side-visible {
 }
 
 body.fluid > .container {
-    min-height: 100%;
     margin: 0px auto 0px auto;
+    min-height: 100%;
 }
 
 body.fluid.fixed > .container {
