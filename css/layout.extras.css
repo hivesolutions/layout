@@ -314,6 +314,7 @@ body.mobile-s .separator {
     text-align: left;
     width: 100%;
     z-index: 10;
+    user-select: none;
 }
 
 body.mobile-s .top-bar {
@@ -484,7 +485,8 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
 
 body.mobile-s .side-links {
     display: none;
-    left: -200px;
+    left: -220px;
+    width: 220px;
 }
 
 body.flat .side-links {

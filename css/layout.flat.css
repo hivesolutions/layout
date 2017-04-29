@@ -276,6 +276,7 @@ a.silent.hover {
 
 form {
     margin: 46px auto 46px auto;
+    max-width: 100%;
     width: 540px;
 }
 
