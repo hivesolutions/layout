@@ -684,6 +684,10 @@ body.mobile-s .input.single {
     width: inherit;
 }
 
+body.mobile-s .window > form {
+	min-width: initial;
+}
+
 .window > form input {
     box-sizing: border-box;
     width: 100%;

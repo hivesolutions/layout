@@ -42,7 +42,7 @@ body.flat #content {
 }
 
 body.fluid {
-    height: 100%;
+    min-height: 100%;
     margin: 0px auto 0px auto;
     min-width: 768px;
     padding: 0px 0px 0px 0px;
@@ -60,7 +60,7 @@ body.mobile-s.fluid.side-visible {
 }
 
 body.fluid > .container {
-    height: 100%;
+    min-height: 100%;
     margin: 0px auto 0px auto;
 }
 
@@ -77,7 +77,7 @@ body.fluid.flat #overlay {
 }
 
 body.fluid #header {
-    height: 100%;
+    min-height: 100%;
     position: fixed;
     z-index: 2;
 }
