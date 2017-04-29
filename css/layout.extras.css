@@ -46,6 +46,7 @@ body.fluid {
     margin: 0px auto 0px auto;
     min-width: 768px;
     padding: 0px 0px 0px 0px;
+    position: relative;
     width: inherit;
 }
 
@@ -298,6 +299,10 @@ body.flat .or {
 .separator {
     border-top: 1px solid #e0e0e0;
     margin: 18px 0px 18px 0px;
+}
+
+body.mobile-s .separator {
+    margin: 12px 0px 12px 0px;
 }
 
 .top-bar {
@@ -870,6 +875,10 @@ body.grey .side-panel {
     vertical-align: top;
 }
 
+body.mobile-s .show-panel .panel-contents dl div.item {
+    padding: 6px 0px 6px 0px;
+}
+
 .show-panel .panel-contents dl.inline div.item {
     float: left;
     width: 50%;
@@ -877,14 +886,14 @@ body.grey .side-panel {
 
 body.mobile-s .show-panel .panel-contents dl.inline div.item {
     border-top: 1px dotted #f4f4f4;
+    float: none;
     font-size: 0px;
     width: 100%;
-    float: none;
 }
 
 body.mobile-s .show-panel .panel-contents dl.inline div.item:first-child,
-body.mobile-s .show-panel .panel-contents dl.inline .separator +  div.item {
-	border-top: none;
+body.mobile-s .show-panel .panel-contents dl.inline .separator + div.item {
+    border-top: none;
 }
 
 .show-panel .panel-contents dl.inline div.separator {

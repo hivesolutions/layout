@@ -757,7 +757,7 @@
 
             // retrieves the reference to the various elements that
             // are going to be used for event handler registration
-            var _body = jQuery("body");
+            var content = jQuery(".container > .content", matchedObject);
             var topBar = jQuery(".top-bar", matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
             var logoLink = jQuery(".logo > a", topBar);
@@ -765,9 +765,44 @@
 
             // registers for the pre async event to be able to run
             // some initial operation on the current viewport
-            _body.bind("pre_async", function() {
-                var isMobile = _body.hasClass("mobile-s");
+            matchedObject.bind("pre_async", function() {
+                var element = jQuery(this);
+                var isMobile = element.hasClass("mobile-s");
                 isMobile && sideLinks.triggerHandler("hide");
+            });
+
+            // registers for the post async event to be able
+            // to sync the menu state for non mobile devices
+            matchedObject.bind("post_async", function() {
+                var element = jQuery(this);
+                var isMobile = element.hasClass("mobile-s");
+                !isMobile && _layout(matchedObject, options, true);
+            });
+
+            // registers for the click event on the top level (body)
+            // element to (if required) hide the side links
+            matchedObject.click(function() {
+                var element = jQuery(this);
+                var sideVisible = element.hasClass("side-visible");
+                var isMobile = element.hasClass("mobile-s");
+                if (!sideVisible || !isMobile) {
+                    return;
+                }
+                sideLinks.triggerHandler("hide");
+            });
+
+            // registers for the click event on the top bar to avoid
+            // propagation of it to the top layers (avoids hiding)
+            topBar.click(function(event) {
+                event.stopPropagation();
+                event.stopImmediatePropagation();
+            });
+
+            // registers for the click event on the side links to avoid
+            // propagation of it to the top layers (avoids hiding)
+            sideLinks.click(function(event) {
+                event.stopPropagation();
+                event.stopImmediatePropagation();
             });
 
             // registers for the click event on the logo link element
