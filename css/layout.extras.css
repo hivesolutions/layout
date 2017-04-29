@@ -106,6 +106,7 @@ body.mobile-s.fluid #content {
 
 body.mobile-s.fluid.side-visible #content {
     opacity: 0.15;
+    pointer-events: none;
 }
 
 body.fluid.flat #content {
@@ -875,9 +876,15 @@ body.grey .side-panel {
 }
 
 body.mobile-s .show-panel .panel-contents dl.inline div.item {
-    border-bottom: 1px dotted #f8f8f8;
+    border-top: 1px dotted #f4f4f4;
     font-size: 0px;
     width: 100%;
+    float: none;
+}
+
+body.mobile-s .show-panel .panel-contents dl.inline div.item:first-child,
+body.mobile-s .show-panel .panel-contents dl.inline .separator +  div.item {
+	border-top: none;
 }
 
 .show-panel .panel-contents dl.inline div.separator {
