@@ -259,7 +259,7 @@ body.mobile-s .content-container > form.inline div.item {
 }
 
 body.mobile-s .content-container .filter .table-row > td:first-child,
-body-mobile-s .content-container .filter .table-row > th:first-child {
+body.mobile-s .content-container .filter .table-row > th:first-child {
     padding-left: 16px;
 }
 
