@@ -415,6 +415,10 @@ body.mobile-s .top-bar > .container > .right {
     width: 176px;
 }
 
+body.mobile-s .top-bar > .container > .logo {
+    width: initial;
+}
+
 body.flat .top-bar > .container > .logo {
     max-height: 52px;
 }
