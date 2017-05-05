@@ -2178,6 +2178,12 @@ body.retina-s .button.button-drop-down.button-blue {
     padding: 4px 0px 4px 0px;
     position: absolute;
     top: 34px;
+    z-index: 1;
+}
+
+.drop-down-container > ul.drop-down.drop-down-left {
+    left: initial;
+    right: 0px;
 }
 
 .drop-down-container > ul.drop-down > li {
