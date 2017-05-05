@@ -298,6 +298,24 @@ body.mobile-s .content-container .filter .table-row > th:last-child {
     min-width: 94px;
 }
 
+.border-box input[type="text"] {
+    height: 42px;
+    width: 100%;
+}
+
+.border-box input[type="text"] {
+    height: 42px;
+    width: 100%;
+}
+
+body.flat .border-box input[type="text"] {
+    height: 44px;
+}
+
+.border-box textarea {
+    width: 100%;
+}
+
 .or {
     font-weight: bold;
     margin: 0px 8px 0px 8px;

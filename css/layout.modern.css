@@ -288,7 +288,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0px;
     margin: 20px 0px 32px 0px;
-    width: 620px;
+    width: 100%;
 }
 
 table td {
@@ -1741,6 +1741,7 @@ body.retina-s .drop-list .drop-item {
     margin: 0px 0px 0px 0px;
     overflow: hidden;
     width: 524px;
+    max-width: 100%;
 }
 
 .progress-bar .progress-bar-bar {
@@ -1775,8 +1776,12 @@ body.retina-s .drop-list .drop-item {
     cursor: pointer;
     display: inline-block;
     height: 24px;
-    padding-left: 4px;
+    margin-left: 4px;
     width: 24px;
+}
+
+.rating .rating-item:first-of-type {
+    margin-left: 0px;
 }
 
 body.retina-s .rating .rating-item {
