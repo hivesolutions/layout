@@ -1628,6 +1628,11 @@ body.retina-s .separator-horizontal {
     width: 24px;
 }
 
+body.mobile-s .table.table-edit .table-add,
+body.mobile-s .table.table-edit .table-remove {
+    display: none;
+}
+
 .table.table-edit .table-add.visible,
 .table.table-edit .table-remove.visible {
     opacity: 1.0;
