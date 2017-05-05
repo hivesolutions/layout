@@ -1444,25 +1444,6 @@ body.retina-s .separator-horizontal {
     text-transform: uppercase;
 }
 
-.table.table-edit input {
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    width: 100%;
-}
-
-.table.table-edit .input.active {
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-}
-
-.table.table-edit .input.invalid {
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-}
-
 .table.table-edit .drop-field .drop-field-contents {
     margin-top: 1px;
 }
@@ -1471,44 +1452,64 @@ body.retina-s .separator-horizontal {
     margin-top: 0px;
 }
 
-.table.table-edit tr.last td input {
+.table.table-edit tr td input[type="text"] {
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+}
+
+.table.table-edit tr td input[type="text"].active {
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+}
+
+.table.table-edit tr td input[type="text"].invalid {
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+}
+
+.table.table-edit tr.last td input[type="text"] {
     border-bottom-width: 1px;
     height: 41px;
 }
 
-.table.table-edit tr td.last input {
+.table.table-edit tr td.last input[type="text"] {
     border-right-width: 1px;
 }
 
-.table.table-edit tr td.next-horizontal input {
+.table.table-edit tr td.next-horizontal input[type="text"] {
     border-left-color: #1b75bb;
 }
 
-.table.table-edit tr td.next-vertical input {
+.table.table-edit tr td.next-vertical input[type="text"] {
     border-top-color: #1b75bb;
 }
 
-.table.table-edit tr td.next-horizontal-invalid input {
+.table.table-edit tr td.next-horizontal-invalid input[type="text"] {
     border-left-color: #f00329;
 }
 
-.table.table-edit tr td.next-vertical-invalid input {
+.table.table-edit tr td.next-vertical-invalid input[type="text"] {
     border-top-color: #f00329;
 }
 
-.table.table-edit tr td.next-horizontal-invalid input.active {
+.table.table-edit tr td.next-horizontal-invalid input[type="text"].active {
     border-left-color: #1b75bb;
 }
 
-.table.table-edit tr td.next-vertical-invalid input.active {
+.table.table-edit tr td.next-vertical-invalid input[type="text"].active {
     border-top-color: #1b75bb;
 }
 
-.table.table-edit tr td.next-horizontal-invalid input.invalid {
+.table.table-edit tr td.next-horizontal-invalid input[type="text"].invalid {
     border-left-color: #f00329;
 }
 
-.table.table-edit tr td.next-vertical-invalid input.invalid {
+.table.table-edit tr td.next-vertical-invalid input[type="text"].invalid {
     border-top-color: #f00329;
 }
 
@@ -1728,7 +1729,7 @@ li.list-more > .button {
 
 li.list-more > .button:hover {
     background-color: #b2b2b2;
-    border-color: #ffffff;
+    border-color: #b2b2b2;
     color: #ffffff;
 }
 
