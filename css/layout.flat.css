@@ -1761,9 +1761,9 @@ body.retina-s .drop-list .drop-item {
     font-weight: 600;
     height: 40px;
     margin: 0px 0px 0px 0px;
+    max-width: 100%;
     overflow: hidden;
     width: 520px;
-    max-width: 100%;
 }
 
 .progress-bar .progress-bar-bar {

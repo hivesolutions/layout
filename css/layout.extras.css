@@ -298,12 +298,16 @@ body.mobile-s .content-container .filter .table-row > th:last-child {
     min-width: 94px;
 }
 
-.border-box input[type="text"] {
+.border-box input[type="text"],
+.border-box input[type="email"],
+.border-box input[type="password"] {
     height: 42px;
     width: 100%;
 }
 
-body.flat .border-box input[type="text"] {
+body.flat .border-box input[type="text"],
+body.flat .border-box input[type="email"],
+body.flat .border-box input[type="password"] {
     height: 44px;
 }
 

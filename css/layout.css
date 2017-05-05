@@ -1570,8 +1570,8 @@ body.retina-s .drop-list .drop-item {
     font-weight: bold;
     height: 40px;
     margin: 0px 0px 0px 0px;
-    width: 524px;
     max-width: 100%;
+    width: 524px;
 }
 
 .progress-bar .progress-bar-bar {
