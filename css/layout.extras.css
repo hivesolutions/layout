@@ -303,11 +303,6 @@ body.mobile-s .content-container .filter .table-row > th:last-child {
     width: 100%;
 }
 
-.border-box input[type="text"] {
-    height: 42px;
-    width: 100%;
-}
-
 body.flat .border-box input[type="text"] {
     height: 44px;
 }
