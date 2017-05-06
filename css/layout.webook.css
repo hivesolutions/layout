@@ -132,6 +132,7 @@ body.complete {
 body.mobile-s {
     box-sizing: border-box;
     max-width: 100%;
+    min-width: 100%;
 }
 
 h1, h2, h3, h4, h5 {
