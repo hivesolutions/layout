@@ -172,6 +172,10 @@ form.minimal {
     margin: 0px auto 0px auto;
 }
 
+form.slim {
+    width: 340px;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0px;
