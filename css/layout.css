@@ -960,6 +960,10 @@ body.retina-s .calendar-header .calendar-arrow-right {
     width: 120px;
 }
 
+.border-box .calendar-range .range .text-field {
+	width: 138px;
+}
+
 .calendar-range .range .text-field.start-date {
     margin-right: 12px;
 }
