@@ -347,6 +347,11 @@ input {
     width: 520px;
 }
 
+.border-box input {
+    height: 44px;
+    width: 100%;
+}
+
 input.small {
     width: 324px;
 }
@@ -355,6 +360,10 @@ input.full {
     box-sizing: border-box;
     height: 42px;
     width: 100%;
+}
+
+.border-box input.full {
+    height: 46px;
 }
 
 input:focus {
@@ -553,6 +562,10 @@ textarea {
     width: 522px;
 }
 
+.border-box textarea {
+    width: 100%;
+}
+
 textarea:focus {
     border-color: #4cbad7;
 }
@@ -638,6 +651,18 @@ pre {
     word-wrap: break-word;
 }
 
+.border-box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.border-box * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 .capital {
     text-transform: capitalize;
 }
@@ -690,6 +715,10 @@ pre {
     font-size: 14px;
     margin: 10px 0px 10px 0px;
     min-height: 52px;
+}
+
+.border-box input {
+    width: 100%;
 }
 
 body.mobile-s .input {
@@ -2001,6 +2030,11 @@ ul.traceback li:hover {
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
+}
+
+.border-box .button.button-color,
+.border-box .button.button-drop-down {
+    min-width: 94px;
 }
 
 .button.button-color:hover,
