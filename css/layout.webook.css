@@ -934,6 +934,10 @@ body.retina-s .tag-field .tag-field-remove {
     width: 312px;
 }
 
+.border-box .calendar {
+    width: 314px;
+}
+
 .calendar.text-field-calendar {
     border-top: none;
     margin: 0px 0px 0px 0px;

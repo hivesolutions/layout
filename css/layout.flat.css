@@ -1036,6 +1036,10 @@ body.retina-s .tag-field .tag-field-remove {
     width: 326px;
 }
 
+.border-box .calendar {
+    width: 330px;
+}
+
 .calendar.text-field-calendar {
     animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -o-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);

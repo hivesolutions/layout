@@ -1010,8 +1010,16 @@ body.retina-s .tag-field .tag-field-remove {
     width: 312px;
 }
 
+.border-box .calendar {
+    width: 314px;
+}
+
 body.romantic .calendar {
     width: 326px;
+}
+
+body.romantic .border-box .calendar {
+    width: 328px;
 }
 
 .calendar.text-field-calendar {
