@@ -717,10 +717,6 @@ pre {
     min-height: 52px;
 }
 
-.border-box input {
-    width: 100%;
-}
-
 body.mobile-s .input {
     min-height: 40px;
 }
@@ -1138,7 +1134,7 @@ body.retina-s .calendar-header .calendar-arrow-right {
 }
 
 .border-box .calendar-range .range .text-field {
-	width: 140px;
+    width: 140px;
 }
 
 .calendar-range .range .text-field.start-date {
