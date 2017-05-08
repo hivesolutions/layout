@@ -1926,7 +1926,7 @@ ul.traceback li:hover {
 
 .border-box .button.button-color,
 .border-box .button.button-drop-down {
-    min-width: 94px;
+    min-width: 96px;
 }
 
 .button.button-color:hover,
@@ -2064,7 +2064,7 @@ ul.traceback li:hover {
 }
 
 .border-box .button.button-drop-down {
-    min-width: 114px;
+    min-width: 116px;
 }
 
 .button.button-drop-down,
@@ -2162,6 +2162,11 @@ body.retina-s .button.button-drop-down.button-blue {
     text-overflow: ellipsis;
     text-transform: uppercase;
     white-space: nowrap;
+}
+
+.border-box .drop-down-container > ul.drop-down > li > a,
+.border-box .drop-down-container > ul.drop-down > li > span {
+    min-width: 144px;
 }
 
 .side {

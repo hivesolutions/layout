@@ -2280,6 +2280,11 @@ body.retina-s .button.button-drop-down.button-blue {
     white-space: nowrap;
 }
 
+.border-box .drop-down-container > ul.drop-down > li > a,
+.border-box .drop-down-container > ul.drop-down > li > span {
+    min-width: 144px;
+}
+
 ul.sections-list {
     margin: 0px 0px 0px 0px;
 }
