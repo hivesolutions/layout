@@ -1757,6 +1757,10 @@ body.retina-s .table.table-edit .table-remove .inline-remove {
     padding: 0px 8px 0px 8px;
 }
 
+.border-box .drop-list .drop-item {
+    height: 42px;
+}
+
 body.retina-s .drop-list .drop-item {
     background-image: url(../images/base/drop-list-2x.png);
     background-size: 1880px 40px;
@@ -1790,6 +1794,10 @@ body.retina-s .drop-list .drop-item {
     max-width: 100%;
     overflow: hidden;
     width: 524px;
+}
+
+.border-box .progress-bar {
+    height: 42px;
 }
 
 .progress-bar .progress-bar-bar {
@@ -2150,6 +2158,10 @@ ul.traceback li:hover {
 .button.button-drop-down {
     padding-right: 32px;
     text-align: left;
+}
+
+.border-box .button.button-drop-down {
+    min-width: 114px;
 }
 
 .button.button-drop-down,
