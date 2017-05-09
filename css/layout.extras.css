@@ -390,7 +390,7 @@ body.flat .or {
 }
 
 body.mobile-s .separator {
-    margin: 12px 0px 12px 0px;
+    margin: 8px 0px 8px 0px;
 }
 
 .top-bar {
@@ -978,6 +978,10 @@ body.mobile-s .show-panel .panel-contents {
 
 .show-panel .panel-contents dl {
     margin: 14px 0px 14px 0px;
+}
+
+body.mobile-s .show-panel .panel-contents dl {
+    margin: 8px 0px 8px 0px;
 }
 
 .show-panel .panel-contents dl div.item {
