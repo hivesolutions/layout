@@ -229,10 +229,18 @@ body.mobile-s .content-container > form.inline div.item {
     width: 100%;
 }
 
+body.mobile-s .content-container > ul.sections-list {
+    margin: 12px 0px 12px 0px;
+}
+
 .content-container > .flow-content {
     margin: 24px 0px 24px 0px;
     text-align: center;
     width: 100%;
+}
+
+body.mobile-s .content-container > .flow-content {
+    margin: 12px 0px 12px 0px;
 }
 
 .content-container .text-field {
@@ -962,12 +970,12 @@ body.grey .side-panel {
     margin-top: 18px;
 }
 
-body.mobile-s .show-panel .panel-contents {
-    margin-top: 8px;
-}
-
 .show-panel .panel-contents.simple {
     border-top: none;
+}
+
+body.mobile-s .show-panel .panel-contents.simple {
+    margin-top: 8px;
 }
 
 .show-panel .panel-contents:after {
