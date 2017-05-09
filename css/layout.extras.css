@@ -251,102 +251,6 @@ body.mobile-s .content-container > .flow-content {
     width: 100%;
 }
 
-.listers > .cards {
-    display: none;
-}
-
-body.mobile-s .listers > .cards {
-    display: block;
-}
-
-.listers > .filter {
-    display: table;
-}
-
-body.mobile-s .listers > .filter {
-    display: none;
-}
-
-.cards {
-    margin: 0px auto 0px auto;
-}
-
-.cards > .card {
-    border: 1px solid #e0e0e0;
-    border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
-    -webkit-border-radius: 4px 4px 4px 4px;
-    display: inline-block;
-    margin: 8px 8px 8px 8px;
-    max-width: 320px;
-    vertical-align: top;
-    width: 100%;
-}
-
-body.mobile-s .cards > .card {
-    border-left: none;
-    border-radius: 0px 0px 0px 0px;
-    -moz-border-radius: 0px 0px 0px 0px;
-    -webkit-border-radius: 0px 0px 0px 0px;
-    border-right: none;
-    border-top: none;
-    margin: 0px 0px 0px 0px;
-    max-width: 100%;
-}
-
-.cards > .card > dl {
-    margin: 0px 0px 0px 0px;
-    padding: 8px 16px 8px 16px;
-}
-
-.cards > .card > dl > .item {
-    border-top: 1px dotted #f4f4f4;
-    float: none;
-    font-size: 0px;
-    padding: 2px 0px 2px 0px;
-    width: 100%;
-}
-
-body.mobile-s .cards > .card > dl > .item {
-    padding: 6px 0px 6px 0px;
-}
-
-.cards > .card > dl > .item:first-child {
-    border-top: none;
-}
-
-.cards > .card > dl > .item > dt {
-    color: #1d1d1d;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 32px;
-    margin: 0px 0px 0px 0px;
-    overflow: hidden;
-    text-align: left;
-    text-overflow: ellipsis;
-    vertical-align: top;
-    width: 45%;
-    word-wrap: break-word;
-}
-
-.cards > .card > dl > .item > dd {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 32px;
-    margin: 0px 0px 0px 0px;
-    overflow: hidden;
-    text-align: right;
-    text-overflow: ellipsis;
-    vertical-align: top;
-    width: 55%;
-    word-wrap: break-word;
-}
-
-.cards > .card > dl > .item > dd > * {
-    width: 100%;
-}
-
 .content-container .filter .table-row > th.selection,
 .content-container .filter .table-row > td.selection {
     width: 74px;
@@ -384,6 +288,22 @@ body.mobile-s .content-container .filter .table-row > th:last-child {
 
 .content-container .filter .table-row > td > .image.lightbox-animated {
     cursor: pointer;
+}
+
+.listers > .cards {
+    display: none;
+}
+
+body.mobile-s .listers > .cards {
+    display: block;
+}
+
+.listers > .filter {
+    display: table;
+}
+
+body.mobile-s .listers > .filter {
+    display: none;
 }
 
 .or {
@@ -1277,4 +1197,84 @@ body.mobile-s .login-footer {
 .retina-s .window.window-lightbox.loaded .button-confirm {
     background-image: url(../images/base/lightbox-close-2x.png);
     background-size: 30px 30px;
+}
+
+.cards {
+    margin: 0px auto 0px auto;
+}
+
+.cards > .card {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    display: inline-block;
+    margin: 8px 8px 8px 8px;
+    max-width: 320px;
+    vertical-align: top;
+    width: 100%;
+}
+
+body.mobile-s .cards > .card {
+    border-left: none;
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    border-right: none;
+    border-top: none;
+    margin: 0px 0px 0px 0px;
+    max-width: 100%;
+}
+
+.cards > .card > dl {
+    margin: 0px 0px 0px 0px;
+    padding: 8px 16px 8px 16px;
+}
+
+.cards > .card > dl > .item {
+    border-top: 1px dotted #f4f4f4;
+    float: none;
+    font-size: 0px;
+    padding: 2px 0px 2px 0px;
+    width: 100%;
+}
+
+body.mobile-s .cards > .card > dl > .item {
+    padding: 6px 0px 6px 0px;
+}
+
+.cards > .card > dl > .item:first-child {
+    border-top: none;
+}
+
+.cards > .card > dl > .item > dt {
+    color: #1d1d1d;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 32px;
+    margin: 0px 0px 0px 0px;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    width: 45%;
+    word-wrap: break-word;
+}
+
+.cards > .card > dl > .item > dd {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 32px;
+    margin: 0px 0px 0px 0px;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    width: 55%;
+    word-wrap: break-word;
+}
+
+.cards > .card > dl > .item > dd > * {
+    width: 100%;
 }
