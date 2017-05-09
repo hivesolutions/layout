@@ -279,6 +279,7 @@ body.mobile-s .listers > .filter {
     display: inline-block;
     margin: 8px 8px 8px 8px;
     max-width: 320px;
+    vertical-align: top;
     width: 100%;
 }
 
