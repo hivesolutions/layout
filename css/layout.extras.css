@@ -997,7 +997,7 @@ body.mobile-s .show-panel .panel-contents dl {
 }
 
 .show-panel .panel-contents dl div.item {
-    padding: 8px 8px 8px 8px;
+    padding: 8px 0px 8px 0px;
     vertical-align: top;
 }
 
@@ -1007,13 +1007,20 @@ body.mobile-s .show-panel .panel-contents dl div.item {
 
 .show-panel .panel-contents dl.inline div.item {
     float: left;
+    padding-right: 8px;
     width: 50%;
+}
+
+.show-panel .panel-contents dl.inline div.item:even {
+    padding-left: 8px;
 }
 
 body.mobile-s .show-panel .panel-contents dl.inline div.item {
     border-top: 1px dotted #f4f4f4;
     float: none;
     font-size: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
     width: 100%;
 }
 
