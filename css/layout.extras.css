@@ -318,6 +318,7 @@ body.mobile-s .cards > .card > dl > .item {
     color: #1d1d1d;
     display: inline-block;
     font-size: 14px;
+    font-weight: bold;
     line-height: 32px;
     margin: 0px 0px 0px 0px;
     overflow: hidden;
