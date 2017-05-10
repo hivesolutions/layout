@@ -1248,18 +1248,24 @@ body.mobile-s .cards > .card > dl > .item {
 }
 
 .cards > .card > dl > .item > dt {
-    color: #1d1d1d;
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     line-height: 32px;
     margin: 0px 0px 0px 0px;
     overflow: hidden;
     text-align: left;
     text-overflow: ellipsis;
+    text-transform: uppercase;
     vertical-align: top;
     width: 45%;
     word-wrap: break-word;
+}
+
+body.flat .cards > .card > dl > .item > dt {
+    color: #1d1d1d;
+    font-size: 14px;
+    text-transform: initial;
 }
 
 .cards > .card > dl > .item > dd {
