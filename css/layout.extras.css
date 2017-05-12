@@ -1117,6 +1117,10 @@ body.mobile-s .login-panel {
     margin: 0px 0px 0px 0px;
 }
 
+.login-panel .login-image {
+    max-height: 120px;
+}
+
 .login-panel .forgot {
     margin: -8px 0px 26px 0px;
     text-align: left;
