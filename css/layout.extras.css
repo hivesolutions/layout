@@ -1119,6 +1119,7 @@ body.mobile-s .login-panel {
 
 .login-panel .login-logo {
     max-height: 120px;
+    max-width: 80%;
 }
 
 .login-panel .forgot {
