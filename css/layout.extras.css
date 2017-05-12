@@ -565,6 +565,11 @@ body.flat .side-links > a {
     font-weight: 600;
 }
 
+body.mobile-s .side-links > a {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
 .side-links > a:last-child {
     margin-bottom: 0px;
 }
