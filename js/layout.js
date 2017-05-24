@@ -119,7 +119,7 @@
                     // extracts the special body associated data from the data
                     // value escapes it with a special value and then creates
                     // the logical element representation for it
-                    var bodyData = data.match(/<body.*>[^\0]*<\/body>/ig)[0];
+                    var bodyData = data.match(/<body[^\0]*>[^\0]*<\/body>/ig)[0];
                     bodyData = bodyData.replace("body", "body_");
                     var body = jQuery(bodyData);
 
