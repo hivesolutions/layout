@@ -1137,9 +1137,14 @@ body.mobile-s .login-panel .login-logo {
 
 .login-panel .buttons .button {
     box-sizing: border-box;
+    margin-bottom: 12px;
     padding-left: 0px;
     padding-right: 0px;
     width: 100%;
+}
+
+.login-panel .buttons .button:last-of-type {
+    margin-bottom: 0px;
 }
 
 .login-panel .new {
