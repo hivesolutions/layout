@@ -1219,7 +1219,7 @@
             // registers for the click operation in the operations links
             // drop down so that the proper link may be changed according
             // to the selected lines of the bulk operation panel
-            operationsLinks.click(function() {
+            operationsLinks.click(function(event) {
                 // retrieves the current element in iteration and uses it
                 // to gather the reference to the associated bulk element
                 // and the complete set of active table rows in it
