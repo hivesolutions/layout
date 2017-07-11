@@ -332,6 +332,8 @@ body.mobile-s .separator {
     padding: 0px 0px 0px 0px;
     text-align: left;
     user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
     width: 100%;
     z-index: 10;
 }
