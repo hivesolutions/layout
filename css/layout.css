@@ -723,6 +723,11 @@ body.mobile-s .window > form {
     width: 100%;
 }
 
+.window > form textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+
 .window > form label {
     display: block;
     margin: 12px 0px 6px 0px;
