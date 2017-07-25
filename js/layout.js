@@ -91,7 +91,7 @@
             // requests are reflected in a layout change
             _body.bind("data", function(event, data, href, uuid, push, hbase) {
                 // in case no unique identifier for the state exists generates a new
-                // on in order to identify the current layout state
+                // one in order to identify the current layout state
                 uuid = uuid || jQuery.uxguid();
 
                 // retrieves the default hiperlink base value as the target link value
@@ -324,17 +324,25 @@
                 href: href
             };
             window.history.replaceState(state, null, href);
+            updateGuid(state.uuid);
 
             // registers the pop state changed handler function so that
             // it's possible to restore the state using an async approach
             window.onpopstate = function(event) {
-                // sets the inital value of the href value that is going to
-                // be used for the pop state operation
-                var href = null;
+                // retrieves the reference to the top level body element
+                // that is going to be used for global operations
+                var _body = jQuery("body");
 
                 // retrieves the proper uuid value to be used in the trigger
                 // of the link action, taking into account the current state
                 var uuid = event.state ? event.state.uuid : null;
+
+                // verifies if the uuid of the event in the pop is the same
+                // as the one currently defined in the body, if that's the case
+                // the async operation should be ignored
+                if (uuid && uuid === _body.attr("uuid")) {
+                    return;
+                }
 
                 // in case the state of the event is invalid the value of the event
                 // is ignored and the current state is properly updated so that
