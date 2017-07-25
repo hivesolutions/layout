@@ -336,7 +336,7 @@
                 // of the link action, taking into account the current state
                 var uuid = event.state ? event.state.uuid : null;
 
-                // in case the state of the event is invalid the value the event
+                // in case the state of the event is invalid the value of the event
                 // is ignored and the current state is properly updated so that
                 // the value becomes ready and available (just as a safety measure)
                 if (event.state === null) {
