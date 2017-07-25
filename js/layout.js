@@ -354,6 +354,7 @@
                         href: href
                     };
                     window.history.replaceState(state, null, href);
+                    updateGuid(state.uuid);
                     return;
                 }
 
