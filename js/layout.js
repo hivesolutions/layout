@@ -53,7 +53,7 @@
 
                 // in case the click used the right or center button the
                 // event should be ignored not meant to be overriden
-                if (event.which == 2 || event.which == 3) {
+                if (event.which === 2 || event.which === 3) {
                     return;
                 }
 
@@ -141,8 +141,8 @@
                     // verifies if the kind of update that is going to be performed
                     // is a full one, meaning that the complete body element is going
                     // to be replace instead of just some of its parts
-                    var isFull = type(body) != type();
-                    isFull = isFull || hash(body) != hash();
+                    var isFull = type(body) !== type();
+                    isFull = isFull || hash(body) !== hash();
 
                     // triggers the pre async event to notify the listening handlers
                     // that the async modification operations are going to be
@@ -238,7 +238,7 @@
 
                 // verifies if the top loader is defined as visible (valid opacity) and
                 // in case it's not return immediately, avoiding the display of it
-                var isVisible = topLoader.css("opacity") == "1";
+                var isVisible = topLoader.css("opacity") === "1";
                 if (!isVisible) {
                     return;
                 }
@@ -267,7 +267,7 @@
 
                 // verifies if the top loader is defined as visible (valid opacity) and
                 // in case it's not return immediately, avoiding the display of it
-                var isVisible = topLoader.css("opacity") == "1";
+                var isVisible = topLoader.css("opacity") === "1";
                 if (!isVisible) {
                     return;
                 }
@@ -444,7 +444,7 @@
 
         var identifier = body.attr("data-id");
         var identifier_ = _body.attr("data-id");
-        var isCompatible = identifier == identifier_;
+        var isCompatible = identifier === identifier_;
         if (!isCompatible) {
             return false;
         }
@@ -1283,7 +1283,7 @@
                 // element and adds the ids value to it making the
                 // complete link value (with identifiers)
                 var link = element.attr("href");
-                var hasGet = link.indexOf("?") != -1;
+                var hasGet = link.indexOf("?") !== -1;
                 var separator = hasGet ? "&" : "?";
                 var completeLink = link + separator;
                 completeLink += ids ? "ids=" + ids : "";
@@ -1344,7 +1344,7 @@
                 // for the element and adds the ids value to it
                 // making the complete link value (with identifiers)
                 var link = element.attr("action");
-                var hasGet = link.indexOf("?") != -1;
+                var hasGet = link.indexOf("?") !== -1;
                 var separator = hasGet ? "&" : "?";
                 var completeLink = link + separator + "ids=" + ids;
 
@@ -1456,7 +1456,7 @@
 
             // tries to determine the correct flag values for the header
             // checkbox from both the length values of checkboxed
-            var isPartial = bodyCheckboxes.length != bodyCheckboxesChecked.length;
+            var isPartial = bodyCheckboxes.length !== bodyCheckboxesChecked.length;
             var isNotEmpty = bodyCheckboxesChecked.length !== 0;
             isPartial = isPartial && isNotEmpty;
 
