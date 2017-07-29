@@ -71,6 +71,14 @@
                     return;
                 }
 
+                // tries to retrieve the value of the target attribute an
+                // in case the value of it is not self (current frame) then
+                // avoid handling as an aysnc link (browser handling)
+                var target = element.attr("target");
+                if (target && target !== "_self") {
+                    return;
+                }
+
                 // runs the async link execution with no force flag set
                 // and in case it run through avoids the default link
                 // behavior (avoid duplicated execution)

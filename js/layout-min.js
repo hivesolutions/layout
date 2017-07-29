@@ -1,6 +1,7 @@
 (function(jQuery){jQuery.fn.uasync=function(){var matchedObject=this;var _validate=function(){var _body=jQuery("body");var async=!_body.hasClass("noajax");return window.FormData?async:false;};var _registerHandlers=function(){var _body=jQuery("body");var links=jQuery("a[href], .link[href]",matchedObject);links=links.filter(":not(.link-confirm)");links.click(function(event){if(event.metaKey||event.ctrlKey){return;}
 if(event.which===2||event.which===3){return;}
 var element=jQuery(this);var href=element.attr("href");var noAsync=element.hasClass("no-async");if(noAsync){return;}
+var target=element.attr("target");if(target&&target!=="_self"){return;}
 var result=jQuery.uxlinkasync(href,false);result&&event.preventDefault();});var async=_body.data("async")||false;if(async){return;}
 _body.bind("data",function(event,data,href,uuid,push,hbase){uuid=uuid||jQuery.uxguid();hbase=hbase||href;var relative=href.replace(/^(?:\/\/|[^\/]+)*\//,"/");var state={uuid:uuid,href:href};try{data=data.replace(/src=/ig,"aux-src=");var base=jQuery(data);var bodyData=data.match(/<body[^\0]*>[^\0]*<\/body>/ig)[0];bodyData=bodyData.replace("body","body_");var body=jQuery(bodyData);var _isValid=isBodyValid();var _isContentsValid=isContentsValid(body);var _isBaseValid=isBaseValid(base);var isValid=_isValid&&_isContentsValid&&_isBaseValid;if(!isValid){throw"Invalid layout or layout not found";}
 var isFull=type(body)!==type();isFull=isFull||hash(body)!==hash();_body.triggerHandler("pre_async");_body.hide();if(isFull){updateFull(base,body);}else{updateSimple(base,body);}
