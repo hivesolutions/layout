@@ -1214,8 +1214,12 @@
             var _body = jQuery("body");
             var container = matchedObject.parents(".container");
             var content = matchedObject.parents(".content");
+            var linksWindows = jQuery(".window.window-link", container);
             var operationsWindows = jQuery(".window.window-operation",
                 container);
+            var links = jQuery(".drop-down.links", content);
+            var linksLinks = jQuery("> li > a", links);
+            var linksForms = jQuery("> form", linksWindows);
             var operations = jQuery(".drop-down.operations", content);
             var operationsLinks = jQuery("> li > a", operations);
             var operationsForms = jQuery("> form", operationsWindows);
@@ -1232,6 +1236,128 @@
             var tableAll = jQuery("tbody .table-all", matchedObject);
             var tableAllSelector = jQuery(".selector", tableAll);
             var tableAllDeselector = jQuery(".deselector", tableAll);
+
+            // registers for the click operation in the links links
+            // drop down so that the proper link may be changed according
+            // to the selected lines of the bulk operation panel
+            linksLinks.click(function(event) {
+                // retrieves the current element in iteration and uses it
+                // to gather the reference to the associated bulk element
+                // and the complete set of active table rows in it
+                var element = jQuery(this);
+                var content = element.parents(".content");
+                var bulk = jQuery(".bulk", content);
+                var activeRows = jQuery(".table-row.active", bulk);
+
+                // determins if the current link element is meant to have
+                // the context values updated/set if that's not the case
+                // returns the control flow immediately (nothign to be done)
+                var isContext = element.hasClass("context");
+                if (!isContext) {
+                    return;
+                }
+
+                // determines if the current bulk panel is selected under
+                // the verything mode, if that's the case the link operation is
+                // going to be performed for the complete set of elements
+                var isEverything = bulk.hasClass("everything");
+
+                // starts the ids value string to the default (empty)
+                // value and then iterates over the various active rows
+                // to appends the id values of each to the string
+                var ids = "";
+                activeRows.each(function(index, element) {
+                    var _element = jQuery(this);
+                    ids += _element.attr("data-id") + ",";
+                });
+                ids = ids.strip(",");
+
+                // in case the everything mode is active the gathered
+                // ids are ignored as the selection is going to be
+                // performed on the server side
+                ids = isEverything ? "" : ids;
+
+                // retrieves the current (base) link value for the
+                // element and adds the ids value to it making the
+                // complete link value (with identifiers)
+                var link = element.attr("href");
+                if (!link) {
+                    return;
+                }
+                var hasGet = link.indexOf("?") !== -1;
+                var separator = hasGet ? "&" : "?";
+                var completeLink = link + separator;
+                completeLink += ids ? "context=" + ids : "";
+
+                // updates the link reference to the new one and schedules
+                // a restore operation for the next tick so that we're able
+                // to re-use the link one more time if required
+                element.attr("href", completeLink);
+                setTimeout(function() {
+                    element.attr("href", link);
+                });
+            });
+
+            // registers for the pre submit event on the links forms so
+            // that it's possible to change the action value for the selected
+            // values (changes the ids value on the fly)
+            linksForms.bind("pre_submit", function() {
+                // retrieves the reference to the current element and
+                // then uses it to retrieve the parent bulk values
+                var element = jQuery(this);
+                var container = element.parents(".container");
+                var content = jQuery(".content", container);
+                var bulk = jQuery(".bulk", content);
+                var activeRows = jQuery(".table-row.active", bulk);
+
+                // determins if the current link element is meant to have
+                // the context values updated/set if that's not the case
+                // returns the control flow immediately (nothign to be done)
+                var isContext = element.hasClass("context");
+                if (!isContext) {
+                    return;
+                }
+
+                // determines if the current bulk panel is selected under
+                // the verything mode, if that's the case the link operation is
+                // going to be performed for the complete set of elements
+                var isEverything = bulk.hasClass("everything");
+
+                // starts the ids value string to the default (empty)
+                // value and then iterates over the various active rows
+                // to appends the id values of each to the string
+                var ids = "";
+                activeRows.each(function(index, element) {
+                    var _element = jQuery(this);
+                    ids += _element.attr("data-id") + ",";
+                });
+                ids = ids.strip(",");
+
+                // in case the everything mode is active the gathered
+                // ids are ignored as the selection is going to be
+                // performed on the server side
+                ids = isEverything ? "" : ids;
+
+                // retrieves the current (base) link/action value
+                // for the element and adds the ids value to it
+                // making the complete link value (with identifiers)
+                var link = element.attr("action");
+                if (!link) {
+                    return;
+                }
+                var hasGet = link.indexOf("?") !== -1;
+                var separator = hasGet ? "&" : "?";
+                var completeLink = link + separator + "context=" + ids;
+
+                // changes the action attribute of the form so that
+                // it represents the "new" complete link value and
+                // schedules an operation to restore the value to
+                // the original value on next tick (allows re-usage)
+                element.attr("action", completeLink);
+                setTimeout(function() {
+                    element.attr("action", link);
+                });
+            });
 
             // registers for the click operation in the operations links
             // drop down so that the proper link may be changed according
@@ -1281,6 +1407,7 @@
                     var _element = jQuery(this);
                     ids += _element.attr("data-id") + ",";
                 });
+                ids = ids.strip(",");
 
                 // in case the everything mode is active the gathered
                 // ids are ignored as the selection is going to be
@@ -1291,6 +1418,9 @@
                 // element and adds the ids value to it making the
                 // complete link value (with identifiers)
                 var link = element.attr("href");
+                if (!link) {
+                    return;
+                }
                 var hasGet = link.indexOf("?") !== -1;
                 var separator = hasGet ? "&" : "?";
                 var completeLink = link + separator;
@@ -1342,6 +1472,7 @@
                     var _element = jQuery(this);
                     ids += _element.attr("data-id") + ",";
                 });
+                ids = ids.strip(",");
 
                 // in case the everything mode is active the gathered
                 // ids are ignored as the selection is going to be
@@ -1352,6 +1483,9 @@
                 // for the element and adds the ids value to it
                 // making the complete link value (with identifiers)
                 var link = element.attr("action");
+                if (!link) {
+                    return;
+                }
                 var hasGet = link.indexOf("?") !== -1;
                 var separator = hasGet ? "&" : "?";
                 var completeLink = link + separator + "ids=" + ids;
