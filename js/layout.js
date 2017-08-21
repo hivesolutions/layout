@@ -1262,6 +1262,11 @@
                 // going to be performed for the complete set of elements
                 var isEverything = bulk.hasClass("everything");
 
+                // retrieves the view associated with the currrent bulk
+                // selector (if there's any), this is going to be passed
+                // to the link so that it can provide proper "view filtering"
+                var view = bulk.attr("data-view");
+
                 // starts the ids value string to the default (empty)
                 // value and then iterates over the various active rows
                 // to appends the id values of each to the string
@@ -1287,8 +1292,10 @@
                 var hasGet = link.indexOf("?") !== -1;
                 var separator = hasGet ? "&" : "?";
                 var completeLink = link + separator;
-                completeLink += ids ? "context=" + ids : "";
+                completeLink += view ? "view=" + view + "&" : "&";
+                completeLink += ids ? "context=" + ids + "&" : "&";
                 completeLink = completeLink.strip(separator);
+                completeLink = completeLink.strip("&");
 
                 // updates the link reference to the new one and schedules
                 // a restore operation for the next tick so that we're able
@@ -1324,6 +1331,11 @@
                 // going to be performed for the complete set of elements
                 var isEverything = bulk.hasClass("everything");
 
+                // retrieves the view associated with the currrent bulk
+                // selector (if there's any), this is going to be passed
+                // to the link so that it can provide proper "view filtering"
+                var view = bulk.attr("data-view");
+
                 // starts the ids value string to the default (empty)
                 // value and then iterates over the various active rows
                 // to appends the id values of each to the string
@@ -1348,8 +1360,11 @@
                 }
                 var hasGet = link.indexOf("?") !== -1;
                 var separator = hasGet ? "&" : "?";
-                var completeLink = link + separator + "context=" + ids;
+                var completeLink = link + separator;
+                completeLink += view ? "view=" + view + "&" : "&";
+                completeLink += ids ? "context=" + ids + "&" : "&";
                 completeLink = completeLink.strip(separator);
+                completeLink = completeLink.strip("&");
 
                 // changes the action attribute of the form so that
                 // it represents the "new" complete link value and
@@ -1385,6 +1400,11 @@
                 // the verything mode, if that's the case the operation is
                 // going to be performed for the complete set of elements
                 var isEverything = bulk.hasClass("everything");
+
+                // retrieves the view associated with the currrent bulk
+                // selector (if there's any), this is going to be passed
+                // to the link so that it can provide proper "view filtering"
+                var view = bulk.attr("data-view");
 
                 // retrieves the total number of records/items associated
                 // with the bulk operation and then in case the everything
@@ -1426,8 +1446,10 @@
                 var hasGet = link.indexOf("?") !== -1;
                 var separator = hasGet ? "&" : "?";
                 var completeLink = link + separator;
-                completeLink += ids ? "ids=" + ids : "";
+                completeLink += view ? "view=" + view + "&" : "&";
+                completeLink += ids ? "ids=" + ids + "&" : "&";
                 completeLink = completeLink.strip(separator);
+                completeLink = completeLink.strip("&");
 
                 // calls the confirm window in the document, so that
                 // only in case the operation is confirmed the proper
@@ -1467,6 +1489,11 @@
                 // going to be performed for the complete set of elements
                 var isEverything = bulk.hasClass("everything");
 
+                // retrieves the view associated with the currrent bulk
+                // selector (if there's any), this is going to be passed
+                // to the link so that it can provide proper "view filtering"
+                var view = bulk.attr("data-view");
+
                 // starts the ids value string to the default (empty)
                 // value and then iterates over the various active rows
                 // to appends the id values of each to the string
@@ -1491,8 +1518,11 @@
                 }
                 var hasGet = link.indexOf("?") !== -1;
                 var separator = hasGet ? "&" : "?";
-                var completeLink = link + separator + "ids=" + ids;
+                var completeLink = link + separator;
+                completeLink += view ? "view=" + view + "&" : "&";
+                completeLink += ids ? "ids=" + ids + "&" : "&";
                 completeLink = completeLink.strip(separator);
+                completeLink = completeLink.strip("&");
 
                 // changes the action attribute of the form so that
                 // it represents the "new" complete link value
