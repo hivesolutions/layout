@@ -1288,6 +1288,7 @@
                 var separator = hasGet ? "&" : "?";
                 var completeLink = link + separator;
                 completeLink += ids ? "context=" + ids : "";
+                completeLink = completeLink.strip(separator);
 
                 // updates the link reference to the new one and schedules
                 // a restore operation for the next tick so that we're able
@@ -1348,6 +1349,7 @@
                 var hasGet = link.indexOf("?") !== -1;
                 var separator = hasGet ? "&" : "?";
                 var completeLink = link + separator + "context=" + ids;
+                completeLink = completeLink.strip(separator);
 
                 // changes the action attribute of the form so that
                 // it represents the "new" complete link value and
@@ -1425,6 +1427,7 @@
                 var separator = hasGet ? "&" : "?";
                 var completeLink = link + separator;
                 completeLink += ids ? "ids=" + ids : "";
+                completeLink = completeLink.strip(separator);
 
                 // calls the confirm window in the document, so that
                 // only in case the operation is confirmed the proper
@@ -1489,6 +1492,7 @@
                 var hasGet = link.indexOf("?") !== -1;
                 var separator = hasGet ? "&" : "?";
                 var completeLink = link + separator + "ids=" + ids;
+                completeLink = completeLink.strip(separator);
 
                 // changes the action attribute of the form so that
                 // it represents the "new" complete link value
