@@ -767,8 +767,14 @@ body.mobile-s .content-header > h1 {
     margin-left: 16px;
 }
 
+.content-header > h1 > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
 .content-header > h1 > a {
     border-bottom: none;
+    padding-bottom: 0px;
 }
 
 .content-header > .content-buttons {
