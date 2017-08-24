@@ -283,7 +283,7 @@ body.mobile-s .content-container .filter .table-row > th:last-child {
 
 body.mobile-s .content-container .filter .table-row > td.no-mobile,
 body.mobile-s .content-container .filter .table-row > th.no-mobile {
-	display: none
+    display: none;
 }
 
 .content-container .filter .table-row > td > .image {
