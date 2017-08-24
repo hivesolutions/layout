@@ -115,6 +115,32 @@ __license__   = Apache License, Version 2.0
     }
 }
 
+@-webkit-keyframes fade-shrink-visibility {
+    from {
+        opacity: 1;
+        -webkit-transform: translateY(0px) scale(1);
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translateY(12px) scale(0.96);
+        visibility: hidden;
+    }
+}
+
+@keyframes fade-shrink-visibility {
+    from {
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.96);
+        visibility: hidden;
+    }
+}
+
 @font-face {
     font-family: "Oxygen";
     font-style: normal;
@@ -869,6 +895,14 @@ body.mobile-s .input.single {
     overflow: auto;
     padding: 12px 24px 12px 24px;
     z-index: 30;
+}
+
+.window.invisible {
+    animation: fade-shrink-visibility 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-shrink-visibility 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-shrink-visibility 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-shrink-visibility 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-shrink-visibility 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
 }
 
 .window.window-alert {
