@@ -480,6 +480,7 @@
         updateTitle(base);
         updateIcon(base);
         updateMeta(base);
+        runGarbage(base);
     };
 
     var updateSimple = function(base, body) {
@@ -496,6 +497,7 @@
         updateContent(base);
         updateFooter(base);
         updateMeta(base);
+        runGarbage(base);
         fixFluid();
     };
 
@@ -657,6 +659,14 @@
         footer_.html(footerHtml);
         footer_.attr("class", footerClass);
         footer_.uxapply();
+    };
+
+    var runGarbage = function(base) {
+        var gcElements = jQuery(".gc");
+        gcElements.each(function(index, element) {
+            var _element = jQuery(this);
+            _element.triggerHandler("collect");
+        });
     };
 
     var fixFluid = function() {
