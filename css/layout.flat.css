@@ -93,6 +93,28 @@ __license__   = Apache License, Version 2.0
     }
 }
 
+@-webkit-keyframes fade-grow-rise {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(12px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade-grow-rise {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
 @font-face {
     font-family: "Oxygen";
     font-style: normal;
@@ -834,11 +856,11 @@ body.mobile-s .input.single {
 }
 
 .window {
-    animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -o-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -ms-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -moz-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
-    -webkit-animation: move-into 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    animation: fade-grow-rise 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-grow-rise 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-grow-rise 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-grow-rise 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-grow-rise 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     background-color: #ffffff;
     border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
