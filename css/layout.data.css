@@ -78,7 +78,10 @@ form .province {
 
 .drop-field.entities > .drop-field-contents > * .picture {
     border-radius: 32px 32px 32px 32px;
+    -o-border-radius: 32px 32px 32px 32px;
+    -ms-border-radius: 32px 32px 32px 32px;
     -moz-border-radius: 32px 32px 32px 32px;
+    -khtml-border-radius: 32px 32px 32px 32px;
     -webkit-border-radius: 32px 32px 32px 32px;
     clear: both;
     float: left;

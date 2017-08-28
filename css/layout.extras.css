@@ -38,6 +38,7 @@ body.flat #content {
     -o-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -ms-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -moz-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -khtml-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -webkit-animation: fade-in 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.0);
 }
 
@@ -97,16 +98,27 @@ body.fluid #content {
 
 body.mobile-s.fluid #content {
     opacity: 1.0;
+    -o-opacity: 1.0;
+    -ms-opacity: 1.0;
+    -moz-opacity: 1.0;
+    -khtml-opacity: 1.0;
+    -webkit-opacity: 1.0;
     transition: opacity 0.35s ease;
     -o-transition: opacity 0.35s ease;
     -ms-transition: opacity 0.35s ease;
     -moz-transition: opacity 0.35s ease;
+    -khtml-transition: opacity 0.35s ease;
     -webkit-transition: opacity 0.35s ease;
     width: 100%;
 }
 
 body.mobile-s.fluid.side-visible #content {
     opacity: 0.15;
+    -o-opacity: 0.15;
+    -ms-opacity: 0.15;
+    -moz-opacity: 0.15;
+    -khtml-opacity: 0.15;
+    -webkit-opacity: 0.15;
     pointer-events: none;
 }
 
@@ -116,10 +128,20 @@ body.fluid.flat #content {
 
 body.fluid .bar-loader.loading {
     opacity: 0.0;
+    -o-opacity: 0.0;
+    -ms-opacity: 0.0;
+    -moz-opacity: 0.0;
+    -khtml-opacity: 0.0;
+    -webkit-opacity: 0.0;
 }
 
 body.fluid .top-loader {
     opacity: 1.0;
+    -o-opacity: 1.0;
+    -ms-opacity: 1.0;
+    -moz-opacity: 1.0;
+    -khtml-opacity: 1.0;
+    -webkit-opacity: 1.0;
 }
 
 body.fluid .content.no-header .content-header {
@@ -141,13 +163,19 @@ body.fluid .content.no-padding .content-container {
 body.fluid .window {
     border-color: #888888;
     box-shadow: 0px 1px 4px #aaaaaa;
+    -o-box-shadow: 0px 1px 4px #aaaaaa;
+    -ms-box-shadow: 0px 1px 4px #aaaaaa;
     -moz-box-shadow: 0px 1px 4px #aaaaaa;
+    -khtml-box-shadow: 0px 1px 4px #aaaaaa;
     -webkit-box-shadow: 0px 1px 4px #aaaaaa;
 }
 
 body.fluid.flat .window {
     box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
     -moz-box-shadow: none;
+    -khtml-box-shadow: none;
     -webkit-box-shadow: none;
 }
 
@@ -338,7 +366,10 @@ body.mobile-s .separator {
     text-align: left;
     user-select: none;
     -o-user-select: none;
+    -ms-user-select: none;
     -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
     width: 100%;
     z-index: 10;
 }
@@ -349,7 +380,10 @@ body.mobile-s .top-bar {
 
 body.flat .top-bar {
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
+    -o-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
+    -ms-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
     -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
+    -khtml-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
     -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
     height: 52px;
     line-height: 52px;
@@ -427,6 +461,11 @@ body.mobile-s .top-bar > .container > .right {
     max-height: 50px;
     overflow: hidden;
     text-shadow: 1px 1px 1px #ffffff;
+    -o-text-shadow: 1px 1px 1px #ffffff;
+    -ms-text-shadow: 1px 1px 1px #ffffff;
+    -moz-text-shadow: 1px 1px 1px #ffffff;
+    -khtml-text-shadow: 1px 1px 1px #ffffff;
+    -webkit-text-shadow: 1px 1px 1px #ffffff;
     width: 176px;
 }
 
@@ -468,7 +507,10 @@ body.flat .top-bar > .container > .logo > a > img {
 .top-bar > .container > .text-field,
 .top-bar > .container > .drop-field > .text-field {
     border-radius: 4px 4px 4px 4px;
+    -o-border-radius: 4px 4px 4px 4px;
+    -ms-border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
+    -khtml-border-radius: 4px 4px 4px 4px;
     -webkit-border-radius: 4px 4px 4px 4px;
     font-size: 14px;
     height: 32px;
@@ -476,6 +518,7 @@ body.flat .top-bar > .container > .logo > a > img {
     -o-transition: width 0.2s ease;
     -ms-transition: width 0.2s ease;
     -moz-transition: width 0.2s ease;
+    -khtml-transition: width 0.2s ease;
     -webkit-transition: width 0.2s ease;
     vertical-align: middle;
     width: 300px;
@@ -508,7 +551,10 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
     border-right: 1px solid #e0e0e0;
     border-top: 51px solid transparent;
     box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     color: #2d2d2d;
     font-weight: bold;
@@ -541,7 +587,10 @@ body.grey .side-links {
     background-color: #f2f2f2;
     border-left: 1px solid #e0e0e0;
     box-shadow: 1px 0px 4px #f2f2f2;
+    -o-box-shadow: 1px 0px 4px #f2f2f2;
+    -ms-box-shadow: 1px 0px 4px #f2f2f2;
     -moz-box-shadow: 1px 0px 4px #f2f2f2;
+    -khtml-box-shadow: 1px 0px 4px #f2f2f2;
     -webkit-box-shadow: 1px 0px 4px #f2f2f2;
 }
 
@@ -549,7 +598,10 @@ body.flat .side-links.grey,
 body.flat.grey .side-links {
     border-left: none;
     box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
     -moz-box-shadow: none;
+    -khtml-box-shadow: none;
     -webkit-box-shadow: none;
 }
 
@@ -652,7 +704,10 @@ body.flat .system-menu.active .menu-button {
     background-color: #ffffff;
     border: 1px solid #dddddd;
     box-shadow: 0px 1px 4px #dddddd;
+    -o-box-shadow: 0px 1px 4px #dddddd;
+    -ms-box-shadow: 0px 1px 4px #dddddd;
     -moz-box-shadow: 0px 1px 4px #dddddd;
+    -khtml-box-shadow: 0px 1px 4px #dddddd;
     -webkit-box-shadow: 0px 1px 4px #dddddd;
     min-width: 340px;
     position: absolute;
@@ -660,6 +715,11 @@ body.flat .system-menu.active .menu-button {
 
 body.mobile-s .system-menu .menu-contents {
     box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     max-width: 90%;
     min-width: 90%;
 }
@@ -669,9 +729,13 @@ body.flat .system-menu .menu-contents {
     -o-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -ms-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -moz-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -khtml-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -webkit-animation: fade-into-drop 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
+    -khtml-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     margin-top: 4px;
 }
@@ -683,7 +747,10 @@ body.flat .system-menu .menu-contents {
 
 .system-menu .avatar-image {
     border-radius: 32px 32px 32px 32px;
+    -o-border-radius: 32px 32px 32px 32px;
+    -ms-border-radius: 32px 32px 32px 32px;
     -moz-border-radius: 32px 32px 32px 32px;
+    -khtml-border-radius: 32px 32px 32px 32px;
     -webkit-border-radius: 32px 32px 32px 32px;
     height: 64px;
     vertical-align: middle;
@@ -815,7 +882,10 @@ body.flat .content-header > .content-buttons .drop-down-container > ul.drop-down
     background-color: #ffffff;
     border-left: 1px solid #888888;
     box-shadow: -2px 0px 4px #aaaaaa;
+    -o-box-shadow: -2px 0px 4px #aaaaaa;
+    -ms-box-shadow: -2px 0px 4px #aaaaaa;
     -moz-box-shadow: -2px 0px 4px #aaaaaa;
+    -khtml-box-shadow: -2px 0px 4px #aaaaaa;
     -webkit-box-shadow: -2px 0px 4px #aaaaaa;
     display: none;
     min-height: 100%;
@@ -831,7 +901,10 @@ body.flat .content-header > .content-buttons .drop-down-container > ul.drop-down
 body.flat .side-panel {
     border-left: none;
     box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
     -moz-box-shadow: none;
+    -khtml-box-shadow: none;
     -webkit-box-shadow: none;
 }
 
@@ -882,7 +955,10 @@ body.grey .side-panel {
 .show-panel .panel-header .image {
     border: 1px solid #cccccc;
     border-radius: 48px 48px 48px 48px;
+    -o-border-radius: 48px 48px 48px 48px;
+    -ms-border-radius: 48px 48px 48px 48px;
     -moz-border-radius: 48px 48px 48px 48px;
+    -khtml-border-radius: 48px 48px 48px 48px;
     -webkit-border-radius: 48px 48px 48px 48px;
     height: 96px;
     width: 96px;
@@ -890,7 +966,10 @@ body.grey .side-panel {
 
 .show-panel .panel-header .image.square {
     border-radius: 0px 0px 0px 0px;
+    -o-border-radius: 0px 0px 0px 0px;
+    -ms-border-radius: 0px 0px 0px 0px;
     -moz-border-radius: 0px 0px 0px 0px;
+    -khtml-border-radius: 0px 0px 0px 0px;
     -webkit-border-radius: 0px 0px 0px 0px;
 }
 
@@ -1062,9 +1141,17 @@ body.flat .show-panel .panel-contents .image {
     background-color: #f9f9f9;
     border: 1px solid #cdcdcd;
     box-shadow: 0px 0px 6px #e8e8e8;
+    -o-box-shadow: 0px 0px 6px #e8e8e8;
+    -ms-box-shadow: 0px 0px 6px #e8e8e8;
     -moz-box-shadow: 0px 0px 6px #e8e8e8;
+    -khtml-box-shadow: 0px 0px 6px #e8e8e8;
     -webkit-box-shadow: 0px 0px 6px #e8e8e8;
     box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     margin: 64px auto 64px auto;
     max-width: 100%;
     padding: 32px 32px 32px 32px;
@@ -1076,16 +1163,23 @@ body.flat .login-panel:not(.login-panel-message) {
     -o-animation: fade-into-rise 0.45s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -ms-animation: fade-into-rise 0.45s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -moz-animation: fade-into-rise 0.45s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -khtml-animation: fade-into-rise 0.45s cubic-bezier(0.645, 0.045, 0.355, 1.0);
     -webkit-animation: fade-into-rise 0.45s cubic-bezier(0.645, 0.045, 0.355, 1.0);
 }
 
 body.flat .login-panel {
     border: 2px solid #cdcdcd;
     border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
+    -khtml-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
     box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
     -moz-box-shadow: none;
+    -khtml-box-shadow: none;
     -webkit-box-shadow: none;
 }
 
@@ -1150,6 +1244,11 @@ body.mobile-s .login-panel .login-logo {
 
 .login-panel .buttons .button {
     box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     margin-bottom: 12px;
     padding-left: 0px;
     padding-right: 0px;
@@ -1203,6 +1302,7 @@ body.mobile-s .login-footer {
 .window.window-lightbox .button-expand {
     animation-duration: 0.5s;
     -o-animation-duration: 0.5s;
+    -ms-animation-duration: 0.5s;
     -moz-animation-duration: 0.5s;
     -khtml-animation-duration: 0.5s;
     -webkit-animation-duration: 0.5s;
@@ -1247,7 +1347,10 @@ body.mobile-s .login-footer {
 .cards > .card {
     border: 1px solid #e0e0e0;
     border-radius: 4px 4px 4px 4px;
+    -o-border-radius: 4px 4px 4px 4px;
+    -ms-border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px 4px 4px 4px;
+    -khtml-border-radius: 4px 4px 4px 4px;
     -webkit-border-radius: 4px 4px 4px 4px;
     display: inline-block;
     margin: 8px 8px 8px 8px;
@@ -1259,7 +1362,10 @@ body.mobile-s .login-footer {
 body.mobile-s .cards > .card {
     border-left: none;
     border-radius: 0px 0px 0px 0px;
+    -o-border-radius: 0px 0px 0px 0px;
+    -ms-border-radius: 0px 0px 0px 0px;
     -moz-border-radius: 0px 0px 0px 0px;
+    -khtml-border-radius: 0px 0px 0px 0px;
     -webkit-border-radius: 0px 0px 0px 0px;
     border-right: none;
     border-top: none;

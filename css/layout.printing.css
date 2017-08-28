@@ -40,6 +40,11 @@ body.printing {
 
 body.printing * {
     box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     page-break-before: left;
 }
 
@@ -55,9 +60,17 @@ body.printing .page {
     background: #ffffff;
     border: 1px solid #d2d2d2;
     border-radius: 6px 6px 6px 6px;
+    -o-border-radius: 6px 6px 6px 6px;
+    -ms-border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -khtml-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
     box-shadow: 0px 0px 4px #cccccc;
+    -o-box-shadow: 0px 0px 4px #cccccc;
+    -ms-box-shadow: 0px 0px 4px #cccccc;
     -moz-box-shadow: 0px 0px 4px #cccccc;
-    -webkit-box-shadow: 0px 0px 3px #cccccc;
+    -khtml-box-shadow: 0px 0px 4px #cccccc;
+    -webkit-box-shadow: 0px 0px 4px #cccccc;
     margin: 10mm auto 10mm auto;
     min-height: 297mm;
     padding: 6mm 2mm 6mm 2mm;
@@ -87,7 +100,17 @@ body.printing .page-counter {
         background: initial;
         border: initial;
         border-radius: initial;
+        -o-border-radius: initial;
+        -ms-border-radius: initial;
+        -moz-border-radius: initial;
+        -khtml-border-radius: initial;
+        -webkit-border-radius: initial;
         box-shadow: initial;
+        -o-box-shadow: initial;
+        -ms-box-shadow: initial;
+        -moz-box-shadow: initial;
+        -khtml-box-shadow: initial;
+        -webkit-box-shadow: initial;
         margin: 0mm 0mm 0mm 0mm;
         min-height: initial;
         page-break-after: always;
