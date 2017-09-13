@@ -967,7 +967,7 @@ body.mobile-s .input.single {
 
 .window p {
     line-height: 24px;
-    margin: 22px 0px 22px 0px;
+    margin: 22px auto 22px auto;
 }
 
 .window .window-buttons {
