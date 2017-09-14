@@ -1290,22 +1290,6 @@ body.mobile-s .login-footer {
     display: inline-block;
 }
 
-.window.window-view .description,
-.window.window-link .description,
-.window.window-operation .description {
-    border-bottom: 1px solid #f2f2f2;
-    border-top: 1px solid #f2f2f2;
-    color: #000000;
-    font-size: 13px;
-    font-weight: normal;
-    line-height: 20px;
-    margin: 0px auto 0px auto;
-    max-width: 360px;
-    padding-bottom: 12px;
-    padding-top: 12px;
-    text-align: center;
-}
-
 .window.window-lightbox {
     cursor: pointer;
     line-height: 0px;
