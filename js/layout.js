@@ -1576,10 +1576,10 @@
                 var previousRowIndex = table.attr("data-last_selected");
                 var checked = element.is(":checked");
                 if (checked) {
-                    table.hasClass("shift-selection") ? _shiftClickSelect(tableRow,
+                    table.hasClass("shift-selection") ? _selectShiftClick(tableRow,
                         previousRowIndex) : _selectSingle(tableRow);
                 } else {
-                    table.hasClass("shift-selection") ? _shiftClickDeselect(tableRow,
+                    table.hasClass("shift-selection") ? _deselectShiftClick(tableRow,
                         previousRowIndex) : _deselectSingle(tableRow, true);
                 }
                 _updateState(bulk, options);
@@ -1775,7 +1775,7 @@
             }
         };
 
-        var _shiftClickSelect = function(element, fromIndex) {
+        var _selectShiftClick = function(element, fromIndex) {
             var toIndex = element.attr("data-index");
             toIndex = toIndex && parseInt(toIndex);
             fromIndex = fromIndex && parseInt(fromIndex) || -1;
@@ -1793,7 +1793,7 @@
             table.attr("data-last_selected", toIndex);
         };
 
-        var _shiftClickDeselect = function(element, fromIndex) {
+        var _deselectShiftClick = function(element, fromIndex) {
 
             var toIndex = element.attr("data-index");
             toIndex = parseInt(toIndex);
