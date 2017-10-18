@@ -1545,6 +1545,9 @@
                 var element = jQuery(this);
                 var bulk = element.parents(".bulk");
                 var checked = element.is(":checked");
+                var table = element.parents(".filter.lister");
+                table.removeClass("shift-on");
+
                 if (checked) {
                     _selectAll(bulk, options);
                 } else {
@@ -1555,17 +1558,28 @@
                 _updateState(bulk, options);
             });
 
+            bodyCheckboxes.click(function(event) {
+                var element = jQuery(this);
+                var shiftKeyPressed = event.shiftKey;
+                var table = element.parents(".filter.lister");
+                table.toggleClass("shift-on", shiftKeyPressed);
+            });
+
             // registers for the "simple" change operation in the
             // body checkboxes so that a single line is toggled
             bodyCheckboxes.bind("change", function() {
                 var element = jQuery(this);
                 var bulk = element.parents(".bulk");
                 var tableRow = element.parents(".table-row");
+                var table = tableRow.parents(".filter.lister");
+                var previousRowIndex = table.attr("data-last_selected");
                 var checked = element.is(":checked");
                 if (checked) {
-                    _selectSingle(tableRow);
+                    table.hasClass("shift-on") ? _shiftSelect(tableRow, previousRowIndex) :
+                        _selectSingle(tableRow);
                 } else {
-                    _deselectSingle(tableRow, true);
+                    table.hasClass("shift-on") ? _shiftDeselect(tableRow, previousRowIndex) :
+                        _deselectSingle(tableRow, true);
                 }
                 _updateState(bulk, options);
             });
@@ -1584,6 +1598,19 @@
                 var element = jQuery(this);
                 var bulk = element.parents(".bulk");
                 _deselectEverything(bulk, options);
+            });
+
+            _body.keydown(function(event) {
+                var element = jQuery(this);
+                var keyValue = event.keyCode ? event.keyCode : event.charCode ? event.charCode :
+                    event.which;
+                switch (keyValue) {
+                    case 65:
+                        headerCheckbox.click();
+                        event.preventDefault();
+                        event.stopPropagation();
+                        break;
+                }
             });
         };
 
@@ -1605,6 +1632,8 @@
                 var _element = jQuery(this);
                 _deselectSingle(_element, false);
             });
+            var table = matchedObject.parents(".filter.lister");
+            table.attr("data-last_selected", 0);
         };
 
         var _selectEverything = function(matchedObject, options) {
@@ -1745,12 +1774,52 @@
             }
         };
 
+        var _shiftSelect = function(element, fromIndex) {
+            var toIndex = element.attr("data-index");
+            toIndex = toIndex && parseInt(toIndex);
+            fromIndex = fromIndex && parseInt(fromIndex) || -1;
+            var start = toIndex > fromIndex ? fromIndex + 1 : toIndex;
+            var end = toIndex > fromIndex ? toIndex : fromIndex;
+            var table = element.parents(".filter.lister");
+            var tblBody = element.parents(".filter-contents");
+            var tableRows = jQuery(".table-row", tblBody);
+
+            for (var i = start, j = end; i <= j && i < tableRows.length; i++) {
+                var _element = jQuery(tableRows[i]);
+                _selectSingle(_element);
+            }
+
+            table.attr("data-last_selected", toIndex);
+        };
+
+        var _shiftDeselect = function(element, fromIndex) {
+
+            var toIndex = element.attr("data-index");
+            toIndex = parseInt(toIndex);
+            fromIndex = parseInt(fromIndex);
+            var start = toIndex > fromIndex ? fromIndex + 1 : toIndex;
+            var end = toIndex > fromIndex ? toIndex : fromIndex;
+            var table = element.parents(".filter.lister");
+            var tblBody = element.parents(".filter-contents");
+            var tableRows = jQuery(".table-row", tblBody);
+
+            for (var i = start, j = end; i <= j && i < tableRows.length; i++) {
+                var _element = jQuery(tableRows[i]);
+                _deselectSingle(_element);
+            }
+
+            table.attr("data-last_selected", toIndex);
+        };
+
         var _selectSingle = function(element) {
             // retrieves the reference to the current line's checkbox and
             // then adds the active class to the current element and runs
             // the select operation to the current checkbox
             var checkbox = jQuery("input[type=checkbox]", element);
             element.addClass("active");
+            var index = element.attr("data-index");
+            var table = element.parents(".filter.lister");
+            table.attr("data-last_selected", index);
             checkbox.attr("checked", true);
             checkbox.prop && checkbox.prop("checked", true);
         };
@@ -1761,6 +1830,9 @@
             // runs the deselect operation to the current checkbox
             var checkbox = jQuery("input[type=checkbox]", element);
             element.removeClass("active");
+            var index = element.attr("data-index");
+            var table = element.parents(".filter.lister");
+            table.attr("data-last_selected", index);
             checkbox.attr("checked", false);
             checkbox.prop && checkbox.prop("checked", false);
         };
