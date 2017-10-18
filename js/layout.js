@@ -1546,7 +1546,7 @@
                 var bulk = element.parents(".bulk");
                 var checked = element.is(":checked");
                 var table = element.parents(".filter.lister");
-                table.removeClass("shift-on");
+                table.removeClass("shift-selection");
 
                 if (checked) {
                     _selectAll(bulk, options);
@@ -1562,11 +1562,12 @@
                 var element = jQuery(this);
                 var shiftKeyPressed = event.shiftKey;
                 var table = element.parents(".filter.lister");
-                table.toggleClass("shift-on", shiftKeyPressed);
+                table.toggleClass("shift-selection", shiftKeyPressed);
             });
 
             // registers for the "simple" change operation in the
             // body checkboxes so that a single line is toggled
+            // or registers for "shift+click" change operation when shift key was pressed
             bodyCheckboxes.bind("change", function() {
                 var element = jQuery(this);
                 var bulk = element.parents(".bulk");
@@ -1575,11 +1576,11 @@
                 var previousRowIndex = table.attr("data-last_selected");
                 var checked = element.is(":checked");
                 if (checked) {
-                    table.hasClass("shift-on") ? _shiftSelect(tableRow, previousRowIndex) :
-                        _selectSingle(tableRow);
+                    table.hasClass("shift-selection") ? _shiftClickSelect(tableRow,
+                        previousRowIndex) : _selectSingle(tableRow);
                 } else {
-                    table.hasClass("shift-on") ? _shiftDeselect(tableRow, previousRowIndex) :
-                        _deselectSingle(tableRow, true);
+                    table.hasClass("shift-selection") ? _shiftClickDeselect(tableRow,
+                        previousRowIndex) : _deselectSingle(tableRow, true);
                 }
                 _updateState(bulk, options);
             });
@@ -1774,7 +1775,7 @@
             }
         };
 
-        var _shiftSelect = function(element, fromIndex) {
+        var _shiftClickSelect = function(element, fromIndex) {
             var toIndex = element.attr("data-index");
             toIndex = toIndex && parseInt(toIndex);
             fromIndex = fromIndex && parseInt(fromIndex) || -1;
@@ -1792,7 +1793,7 @@
             table.attr("data-last_selected", toIndex);
         };
 
-        var _shiftDeselect = function(element, fromIndex) {
+        var _shiftClickDeselect = function(element, fromIndex) {
 
             var toIndex = element.attr("data-index");
             toIndex = parseInt(toIndex);
