@@ -1545,8 +1545,7 @@
                 var element = jQuery(this);
                 var bulk = element.parents(".bulk");
                 var checked = element.is(":checked");
-                var table = element.parents(".filter.lister");
-                table.removeClass("shift-selection");
+                bulk.removeClass("shift-selection");
 
                 if (checked) {
                     _selectAll(bulk, options);
@@ -1573,14 +1572,14 @@
                 var bulk = element.parents(".bulk");
                 var tableRow = element.parents(".table-row");
                 var table = tableRow.parents(".filter.lister");
-                var previousRowIndex = table.attr("data-last_selected");
+                var lastSelectedIndex = table.attr("data-last_selected");
                 var checked = element.is(":checked");
                 if (checked) {
                     table.hasClass("shift-selection") ? _selectShiftClick(tableRow,
-                        previousRowIndex) : _selectSingle(tableRow);
+                        lastSelectedIndex) : _selectSingle(tableRow);
                 } else {
                     table.hasClass("shift-selection") ? _deselectShiftClick(tableRow,
-                        previousRowIndex) : _deselectSingle(tableRow, true);
+                        lastSelectedIndex) : _deselectSingle(tableRow, true);
                 }
                 _updateState(bulk, options);
             });
@@ -1633,8 +1632,7 @@
                 var _element = jQuery(this);
                 _deselectSingle(_element, false);
             });
-            var table = matchedObject.parents(".filter.lister");
-            table.attr("data-last_selected", 0);
+            matchedObject.attr("data-last_selected", 0);
         };
 
         var _selectEverything = function(matchedObject, options) {
@@ -1776,10 +1774,16 @@
         };
 
         var _selectShiftClick = function(element, fromIndex) {
+            // checks the origin and destination rows
+            // by their 'data-index' attribute
+            // and then adds the active class to all the rows
+            //between by performing select operation to each one
             var toIndex = element.attr("data-index");
-            toIndex = toIndex && parseInt(toIndex);
-            fromIndex = fromIndex && parseInt(fromIndex) || -1;
-            var start = toIndex > fromIndex ? fromIndex + 1 : toIndex;
+            toIndex = parseInt(toIndex);
+            // if no previous selected row,
+            // then it starts from the one with index 0
+            fromIndex = parseInt(fromIndex) || 0;
+            var start = toIndex > fromIndex ? fromIndex : toIndex;
             var end = toIndex > fromIndex ? toIndex : fromIndex;
             var table = element.parents(".filter.lister");
             var tblBody = element.parents(".filter-contents");
@@ -1787,18 +1791,27 @@
 
             for (var i = start, j = end; i <= j && i < tableRows.length; i++) {
                 var _element = jQuery(tableRows[i]);
-                _selectSingle(_element);
+                if (_element.hasClass("active") === false) {
+                    _selectSingle(_element);
+                }
             }
 
+            // updates the last selected row's index
+            // with the destination row's index
             table.attr("data-last_selected", toIndex);
         };
 
         var _deselectShiftClick = function(element, fromIndex) {
-
+            // checks the origin and destination rows
+            // by their 'data-index' attribute
+            // and then removes the active class to all the rows
+            // between by performing deselect operation to each one
             var toIndex = element.attr("data-index");
             toIndex = parseInt(toIndex);
+            // if no previous selected row,
+            // then it starts from the one with index 0
             fromIndex = parseInt(fromIndex);
-            var start = toIndex > fromIndex ? fromIndex + 1 : toIndex;
+            var start = toIndex > fromIndex ? fromIndex : toIndex;
             var end = toIndex > fromIndex ? toIndex : fromIndex;
             var table = element.parents(".filter.lister");
             var tblBody = element.parents(".filter-contents");
@@ -1806,10 +1819,16 @@
 
             for (var i = start, j = end; i <= j && i < tableRows.length; i++) {
                 var _element = jQuery(tableRows[i]);
-                _deselectSingle(_element);
+                if (_element.hasClass("active")) {
+                    _deselectSingle(_element);
+                }
             }
 
-            table.attr("data-last_selected", toIndex);
+
+            // updates the last selected row's index
+            // according to the ascending or descending selection order
+            var pivot = toIndex > fromIndex ? toIndex + 1 : toIndex - 1;
+            table.attr("data-last_selected", pivot);
         };
 
         var _selectSingle = function(element) {
