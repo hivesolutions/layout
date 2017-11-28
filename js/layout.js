@@ -1234,6 +1234,10 @@
             var operationsLinks = jQuery("> li > a", operations);
             var operationsForms = jQuery("> form", operationsWindows);
 
+            // retrieves the refereces to the complete set of table rows
+            // present in the body part of the bulk element
+            var bodyRows = jQuery("tbody .table-row", matchedObject);
+
             // retrieves the references to the header checkbox and the various
             // possible checkboxes from the body of the current table
             var headerCheckbox = jQuery("thead input[type=checkbox]",
@@ -1539,6 +1543,27 @@
                 element.attr("action", completeLink);
             });
 
+            // registers for the click event on the body rows so that
+            // it's possible to toggle the value of the selection with
+            // a control based click or select a range of cells in case
+            // the shift key is pressed (bulk selection)
+            bodyRows.click(function(event) {
+                var element = jQuery(this);
+                var bulk = element.parents(".bulk");
+                if (event.shiftKey) {
+                    _deselectAll(bulk, options);
+                    var rangeRows = _rangeRows(element);
+                    rangeRows.each(function() {
+                        var element = jQuery(this);
+                        _selectSingle(element, true);
+                    });
+                    _updateState(bulk, options);
+                } else if (event.ctrlKey) {
+                    _toggleSingle(element);
+                    _updateState(bulk, options);
+                }
+            });
+
             // registers for the change operation in the header checkbox
             // so that the various checkboxes are selected or unselected
             headerCheckbox.bind("change", function() {
@@ -1565,7 +1590,7 @@
                 if (checked) {
                     _selectSingle(tableRow);
                 } else {
-                    _deselectSingle(tableRow, true);
+                    _deselectSingle(tableRow);
                 }
                 _updateState(bulk, options);
             });
@@ -1603,7 +1628,7 @@
             var rows = jQuery("tbody .table-row", matchedObject);
             rows.each(function(index, element) {
                 var _element = jQuery(this);
-                _deselectSingle(_element, false);
+                _deselectSingle(_element);
             });
         };
 
@@ -1745,12 +1770,21 @@
             }
         };
 
-        var _selectSingle = function(element) {
+        var _selectSingle = function(element, noTouch) {
+            // ueses the parent element to remove the reference to the
+            // current latest element, notice that this only happens in
+            // case the no touch flags is unset otherwise the latest flag
+            // class should be preserved as it is
+            var parent = element.parent();
+            var latest = jQuery("> .table-row.latest", parent);
+            !noTouch && latest.removeClass("latest");
+
             // retrieves the reference to the current line's checkbox and
             // then adds the active class to the current element and runs
             // the select operation to the current checkbox
             var checkbox = jQuery("input[type=checkbox]", element);
             element.addClass("active");
+            !noTouch && element.addClass("latest");
             checkbox.attr("checked", true);
             checkbox.prop && checkbox.prop("checked", true);
         };
@@ -1763,6 +1797,35 @@
             element.removeClass("active");
             checkbox.attr("checked", false);
             checkbox.prop && checkbox.prop("checked", false);
+        };
+
+        var _toggleSingle = function(element) {
+            var selected = _isSelected(element);
+            var selected = _isSelected(element);
+            if (selected) {
+                _deselectSingle(element);
+            } else {
+                _selectSingle(element);
+            }
+        };
+
+        var _isSelected = function(element) {
+            var checkbox = jQuery("input[type=checkbox]", element);
+            var checked = checkbox.is(":checked");
+            return checked;
+        };
+
+        var _rangeRows = function(element) {
+            var parent = element.parent();
+            var tableRows = jQuery("> .table-row", parent);
+            var latest = jQuery("> .table-row.latest", parent);
+            var startIndex = latest.length ? latest.index() : 1;
+            var endIndex = element.index();
+            if (endIndex >= startIndex) {
+                return tableRows.slice(startIndex - 1, endIndex);
+            } else {
+                return tableRows.slice(endIndex - 1, startIndex);
+            }
         };
 
         var _showOperations = function(element, force) {
