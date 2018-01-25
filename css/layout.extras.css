@@ -187,16 +187,36 @@ body.no-footer .footer {
     color: #46a546;
 }
 
+a.text-green:hover,
+a.text-green.hover {
+    border-color: #46a546;
+}
+
 .text-orange {
     color: #f89406;
+}
+
+a.text-orange:hover,
+a.text-orange.hover {
+    border-color: #f89406;
 }
 
 .text-red {
     color: #c43c35;
 }
 
+a.text-red:hover,
+a.text-red.hover {
+    border-color: #c43c35;
+}
+
 .text-blue {
     color: #3c80cd;
+}
+
+a.text-blue:hover,
+a.text-blue.hover {
+    border-color: #3c80cd;
 }
 
 .content-container table {
