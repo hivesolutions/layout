@@ -375,7 +375,7 @@ body.flat .or {
 }
 
 body.mobile-s .separator {
-    margin: 8px 0px 8px 0px;
+    margin: 10px 0px 10px 0px;
 }
 
 .top-bar {
@@ -593,7 +593,7 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
 body.mobile-s .side-links {
     display: none;
     left: -200px;
-    padding-top: 10px;
+    padding-top: 12px;
 }
 
 body.flat .side-links {
