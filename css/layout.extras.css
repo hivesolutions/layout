@@ -593,6 +593,7 @@ body.flat .top-bar > .container > .drop-field > .text-field:focus {
 body.mobile-s .side-links {
     display: none;
     left: -200px;
+    padding-top: 10px;
 }
 
 body.flat .side-links {
@@ -623,6 +624,20 @@ body.flat.grey .side-links {
     -moz-box-shadow: none;
     -khtml-box-shadow: none;
     -webkit-box-shadow: none;
+}
+
+.side-links > h3 {
+    color: #6d6d6d;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    margin: 0px 24px 12px 24px;
+    text-transform: uppercase;
+}
+
+body.mobile-s .side-links > h3 {
+    margin-bottom: 6px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .side-links > a {
