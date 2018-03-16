@@ -664,10 +664,6 @@ body.mobile-s .side-links > a {
     margin-right: 16px;
 }
 
-.side-links > a:last-child {
-    margin-bottom: 0px;
-}
-
 .side-links > a.active,
 .side-links > a.selected {
     background-color: transparent;
