@@ -106,7 +106,7 @@
                 // this value may be used to customize the url versus link resolution
                 hbase = hbase || href;
 
-                // constructs the absolute path from the possibly absolute href
+                // constructs the relative path from the possibly absolute href
                 // value, so that it may be used for some of the operations
                 var relative = href.replace(/^(?:\/\/|[^\/]+)*\//, "/");
 
@@ -179,6 +179,10 @@
                     // updates the globally unique identifier representation for
                     // the current state in the current structures
                     updateGuid(uuid);
+
+                    // updates the relative path for the currently loaded page so
+                    // that it may be used for path discovery operations
+                    updateRelative(relative);
 
                     // restores the display of the body so that the elements of
                     // it are restored to the user, also scroll the body element
@@ -472,6 +476,11 @@
     var updateGuid = function(uuid) {
         var _body = jQuery("body");
         _body.attr("uuid", uuid);
+    };
+
+    var updateRelative = function(relative) {
+        var _body = jQuery("body");
+        _body.attr("relative", relative);
     };
 
     var updateFull = function(base, body) {
