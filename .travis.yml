@@ -1,0 +1,21 @@
+sudo: false
+dist: trusty
+language: node_js
+node_js:
+  - "7"
+  - "8"
+  - "9"
+  - "10"
+install:
+  - npm install
+script: npm test
+git:
+  submodules: false
+deploy:
+  provider: npm
+  email: development@hive.pt
+  api_key:
+    secure: QJ3wbywDR2hm1I01YBwvmkUxAnTkb8MhrXBU/1L65J9saOOPttl1WxRjGcUh32Et17Kxy8j3bIpmRAeD2w9MSgm2x5MjQXyymnjzZ52cvx1+a+fToYA3WbrgmADj/MpvKwWTCqqAyfTh5eM52k+NnjV3GKZmQhvbzibSEp116zQ=
+  on:
+    tags: true
+    node_js: "7"
