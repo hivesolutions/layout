@@ -1,3 +1,4 @@
+if(typeof require!=="undefined"){var jQuery=require("./_compat").jQuery;}
 (function(jQuery){jQuery.fn.uasync=function(){var matchedObject=this;var _validate=function(){var _body=jQuery("body");var async=!_body.hasClass("noajax");return window.FormData?async:false;};var _registerHandlers=function(){var _body=jQuery("body");var links=jQuery("a[href], .link[href]",matchedObject);links=links.filter(":not(.link-confirm)");links.click(function(event){if(event.metaKey||event.ctrlKey){return;}
 if(event.which===2||event.which===3){return;}
 var element=jQuery(this);var href=element.attr("href");var noAsync=element.hasClass("no-async");if(noAsync){return;}
