@@ -21,10 +21,7 @@
     "files": [
         "index.js",
         "css/**/*.css",
-        "js/**/*.js",
-        "test/**/*.js",
-        "vue/**/*.js",
-        "vue/**/*.vue"
+        "js/**/*.js"
     ],
     "main": "index.js",
     "scripts": {
