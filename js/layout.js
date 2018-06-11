@@ -143,7 +143,7 @@
                     // raises an exception indicating the problem
                     var isValid = _isValid && _isContentsValid && _isBaseValid;
                     if (!isValid) {
-                        throw "Invalid layout or layout not found";
+                        throw new Error("Invalid layout or layout not found");
                     }
 
                     // verifies if the kind of update that is going to be performed
@@ -733,7 +733,7 @@
 
         // sets the default options value and then
         // runs the proper extension/construction
-        options = options ? options : {};
+        options = options || {};
         options = jQuery.extend(defaults, options);
 
         // sets the jquery matched object
@@ -793,7 +793,6 @@
 
             // retrieves the reference to the various elements that
             // are going to be used for event handler registration
-            var content = jQuery(".container > .content", matchedObject);
             var topBar = jQuery(".top-bar", matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
             var logoLink = jQuery(".logo > a", topBar);
@@ -934,7 +933,7 @@
             var sideLinksLeft = sideLinks.css("left");
             var sideLinksDisplay = sideLinks.css("display");
             sideLinksLeft = parseInt(sideLinksLeft);
-            sideLinksLeft = sideLinksLeft ? sideLinksLeft : 0;
+            sideLinksLeft = sideLinksLeft || 0;
             sideLinksWidth += sideLinksLeft;
             sideLinksWidth = sideLinksVisible ? sideLinksWidth : 0;
 
@@ -984,7 +983,7 @@
 
         // sets the default options value and then
         // runs the proper extension/construction
-        options = options ? options : {};
+        options = options || {};
         options = jQuery.extend(defaults, options);
 
         // sets the jquery matched object
@@ -1155,7 +1154,7 @@
 
         // sets the default options value and then
         // runs the proper extension/construction
-        options = options ? options : {};
+        options = options || {};
         options = jQuery.extend(defaults, options);
 
         // sets the jquery matched object
@@ -1809,7 +1808,6 @@
         };
 
         var _toggleSingle = function(element) {
-            var selected = _isSelected(element);
             var selected = _isSelected(element);
             if (selected) {
                 _deselectSingle(element);
