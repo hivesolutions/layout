@@ -23,7 +23,8 @@
         "css/**/*.css",
         "fonts/**/*.ttf",
         "images/**/*.png",
-        "js/**/*.js"
+        "js/**/*.js",
+        "test/**/*.js"
     ],
     "main": "js/layout.js",
     "scripts": {
