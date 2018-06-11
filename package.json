@@ -24,6 +24,7 @@
         "fonts/**/*.ttf",
         "images/**/*.png",
         "js/**/*.js",
+        "test/**/*.gif",
         "test/**/*.js"
     ],
     "main": "js/layout.js",
