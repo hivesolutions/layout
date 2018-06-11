@@ -23,7 +23,7 @@
         "css/**/*.css",
         "js/**/*.js"
     ],
-    "main": "index.js",
+    "main": "js/layout.js",
     "scripts": {
         "dev": "webpack-dev-server --config config/webpack.config.examples.js --mode development --watch --hot",
         "test": "mocha --recursive",
@@ -33,10 +33,7 @@
         "webpack-full": "webpack --config config/webpack.config.full.js"
     },
     "dependencies": {
-        "hive-js-util": "^0.1.17",
-        "jquery": "^3.3.1",
-        "jsdom": "^11.11.0",
-        "vue": "^2.5.16"
+        "jquery": "^3.3.1"
     },
     "devDependencies": {
         "babel-core": "^6.26.3",

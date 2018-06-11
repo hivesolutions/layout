@@ -23,6 +23,10 @@
 // __copyright__ = Copyright (c) 2008-2018 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
+if (typeof require !== "undefined") {
+    var jQuery = require("./_compat").jQuery;
+}
+
 (function(jQuery) {
     jQuery.fn.uasync = function() {
         // sets the jquery matched object
@@ -201,8 +205,8 @@
                     // analytics reference exists a new event is triggered, the
                     // same is also performed for conversion tracking
                     push && window.history.pushState(state, null, href);
-                    push && window._gaq && _gaq.push(["_trackPageview", relative]);
-                    push && window.ga && ga("send", {
+                    push && window._gaq && _gaq.push(["_trackPageview", relative]); // eslint-disable-line no-undef
+                    push && window.ga && ga("send", { // eslint-disable-line no-undef
                         hitType: "pageview",
                         page: relative
                     });
@@ -714,7 +718,7 @@
             var elementId = _element.text();
             itemIdList.push(elementId);
         });
-        google_trackConversion({
+        google_trackConversion({ // eslint-disable-line no-undef
             google_conversion_id: conversionId,
             google_custom_params: {
                 dynx_itemid: itemIdList,
