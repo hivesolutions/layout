@@ -1,6 +1,6 @@
 {
     "name": "hive-layout",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Simple UI framework, for a simple web application",
     "keywords": [
         "components",
