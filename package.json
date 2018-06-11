@@ -21,6 +21,8 @@
     "files": [
         "index.js",
         "css/**/*.css",
+        "fonts/**/*.ttf",
+        "images/**/*.png",
         "js/**/*.js"
     ],
     "main": "js/layout.js",
