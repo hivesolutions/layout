@@ -205,11 +205,12 @@ if (typeof require !== "undefined") {
                     // analytics reference exists a new event is triggered, the
                     // same is also performed for conversion tracking
                     push && window.history.pushState(state, null, href);
-                    push && window._gaq && _gaq.push(["_trackPageview", relative]); // eslint-disable-line no-undef
+                    // eslint-disable-next-line no-undef
+                    push && window._gaq && _gaq.push(["_trackPageview", relative]);
                     push &&
                         window.ga &&
+                        // eslint-disable-next-line no-undef
                         ga("send", {
-                            // eslint-disable-line no-undef
                             hitType: "pageview",
                             page: relative
                         });
@@ -731,8 +732,8 @@ if (typeof require !== "undefined") {
             var elementId = _element.text();
             itemIdList.push(elementId);
         });
+        // eslint-disable-next-line no-undef
         google_trackConversion({
-            // eslint-disable-line no-undef
             google_conversion_id: conversionId,
             google_custom_params: {
                 dynx_itemid: itemIdList,
