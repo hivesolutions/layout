@@ -125,13 +125,13 @@ if (typeof require !== "undefined") {
                     // replaces the image source references in the requested
                     // data so that no extra images are loaded then loads the
                     // data as the base object structure
-                    data = data.replace(/src=/ig, "aux-src=");
+                    data = data.replace(/src=/gi, "aux-src=");
                     var base = jQuery(data);
 
                     // extracts the special body associated data from the data
                     // value escapes it with a special value and then creates
                     // the logical element representation for it
-                    var bodyData = data.match(/<body[^\0]*>[^\0]*<\/body>/ig)[0];
+                    var bodyData = data.match(/<body[^\0]*>[^\0]*<\/body>/gi)[0];
                     bodyData = bodyData.replace("body", "body_");
                     var body = jQuery(bodyData);
 
@@ -206,10 +206,13 @@ if (typeof require !== "undefined") {
                     // same is also performed for conversion tracking
                     push && window.history.pushState(state, null, href);
                     push && window._gaq && _gaq.push(["_trackPageview", relative]); // eslint-disable-line no-undef
-                    push && window.ga && ga("send", { // eslint-disable-line no-undef
-                        hitType: "pageview",
-                        page: relative
-                    });
+                    push &&
+                        window.ga &&
+                        ga("send", {
+                            // eslint-disable-line no-undef
+                            hitType: "pageview",
+                            page: relative
+                        });
                     push && window.google_trackConversion && trackConversion();
                 } catch (exception) {
                     document.location = href;
@@ -234,7 +237,7 @@ if (typeof require !== "undefined") {
                 // to the current structure so that it may be used
                 var barLoader = jQuery(".bar-loader");
                 if (barLoader.length === 0) {
-                    barLoader = jQuery("<div class=\"bar-loader\"></div>");
+                    barLoader = jQuery('<div class="bar-loader"></div>');
                     _body.prepend(barLoader);
                 }
 
@@ -242,8 +245,11 @@ if (typeof require !== "undefined") {
                 // not found inserts it in the correct position in the body contents
                 var topLoader = jQuery(".top-loader");
                 if (topLoader.length === 0) {
-                    topLoader = jQuery("<div class=\"top-loader\">" +
-                        "<div class=\"loader-background\"></div>" + "</div>");
+                    topLoader = jQuery(
+                        '<div class="top-loader">' +
+                            '<div class="loader-background"></div>' +
+                            "</div>"
+                    );
                     _body.prepend(topLoader);
                 }
 
@@ -263,9 +269,12 @@ if (typeof require !== "undefined") {
                 // the current screen and runs the initial animation in it
                 topLoader.width(0);
                 topLoader.show();
-                topLoader.animate({
-                    width: 60
-                }, 100);
+                topLoader.animate(
+                    {
+                        width: 60
+                    },
+                    100
+                );
             });
 
             // registers for the async end event that marks the end of the remote
@@ -295,19 +304,23 @@ if (typeof require !== "undefined") {
 
                 // performs the proper animation of the top loader moving it's width along
                 // the horizontal line, providing the "feeling of progress"
-                topLoader.animate({
-                    width: width
-                }, 350, function() {
-                    // verifies if the top loader is currently visible if that's
-                    // the case fades it out (ux effect) otherwise hides it immediately
-                    // to avoid problems with the fading effect
-                    var isVisible = topLoader.is(":visible");
-                    if (isVisible) {
-                        topLoader.fadeOut(150);
-                    } else {
-                        topLoader.hide();
+                topLoader.animate(
+                    {
+                        width: width
+                    },
+                    350,
+                    function() {
+                        // verifies if the top loader is currently visible if that's
+                        // the case fades it out (ux effect) otherwise hides it immediately
+                        // to avoid problems with the fading effect
+                        var isVisible = topLoader.is(":visible");
+                        if (isVisible) {
+                            topLoader.fadeOut(150);
+                        } else {
+                            topLoader.hide();
+                        }
                     }
-                });
+                );
             });
 
             // registers for the location changed event in order to validate the
@@ -531,7 +544,7 @@ if (typeof require !== "undefined") {
     var updateBodyFull = function(body) {
         var _body = jQuery("body");
         var bodyHtml = body.html();
-        bodyHtml = bodyHtml.replace(/aux-src=/ig, "src=");
+        bodyHtml = bodyHtml.replace(/aux-src=/gi, "src=");
         _body.html(bodyHtml);
         _body.show();
         _body.uxapply();
@@ -575,7 +588,7 @@ if (typeof require !== "undefined") {
         var sideLinks_ = jQuery("#header > .side-links");
         var sideLinksClass = sideLinks.attr("class");
         var sideLinksHtml = sideLinks.html();
-        sideLinksHtml = sideLinksHtml && sideLinksHtml.replace(/aux-src=/ig, "src=");
+        sideLinksHtml = sideLinksHtml && sideLinksHtml.replace(/aux-src=/gi, "src=");
         sideLinks_.html(sideLinksHtml);
         sideLinks_.attr("class", sideLinksClass);
         sideLinks_.uxapply();
@@ -586,7 +599,7 @@ if (typeof require !== "undefined") {
         var actionBar_ = jQuery(".action-bar");
         var actionBarClass = actionBar.attr("class");
         var actionBarHtml = actionBar.html();
-        actionBarHtml = actionBarHtml && actionBarHtml.replace(/aux-src=/ig, "src=");
+        actionBarHtml = actionBarHtml && actionBarHtml.replace(/aux-src=/gi, "src=");
         actionBar_.html(actionBarHtml);
         actionBar_.attr("class", actionBarClass);
         actionBar_.uxapply();
@@ -610,7 +623,7 @@ if (typeof require !== "undefined") {
         var windows_ = jQuery("#windows");
         var windowsClass = windows.attr("class");
         var windowsHtml = windows.html();
-        windowsHtml = windowsHtml && windowsHtml.replace(/aux-src=/ig, "src=");
+        windowsHtml = windowsHtml && windowsHtml.replace(/aux-src=/gi, "src=");
         windows_.html(windowsHtml);
         windows_.attr("class", windowsClass);
         windows_.uxapply();
@@ -630,11 +643,11 @@ if (typeof require !== "undefined") {
         var title = jQuery("> h1", header);
         var title_ = jQuery("> h1", header_);
         var containertHtml = container.html();
-        containertHtml = containertHtml && containertHtml.replace(/aux-src=/ig, "src=");
+        containertHtml = containertHtml && containertHtml.replace(/aux-src=/gi, "src=");
         container_.html(containertHtml);
         container_.uxapply();
         var titleHtml = title.html();
-        titleHtml = titleHtml && titleHtml.replace(/aux-src=/ig, "src=");
+        titleHtml = titleHtml && titleHtml.replace(/aux-src=/gi, "src=");
         title_.html(titleHtml);
         title_.uxapply();
     };
@@ -644,7 +657,7 @@ if (typeof require !== "undefined") {
         var header_ = jQuery("#header");
         var headerClass = header.attr("class");
         var headerHtml = header.html();
-        headerHtml = headerHtml && headerHtml.replace(/aux-src=/ig, "src=");
+        headerHtml = headerHtml && headerHtml.replace(/aux-src=/gi, "src=");
         header_.html(headerHtml);
         header_.attr("class", headerClass);
         header_.uxapply();
@@ -656,7 +669,7 @@ if (typeof require !== "undefined") {
         var contentClass = content.attr("class");
         var contentHtml = content.html();
         var isShortcuts = content.hasClass("shortcuts");
-        contentHtml = contentHtml.replace(/aux-src=/ig, "src=");
+        contentHtml = contentHtml.replace(/aux-src=/gi, "src=");
         content_.html(contentHtml);
         content_.attr("class", contentClass);
         content_.uxapply();
@@ -668,7 +681,7 @@ if (typeof require !== "undefined") {
         var footer_ = jQuery("#footer");
         var footerClass = footer.attr("class");
         var footerHtml = footer.html();
-        footerHtml = footerHtml && footerHtml.replace(/aux-src=/ig, "src=");
+        footerHtml = footerHtml && footerHtml.replace(/aux-src=/gi, "src=");
         footer_.html(footerHtml);
         footer_.attr("class", footerClass);
         footer_.uxapply();
@@ -718,7 +731,8 @@ if (typeof require !== "undefined") {
             var elementId = _element.text();
             itemIdList.push(elementId);
         });
-        google_trackConversion({ // eslint-disable-line no-undef
+        google_trackConversion({
+            // eslint-disable-line no-undef
             google_conversion_id: conversionId,
             google_custom_params: {
                 dynx_itemid: itemIdList,
@@ -764,15 +778,14 @@ if (typeof require !== "undefined") {
 
             // retrieves the refereces to the various inner elements
             // of the fluid layout that are going to be updated
-            var elements = jQuery("#header, #content, #footer, #windows",
-                matchedObject);
+            var elements = jQuery("#header, #content, #footer, #windows", matchedObject);
             var sideLinks = jQuery(".side-links", matchedObject);
             var contentContainer = jQuery(".content-container", matchedObject);
 
             // wrapps the complete set of valid elements of the current layout
             // arround the container element, as this will provide extra flexibility
             // for the dynamic dimensions of this layout
-            elements.wrapAll("<div class=\"container\"></div>");
+            elements.wrapAll('<div class="container"></div>');
 
             // runs the initial laout operation so that the current
             // panel is display with the correct dimensions
@@ -872,18 +885,21 @@ if (typeof require !== "undefined") {
                 }
                 element.show();
                 var duration = _isFixed() ? 0 : 350;
-                element.animate({
-                    left: 0
-                }, {
-                    duration: duration,
-                    easing: "swing",
-                    complete: function() {
-                        _layout(matchedObject, options, true);
+                element.animate(
+                    {
+                        left: 0
                     },
-                    progress: function() {
-                        _layout(matchedObject, options, false);
+                    {
+                        duration: duration,
+                        easing: "swing",
+                        complete: function() {
+                            _layout(matchedObject, options, true);
+                        },
+                        progress: function() {
+                            _layout(matchedObject, options, false);
+                        }
                     }
-                });
+                );
             });
 
             // registers for the hide event so that the side links
@@ -896,19 +912,22 @@ if (typeof require !== "undefined") {
                 }
                 var width = element.outerWidth(true);
                 var duration = _isFixed() ? 0 : 350;
-                element.animate({
-                    left: width * -1
-                }, {
-                    duration: duration,
-                    easing: "swing",
-                    complete: function() {
-                        element.hide();
-                        _layout(matchedObject, options, true);
+                element.animate(
+                    {
+                        left: width * -1
                     },
-                    progress: function() {
-                        _layout(matchedObject, options, false);
+                    {
+                        duration: duration,
+                        easing: "swing",
+                        complete: function() {
+                            element.hide();
+                            _layout(matchedObject, options, true);
+                        },
+                        progress: function() {
+                            _layout(matchedObject, options, false);
+                        }
                     }
-                });
+                );
             });
 
             // registers for the selection of an element in the top
@@ -1202,7 +1221,7 @@ if (typeof require !== "undefined") {
                 // creates the table all (special) row at the begining
                 // of the bulk table and then retrieves the reference
                 // to it to be able to change it
-                tableBody.prepend("<tr class=\"table-all\"></tr>");
+                tableBody.prepend('<tr class="table-all"></tr>');
                 var tableAll = jQuery(".table-all", tableBody);
 
                 // creates the proper template information taking into
@@ -1220,9 +1239,19 @@ if (typeof require !== "undefined") {
                 // adds the (unique) table column to the all rows that
                 // contain the proper all message and selectors and
                 // the runs the initial update state for the bulk
-                tableAll.append("<td colspan=\"99\">" + "<span class=\"message\">" + messageAll +
-                    "</span>" + "<a class=\"selector\">" + messageSelect + "</a>" +
-                    "<a class=\"deselector\">" + messageDeselect + "</a>" + "</td>");
+                tableAll.append(
+                    '<td colspan="99">' +
+                        '<span class="message">' +
+                        messageAll +
+                        "</span>" +
+                        '<a class="selector">' +
+                        messageSelect +
+                        "</a>" +
+                        '<a class="deselector">' +
+                        messageDeselect +
+                        "</a>" +
+                        "</td>"
+                );
                 _updateState(_element, options);
             });
         };
@@ -1237,8 +1266,7 @@ if (typeof require !== "undefined") {
             var container = matchedObject.parents(".container");
             var content = matchedObject.parents(".content");
             var linksWindows = jQuery(".window.window-link", container);
-            var operationsWindows = jQuery(".window.window-operation",
-                container);
+            var operationsWindows = jQuery(".window.window-operation", container);
             var links = jQuery(".drop-down.links", content);
             var linksLinks = jQuery("> li > a", links);
             var linksForms = jQuery("> form", linksWindows);
@@ -1252,10 +1280,8 @@ if (typeof require !== "undefined") {
 
             // retrieves the references to the header checkbox and the various
             // possible checkboxes from the body of the current table
-            var headerCheckbox = jQuery("thead input[type=checkbox]",
-                matchedObject);
-            var bodyCheckboxes = jQuery("tbody input[type=checkbox]",
-                matchedObject);
+            var headerCheckbox = jQuery("thead input[type=checkbox]", matchedObject);
+            var bodyCheckboxes = jQuery("tbody input[type=checkbox]", matchedObject);
 
             // retreives the reference to the table all information
             // message and to its child selector
@@ -1443,8 +1469,10 @@ if (typeof require !== "undefined") {
                 // element, defaulting to the base one in case one is
                 // not provided for the bulk structure
                 var template = bulk.attr("data-message");
-                template = template || "Are you sure you want to perform ['%s'] ?\\n" +
-                    "The operation is going to be performed for [%s entities].";
+                template =
+                    template ||
+                    "Are you sure you want to perform ['%s'] ?\\n" +
+                        "The operation is going to be performed for [%s entities].";
                 var message = template.formatC(element.text(), count);
 
                 // starts the ids value string to the default (empty)
@@ -1670,12 +1698,9 @@ if (typeof require !== "undefined") {
             // gathers the reference to the header and body checkboxes
             // (including the ones that are checked), these are going
             // to be used to detect the correct header checkbox state
-            var headerCheckbox = jQuery("thead input[type=checkbox]",
-                matchedObject);
-            var bodyCheckboxes = jQuery("tbody input[type=checkbox]",
-                matchedObject);
-            var bodyCheckboxesChecked = jQuery(
-                "tbody input[type=checkbox]:checked", matchedObject);
+            var headerCheckbox = jQuery("thead input[type=checkbox]", matchedObject);
+            var bodyCheckboxes = jQuery("tbody input[type=checkbox]", matchedObject);
+            var bodyCheckboxesChecked = jQuery("tbody input[type=checkbox]:checked", matchedObject);
 
             // tries to determine the correct flag values for the header
             // checkbox from both the length values of checkboxed
@@ -1698,8 +1723,7 @@ if (typeof require !== "undefined") {
 
             // uses the is not empty flag to decide on whether or not to show
             // the operations (button) for drop down usage and activation
-            isNotEmpty
-                ? _showOperations(matchedObject) : _hideOperations(matchedObject);
+            isNotEmpty ? _showOperations(matchedObject) : _hideOperations(matchedObject);
 
             // updates the various state variables for the current bulk
             // selection table so that it may be checked
