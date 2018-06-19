@@ -29,7 +29,7 @@
     ],
     "main": "js/layout.js",
     "scripts": {
-        "lint": "eslint js/layout.js",
+        "lint": "eslint 'js/layout.js'",
         "test": "mocha --recursive",
         "prettier": "prettier './js/**/*.js' './test/**/*.js' --write",
         "upgrade": "npx sort-package-json && ncu -au"
