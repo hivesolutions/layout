@@ -209,10 +209,17 @@ if (typeof require !== "undefined") {
                     push && window._gaq && _gaq.push(["_trackPageview", relative]);
                     push &&
                         window.ga &&
+                        !window.gtag &&
                         // eslint-disable-next-line no-undef
                         ga("send", {
                             hitType: "pageview",
                             page: relative
+                        });
+                    push &&
+                        window.gtag &&
+                        // eslint-disable-next-line no-undef
+                        gtag("config", window.gaTracking, {
+                            page_path: relative
                         });
                     push && window.google_trackConversion && trackConversion();
                 } catch (exception) {
