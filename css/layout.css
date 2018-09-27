@@ -219,6 +219,23 @@ table td.right {
     text-align: right;
 }
 
+button {
+    background: inherit;
+    border: inherit;
+    color: inherit;
+    font-family: inherit;
+    padding: inherit;
+}
+
+button:focus {
+    outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+    -moz-outline: none;
+    -khtml-outline: none;
+    -webkit-outline: none;
+}
+
 input {
     appearance: none;
     -o-appearance: none;
