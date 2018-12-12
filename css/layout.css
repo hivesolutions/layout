@@ -736,7 +736,7 @@ body.mobile-s .input.single {
     font-size: 0px;
 }
 
-.button {
+.button:not(.button-no-style) {
     border-bottom: 1px solid transparent;
     font-size: 22px;
     font-weight: bold;
@@ -744,7 +744,7 @@ body.mobile-s .input.single {
     padding-bottom: 2px;
 }
 
-.button:hover {
+.button:not(.button-no-style):hover {
     border-color: #666666;
 }
 
