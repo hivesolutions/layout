@@ -1140,6 +1140,22 @@ body.mobile-s .input.single {
     border-color: #666666;
 }
 
+.button > span.base {
+    display: inline;
+}
+
+.button > span.locked {
+    display: none;
+}
+
+.button.locked > span.base {
+    display: none;
+}
+
+.button.locked > span.locked {
+    display: inline;
+}
+
 .tag {
     background-color: #999999;
     border-radius: 5px 5px 5px 5px;
