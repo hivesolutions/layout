@@ -1003,6 +1003,7 @@ body.grey .side-panel {
     -moz-border-radius: 0px 0px 0px 0px;
     -khtml-border-radius: 0px 0px 0px 0px;
     -webkit-border-radius: 0px 0px 0px 0px;
+    float: left;
 }
 
 .show-panel .panel-header .image.no-border {
@@ -1010,11 +1011,15 @@ body.grey .side-panel {
 }
 
 .show-panel .panel-header .details {
-    display: inline-block;
     height: 86px;
-    margin-left: 24px;
+    padding-left: 124px;
     padding-top: 12px;
     vertical-align: top;
+    width: 100%;
+}
+
+body.mobile-s .show-panel .panel-header .details {
+    padding-left: 116px;
 }
 
 .show-panel .panel-header .details h2 {
