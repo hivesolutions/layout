@@ -514,6 +514,7 @@ body.flat .top-bar > .container > .logo > a:hover {
 
 .top-bar > .container > .logo > a > img {
     height: 50px;
+    max-width: 152px;
 }
 
 body.flat .top-bar > .container > .logo > a > img {
