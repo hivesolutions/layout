@@ -1448,7 +1448,7 @@ body.mobile-s .cards > .card > dl > .item {
 body.flat .cards > .card > dl > .item > dt {
     color: #1d1d1d;
     font-size: 14px;
-    text-transform: initial;
+    text-transform: none;
 }
 
 .cards > .card > dl > .item > dd {
