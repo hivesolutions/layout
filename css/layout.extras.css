@@ -1027,6 +1027,10 @@ body.grey .side-panel {
     text-transform: uppercase;
 }
 
+body.flat .show-panel .panel-header .details h3 {
+    text-transform: none;
+}
+
 .show-panel .panel-contents {
     border-top: 1px solid #e0e0e0;
     margin-top: 18px;
