@@ -1274,6 +1274,10 @@ body.mobile-s .login-panel .login-logo {
     text-align: left;
 }
 
+body.mobile-s .login-panel .forgot {
+    margin-top: 0px;
+}
+
 .login-panel .buttons {
     margin: 42px 0px 0px 0px;
 }
