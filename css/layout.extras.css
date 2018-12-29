@@ -641,8 +641,7 @@ body.mobile-s .side-links > h3 {
     margin-right: 16px;
 }
 
-.side-links > a,
-.side-links > a.button {
+.side-links > a {
     border-bottom: none;
     color: #4d4d4d;
     cursor: pointer;
