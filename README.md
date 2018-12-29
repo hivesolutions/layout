@@ -16,7 +16,7 @@ Extra files exist with specific purposes:
 
 * **layout.data.css** - Data processing and showing related styles
 * **layout.extras.css** - Extra domain specific styles that should be applied across multiple base styles
-* **layout.print.css** - Printing related styles
+* **layout.printing.css** - Printing related styles
 
 ## Notes
 
