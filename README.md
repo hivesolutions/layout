@@ -12,6 +12,12 @@ There are currently four variants of the stylesheet:
 * **layout.modern.css** - Modern design created for minimalist and simple applications
 * **layout.webook.css** - Stylesheet created for the webook application
 
+Extra files exist with specific purposes:
+
+* **layout.data.css** - Data processing and showing related styles
+* **layout.extras.css** - Extra domain specific styles that should be applied across multiple base styles
+* **layout.print.css** - Printing related styles
+
 ## Notes
 
 The current recommended version of jQuery for the best behavior and compatibility is the 1.4.2.
