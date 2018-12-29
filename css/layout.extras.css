@@ -992,6 +992,7 @@ body.grey .side-panel {
     -moz-border-radius: 48px 48px 48px 48px;
     -khtml-border-radius: 48px 48px 48px 48px;
     -webkit-border-radius: 48px 48px 48px 48px;
+    float: left;
     height: 96px;
     width: 96px;
 }
@@ -1003,7 +1004,6 @@ body.grey .side-panel {
     -moz-border-radius: 0px 0px 0px 0px;
     -khtml-border-radius: 0px 0px 0px 0px;
     -webkit-border-radius: 0px 0px 0px 0px;
-    float: left;
 }
 
 .show-panel .panel-header .image.no-border {
