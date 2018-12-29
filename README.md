@@ -3,6 +3,15 @@
 Simple UI framework, for a simple web application. It's meant to be used together with UX
 Framework to provide a simple structure for rapid prototyping.
 
+## Stylesheets
+
+There are currently four variants of the stylesheet:
+
+* **layout.css** - The "original" one, considered to be typographic
+* **layout.flat.css** - Flat design style focused in vibrant and colorful application
+* **layout.modern.css** - Modern design created for minimalist and simple applications
+* **layout.webook.css** - Stylesheet created for the webook application
+
 ## Notes
 
 The current recommended version of jQuery for the best behavior and compatibility is the 1.4.2.
