@@ -19,6 +19,10 @@ Extra files exist with specific purposes:
 * **layout.legacy.css** - Legacy fixes for older browsers
 * **layout.printing.css** - Printing related styles
 
+Other unofficially supported stylesheets exist for random usage:
+
+* **layout.typo.css** - Special stylesheet with typographic focus
+
 ## Notes
 
 The current recommended version of jQuery for the best behavior and compatibility is the 1.4.2.
