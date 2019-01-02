@@ -1261,6 +1261,10 @@ body.mobile-s .login-panel {
     margin: 0px 0px 16px 0px;
 }
 
+body.flat .login-panel h4 {
+    font-weight: 600;
+}
+
 .login-panel p {
     color: #4d4d4d;
     margin: 0px 0px 0px 0px;
