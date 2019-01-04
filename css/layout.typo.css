@@ -80,12 +80,12 @@ body {
     margin: 0px 0px 0px 0px;
     max-width: 480px;
     overflow-y: scroll;
-    padding: 60px 60px 60px 60px;
+    padding: 60px 60px 20px 60px;
     text-align: left;
 }
 
 body.tablet-s {
-    padding: 40px 40px 40px 40px;
+    padding: 40px 40px 20px 40px;
 }
 
 body.mobile-s {
