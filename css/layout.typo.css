@@ -309,16 +309,20 @@ body.simplified strong {
     font-weight: bold;
 }
 
-ul {
+ul,
+ol {
     padding: 0px 0px 0px 18px;
 }
 
 ul ul,
-ul ul ul {
+ol ol,
+ul ul ul,
+ol ol ol {
     padding-left: 10px;
 }
 
-ul li {
+ul li,
+ol li {
     font-size: 14px;
     line-height: 24px;
     margin: 8px 0px 8px 0px;
