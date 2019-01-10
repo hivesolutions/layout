@@ -215,7 +215,6 @@ section:after {
 }
 
 a {
-    border-bottom: 1px solid transparent;
     color: #4078c0;
     text-decoration: none;
     transition: color 0.25s;
@@ -228,17 +227,22 @@ a {
 
 a:hover,
 a.hover {
-    border-bottom-color: #4078c0;
+    text-decoration: underline;
 }
 
 body.simplified a {
-    border-bottom: none;
     color: #4d4d4d;
 }
 
 body.simplified a:hover,
 body.simplified a.hover {
     color: #4078c0;
+    text-decoration: none;
+}
+
+a:hover img,
+a.hover img {
+    text-decoration: none;
 }
 
 img {
@@ -604,7 +608,6 @@ body.simplified .button-float {
 .button-float:hover,
 .button-float.hover {
     background-color: #7f7f7d;
-    border-bottom: none;
     box-shadow: 0px 15px 20px rgba(127, 127, 125, 0.4);
     -o-box-shadow: 0px 15px 20px rgba(127, 127, 125, 0.4);
     -ms-box-shadow: 0px 15px 20px rgba(127, 127, 125, 0.4);
@@ -613,6 +616,7 @@ body.simplified .button-float {
     -webkit-box-shadow: 0px 15px 20px rgba(127, 127, 125, 0.4);
     color: #ffffff;
     padding-bottom: 0px;
+    text-decoration: none;
     transform: translateY(-2px);
     -o-transform: translateY(-2px);
     -ms-transform: translateY(-2px);
