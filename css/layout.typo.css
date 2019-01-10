@@ -683,6 +683,7 @@ body.simplified .button-float.hover {
 .button-float.button-float-tiny {
     font-size: 10px;
     height: 32px;
+    letter-spacing: 2px;
     line-height: 32px;
     width: 120px;
 }
