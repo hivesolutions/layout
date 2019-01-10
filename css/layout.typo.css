@@ -680,6 +680,13 @@ body.simplified .button-float.hover {
     line-height: 38px;
 }
 
+.button-float.button-float-tiny {
+    font-size: 10px;
+    height: 32px;
+    line-height: 32px;
+    width: 120px;
+}
+
 .clear {
     clear: both;
 }
