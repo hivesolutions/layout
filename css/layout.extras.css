@@ -980,6 +980,10 @@ body.grey .side-panel {
     margin-top: 18px;
 }
 
+body.mobile-s .show-panel .panel-header {
+    height: 64px;
+}
+
 .show-panel .panel-header .buttons {
     float: right;
 }
@@ -995,6 +999,11 @@ body.grey .side-panel {
     float: left;
     height: 96px;
     width: 96px;
+}
+
+body.mobile-s .show-panel .panel-header .image {
+    height: 64px;
+    width: 64px;
 }
 
 .show-panel .panel-header .image.square {
@@ -1019,17 +1028,27 @@ body.grey .side-panel {
 }
 
 body.mobile-s .show-panel .panel-header .details {
-    padding-left: 116px;
+    padding-left: 80px;
+    padding-top: 8px;
 }
 
 .show-panel .panel-header .details h2 {
     margin: 0px 0px 12px 0px;
 }
 
+body.mobile-s .show-panel .panel-header .details h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
 .show-panel .panel-header .details h3 {
     font-size: 14px;
     margin: 0px 0px 0px 0px;
     text-transform: uppercase;
+}
+
+body.mobile-s .show-panel .panel-header .details h3 {
+    font-size: 13px;
 }
 
 body.flat .show-panel .panel-header .details h3 {

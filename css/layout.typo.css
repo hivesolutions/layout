@@ -183,7 +183,8 @@ form {
 }
 
 form dl > dt {
-    font-size: 15px;
+    color: #5d5d5d;
+    font-size: 16px;
     margin-bottom: 4px;
     margin-top: 16px;
     min-width: auto;
@@ -598,6 +599,14 @@ textarea:focus {
     -moz-transition: all 0.3s ease 0s;
     -khtml-transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
     width: 140px;
 }
 
@@ -625,6 +634,22 @@ body.simplified .button-float {
     -webkit-transform: translateY(-2px);
 }
 
+.button-float.click:hover,
+.button-float.click.hover {
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    -ms-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    -khtml-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -khtml-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+}
+
 body.simplified .button-float:hover,
 body.simplified .button-float.hover {
     color: #ffffff;
@@ -634,7 +659,8 @@ body.simplified .button-float.hover {
     color: #6bbab5;
 }
 
-.button-float.button-float-blue:hover {
+.button-float.button-float-blue:hover,
+.button-float.button-float-blue.hover {
     background-color: #6bbab5;
     box-shadow: 0px 15px 20px rgba(107, 186, 181, 0.4);
     -o-box-shadow: 0px 15px 20px rgba(107, 186, 181, 0.4);
@@ -645,11 +671,22 @@ body.simplified .button-float.hover {
     color: #ffffff;
 }
 
+.button-float.button-float-blue.click:hover,
+.button-float.button-float-blue.click.hover {
+    box-shadow: 0px 8px 25px rgba(107, 186, 181, 0.4);
+    -o-box-shadow: 0px 8px 25px rgba(107, 186, 181, 0.4);
+    -ms-box-shadow: 0px 8px 25px rgba(107, 186, 181, 0.4);
+    -moz-box-shadow: 0px 8px 25px rgba(107, 186, 181, 0.4);
+    -khtml-box-shadow: 0px 8px 25px rgba(107, 186, 181, 0.4);
+    -webkit-box-shadow: 0px 8px 25px rgba(107, 186, 181, 0.4);
+}
+
 .button-float.button-float-green {
     color: #00cc98;
 }
 
-.button-float.button-float-green:hover {
+.button-float.button-float-green:hover,
+.button-float.button-float-green.hover {
     background-color: #00cc98;
     box-shadow: 0px 15px 20px rgba(0, 204, 152, 0.4);
     -o-box-shadow: 0px 15px 20px rgba(0, 204, 152, 0.4);
@@ -660,11 +697,22 @@ body.simplified .button-float.hover {
     color: #ffffff;
 }
 
+.button-float.button-float-green.click:hover,
+.button-float.button-float-green.click.hover {
+    box-shadow: 0px 8px 25px rgba(0, 204, 152, 0.4);
+    -o-box-shadow: 0px 8px 25px rgba(0, 204, 152, 0.4);
+    -ms-box-shadow: 0px 8px 25px rgba(0, 204, 152, 0.4);
+    -moz-box-shadow: 0px 8px 25px rgba(0, 204, 152, 0.4);
+    -khtml-box-shadow: 0px 8px 25px rgba(0, 204, 152, 0.4);
+    -webkit-box-shadow: 0px 8px 25px rgba(0, 204, 152, 0.4);
+}
+
 .button-float.button-float-red {
     color: #c9463d;
 }
 
-.button-float.button-float-red:hover {
+.button-float.button-float-red:hover,
+.button-float.button-float-red.hover {
     background-color: #c9463d;
     box-shadow: 0px 15px 20px rgba(201, 70, 61, 0.4);
     -o-box-shadow: 0px 15px 20px rgba(201, 70, 61, 0.4);
@@ -673,6 +721,16 @@ body.simplified .button-float.hover {
     -khtml-box-shadow: 0px 15px 20px rgba(201, 70, 61, 0.4);
     -webkit-box-shadow: 0px 15px 20px rgba(201, 70, 61, 0.4);
     color: #ffffff;
+}
+
+.button-float.button-float-red.click:hover,
+.button-float.button-float-red.click.hover {
+    box-shadow: 0px 8px 25px rgba(201, 70, 61, 0.4);
+    -o-box-shadow: 0px 8px 25px rgba(201, 70, 61, 0.4);
+    -ms-box-shadow: 0px 8px 25px rgba(201, 70, 61, 0.4);
+    -moz-box-shadow: 0px 8px 25px rgba(201, 70, 61, 0.4);
+    -khtml-box-shadow: 0px 8px 25px rgba(201, 70, 61, 0.4);
+    -webkit-box-shadow: 0px 8px 25px rgba(201, 70, 61, 0.4);
 }
 
 .button-float.button-float-small {
