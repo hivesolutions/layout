@@ -772,10 +772,11 @@ body.simplified .button-float.hover {
     -khtml-box-shadow: 1px 1px 3px #bbbbbb;
     -webkit-box-shadow: 1px 1px 3px #bbbbbb;
     list-style: none;
+    margin-left: -16px;
     margin-top: -6px;
     min-width: 140px;
     overflow: hidden;
-    padding: 0px 12px 0px 12px;
+    padding: 0px 16px 0px 16px;
     position: absolute;
 }
 
