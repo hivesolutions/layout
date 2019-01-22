@@ -362,6 +362,7 @@ table th {
 
 code {
     background-color: #f6f8fa;
+    border: 1px solid #e6e6e6;
     display: inline-block;
     font-size: 13px;
 }
