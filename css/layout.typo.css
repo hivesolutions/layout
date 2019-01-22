@@ -746,6 +746,45 @@ body.simplified .button-float.hover {
     width: 120px;
 }
 
+.drop-down-container {
+    display: inline-block;
+    position: relative;
+}
+
+.drop-down-container > ul.drop-down {
+    animation: fade-into-drop 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -o-animation: fade-into-drop 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -ms-animation: fade-into-drop 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -moz-animation: fade-into-drop 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -khtml-animation: fade-into-drop 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    -webkit-animation: fade-into-drop 0.35s cubic-bezier(0.645, 0.045, 0.355, 1.0);
+    background-color: #ffffff;
+    border-radius: 6px 6px 6px 6px;
+    -o-border-radius: 6px 6px 6px 6px;
+    -ms-border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -khtml-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    box-shadow: 1px 1px 3px #bbbbbb;
+    -o-box-shadow: 1px 1px 3px #bbbbbb;
+    -ms-box-shadow: 1px 1px 3px #bbbbbb;
+    -moz-box-shadow: 1px 1px 3px #bbbbbb;
+    -khtml-box-shadow: 1px 1px 3px #bbbbbb;
+    -webkit-box-shadow: 1px 1px 3px #bbbbbb;
+    list-style: none;
+    margin-top: -6px;
+    min-width: 140px;
+    overflow: hidden;
+    padding: 0px 12px 0px 12px;
+    position: absolute;
+}
+
+.drop-down-container.visible > .button.button-drop-down,
+.drop-down-container > .button.button-drop-down:hover,
+.drop-down-container > .button.button-drop-down.hover {
+    color: #4078c0;
+}
+
 .clear {
     clear: both;
 }
