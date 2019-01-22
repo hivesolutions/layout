@@ -776,8 +776,12 @@ body.simplified .button-float.hover {
     margin-top: -6px;
     min-width: 140px;
     overflow: hidden;
-    padding: 0px 16px 0px 16px;
+    padding: 4px 16px 4px 16px;
     position: absolute;
+}
+
+.drop-down-container > ul.drop-down > li {
+    margin: 10px 0px 10px 0px;
 }
 
 .drop-down-container.visible > .button.button-drop-down,
