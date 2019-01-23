@@ -365,6 +365,7 @@ code {
     border: 1px solid #e6e6e6;
     display: inline-block;
     font-size: 13px;
+    line-height: 20px;
 }
 
 :not(pre) > code[class*="language-"] {
@@ -373,6 +374,7 @@ code {
 
 pre {
     background-color: #f6f8fa;
+    border: 1px solid #e6e6e6;
     border-radius: 4px 4px 4px 4px;
     -o-border-radius: 4px 4px 4px 4px;
     -ms-border-radius: 4px 4px 4px 4px;
