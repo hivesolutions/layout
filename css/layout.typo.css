@@ -380,12 +380,12 @@ pre {
     -moz-border-radius: 4px 4px 4px 4px;
     -khtml-border-radius: 4px 4px 4px 4px;
     -webkit-border-radius: 4px 4px 4px 4px;
-    box-shadow: 1px 1px 3px #bbbbbb;
-    -o-box-shadow: 1px 1px 3px #bbbbbb;
-    -ms-box-shadow: 1px 1px 3px #bbbbbb;
-    -moz-box-shadow: 1px 1px 3px #bbbbbb;
-    -khtml-box-shadow: 1px 1px 3px #bbbbbb;
-    -webkit-box-shadow: 1px 1px 3px #bbbbbb;
+    box-shadow: 1px 1px 3px #aaaaaa;
+    -o-box-shadow: 1px 1px 3px #aaaaaa;
+    -ms-box-shadow: 1px 1px 3px #aaaaaa;
+    -moz-box-shadow: 1px 1px 3px #aaaaaa;
+    -khtml-box-shadow: 1px 1px 3px #aaaaaa;
+    -webkit-box-shadow: 1px 1px 3px #aaaaaa;
     font-size: 13px;
     line-height: 19px;
 }
