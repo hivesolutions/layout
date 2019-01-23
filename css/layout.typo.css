@@ -373,7 +373,6 @@ code {
 }
 
 pre {
-    background-color: #f6f8fa;
     border: 1px solid #e6e6e6;
     border-radius: 4px 4px 4px 4px;
     -o-border-radius: 4px 4px 4px 4px;
@@ -381,6 +380,12 @@ pre {
     -moz-border-radius: 4px 4px 4px 4px;
     -khtml-border-radius: 4px 4px 4px 4px;
     -webkit-border-radius: 4px 4px 4px 4px;
+    box-shadow: 1px 1px 3px #bbbbbb;
+    -o-box-shadow: 1px 1px 3px #bbbbbb;
+    -ms-box-shadow: 1px 1px 3px #bbbbbb;
+    -moz-box-shadow: 1px 1px 3px #bbbbbb;
+    -khtml-box-shadow: 1px 1px 3px #bbbbbb;
+    -webkit-box-shadow: 1px 1px 3px #bbbbbb;
     font-size: 13px;
     line-height: 18px;
 }
