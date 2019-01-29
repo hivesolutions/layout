@@ -1703,17 +1703,20 @@ body.retina-s .separator-horizontal {
     background-size: 260px 10px;
 }
 
-.footer-logo {
+.footer-logo,
+.footer-logo:not(.button-no-style) {
     background: transparent none no-repeat left 0px;
     border-bottom: none;
     cursor: pointer;
+    display: inline-block;
     height: 25px;
     margin: 28px auto 8px auto;
     padding: 0px 0px 0px 0px;
     width: 25px;
 }
 
-.footer-logo:hover {
+.footer-logo:hover,
+.footer-logo:not(.button-no-style):hover {
     background-position: left -25px;
 }
 
