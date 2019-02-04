@@ -464,6 +464,20 @@ input[type=number]:disabled {
     -webkit-opacity: 0.6;
 }
 
+input[type=url]:read-only,
+input[type=date]:read-only,
+input[type=file]:read-only,
+input[type=text]:read-only,
+input[type=email]:read-only,
+input[type=number]:read-only {
+    opacity: 0.6;
+    -o-opacity: 0.6;
+    -ms-opacity: 0.6;
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    -webkit-opacity: 0.6;
+}
+
 input[type=text].grow {
     background-color: #f2f2f2;
     border: 1px solid transparent;
