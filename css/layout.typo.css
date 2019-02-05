@@ -456,6 +456,7 @@ input[type=file]:disabled,
 input[type=text]:disabled,
 input[type=email]:disabled,
 input[type=number]:disabled {
+    color: #545454;
     opacity: 0.6;
     -o-opacity: 0.6;
     -ms-opacity: 0.6;
@@ -470,6 +471,7 @@ input[type=file]:read-only,
 input[type=text]:read-only,
 input[type=email]:read-only,
 input[type=number]:read-only {
+    color: #545454;
     opacity: 0.6;
     -o-opacity: 0.6;
     -ms-opacity: 0.6;
