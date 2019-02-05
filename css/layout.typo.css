@@ -476,6 +476,7 @@ input[type=number]:read-only {
     -moz-opacity: 0.6;
     -khtml-opacity: 0.6;
     -webkit-opacity: 0.6;
+    pointer-events: none;
 }
 
 input[type=text].grow {
