@@ -359,11 +359,16 @@ table tr {
     border-top: 1px solid #c6cbd1;
 }
 
-table td,
 table th {
-    border: 1px solid #dfe2e5;
-    padding: 6px 13px 6px 13px;
     text-align: center;
+}
+
+table td {
+    text-align: left;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa;
 }
 
 code {
