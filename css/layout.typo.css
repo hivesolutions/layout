@@ -353,6 +353,7 @@ table {
     line-height: 22px;
     overflow: auto;
     width: 100%;
+    word-break: normal;
 }
 
 table tr {
@@ -366,6 +367,7 @@ table th {
 }
 
 table th {
+    font-weight: 600;
     text-align: center;
 }
 
