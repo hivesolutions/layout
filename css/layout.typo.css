@@ -177,6 +177,10 @@ dl > dt {
     min-width: 120px;
 }
 
+dl > dd {
+    display: table-cell;
+}
+
 form {
     margin-bottom: 32px;
     text-align: center;
