@@ -199,6 +199,7 @@ form dl > dt:first-child {
 }
 
 form dl > dd {
+    display: block;
     line-height: 0px;
     margin-left: 0px;
 }
