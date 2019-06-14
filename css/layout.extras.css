@@ -1183,11 +1183,11 @@ body.mobile-s.flat .show-panel .panel-contents dl dd {
 .show-panel .panel-contents .image {
     margin-top: 14px;
     max-height: 278px;
+    max-width: 100%;
 }
 
 body.mobile-s .show-panel .panel-contents .image {
     max-height: initial;
-    max-width: 100%;
 }
 
 body.flat .show-panel .panel-contents .image {
