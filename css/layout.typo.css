@@ -156,6 +156,7 @@ p {
     font-size: 14px;
     line-height: 22px;
     margin: 12px 0px 12px 0px;
+    word-break: break-word;
 }
 
 body.simplified p {
