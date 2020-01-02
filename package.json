@@ -35,15 +35,15 @@
         "upgrade": "npx sort-package-json && ncu -u"
     },
     "dependencies": {
-        "jquery": "^3.3.1"
+        "jquery": "^3.4.1"
     },
     "devDependencies": {
-        "eslint": "^5.15.3",
-        "eslint-config-hive": "^0.1.8",
-        "mocha": "^6.0.2",
-        "npm-check-updates": "^3.1.1",
-        "prettier": "^1.16.4",
+        "eslint": "^6.8.0",
+        "eslint-config-hive": "^0.2.2",
+        "mocha": "^6.2.2",
+        "npm-check-updates": "^4.0.1",
+        "prettier": "^1.19.1",
         "prettier-config-hive": "^0.1.1",
-        "sort-package-json": "^1.21.0"
+        "sort-package-json": "^1.35.0"
     }
 }
