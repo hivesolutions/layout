@@ -2279,10 +2279,10 @@ ul.traceback li:hover {
     min-width: 96px;
 }
 
-.button.button-color:hover,
-.button.button-drop-down:hover,
-.button.button-color.hover,
-.button.button-drop-down.hover {
+.button.button-color:hover:not(.disabled),
+.button.button-drop-down:hover:not(.disabled),
+.button.button-color.hover:not(.disabled),
+.button.button-drop-down.hover:not(.disabled) {
     background-position: right -32px;
 }
 
@@ -2340,10 +2340,10 @@ ul.traceback li:hover {
     -webkit-text-shadow: 0px 1px 0px #4d4d4d;
 }
 
-.button.button-color.button-green:hover,
-.button.button-drop-down.button-green:hover,
-.button.button-color.button-green.hover,
-.button.button-drop-down.button-green.hover {
+.button.button-color.button-green:hover:not(.disabled),
+.button.button-drop-down.button-green:hover:not(.disabled),
+.button.button-color.button-green.hover:not(.disabled),
+.button.button-drop-down.button-green.hover:not(.disabled) {
     background-color: #00963a;
 }
 
@@ -2365,10 +2365,10 @@ ul.traceback li:hover {
     -webkit-text-shadow: 0px 1px 0px #4d4d4d;
 }
 
-.button.button-color.button-red:hover,
-.button.button-drop-down.button-red:hover,
-.button.button-color.button-red.hover,
-.button.button-drop-down.button-red.hover {
+.button.button-color.button-red:hover:not(.disabled),
+.button.button-drop-down.button-red:hover:not(.disabled),
+.button.button-color.button-red.hover:not(.disabled),
+.button.button-drop-down.button-red.hover:not(.disabled) {
     background-color: #d11825;
 }
 
@@ -2390,10 +2390,10 @@ ul.traceback li:hover {
     -webkit-text-shadow: 0px 1px 0px #4d4d4d;
 }
 
-.button.button-color.button-blue:hover,
-.button.button-drop-down.button-blue:hover,
-.button.button-color.button-blue.hover,
-.button.button-drop-down.button-blue.hover {
+.button.button-color.button-blue:hover:not(.disabled),
+.button.button-drop-down.button-blue:hover:not(.disabled),
+.button.button-color.button-blue.hover:not(.disabled),
+.button.button-drop-down.button-blue.hover:not(.disabled) {
     background-color: #1f84d4;
 }
 
@@ -2417,14 +2417,14 @@ ul.traceback li:hover {
     -webkit-text-shadow: 0px 1px 0px #ffffff;
 }
 
-.button.button-color:hover,
-.button.button-drop-down:hover,
-.button.button-color.button-grey:hover,
-.button.button-drop-down.button-grey:hover,
-.button.button-color.hover,
-.button.button-drop-down.hover,
-.button.button-color.button-grey.hover,
-.button.button-drop-down.button-grey.hover {
+.button.button-color:hover:not(.disabled),
+.button.button-drop-down:hover:not(.disabled),
+.button.button-color.button-grey:hover:not(.disabled),
+.button.button-drop-down.button-grey:hover:not(.disabled),
+.button.button-color.hover:not(.disabled),
+.button.button-drop-down.hover:not(.disabled),
+.button.button-color.button-grey.hover:not(.disabled),
+.button.button-drop-down.button-grey.hover:not(.disabled) {
     background-color: #858484;
 }
 
