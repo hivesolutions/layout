@@ -420,6 +420,7 @@ input[type=tel],
 input[type=date],
 input[type=file],
 input[type=text],
+input[type=week],
 input[type=email],
 input[type=number] {
     background-color: #f2f2f2;
@@ -467,6 +468,7 @@ input[type=tel]:focus,
 input[type=date]:focus,
 input[type=file]:focus,
 input[type=text]:focus,
+input[type=week]:focus,
 input[type=email]:focus,
 input[type=number]:focus {
     box-shadow: 1px 1px 3px #6d6d6d;
@@ -482,6 +484,7 @@ input[type=tel]:disabled,
 input[type=date]:disabled,
 input[type=file]:disabled,
 input[type=text]:disabled,
+input[type=week]:disabled,
 input[type=email]:disabled,
 input[type=number]:disabled {
     color: #545454;
@@ -498,6 +501,7 @@ input[type=tel]:read-only,
 input[type=date]:read-only,
 input[type=file]:read-only,
 input[type=text]:read-only,
+input[type=week]:read-only,
 input[type=email]:read-only,
 input[type=number]:read-only {
     color: #545454;
@@ -510,10 +514,12 @@ input[type=number]:read-only {
     pointer-events: none;
 }
 
-input[type=date].invalid,
+input[type=url].invalid,
+input[type=tel].invalid,
 input[type=date].invalid,
 input[type=file].invalid,
 input[type=text].invalid,
+input[type=week].invalid,
 input[type=email].invalid,
 input[type=number].invalid {
     border-color: #d3503f;
