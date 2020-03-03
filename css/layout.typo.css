@@ -416,6 +416,7 @@ pre {
 }
 
 input[type=url],
+input[type=tel],
 input[type=date],
 input[type=file],
 input[type=text],
@@ -462,6 +463,7 @@ input[type=number] {
 }
 
 input[type=url]:focus,
+input[type=tel]:focus,
 input[type=date]:focus,
 input[type=file]:focus,
 input[type=text]:focus,
@@ -476,6 +478,7 @@ input[type=number]:focus {
 }
 
 input[type=url]:disabled,
+input[type=tel]:disabled,
 input[type=date]:disabled,
 input[type=file]:disabled,
 input[type=text]:disabled,
@@ -491,6 +494,7 @@ input[type=number]:disabled {
 }
 
 input[type=url]:read-only,
+input[type=tel]:read-only,
 input[type=date]:read-only,
 input[type=file]:read-only,
 input[type=text]:read-only,
