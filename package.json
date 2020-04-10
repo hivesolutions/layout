@@ -18,6 +18,7 @@
     },
     "license": "Apache-2.0",
     "author": "Hive Solutions",
+    "main": "js/layout.js",
     "files": [
         "index.js",
         "css/**/*.css",
@@ -27,11 +28,10 @@
         "js/**/*.js",
         "test/**/*.js"
     ],
-    "main": "js/layout.js",
     "scripts": {
         "lint": "eslint \"./js/layout.js\"",
-        "test": "mocha --recursive",
         "prettier": "prettier \"./*.{js,json}\" \"./{js,test}/**/*.{js,json}\" --write",
+        "test": "mocha --recursive",
         "upgrade": "npx sort-package-json && ncu -u"
     },
     "dependencies": {
