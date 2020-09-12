@@ -501,7 +501,6 @@ body.flat .top-bar > .container > .logo {
     border-bottom: none;
     color: #2d2d2d;
     cursor: pointer;
-    object-fit: scale-down;
     vertical-align: top;
 }
 
@@ -516,6 +515,7 @@ body.flat .top-bar > .container > .logo > a:hover {
 .top-bar > .container > .logo > a > img {
     height: 50px;
     max-width: 152px;
+    object-fit: scale-down;
 }
 
 body.flat .top-bar > .container > .logo > a > img {
