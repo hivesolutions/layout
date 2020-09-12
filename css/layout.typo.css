@@ -682,7 +682,6 @@ textarea.invalid {
     -moz-transition: all 0.3s ease 0s;
     -khtml-transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
-    user-drag: none;
     -webkit-user-drag: none;
     user-select: none;
     -o-user-select: none;
@@ -691,6 +690,7 @@ textarea.invalid {
     -khtml-user-select: none;
     -webkit-user-select: none;
     width: 140px;
+    user-drag: none;
 }
 
 body.simplified .button-float {
