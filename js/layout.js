@@ -152,7 +152,7 @@ if (typeof require !== "undefined") {
 
                     // verifies if the kind of update that is going to be performed
                     // is a full one, meaning that the complete body element is going
-                    // to be replace instead of just some of its parts
+                    // to be replaced instead of just some of its parts
                     var isFull = type(body) !== type();
                     isFull = isFull || hash(body) !== hash();
 
