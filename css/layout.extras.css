@@ -231,8 +231,8 @@ a.text-blue.hover {
 }
 
 .content-container > form {
-    margin: 18px 0px 18px 0px;
     max-width: 690px;
+    padding: 18px 0px 18px 0px;
     width: 100%;
 }
 
