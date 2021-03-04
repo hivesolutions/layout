@@ -273,13 +273,13 @@ body.mobile-s .content-container > form.inline div.item {
 }
 
 .content-container > ul.sections-list {
-    margin: 24px 0px 24px 0px;
     max-width: 690px;
+    padding: 24px 0px 24px 0px;
     width: 100%;
 }
 
 body.mobile-s .content-container > ul.sections-list {
-    margin: 12px 0px 12px 0px;
+    padding: 12px 0px 12px 0px;
 }
 
 .content-container > .flow-content {
