@@ -499,7 +499,6 @@ input[type=number]:disabled {
 input[type=url]:read-only,
 input[type=tel]:read-only,
 input[type=date]:read-only,
-input[type=file]:read-only,
 input[type=text]:read-only,
 input[type=week]:read-only,
 input[type=email]:read-only,
