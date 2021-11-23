@@ -633,6 +633,19 @@ textarea.invalid {
     border-color: #d3503f;
 }
 
+.input-container {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+.input-container label {
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 12px;
+    padding-left: 3px;
+}
+
 .error-description {
     color: #d3503f;
     font-size: 14px;
