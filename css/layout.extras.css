@@ -502,6 +502,7 @@ body.flat .top-bar > .container > .logo {
     border-bottom: none;
     color: #2d2d2d;
     cursor: pointer;
+    display: inline-block;
     vertical-align: top;
 }
 
