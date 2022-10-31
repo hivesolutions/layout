@@ -34,6 +34,7 @@ __license__   = Apache License, Version 2.0
     font-style: normal;
     font-weight: 300;
     src: local("Oxygen Light"), local("Oxygen-Light"), url(../fonts/Oxygen-Light.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -41,6 +42,7 @@ __license__   = Apache License, Version 2.0
     font-style: normal;
     font-weight: 400;
     src: local("Oxygen"), local("Oxygen-Regular"), url(../fonts/Oxygen-Regular.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -48,6 +50,7 @@ __license__   = Apache License, Version 2.0
     font-style: normal;
     font-weight: 700;
     src: local("Oxygen Bold"), local("Oxygen-Bold"), url(../fonts/Oxygen-Bold.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -55,6 +58,7 @@ __license__   = Apache License, Version 2.0
     font-style: normal;
     font-weight: 300;
     src: local("Open Sans Light"), local("OpenSans-Light"), url(../fonts/OpenSans-Light.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -62,6 +66,7 @@ __license__   = Apache License, Version 2.0
     font-style: normal;
     font-weight: 400;
     src: local("Open Sans"), local("OpenSans"), url(../fonts/OpenSans-Regular.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -69,6 +74,7 @@ __license__   = Apache License, Version 2.0
     font-style: normal;
     font-weight: 600;
     src: local("Open Sans Semi-Bold"), local("OpenSans-Semibold"), url(../fonts/OpenSans-Semibold.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -76,6 +82,7 @@ __license__   = Apache License, Version 2.0
     font-style: normal;
     font-weight: 700;
     src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/OpenSans-Bold.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -83,6 +90,7 @@ __license__   = Apache License, Version 2.0
     font-style: normal;
     font-weight: 300;
     src: local("Merriweather Light"), local("Merriweather-Light"), url(../fonts/Merriweather-Light.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -90,6 +98,7 @@ __license__   = Apache License, Version 2.0
     font-style: normal;
     font-weight: 400;
     src: local("Merriweather"), url(../fonts/Merriweather-Regular.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -97,6 +106,7 @@ __license__   = Apache License, Version 2.0
     font-style: normal;
     font-weight: 700;
     src: local("Merriweather Bold"), local("Merriweather-Bold"), url(../fonts/Merriweather-Bold.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -104,6 +114,7 @@ __license__   = Apache License, Version 2.0
     font-style: normal;
     font-weight: 900;
     src: local("Merriweather Heavy"), local("Merriweather-Heavy"), url(../fonts/Merriweather-Black.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -111,6 +122,7 @@ __license__   = Apache License, Version 2.0
     font-style: italic;
     font-weight: 300;
     src: local("Merriweather Light Italic"), local("Merriweather-LightItalic"), url(../fonts/Merriweather-LightItalic.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -118,6 +130,7 @@ __license__   = Apache License, Version 2.0
     font-style: italic;
     font-weight: 400;
     src: local("Merriweather Italic"), local("Merriweather-Italic"), url(../fonts/Merriweather-Italic.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -125,6 +138,7 @@ __license__   = Apache License, Version 2.0
     font-style: italic;
     font-weight: 700;
     src: local("Merriweather Bold Italic"), local("Merriweather-BoldItalic"), url(../fonts/Merriweather-BoldItalic.ttf);
+    font-display: swap;
 }
 
 @font-face {
@@ -132,6 +146,7 @@ __license__   = Apache License, Version 2.0
     font-style: italic;
     font-weight: 900;
     src: local("Merriweather Heavy Italic"), local("Merriweather-HeavyItalic"), url(../fonts/Merriweather-HeavyItalic.ttf);
+    font-display: swap;
 }
 
 #footer {
