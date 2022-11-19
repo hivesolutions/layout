@@ -170,7 +170,7 @@ body.simplified p {
 }
 
 p.highlight {
-    border: 1px solid #dadada;
+    border: 1px solid #e9ecef;
     border-radius: 8px 8px 8px 8px;
     -o-border-radius: 8px 8px 8px 8px;
     -ms-border-radius: 8px 8px 8px 8px;
