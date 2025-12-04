@@ -204,16 +204,18 @@ if (typeof require !== "undefined") {
                     push && window.history.pushState(state, null, href);
                     // eslint-disable-next-line no-undef
                     push && window._gaq && _gaq.push(["_trackPageview", relative]);
-                    push &&
-                        window.ga &&
-                        !window.gtag &&
+                    push
+                        && window.ga
+                        && !window.gtag
+                        &&
                         // eslint-disable-next-line no-undef
                         ga("send", {
                             hitType: "pageview",
                             page: relative
                         });
-                    push &&
-                        window.gtag &&
+                    push
+                        && window.gtag
+                        &&
                         // eslint-disable-next-line no-undef
                         gtag("config", window.gaTracking, {
                             page_path: relative
@@ -251,9 +253,9 @@ if (typeof require !== "undefined") {
                 var topLoader = jQuery(".top-loader");
                 if (topLoader.length === 0) {
                     topLoader = jQuery(
-                        '<div class="top-loader">' +
-                            '<div class="loader-background"></div>' +
-                            "</div>"
+                        '<div class="top-loader">'
+                        + '<div class="loader-background"></div>'
+                        + "</div>"
                     );
                     _body.prepend(topLoader);
                 }
@@ -274,8 +276,7 @@ if (typeof require !== "undefined") {
                 // the current screen and runs the initial animation in it
                 topLoader.width(0);
                 topLoader.show();
-                topLoader.animate(
-                    {
+                topLoader.animate({
                         width: 60
                     },
                     100
@@ -309,8 +310,7 @@ if (typeof require !== "undefined") {
 
                 // performs the proper animation of the top loader moving it's width along
                 // the horizontal line, providing the "feeling of progress"
-                topLoader.animate(
-                    {
+                topLoader.animate({
                         width: width
                     },
                     350,
@@ -890,21 +890,18 @@ if (typeof require !== "undefined") {
                 }
                 element.show();
                 var duration = _isFixed() ? 0 : 350;
-                element.animate(
-                    {
-                        left: 0
+                element.animate({
+                    left: 0
+                }, {
+                    duration: duration,
+                    easing: "swing",
+                    complete: function() {
+                        _layout(matchedObject, options, true);
                     },
-                    {
-                        duration: duration,
-                        easing: "swing",
-                        complete: function() {
-                            _layout(matchedObject, options, true);
-                        },
-                        progress: function() {
-                            _layout(matchedObject, options, false);
-                        }
+                    progress: function() {
+                        _layout(matchedObject, options, false);
                     }
-                );
+                });
             });
 
             // registers for the hide event so that the side links
@@ -917,22 +914,19 @@ if (typeof require !== "undefined") {
                 }
                 var width = element.outerWidth(true);
                 var duration = _isFixed() ? 0 : 350;
-                element.animate(
-                    {
-                        left: width * -1
+                element.animate({
+                    left: width * -1
+                }, {
+                    duration: duration,
+                    easing: "swing",
+                    complete: function() {
+                        element.hide();
+                        _layout(matchedObject, options, true);
                     },
-                    {
-                        duration: duration,
-                        easing: "swing",
-                        complete: function() {
-                            element.hide();
-                            _layout(matchedObject, options, true);
-                        },
-                        progress: function() {
-                            _layout(matchedObject, options, false);
-                        }
+                    progress: function() {
+                        _layout(matchedObject, options, false);
                     }
-                );
+                });
             });
 
             // registers for the selection of an element in the top
@@ -1245,17 +1239,17 @@ if (typeof require !== "undefined") {
                 // contain the proper all message and selectors and
                 // the runs the initial update state for the bulk
                 tableAll.append(
-                    '<td colspan="99">' +
-                        '<span class="message">' +
-                        messageAll +
-                        "</span>" +
-                        '<a class="selector">' +
-                        messageSelect +
-                        "</a>" +
-                        '<a class="deselector">' +
-                        messageDeselect +
-                        "</a>" +
-                        "</td>"
+                    '<td colspan="99">'
+                    + '<span class="message">'
+                    + messageAll
+                    + "</span>"
+                    + '<a class="selector">'
+                    + messageSelect
+                    + "</a>"
+                    + '<a class="deselector">'
+                    + messageDeselect
+                    + "</a>"
+                    + "</td>"
                 );
                 _updateState(_element, options);
             });
@@ -1475,9 +1469,9 @@ if (typeof require !== "undefined") {
                 // not provided for the bulk structure
                 var template = bulk.attr("data-message");
                 template =
-                    template ||
-                    "Are you sure you want to perform ['%s'] ?\\n" +
-                        "The operation is going to be performed for [%s entities].";
+                    template
+                    || "Are you sure you want to perform ['%s'] ?\\n"
+                    + "The operation is going to be performed for [%s entities].";
                 var message = template.formatC(element.text(), count);
 
                 // starts the ids value string to the default (empty)
