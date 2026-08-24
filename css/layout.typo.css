@@ -64,7 +64,7 @@ __license__   = Apache License, Version 2.0
     font-family: "Heuristica";
     font-style: normal;
     font-weight: 400;
-    src: url(../fonts/Heuristica-Regular.otf);
+    src: url(../fonts/Heuristica-Regular.ttf);
     font-display: swap;
 }
 
