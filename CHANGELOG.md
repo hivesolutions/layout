@@ -17,4 +17,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-* Heuristica font not rendering in Chromium based browsers
+* Heuristica font not rendering in Chromium and Firefox based browsers
